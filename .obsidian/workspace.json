@@ -1,0 +1,155 @@
+{
+  "main": {
+    "id": "37c4c4807ee25ef1",
+    "type": "split",
+    "children": [
+      {
+        "id": "48f8c35699024cc6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9c26a37676f081cd",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a5fc9c4752beee36",
+    "type": "split",
+    "children": [
+      {
+        "id": "61abc0b2df6938be",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d82701bc35b5884f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "69ed91a5b555014c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "22de0d104efd5762",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4cb2d8017a535402",
+    "type": "split",
+    "children": [
+      {
+        "id": "f74ca5c79071dca8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d5c451e9fdee9d9f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e15ddd66da04e172",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d89117a71b475191",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "210472fb66473fd1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "canvas:新建白板": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "9c26a37676f081cd",
+  "lastOpenFiles": [
+    "面试题/JS/EventLoop.md",
+    "面试题/VUE/响应式原理和数据双向绑定.md",
+    "面试题/未命名.md",
+    "面试题/VUE",
+    "未命名.canvas",
+    "2023-03-26.md",
+    "面试题/JS",
+    "面试题",
+    "云端IDE基础框架.md",
+    "2023-02-24.md"
+  ]
+}
