@@ -1,0 +1,330 @@
+[2020 第十一届蓝桥杯决赛（国赛）题目 C++ B组_CofDoria的博客-CSDN博客](https://blog.csdn.net/qq_46144509/article/details/109699279)![image-20210429194948734](C:\Users\29912\AppData\Roaming\Typora\typora-user-images\image-20210429194948734.png)
+
+### 思路
+
+for循环2020次转化为string，find判断有没有2
+
+### 代码
+
+~~~c
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int N = 100005;
+int maxn    = 0;
+int minn    = 0x3f3f3f3f;
+
+void solve() {
+    string s;
+    int cnt = 0;
+    for (int i = 1; i < 2021; i++) {
+        s = to_string(i);
+        if (s.find("2") != string::npos) cnt++;
+    }
+    cout << cnt << endl;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    solve();
+    return 0;
+}
+~~~
+
+### 答案
+
+~~~c
+563
+~~~
+
+![image-20210429200107250](C:\Users\29912\AppData\Roaming\Typora\typora-user-images\image-20210429200107250.png)
+
+### 思路
+
+BFS跑一边，用step记录分钟，刚开始cnt计数用的int没注意，卡了点时间。
+
+代码
+
+~~~c
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int N   = 100005;
+int maxn      = 0;
+int minn      = 0x3f3f3f3f;
+int dir[4][2] = {1, 0, 0, 1, -1, 0, 0, -1};
+
+int Map[10005][10005] = {0};
+ll cnt=4;
+struct node {
+    int x;
+    int y;
+    int step;
+};
+
+queue<node> q;
+int n = 2100;//在网上看的一个老哥，用n加确实比我原来直接加看起来直观的多。至于为什么要加个n，因为题目里提到了是无限大的二维数组，所以至少要有4040*4040的坐标来搜索。
+void solve() {
+    Map[n][n] = 1;
+    Map[n+2020][n+11] = 1;
+    Map[n+11][n+14] = 1;
+    Map[n+2000][n+2000] = 1;
+    node a, temp;
+    a.step = 0;
+    a.x    = n;
+    a.y    = n;
+    q.push(a);
+    a.x = n+2020;
+    a.y = n+11;
+    q.push(a);
+    a.x = n+11;
+    a.y = n+14;
+    q.push(a);
+    a.x = n+2000;
+    a.y = n+2000;
+    q.push(a);
+
+    while (!q.empty()) {
+        a = q.front();
+        q.pop();
+        for (int i = 0; i < 4; ++i) {
+            temp.x    = a.x + dir[i][0];
+            temp.y    = a.y + dir[i][1];
+            temp.step = a.step + 1;
+            if (temp.step <= 2020 && Map[temp.x][temp.y] == 0) {
+                Map[temp.x][temp.y] = 1;
+                cnt++;
+                q.push(temp);
+            }
+        }    }
+    cout << cnt << endl;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    solve();
+    return 0;
+}
+~~~
+
+### 答案
+
+~~~c
+20312088
+~~~
+
+
+
+![image-20210429211405034](C:\Users\29912\AppData\Roaming\Typora\typora-user-images\image-20210429211405034.png)
+
+### 思路
+
+​		这道题用的是数论里的[唯一分解定理]([算术基本定理_falserumour的博客-CSDN博客](https://blog.csdn.net/falserumour/article/details/116461407?spm=1001.2014.3001.5501))（看B站视频写的一点东西，可以看看），需要注意的是这道题不止是找单个数的约数个数，而是找n的阶乘的约数个数。
+
+~~~c
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int N   = 100005;
+int maxn      = 0;
+int minn      = 0x3f3f3f3f;
+int dir[4][2] = {1, 0, 0, 1, -1, 0, 0, -1};
+
+int a[N];
+
+void solve() {
+    for (int i = 2; i <= 100; i++) {
+        int x = i;
+        for (int j = 2; j * j <= x; j++) {
+            if (x % j == 0) {
+                int cnt = 0;
+                while (x % j == 0) ++cnt, x /= j;
+                a[j] += cnt;
+            }
+        }
+        if (x != 1) a[x]++;
+    }
+    unsigned long long ans = 1;
+    for (int i = 1; i <= 100; i++) {
+        if (a[i]) {
+            // cout << i << " " << a[i] << endl;
+            ans = ans * (a[i] + 1);
+        }
+    }
+    cout << ans << endl;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    solve();
+    return 0;
+}
+~~~
+
+### 答案
+
+~~~
+39001250856960000
+~~~
+
+
+
+![image-20210506203010186](C:\Users\29912\AppData\Roaming\Typora\typora-user-images\image-20210506203010186.png)
+
+##### 题目所给字符串
+
+~~~c
+tocyjkdzcieoiodfpbgcncsrjbhmugdnojjddhllnofawllbhf
+iadgdcdjstemphmnjihecoapdjjrprrqnhgccevdarufmliqij
+gihhfgdcmxvicfauachlifhafpdccfseflcdgjncadfclvfmad
+vrnaaahahndsikzssoywakgnfjjaihtniptwoulxbaeqkqhfwl
+~~~
+
+ 
+
+### 思路
+
+​		我一看就知道是DP，但是我DP一点不会~~因为我太懒了，没刷DP题~~，本来打算用BFS做，发现这样时间用的太久了，还是DP吧。
+
+### ***解题思路***
+
+1. 动态规划，首先dp[i]的值代表 ***从s[]开始并且以s[i]为结尾的上升序列个数***
+
+2. 因为每单独一个字母必然是一个上升序列，所以dp初始化为1
+
+3. 不难理解，dp[i]的值又全体dp[j]共同决定(0<j<i)
+
+4. 遍历j=0 ~ (i-1)，若s[j]<s[i]，dp[i]+=dp[j],因为有dp[j]个以s[j]结尾的子序列，因为s[i]>s[j], 在这些子序列末尾加上s[i]所得到的所有子序列都包含于dp[i]对应的序列集
+
+   若s[j]=s[i],dp[i]-=dp[j]，按照dp的定义s[j]=s[i]时应该是dp[i]不改变，但是我们最终是求全体的序列个数，需要进行累加，如果不减去dp[j]，会把dp[j]之前的情况重复累加。
+
+   (参考)[[蓝桥杯 本质上升序列_catrtees的博客-CSDN博客_蓝桥杯本质上升序列](https://blog.csdn.net/catrtees/article/details/113064117?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-4&spm=1001.2101.3001.4242)]
+
+   可以看看参考的文章作者写的，写挺好。
+
+   ### 代码
+
+   ~~~c
+   #include <bits/stdc++.h>
+   using namespace std;
+   typedef long long ll;
+   const int N   = 100005;
+   int maxn      = 0;
+   int minn      = 0x3f3f3f3f;
+   int dir[4][2] = {1, 0, 0, 1, -1, 0, 0, -1};
+   
+   string s = "tocyjkdzcieoiodfpbgcncsrjbhmugdnojjddhllnofawllbhfiadgdcdjstemphmnjihecoapdjjrprrqnhgccevdarufmliqijgihhfgdcmxvicfauachlifhafpdccfseflcdgjncadfclvfmadvrnaaahahndsikzssoywakgnfjjaihtniptwoulxbaeqkqhfwl";
+   int a[200];
+   
+   void solve() {
+       for (int i = 0; i < 200; i++) a[i] = 1;
+       for (int i = 1; i < 200; i++) {
+           for (int j = 0; j < i; j++) {
+               if (s[i] > s[j]) {
+                   a[i] += a[j];
+               } else if (s[i] == s[j]) {
+                   a[i] -= a[j];
+               }
+           }
+       }
+   
+       int ans = 0;
+       for (int i = 0; i < 200; i++) {
+           ans += a[i];
+       }
+       cout << ans << endl;
+   }
+   
+   int main() {
+       ios::sync_with_stdio(false);
+       cin.tie(0);
+       cout.tie(0);
+       solve();
+       return 0;
+   }
+   ~~~
+
+   ### 答案
+
+   ~~~c
+   3616159
+   ~~~
+
+   
+
+![image-20210506215819465](C:\Users\29912\AppData\Roaming\Typora\typora-user-images\image-20210506215819465.png)
+
+### 思路
+
+​	这一题就挺简单的了，DFS板子题（其实说起来填空题都是板子题，只是自己太菜了，板子题都有些不知道），把十六个点都用DFS过一遍答案就出来了。
+
+### 代码
+
+~~~c
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int N   = 100005;
+int maxn      = 0;
+int minn      = 0x3f3f3f3f;
+int dir[4][2] = {1, 0, 0, 1, -1, 0, 0, -1};
+
+int vis[4][4];
+int ans = 0;
+
+void DFS(int x, int y, int sum) {
+    if (sum == 16) {
+        ans++;
+        return;
+    } else {
+        for (int i = 0; i <= 3; i++) {
+            int dx = x + dir[i][0];
+            int dy = y + dir[i][1];
+            if (dx >= 0 && dx <= 3 && dy >= 0 && dy <= 3 && vis[dx][dy] == 0) {
+                vis[dx][dy] = 1;
+                DFS(dx, dy, sum + 1);
+                vis[dx][dy] = 0;
+            }
+        }
+    }
+}
+
+void solve() {
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            vis[i][j] = 1;
+            DFS(i, j, 1);
+            vis[i][j] = 0;
+        }
+    }
+
+    cout << ans << endl;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    solve();
+    return 0;
+}
+~~~
+
+### 答案
+
+~~~c
+552
+~~~
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20201115003200795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ2MTQ0NTA5,size_16,color_FFFFFF,t_70#pic_center)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20201115003217294.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ2MTQ0NTA5,size_16,color_FFFFFF,t_70#pic_center)
+
+### 思路
+
