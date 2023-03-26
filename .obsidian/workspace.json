@@ -11,8 +11,12 @@
             "id": "9c26a37676f081cd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "面试自我介绍.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "面试自我介绍.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "面试自我介绍.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "面试自我介绍.md"
+              }
             }
           }
         ],
@@ -139,8 +147,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9c26a37676f081cd",
+  "active": "d82701bc35b5884f",
   "lastOpenFiles": [
+    "入党相关时间.md",
+    "Quick Start.md",
     "面试题/JS/EventLoop.md",
     "面试题/VUE/响应式原理和数据双向绑定.md",
     "面试题/未命名.md",
