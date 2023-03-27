@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试自我介绍.md",
+                "file": "面试题/VUE/响应式原理和数据双向绑定.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试自我介绍.md",
+                "file": "面试题/VUE/响应式原理和数据双向绑定.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试自我介绍.md",
+                "file": "面试题/VUE/响应式原理和数据双向绑定.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试自我介绍.md"
+                "file": "面试题/VUE/响应式原理和数据双向绑定.md"
               }
             }
           }
@@ -147,12 +147,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "9c26a37676f081cd",
   "lastOpenFiles": [
-    "入党相关时间.md",
     "Quick Start.md",
-    "面试题/JS/EventLoop.md",
     "面试题/VUE/响应式原理和数据双向绑定.md",
+    "面试自我介绍.md",
+    "入党相关时间.md",
+    "面试题/JS/EventLoop.md",
     "面试题/未命名.md",
     "面试题/VUE",
     "未命名.canvas",
