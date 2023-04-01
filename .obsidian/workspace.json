@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "86f334dfb36dd7b2",
+        "id": "8a94d268a1b246b5",
         "type": "tabs",
         "children": [
           {
-            "id": "a69fa500ed367f00",
+            "id": "1e6fe819ff94791e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试题/VUE/响应式原理和数据双向绑定.md",
+                "file": "面试题/JS/EventLoop.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试题/VUE/响应式原理和数据双向绑定.md",
+                "file": "面试题/JS/EventLoop.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试题/VUE/响应式原理和数据双向绑定.md",
+                "file": "面试题/JS/EventLoop.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试题/VUE/响应式原理和数据双向绑定.md"
+                "file": "面试题/JS/EventLoop.md"
               }
             }
           }
@@ -147,11 +147,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a69fa500ed367f00",
+  "active": "1e6fe819ff94791e",
   "lastOpenFiles": [
+    "面试题/VUE/响应式原理和数据双向绑定.md",
     "Pasted image 20230401194759.png",
     "Pasted image 20230401201214.png",
-    "面试题/VUE/响应式原理和数据双向绑定.md",
     "Quick Start.md",
     "未命名.canvas",
     "面试自我介绍.md",
