@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6960e282200ff369",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "面试题/JS/ES6 Module和CommonJS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试题/VUE/proxy.md",
+                "file": "面试题/JS/ES6 Module和CommonJS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试题/VUE/proxy.md",
+                "file": "面试题/JS/ES6 Module和CommonJS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试题/VUE/proxy.md"
+                "file": "面试题/JS/ES6 Module和CommonJS.md"
               }
             }
           }
@@ -147,13 +160,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "411465bd0373e222",
+  "active": "6960e282200ff369",
   "lastOpenFiles": [
-    "前端/js/js块级作用域、函数作用域、全局作用域.md",
+    "面试题/VUE/响应式原理和数据双向绑定.md",
     "面试题/VUE/proxy.md",
+    "面试题/JS/ES6 Module和CommonJS.md",
+    "前端/js/js块级作用域、函数作用域、全局作用域.md",
     "前端/js/js块级作用域、函数作用域、全局作用域.assets/bVbemO7.png",
     "面试题/JS/EventLoop.md",
-    "面试题/VUE/响应式原理和数据双向绑定.md",
     "Pasted image 20230401194759.png",
     "Pasted image 20230401201214.png",
     "Quick Start.md",
