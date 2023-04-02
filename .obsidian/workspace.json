@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试题/VUE/proxy和defineProperty.md",
+                "file": "面试题/VUE/proxy.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试题/VUE/proxy和defineProperty.md",
+                "file": "面试题/VUE/proxy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试题/VUE/proxy和defineProperty.md",
+                "file": "面试题/VUE/proxy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试题/VUE/proxy和defineProperty.md"
+                "file": "面试题/VUE/proxy.md"
               }
             }
           }
@@ -150,7 +150,7 @@
   "active": "411465bd0373e222",
   "lastOpenFiles": [
     "前端/js/js块级作用域、函数作用域、全局作用域.md",
-    "面试题/VUE/proxy和defineProperty.md",
+    "面试题/VUE/proxy.md",
     "前端/js/js块级作用域、函数作用域、全局作用域.assets/bVbemO7.png",
     "面试题/JS/EventLoop.md",
     "面试题/VUE/响应式原理和数据双向绑定.md",
