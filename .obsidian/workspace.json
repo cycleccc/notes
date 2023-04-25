@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/项目记录.md",
+                "file": "前端note/网络/axios封装.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/项目记录.md",
+                "file": "前端note/网络/axios封装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/项目记录.md",
+                "file": "前端note/网络/axios封装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/项目记录.md"
+                "file": "前端note/网络/axios封装.md"
               }
             }
           }
@@ -147,8 +147,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "deac4d26ef11efae",
   "lastOpenFiles": [
+    "前端/项目记录.md",
     "前端note/网络/axios封装.md",
     "前端note/网络",
     "前端note/VUE/响应式原理和数据双向绑定.md",
