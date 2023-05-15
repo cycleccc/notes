@@ -28,9 +28,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c8208b55d2bc8e09",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.2.8"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -73,6 +83,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "bdedd89893a9d014",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -158,7 +176,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cdfae28b718acb03",
+  "active": "c8208b55d2bc8e09",
   "lastOpenFiles": [
     "88d3c1266f2e1529b1ee9e69b2690e1.jpg",
     "92b6f8bfc7a7c8a353fb0ca13b9c0b8 1.jpg",
