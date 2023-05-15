@@ -11,16 +11,6 @@
             "id": "97a731028f6f013c",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "Pasted image 20230401201214.png"
-              }
-            }
-          },
-          {
-            "id": "cdfae28b718acb03",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
                 "file": "毕业论文/论文TodoList.md",
@@ -28,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "c8208b55d2bc8e09",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.2.8"
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -176,14 +155,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c8208b55d2bc8e09",
+  "active": "97a731028f6f013c",
   "lastOpenFiles": [
+    "Quick Start.md",
+    "毕业论文/论文TodoList.md",
+    "92b6f8bfc7a7c8a353fb0ca13b9c0b8.jpg",
     "88d3c1266f2e1529b1ee9e69b2690e1.jpg",
     "92b6f8bfc7a7c8a353fb0ca13b9c0b8 1.jpg",
     "5720191307丁嘉斌.zip",
-    "92b6f8bfc7a7c8a353fb0ca13b9c0b8.jpg",
     "Pasted image 20230401201214.png",
-    "毕业论文/论文TodoList.md",
     "未命名",
     "未命名 1",
     "毕业论文",
@@ -198,7 +178,6 @@
     "前端/js/js块级作用域、函数作用域、全局作用域.md",
     "前端/js/js块级作用域、函数作用域、全局作用域.assets/bVbemO7.png",
     "Pasted image 20230401194759.png",
-    "Quick Start.md",
     "未命名.canvas",
     "入党相关时间.md",
     "面试题/未命名.md",
