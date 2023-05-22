@@ -3,4 +3,4 @@
 # npm
 NPM（Node Package Managemnt）是node.js内置的包管理器和node一并安装。npm最大的诟病我们可以总结为以下两点：
 ## 慢
-在npm2及以前npm使用简单的递归安装方法，将没个模块的依赖安装到自身的node_modules文件夹中，
+在npm2及以前npm使用简单的递归安装方法，将没个模块的依赖安装到自身的node_modules文件夹中，形成一个嵌套的依赖树
