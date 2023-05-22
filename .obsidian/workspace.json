@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/js/js原型链.md",
+                "file": "前端note/JS/包管理工具npm、yarn、pnpm.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/js/js原型链.md",
+                "file": "前端note/JS/包管理工具npm、yarn、pnpm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/js/js原型链.md",
+                "file": "前端note/JS/包管理工具npm、yarn、pnpm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/js/js原型链.md"
+                "file": "前端note/JS/包管理工具npm、yarn、pnpm.md"
               }
             }
           }
@@ -157,9 +157,12 @@
   },
   "active": "97a731028f6f013c",
   "lastOpenFiles": [
+    "前端note/JS/EventLoop.md",
+    "前端note/JS/包管理工具npm、yarn、pnpm.md",
+    "前端note/JS/ES6 Module和CommonJS.md",
+    "前端/js/js原型链.md",
     "前端/js/js块级作用域、函数作用域、全局作用域.md",
     "前端/js/js块级作用域、函数作用域、全局作用域.assets/bVbemO7.png",
-    "前端/js/js原型链.md",
     "毕业论文/论文TodoList.md",
     "Quick Start.md",
     "92b6f8bfc7a7c8a353fb0ca13b9c0b8.jpg",
@@ -175,8 +178,6 @@
     "前端/项目记录.md",
     "前端note/网络",
     "前端note/VUE/响应式原理和数据双向绑定.md",
-    "前端note/JS/EventLoop.md",
-    "前端note/JS/ES6 Module和CommonJS.md",
     "前端note/VUE/proxy.md",
     "Pasted image 20230401194759.png",
     "未命名.canvas",
