@@ -1,7 +1,7 @@
 # 结论
 我们了解包管理工具的区别当然是为了服务于项目，如果关注性能和安装速度且你乐于使用新的工具，可以考虑使用Yarn或pnpm。如果是在大型项目中，希望保持稳定性和与广泛的npm生态系统兼容，那么npm是更好的选择！
 # npm
-NPM（Node Package Managemnt）是node.js内置的包管理器和node一并安装。npm最大的诟病我们可以总结为以下两点：
+NPM（Node Package Managemnt）是node.js`官方内置`的包管理器和node一并安装。npm最大的诟病我们可以总结为以下两点：
 ## 慢
 ### npm2
 在npm2及以前npm使用简单的递归安装方法，将每个模块的依赖安装到自身的node_modules文件夹中，形成一个嵌套的依赖树
@@ -15,3 +15,9 @@ NPM（Node Package Managemnt）是node.js内置的包管理器和node一并安�
 遍历项目依赖关系是一个很耗时的操作，有时npm3的速度甚至还不如npm2
 # yarn
 yarn实现的优点npm后续都实现了
+#### 特点
+1. 并行安装：无论npm还是Yarn在执行包的安装时，都会执行一系列任务，npm是按照队列执行没个package，也就是说必须要等到当前package安装完成之后，才能继续后面的安装，而Yarn是同步执行所有任务，提高了性能。
+2. 更简洁的输出
+3. 多注册来源处理
+4. 更好的语义化
+# pnpm
