@@ -332,9 +332,9 @@ Object.prototype.toString.call(new Class2()); // "[object Class2]"
 回答：
 
 ```
-js 中的内置对象主要指的是在程序执行前存在全局作用域里的由 js 定义的一些全局值属性、函数和用来实例化其他对象的构造函
-数对象。一般我们经常用到的如全局变量值 NaN、undefined，全局函数如 parseInt()、parseFloat() 用来实例化对象的构
-造函数如 Date、Object 等，还有提供数学计算的单体内置对象如 Math 对象。
+	js 中的内置对象主要指的是在程序执行前存在全局作用域里的由 js 定义的一些全局值属性、函数和用来实例化其他对象的构造函数对象。
+	一般我们经常用到的如全局变量值 NaN、undefined，全局函数如 parseInt()、parseFloat() 
+	用来实例化对象的构造函数如 Date、Object 等，还有提供数学计算的单体内置对象如 Math 对象。
 ```
 
 详细资料可以参考：
