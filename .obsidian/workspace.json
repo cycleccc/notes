@@ -8,11 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "95dd0aeefb5deecf",
+            "id": "68f685ccc7383c88",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "面试题/JavaScript/JavaScript.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "面试题/JavaScript/JavaScript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "面试题/JavaScript/JavaScript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "面试题/JavaScript/JavaScript.md"
+              }
             }
           }
         ],
@@ -147,50 +155,49 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "68f685ccc7383c88",
   "lastOpenFiles": [
-    "前端/面试/test.md",
-    "前端/面试/README.md",
-    "前端/面试/算法/算法.md",
-    "前端/面试/算法/智力题.md",
-    "前端/面试/算法/剑指offer.md",
-    "前端/面试/算法",
-    "前端/面试/面试记录/面试记录.md",
-    "前端/面试/面试记录",
-    "前端/面试/计算机网络/计算机网络.md",
-    "前端/面试/计算机网络",
-    "前端/面试/工具/工具.md",
-    "前端/面试/工具",
-    "前端/面试/操作系统/计算机操作系统.md",
-    "前端/面试/操作系统",
-    "前端/面试/JavaScript/JavaScript.md",
-    "前端/面试/JavaScript",
-    "前端/面试/Html/Html.md",
-    "前端/面试/Html",
-    "前端/面试/Css/Css.md",
-    "前端/面试/Css",
+    "前端/项目记录.md",
+    "面试自我介绍.md",
+    "入党相关时间.md",
+    "Quick Start.md",
+    "前端/js/js原型链.md",
+    "前端/js/js块级作用域、函数作用域、全局作用域.md",
+    "前端/js/js块级作用域、函数作用域、全局作用域.assets/bVbemO7.png",
+    "面试题/test.md",
+    "面试题/README.md",
+    "面试题/算法/算法.md",
+    "面试题/算法/智力题.md",
+    "面试题/算法/剑指offer.md",
+    "面试题/算法",
+    "面试题/面试记录/面试记录.md",
+    "面试题/面试记录",
+    "面试题/计算机网络/计算机网络.md",
+    "面试题/计算机网络",
+    "面试题/工具/工具.md",
+    "面试题/工具",
+    "面试题/操作系统/计算机操作系统.md",
+    "面试题/操作系统",
+    "面试题/JavaScript/JavaScript.md",
+    "面试题/JavaScript",
+    "面试题/Html/Html.md",
+    "面试题/Html",
+    "面试题/Css/Css.md",
+    "面试题/Css",
     "未命名.canvas",
     "前端/前端note/JS/包管理工具npm、yarn、pnpm.md",
     "前端/前端note/JS/EventLoop.md",
     "前端/前端note/JS/ES6 Module和CommonJS.md",
-    "前端/js/js原型链.md",
-    "前端/js/js块级作用域、函数作用域、全局作用域.md",
-    "前端/js/js块级作用域、函数作用域、全局作用域.assets/bVbemO7.png",
     "毕业论文/论文TodoList.md",
-    "Quick Start.md",
     "92b6f8bfc7a7c8a353fb0ca13b9c0b8.jpg",
     "88d3c1266f2e1529b1ee9e69b2690e1.jpg",
     "92b6f8bfc7a7c8a353fb0ca13b9c0b8 1.jpg",
     "5720191307丁嘉斌.zip",
     "Pasted image 20230401201214.png",
     "未命名",
-    "面试自我介绍.md",
     "前端/前端note/网络/axios封装.md",
-    "前端/项目记录.md",
     "前端/前端note/VUE/响应式原理和数据双向绑定.md",
     "前端/前端note/VUE/proxy.md",
-    "Pasted image 20230401194759.png",
-    "入党相关时间.md",
-    "面试题/未命名.md"
+    "Pasted image 20230401194759.png"
   ]
 }
