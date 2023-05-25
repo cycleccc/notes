@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试题/Css/Css.md",
+                "file": "面试题/JavaScript/JavaScript.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试题/Css/Css.md",
+                "file": "面试题/JavaScript/JavaScript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试题/Css/Css.md",
+                "file": "面试题/JavaScript/JavaScript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试题/Css/Css.md"
+                "file": "面试题/JavaScript/JavaScript.md"
               }
             }
           }
@@ -157,9 +157,9 @@
   },
   "active": "df7d0bfef88a9b76",
   "lastOpenFiles": [
+    "面试题/Css/Css.md",
     "面试题/Html/Html.md",
     "前端/前端note/网络/浏览器缓存机制.md",
-    "面试题/Css/Css.md",
     "面试题/算法/剑指offer.md",
     "面试题/JavaScript/JavaScript.md",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
