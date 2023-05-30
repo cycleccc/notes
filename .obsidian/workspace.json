@@ -11,8 +11,12 @@
             "id": "df7d0bfef88a9b76",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "生活/羽毛球/doujiang_todolist.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "生活/羽毛球/doujiang_todolist.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "生活/羽毛球/doujiang_todolist.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "生活/羽毛球/doujiang_todolist.md"
+              }
             }
           }
         ],
@@ -147,7 +155,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "df7d0bfef88a9b76",
+  "active": "d82701bc35b5884f",
   "lastOpenFiles": [
     "生活/羽毛球/doujiang_todolist.md",
     "21eee8e3223a4fb1baafd4e93b06fec4.gif",
