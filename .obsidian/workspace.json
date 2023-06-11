@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试题/面试总结.md",
+                "file": "面试题/Js面试题手册/Js面试题手册.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试题/面试总结.md",
+                "file": "面试题/Js面试题手册/Js面试题手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试题/面试总结.md",
+                "file": "面试题/Js面试题手册/Js面试题手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试题/面试总结.md"
+                "file": "面试题/Js面试题手册/Js面试题手册.md"
               }
             }
           }
@@ -157,15 +157,16 @@
   },
   "active": "91faf4e68641ba01",
   "lastOpenFiles": [
+    "面试题/算法/智力题.md",
+    "面试题/Js面试题手册/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
+    "面试题/面试总结.md",
     "面试题/Js面试题手册/Js面试题手册.md",
     "面试题/README.md",
     "面试题/test.md",
     "未命名.canvas",
     "生活/羽毛球/doujiang_todolist.md",
     "毕业论文/王海峰_论文_ TodoList.md",
-    "面试题/面试总结.md",
     "面试题/面试记录/面试记录.md",
-    "面试题/算法/智力题.md",
     "面试题/算法/算法.md",
     "面试题/算法/剑指offer.md",
     "面试题/Html/Html.md",
@@ -175,7 +176,6 @@
     "面试题/操作系统/计算机操作系统.md",
     "面试题/Js面试题手册/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
     "面试题/Js面试题手册/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.003.jpeg",
-    "面试题/Js面试题手册/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
     "面试题/Js面试题手册/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
     "面试题/Js面试题手册",
     "Pasted image 20230611151416.png",
@@ -199,7 +199,6 @@
     "前端/前端note/网络/axios封装.md",
     "前端/项目记录.md",
     "前端/js/js原型链.md",
-    "前端/js/js块级作用域、函数作用域、全局作用域.md",
     "面试题/算法",
     "面试题/面试记录",
     "面试题/计算机网络",
