@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "efcaa05910095e00",
+        "id": "1eb692369a4b7f70",
         "type": "tabs",
         "children": [
           {
-            "id": "97bc6aac707bee6c",
+            "id": "91faf4e68641ba01",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试题/Js面试题手册/Js面试题手册.md",
+                "file": "面试题/面试总结.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试题/Js面试题手册/Js面试题手册.md",
+                "file": "面试题/面试总结.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试题/Js面试题手册/Js面试题手册.md",
+                "file": "面试题/面试总结.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试题/Js面试题手册/Js面试题手册.md"
+                "file": "面试题/面试总结.md"
               }
             }
           }
@@ -156,11 +155,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "97bc6aac707bee6c",
+  "active": "91faf4e68641ba01",
   "lastOpenFiles": [
+    "面试题/Js面试题手册/Js面试题手册.md",
+    "面试题/README.md",
+    "面试题/test.md",
+    "未命名.canvas",
     "生活/羽毛球/doujiang_todolist.md",
     "毕业论文/王海峰_论文_ TodoList.md",
-    "面试题/Js面试题手册/Js面试题手册.md",
     "面试题/面试总结.md",
     "面试题/面试记录/面试记录.md",
     "面试题/算法/智力题.md",
@@ -198,12 +200,9 @@
     "前端/项目记录.md",
     "前端/js/js原型链.md",
     "前端/js/js块级作用域、函数作用域、全局作用域.md",
-    "面试题/test.md",
-    "面试题/README.md",
     "面试题/算法",
     "面试题/面试记录",
     "面试题/计算机网络",
-    "面试题/工具",
-    "未命名.canvas"
+    "面试题/工具"
   ]
 }
