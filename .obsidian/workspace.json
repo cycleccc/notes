@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "毕业论文/王海峰_论文_ TodoList.md",
+                "file": "面试题/Js面试题手册/Js面试题手册.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5
+    "width": 251.5,
+    "collapsed": true
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "毕业论文/王海峰_论文_ TodoList.md",
+                "file": "面试题/Js面试题手册/Js面试题手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "毕业论文/王海峰_论文_ TodoList.md",
+                "file": "面试题/Js面试题手册/Js面试题手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "毕业论文/王海峰_论文_ TodoList.md"
+                "file": "面试题/Js面试题手册/Js面试题手册.md"
               }
             }
           }
@@ -155,8 +156,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "97bc6aac707bee6c",
   "lastOpenFiles": [
+    "生活/羽毛球/doujiang_todolist.md",
+    "毕业论文/王海峰_论文_ TodoList.md",
     "面试题/Js面试题手册/Js面试题手册.md",
     "面试题/面试总结.md",
     "面试题/面试记录/面试记录.md",
@@ -168,7 +171,6 @@
     "面试题/计算机网络/计算机网络.md",
     "面试题/工具/工具.md",
     "面试题/操作系统/计算机操作系统.md",
-    "毕业论文/王海峰_论文_ TodoList.md",
     "面试题/Js面试题手册/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
     "面试题/Js面试题手册/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.003.jpeg",
     "面试题/Js面试题手册/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
@@ -186,7 +188,6 @@
     "面试自我介绍.md",
     "入党相关时间.md",
     "Quick Start.md",
-    "生活/羽毛球/doujiang_todolist.md",
     "面试题/JavaScript/JavaScript.md",
     "未命名.md",
     "生活/羽毛球",
