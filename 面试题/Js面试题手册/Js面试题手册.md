@@ -588,7 +588,8 @@ history和hash的差异主要有以下点：
 2. 组件方式
 	使用组件包裹需要权限控制的按钮，该按钮需要的权限码通过value属性传入。
 3. 自定义指令
-	
+	自定义指令由一个包含类似组件声明周期钩子的对象来定义。钩子函数会接收到指令所绑定元素作为其参数。参数一般包括el和binding。
+	[自定义指令 | Vue.js (vuejs.org)](https://cn.vuejs.org/guide/reusability/custom-directives.html#custom-directives)
 
 # <a name="_toc19066"></a><a name="_toc32005"></a>**http面试题**
 ## <a name="_toc21777"></a>**http与https**
