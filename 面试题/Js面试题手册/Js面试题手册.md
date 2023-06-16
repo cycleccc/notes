@@ -590,6 +590,10 @@ history和hash的差异主要有以下点：
 3. 自定义指令
 	自定义指令由一个包含类似组件声明周期钩子的对象来定义。钩子函数会接收到指令所绑定元素作为其参数。参数一般包括el和binding。
 	[自定义指令 | Vue.js (vuejs.org)](https://cn.vuejs.org/guide/reusability/custom-directives.html#custom-directives)
+## keep-alive
+开发中缓存组件使用keep-alive组件，keep-alive包裹动态组件时会缓存不活动的组件实例，而不销毁它们。
+使用include白名单、exclude黑名单属性来匹配或排除组件缓存。使用max属性限定最多缓存多少个实例，一旦达到这个数字，新实例被创建之前，会销毁一缓存zu'ji
+
 
 # <a name="_toc19066"></a><a name="_toc32005"></a>**http面试题**
 ## <a name="_toc21777"></a>**http与https**
