@@ -592,7 +592,8 @@ history和hash的差异主要有以下点：
 	[自定义指令 | Vue.js (vuejs.org)](https://cn.vuejs.org/guide/reusability/custom-directives.html#custom-directives)
 ## keep-alive
 开发中缓存组件使用keep-alive组件，keep-alive包裹动态组件时会缓存不活动的组件实例，而不销毁它们。
-使用include白名单、exclude黑名单属性来匹配或排除组件缓存。使用max属性限定最多缓存多少个实例，一旦达到这个数字，新实例被创建之前，会销毁一缓存zu'ji
+使用include白名单、exclude黑名单属性来匹配或排除组件缓存。使用max属性限定最多缓存多少个实例，一旦达到这个数字，新实例被创建之前，会销毁一缓存组件中最久没有被访问的实例（LRU算法）
+
 
 
 # <a name="_toc19066"></a><a name="_toc32005"></a>**http面试题**
