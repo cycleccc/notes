@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5
+    "width": 251.5,
+    "collapsed": true
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -155,7 +156,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "6aa44c9d7c0bfb1f",
   "lastOpenFiles": [
     "生活/菜.md",
     "Pasted image 20230611151416.png",
