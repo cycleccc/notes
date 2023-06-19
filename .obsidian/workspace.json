@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/菜.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/菜.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/菜.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md"
+                "file": "生活/菜.md"
               }
             }
           }
@@ -157,9 +157,9 @@
   },
   "active": "6aa44c9d7c0bfb1f",
   "lastOpenFiles": [
+    "面试题/Js面试题/面试题手册.md",
     "面试题/面试总结.md",
     "生活/游泳.md",
-    "面试题/Js面试题/面试题手册.md",
     "生活/菜.md",
     "Pasted image 20230611151416.png",
     "未命名.canvas",
