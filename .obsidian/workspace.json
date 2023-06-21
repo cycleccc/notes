@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "57c1026e6629aa34",
+        "id": "1a548afbbaf270ca",
         "type": "tabs",
         "children": [
           {
-            "id": "6aa44c9d7c0bfb1f",
+            "id": "edc9d1d7b37797d9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/未命名.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md"
+                "file": "生活/未命名.md"
               }
             }
           }
@@ -156,14 +155,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "6aa44c9d7c0bfb1f",
+  "active": "edc9d1d7b37797d9",
   "lastOpenFiles": [
-    "生活/菜.md",
-    "面试题/Js面试题/面试题手册.md",
     "面试题/面试总结.md",
+    "生活/未命名.md",
+    "未命名 1.canvas",
+    "未命名.canvas",
+    "面试题/Js面试题/面试题手册.md",
+    "生活/菜.md",
     "生活/游泳.md",
     "Pasted image 20230611151416.png",
-    "未命名.canvas",
     "Pasted image 20230611150504.png",
     "IMG_20230611_150543.jpg",
     "Pasted image 20230611151339.png",
