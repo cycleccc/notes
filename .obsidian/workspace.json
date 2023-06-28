@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/now_todolist.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/now_todolist.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/now_todolist.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md"
+                "file": "生活/now_todolist.md"
               }
             }
           }
@@ -158,24 +157,25 @@
   },
   "active": "edc9d1d7b37797d9",
   "lastOpenFiles": [
-    "面试题/Js面试题/面试题手册.md",
+    "生活/菜.md",
+    "生活/now_todolist.md",
     "生活/歌.md",
+    "生活/游泳.md",
+    "生活/羽毛球/doujiang_todolist.md",
+    "生活/羽毛球/555364458c244915a0ae357961ff0a4a.gif",
+    "生活/羽毛球/65947ffb585546c3bc4e24a637b37ca1.gif",
+    "生活/羽毛球/61741feda83b461183d88fca1c61e90d.gif",
+    "生活/羽毛球/21eee8e3223a4fb1baafd4e93b06fec4.gif",
+    "生活/羽毛球/9c7909ef54e748fdbd95470c1ba36a2f.gif",
+    "生活/羽毛球/8a66c5b88fc44fe88bfeb70a6afc7cb4.gif",
+    "面试题/Js面试题/面试题手册.md",
     "面试题/面试总结.md",
     "未命名 1.canvas",
     "未命名.canvas",
-    "生活/菜.md",
-    "生活/游泳.md",
     "Pasted image 20230611151416.png",
     "Pasted image 20230611150504.png",
     "IMG_20230611_150543.jpg",
     "Pasted image 20230611151339.png",
-    "Pasted image 20230611150942.png",
-    "Pasted image 20230611150830.png",
-    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
-    "20230611151201.png",
-    "生活/羽毛球/555364458c244915a0ae357961ff0a4a.gif",
-    "生活/羽毛球/65947ffb585546c3bc4e24a637b37ca1.gif",
-    "生活/羽毛球/doujiang_todolist.md",
     "面试题/计算机网络/计算机网络.md",
     "未命名.md",
     "面试题/算法/智力题.md",
@@ -201,7 +201,6 @@
     "生活",
     "面试题/Css/Css.md",
     "前端/前端note/网络/浏览器缓存机制.md",
-    "前端/前端note/网络/axios封装.md",
     "面试题/算法",
     "面试题/面试记录",
     "面试题/计算机网络",
