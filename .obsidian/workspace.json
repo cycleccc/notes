@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1a548afbbaf270ca",
+        "id": "5f1d4f23911bc56f",
         "type": "tabs",
         "children": [
           {
-            "id": "edc9d1d7b37797d9",
+            "id": "bc615e036e9cad61",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/健身/doujiang_waist_exercise.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/健身/doujiang_waist_exercise.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "生活/健身/doujiang_waist_exercise.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md"
+                "file": "生活/健身/doujiang_waist_exercise.md"
               }
             }
           }
@@ -155,8 +154,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "edc9d1d7b37797d9",
+  "active": "bc615e036e9cad61",
   "lastOpenFiles": [
+    "生活/未命名.md",
+    "生活/健身/doujiang_waist_exercise.md",
+    "生活/健身",
+    "面试题/Js面试题/面试题手册.md",
     "生活/now_todolist.md",
     "生活/菜.md",
     "生活/歌.md",
@@ -168,7 +171,6 @@
     "生活/羽毛球/21eee8e3223a4fb1baafd4e93b06fec4.gif",
     "生活/羽毛球/9c7909ef54e748fdbd95470c1ba36a2f.gif",
     "生活/羽毛球/8a66c5b88fc44fe88bfeb70a6afc7cb4.gif",
-    "面试题/Js面试题/面试题手册.md",
     "面试题/面试总结.md",
     "未命名 1.canvas",
     "未命名.canvas",
@@ -199,11 +201,8 @@
     "面试题/JavaScript/JavaScript.md",
     "生活/羽毛球",
     "生活",
-    "面试题/Css/Css.md",
-    "前端/前端note/网络/浏览器缓存机制.md",
     "面试题/算法",
     "面试题/面试记录",
-    "面试题/计算机网络",
-    "面试题/工具"
+    "面试题/计算机网络"
   ]
 }
