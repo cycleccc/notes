@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "面试/项目.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "面试/项目.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md",
+                "file": "面试/项目.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试题/Js面试题/面试题手册.md"
+                "file": "面试/项目.md"
               }
             }
           }
@@ -158,9 +157,14 @@
   },
   "active": "0dbc0e87341687ab",
   "lastOpenFiles": [
-    "面试题/面试总结.md",
+    "面试/面试总结.assets/image-20220518155959224-16528608028981.png",
+    "面试/项目.md",
+    "面试题/面试记录/面试记录.md",
+    "面试/Js面试题/面试题手册.md",
+    "面试题/计算机网络/计算机网络.md",
+    "前端/项目记录.md",
+    "面试/面试总结.md",
     "生活/游泳.md",
-    "面试题/Js面试题/面试题手册.md",
     "生活/健身/doujiang_waist_exercise.md",
     "生活/健身/Pasted image 20230630162016.png",
     "生活/健身/Pasted image 20230630162012.png",
@@ -179,27 +183,22 @@
     "生活/羽毛球/65947ffb585546c3bc4e24a637b37ca1.gif",
     "生活/羽毛球/61741feda83b461183d88fca1c61e90d.gif",
     "生活/羽毛球/21eee8e3223a4fb1baafd4e93b06fec4.gif",
-    "生活/羽毛球/9c7909ef54e748fdbd95470c1ba36a2f.gif",
     "未命名 1.canvas",
     "未命名.canvas",
-    "面试题/计算机网络/计算机网络.md",
     "未命名.md",
     "面试题/算法/智力题.md",
     "面试题/README.md",
     "面试题/test.md",
     "毕业论文/王海峰_论文_ TodoList.md",
-    "面试题/面试记录/面试记录.md",
     "面试题/算法/算法.md",
     "面试题/算法/剑指offer.md",
     "面试题/Html/Html.md",
     "面试题/工具/工具.md",
     "面试题/操作系统/计算机操作系统.md",
-    "面试题/Js面试题",
-    "毕业论文/论文TodoList.md",
+    "面试/Js面试题",
     "未命名 1",
     "未命名",
     "王海峰_论文_ TodoList",
-    "面试自我介绍.md",
     "生活/羽毛球",
     "生活",
     "面试题/算法",
