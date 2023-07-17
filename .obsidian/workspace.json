@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "a48d2155d3a79060",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "面试/项目.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试/面试题/面试题手册.md",
+                "file": "面试/项目.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试/面试题/面试题手册.md",
+                "file": "面试/项目.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/面试题/面试题手册.md"
+                "file": "面试/项目.md"
               }
             }
           }
@@ -155,15 +168,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "a48d2155d3a79060",
   "lastOpenFiles": [
+    "面试/面试题/面试题手册.md",
+    "面试/面试总结.md",
     "面试/项目.md",
     "面试/面试总结.assets/image-20220518155959224-16528608028981.png",
     "面试题/面试记录/面试记录.md",
-    "面试/面试题/面试题手册.md",
     "面试题/计算机网络/计算机网络.md",
     "前端/项目记录.md",
-    "面试/面试总结.md",
     "生活/游泳.md",
     "生活/健身/doujiang_waist_exercise.md",
     "生活/健身/Pasted image 20230630162016.png",
