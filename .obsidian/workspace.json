@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Quick Start.md",
+                "file": "面试/面试题/面试题手册.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Quick Start.md",
+                "file": "面试/面试题/面试题手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Quick Start.md",
+                "file": "面试/面试题/面试题手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Quick Start.md"
+                "file": "面试/面试题/面试题手册.md"
               }
             }
           }
@@ -142,8 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,14 +156,15 @@
   },
   "active": "cb1c06c41647795b",
   "lastOpenFiles": [
-    "面试/面试题/面试题手册.md",
     "面试/面试题/面试题手册.pdf",
+    "面试/项目.md",
     "面试/面试总结.md",
+    "面试/面试题/面试题手册.md",
+    "Quick Start.md",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "前端/REACT NATIVE",
     "未命名.md",
     "未命名",
-    "面试/项目.md",
     "面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
     "面试/面试总结.assets/image-20220518155959224-16528608028981.png",
     "面试题/面试记录/面试记录.md",
@@ -179,7 +179,6 @@
     "生活/健身/Pasted image 20230630161333.png",
     "生活/健身/Pasted image 20230630161331.png",
     "[.md",
-    "Quick Start.md",
     "生活/未命名.md",
     "生活/健身",
     "生活/now_todolist.md",
