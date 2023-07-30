@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5672872ac38262e7",
+        "id": "33cd5f24f2abb354",
         "type": "tabs",
         "children": [
           {
-            "id": "ba5eddf936291cca",
+            "id": "f246f9fd905a5d2b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/面试自我介绍.md",
+                "file": "面试/面试题/面试题手册.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试/面试自我介绍.md",
+                "file": "面试/面试题/面试题手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试/面试自我介绍.md",
+                "file": "面试/面试题/面试题手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/面试自我介绍.md"
+                "file": "面试/面试题/面试题手册.md"
               }
             }
           }
@@ -154,8 +154,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "f246f9fd905a5d2b",
   "lastOpenFiles": [
+    "面试/面试自我介绍.md",
     "入党相关时间.md",
     "面试/面试题/面试题手册.md",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
@@ -197,7 +198,6 @@
     "面试题/算法/剑指offer.md",
     "面试题/Html/Html.md",
     "面试题/工具/工具.md",
-    "面试题/操作系统/计算机操作系统.md",
     "面试/面试题",
     "未命名 1",
     "王海峰_论文_ TodoList",
