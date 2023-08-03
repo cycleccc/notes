@@ -11,9 +11,11 @@
             "id": "f246f9fd905a5d2b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "面试/项目.pdf"
+                "file": "面试/面试题/面试题手册.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -91,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试/项目.pdf",
+                "file": "面试/面试题/面试题手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试/项目.pdf",
+                "file": "面试/面试题/面试题手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/项目.pdf"
+                "file": "面试/面试题/面试题手册.md"
               }
             }
           }
@@ -154,8 +156,8 @@
   },
   "active": "f246f9fd905a5d2b",
   "lastOpenFiles": [
-    "面试/项目.md",
     "面试/项目.pdf",
+    "面试/项目.md",
     "面试/面试题/面试题手册.md",
     "Quick Start.md",
     "面试/面试总结.md",
