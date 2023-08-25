@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "面试/面试题/面试题手册.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2ab23c1c4ecdedf2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Quick Start.md",
                 "mode": "source",
                 "source": false
@@ -93,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Quick Start.md",
+                "file": "面试/面试题/面试题手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Quick Start.md",
+                "file": "面试/面试题/面试题手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Quick Start.md"
+                "file": "面试/面试题/面试题手册.md"
               }
             }
           }
@@ -154,8 +166,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "523ef25b9ee348ee",
   "lastOpenFiles": [
+    "Quick Start.md",
     "面试/面试题/面试题手册.md",
     "面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png",
     "面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png.crdownload",
@@ -168,7 +181,6 @@
     "面试/面试题/Pasted image 20230825214920.png",
     "前端/职业规划.md",
     "面试/你还有什么想问的吗.md",
-    "Quick Start.md",
     "面试/面试题/面试题手册.pdf",
     "面试/跳槽/简历修改.md",
     "面试/项目.md",
