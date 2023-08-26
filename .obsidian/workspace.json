@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -106,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试/面试题/面试题手册.md",
+                "file": "Quick Start.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试/面试题/面试题手册.md",
+                "file": "Quick Start.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/面试题/面试题手册.md"
+                "file": "Quick Start.md"
               }
             }
           }
@@ -167,10 +168,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "523ef25b9ee348ee",
+  "active": "2ab23c1c4ecdedf2",
   "lastOpenFiles": [
-    "Quick Start.md",
     "面试/面试题/面试题手册.md",
+    "Quick Start.md",
     "面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png",
     "面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png.crdownload",
     "Pasted.md",
