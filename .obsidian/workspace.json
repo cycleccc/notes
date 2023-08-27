@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/面试题/面试题手册.md",
+                "file": "前端/读书笔记/深入浅出nodejs.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,8 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -106,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试/面试题/面试题手册.md",
+                "file": "前端/读书笔记/深入浅出nodejs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试/面试题/面试题手册.md",
+                "file": "前端/读书笔记/深入浅出nodejs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/面试题/面试题手册.md"
+                "file": "前端/读书笔记/深入浅出nodejs.md"
               }
             }
           }
@@ -169,8 +168,10 @@
   },
   "active": "c62ce70166111d64",
   "lastOpenFiles": [
-    "Quick Start.md",
     "面试/面试题/面试题手册.md",
+    "前端/读书笔记/深入浅出nodejs.md",
+    "前端/读书笔记",
+    "Quick Start.md",
     "面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png",
     "面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png.crdownload",
     "Pasted.md",
@@ -214,7 +215,6 @@
     "未命名 1.canvas",
     "未命名.canvas",
     "面试题/算法/智力题.md",
-    "面试题/README.md",
-    "面试/面试题"
+    "面试题/README.md"
   ]
 }
