@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c62ce70166111d64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "temp/temp.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2ab23c1c4ecdedf2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Quick Start.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c7b61ca68a0c468f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/面试题/面试题手册.md",
+                "file": "前端/文章/如何学习REACT源码.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -118,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "temp/temp.md",
+                "file": "前端/文章/如何学习REACT源码.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "temp/temp.md",
+                "file": "前端/文章/如何学习REACT源码.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "temp/temp.md"
+                "file": "前端/文章/如何学习REACT源码.md"
               }
             }
           }
@@ -179,11 +154,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c62ce70166111d64",
+  "active": "c7b61ca68a0c468f",
   "lastOpenFiles": [
+    "面试/面试题/面试题手册.md",
+    "前端/文章/如何学习REACT源码.md",
+    "前端/文章",
     "Quick Start.md",
     "temp/temp.md",
-    "面试/面试题/面试题手册.md",
     "面试/面试题/面试题手册.pdf",
     "temp",
     "前端/读书笔记/深入浅出nodejs.md",
@@ -223,7 +200,6 @@
     "生活/羽毛球/doujiang_todolist.md",
     "[.md",
     "生活/未命名.md",
-    "生活/健身",
     "生活/now_todolist.md",
     "生活/歌.md",
     "未命名 1.canvas",

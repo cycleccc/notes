@@ -4,7 +4,11 @@
 4. 前端路由
 	- hash和history模式如何设置
 	- hash和history模式的实现原理（浏览器的两种API）
-5. TCP三次握手（回合）
+5. TCP三次握手（会和HTTPS一起问）
 6. https：tls原理
 7. http3.0：QUIC协议
-8. 
+8. WebSocket
+9. WebWorker
+10. ServiceWorker
+11. WebAssembly
+12. WebRTC
