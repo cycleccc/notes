@@ -1,0 +1,10 @@
+1. 跨域的几种方式（基本怼着jsonp问）
+2. 事件模型、事件代理
+3. web攻击：XSS、CSRF原理和防御措施
+4. 前端路由
+	- hash和history模式如何设置
+	- hash和history模式的实现原理（浏览器的两种API）
+5. TCP三次握手（回合）
+6. https：tls原理
+7. http3.0：QUIC协议
+8. 
