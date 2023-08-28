@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 生词
+- from scratch：从头开始
+- nonessential：非本质的；非必须的
+- Concurrent：并发的
+- Reconciliation：调和；和好
