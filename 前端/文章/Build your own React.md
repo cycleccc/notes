@@ -23,3 +23,4 @@
 - nonessential：非本质的；非必须的
 - Concurrent：并发的
 - Reconciliation：调和；和好
+- concept：概念
