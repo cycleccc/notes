@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/Build your own React.md",
+                "file": "面试/面试题/面试题手册.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/Build your own React.md",
+                "file": "面试/面试题/面试题手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/Build your own React.md",
+                "file": "面试/面试题/面试题手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/Build your own React.md"
+                "file": "面试/面试题/面试题手册.md"
               }
             }
           }
@@ -143,8 +143,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 325.5,
-    "collapsed": true
+    "width": 325.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -158,8 +157,8 @@
   },
   "active": "c7b61ca68a0c468f",
   "lastOpenFiles": [
-    "面试/面试题/面试题手册.md",
     "前端/文章/Build your own React.md",
+    "面试/面试题/面试题手册.md",
     "前端/文章",
     "Quick Start.md",
     "temp/temp.md",
