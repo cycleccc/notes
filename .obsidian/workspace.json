@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/项目.md",
+                "file": "前端/文章/Build your own React.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试/项目.md",
+                "file": "前端/文章/Build your own React.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试/项目.md",
+                "file": "前端/文章/Build your own React.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/项目.md"
+                "file": "前端/文章/Build your own React.md"
               }
             }
           }
@@ -167,14 +167,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "6efb0bea00fb0700",
   "lastOpenFiles": [
+    "Quick Start.md",
+    "temp/temp.md",
+    "面试/项目.md",
     "面试/你还有什么想问的吗.md",
     "面试/面试题/面试题手册.md",
     "前端/文章/Build your own React.md",
     "前端/文章",
-    "Quick Start.md",
-    "temp/temp.md",
     "面试/面试题/面试题手册.pdf",
     "temp",
     "前端/读书笔记/深入浅出nodejs.md",
@@ -190,7 +191,6 @@
     "面试/面试题/Pasted image 20230825214920.png",
     "前端/职业规划.md",
     "面试/跳槽/简历修改.md",
-    "面试/项目.md",
     "面试/面试自我介绍.md",
     "面试/项目.pdf",
     "面试/面试总结.md",
