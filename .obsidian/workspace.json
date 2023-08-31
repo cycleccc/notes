@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "6efb0bea00fb0700",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/文章/Build your own React.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/Build your own React.md",
+                "file": "面试/面试题/面试题手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/Build your own React.md",
+                "file": "面试/面试题/面试题手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/Build your own React.md"
+                "file": "面试/面试题/面试题手册.md"
               }
             }
           }
@@ -167,14 +154,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "6efb0bea00fb0700",
+  "active": "c7b61ca68a0c468f",
   "lastOpenFiles": [
+    "生活/健身/doujiang_waist_exercise.md",
+    "生活/doujiang/打球记录.md",
+    "前端/文章/Build your own React.md",
+    "面试/面试题/面试题手册.md",
     "Quick Start.md",
     "temp/temp.md",
     "面试/项目.md",
     "面试/你还有什么想问的吗.md",
-    "面试/面试题/面试题手册.md",
-    "前端/文章/Build your own React.md",
     "前端/文章",
     "面试/面试题/面试题手册.pdf",
     "temp",
@@ -200,7 +189,6 @@
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "生活/菜.md",
     "生活/游泳.md",
-    "生活/doujiang/打球记录.md",
     "生活/doujiang",
     "前端/REACT NATIVE",
     "未命名.md",
@@ -208,7 +196,6 @@
     "面试题/面试记录/面试记录.md",
     "面试题/计算机网络/计算机网络.md",
     "前端/项目记录.md",
-    "生活/健身/doujiang_waist_exercise.md",
     "生活/健身/Pasted image 20230630162016.png",
     "生活/羽毛球/doujiang_todolist.md",
     "[.md",

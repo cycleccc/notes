@@ -7,17 +7,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 # 生词
 - from scratch：从头开始
 - nonessential：非本质的；非必须的
