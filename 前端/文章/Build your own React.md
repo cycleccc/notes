@@ -15,3 +15,4 @@
 - concept：概念
 - vanilla：香草味的；普通的；寻常的
 - sibling：兄弟；兄弟姐妹；同胞
+- Reconciliation：调和；和好；对帐
