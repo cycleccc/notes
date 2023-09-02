@@ -18,22 +18,14 @@
 
 而在源码内部，为了支持这些特性，同样需要将**同步的更新**变为**可中断的异步更新**。
 
-
-
-
-
-
-
-
-
-
 ## 第二章 老的React架构
-**React15架构**
+### React15架构
 - Reconciler（协调器）—— 负责找出变化的组件
 - Renderer（渲染器）—— 负责将变化的组件渲染到页面上
 
-### Reconciler（协调器）
-	在`React`中可以通过`this.setState`、`this.forceUpdate`、`ReactDOM.render`等API触发更新。
+#### Reconciler（协调器）
+在`React`中可以通过`this.setState`、`this.forceUpdate`、`ReactDOM.render`等API触发更新。
+
 **做了什么**
 每当有更新发生时，**Reconciler**会做如下工作：
 
@@ -41,6 +33,48 @@
 - 将虚拟DOM和上次更新时的虚拟DOM对比
 - 通过对比找出本次更新中变化的虚拟DOM
 - 通知**Renderer**将变化的虚拟DOM渲染到页面上
+#### Renderer（渲染器）
+由于`React`支持跨平台，所以不同平台有不同的**Renderer**。我们前端最熟悉的是负责在浏览器环境渲染的**Renderer** —— [ReactDOM](https://www.npmjs.com/package/react-dom)
+
+除此之外，还有：
+
+- [ReactNative](https://www.npmjs.com/package/react-native)渲染器，渲染App原生组件
+- [ReactTest](https://www.npmjs.com/package/react-test-renderer)渲染器，渲染出纯Js对象用于测试
+- [ReactArt](https://www.npmjs.com/package/react-art)渲染器，渲染到Canvas, SVG 或 VML (IE8)
+
+在每次更新发生时，**Renderer**接到**Reconciler**通知，将变化的组件渲染在当前宿主环境。
+
+### React15架构的缺点
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 生词
 - from scratch：从头开始
 - nonessential：非本质的；非必须的
