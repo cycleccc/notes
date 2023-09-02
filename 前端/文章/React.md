@@ -1,4 +1,5 @@
-# 第一章 react理念
+# 理念篇
+## 第一章 React理念
 ## react理念
 	React 是用 JavaScript 构建**快速响应**的大型 Web 应用程序的首选方式。它在 Facebook 和 Instagram 上表现优秀。·
 ## CUP瓶颈
@@ -25,6 +26,21 @@
 
 
 
+
+## 第二章 老的React架构
+**React15架构**
+- Reconciler（协调器）—— 负责找出变化的组件
+- Renderer（渲染器）—— 负责将变化的组件渲染到页面上
+
+### Reconciler（协调器）
+	在`React`中可以通过`this.setState`、`this.forceUpdate`、`ReactDOM.render`等API触发更新。
+**做了什么**
+每当有更新发生时，**Reconciler**会做如下工作：
+
+- 调用函数组件、或class组件的`render`方法，将返回的JSX转化为虚拟DOM
+- 将虚拟DOM和上次更新时的虚拟DOM对比
+- 通过对比找出本次更新中变化的虚拟DOM
+- 通知**Renderer**将变化的虚拟DOM渲染到页面上
 # 生词
 - from scratch：从头开始
 - nonessential：非本质的；非必须的
