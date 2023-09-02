@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b0f6a25f130380b4",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.5"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -154,7 +165,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "b0f6a25f130380b4",
   "lastOpenFiles": [
     "面试/面试题/面试题手册.md",
     "生活/健身/doujiang_waist_exercise.md",
