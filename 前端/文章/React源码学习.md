@@ -65,7 +65,17 @@
 `React`实现了功能更完备的`requestIdleCallback`polyfill，这就是**Scheduler**。除了在空闲时触发回调的功能外，**Scheduler**还提供了多种调度优先级供任务设置。
 
 #### Reconciler（协调器）
+React16更新工作从递归变成了可以中断的循环过程。每次循环都会调用`shouldYield`判断当前是否有剩余时间。
 
+**React16解决中断更新时DOM渲染不完全的问题呢**
+在React16中，**Reconciler**与**Renderer**不再是交替工作。当**Scheduler**将任务交给**Reconciler**后，**Reconciler**会为变化的虚拟DOM打上代表增/删/更新的标记，类似这样：
+
+```JavaScript
+export const Placement = /*             */ 0b0000000000010;
+export const Update = /*                */ 0b0000000000100;
+export const PlacementAndUpdate = /*    */ 0b0000000000110;
+export const Deletion = /*              */ 0b0000000001000;
+```
 
 
 
