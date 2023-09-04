@@ -77,8 +77,15 @@ export const PlacementAndUpdate = /*    */ 0b0000000000110;
 export const Deletion = /*              */ 0b0000000001000;
 ```
 
+整个**Scheduler**与**Reconciler**的工作都在内存中进行。只有当所有组件都完成**Reconciler**的工作，才会统一交给**Renderer**。
 
+#### Renderer（渲染器）
 
+**Renderer**根据**Reconciler**为虚拟DOM打的标记，同步执行对应的DOM操作。
+
+### Fiber架构的心智模型
+#### 什么是代数响应
+	`代数效应`是`函数式编程`中的一个概念，用于将`副作用`从`函数`调用中分离。
 
 
 
