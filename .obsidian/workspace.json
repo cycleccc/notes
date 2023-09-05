@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/React源码学习.md",
+                "file": "前端/学习笔记/egg.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/React源码学习.md",
+                "file": "前端/学习笔记/egg.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/React源码学习.md",
+                "file": "前端/学习笔记/egg.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/React源码学习.md"
+                "file": "前端/学习笔记/egg.md"
               }
             }
           }
@@ -157,15 +157,16 @@
   },
   "active": "04a4c2e14a37b3be",
   "lastOpenFiles": [
+    "前端/学习笔记/React源码学习.md",
+    "前端/学习笔记/egg.md",
     "面试/面试题/面试题手册.md",
-    "前端/文章/React源码学习.md",
     "生活/健身/doujiang_waist_exercise.md",
     "生活/doujiang/打球记录.md",
     "Quick Start.md",
     "temp/temp.md",
     "面试/项目.md",
     "面试/你还有什么想问的吗.md",
-    "前端/文章",
+    "前端/学习笔记",
     "面试/面试题/面试题手册.pdf",
     "temp",
     "前端/读书笔记/深入浅出nodejs.md",
@@ -202,7 +203,6 @@
     "[.md",
     "生活/未命名.md",
     "生活/now_todolist.md",
-    "生活/歌.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
