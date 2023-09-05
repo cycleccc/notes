@@ -128,7 +128,52 @@ export const Deletion = /*              */ 0b0000000001000;
 #### Fiber的三层含义
 1. 作为架构来说，之前`React15`的`Reconciler`采用递归的方式执行，数据保存在递归调用栈中，所以被称为`stack Reconciler`。`React16`的`Reconciler`基于`Fiber节点`实现，被称为`Fiber Reconciler`。
 2. 作为静态的数据结构来说，每个Fiber节点对应一个React element，保存了该组件的类型（函数组件/类组件/原生组件）、对应的DOM节点等信息。
-3. 作为动态的工作单元来说，每个Fiber节点保存了本次更新中该组件改变的状态、要执行的工作（需要被删除/被插入页面中）
+3. 作为动态的工作单元来说，每个Fiber节点保存了本次更新中该组件改变的状态、要执行的工作（需要被删除/被插入页面中/被更新...）
+
+#### Fiber的结构
+从上述三层含义来解析Fiber的属性
+1. 有作为静态数据结构的属性
+```JavaScript
+  this.tag = tag;
+  this.key = key;
+  this.elementType = null;
+  this.type = null;
+  this.stateNode = null;
+```
+2. 有用于连接其它Fiber节点形成Fiber树的属性
+```JavaScript
+  this.return = null;
+  this.child = null;
+  this.sibling = null;
+  this.index = 0;
+```
+3. 作为动态的工作单元的属性
+```JavaScript
+  this.pendingProps = pendingProps;
+  this.memoizedProps = null;
+  this.updateQueue = null;
+  this.memoizedState = null;
+  this.dependencies = null;
+```
+4. 调度优先级相关
+```
+  this.lanes = NoLanes;
+  this.childLanes = NoLanes;
+```
+
+### Fiber架构的工作原理
+#### 什么是双缓存
+**在内存中构建并直接替换**的技术叫做[双缓存 (opens new window)](https://baike.baidu.com/item/%E5%8F%8C%E7%BC%93%E5%86%B2)。
+
+`React`使用“双缓存”来完成`Fiber树`的构建与替换——对应着`DOM树`的创建与更新。
+
+#### 双缓存Fiber树
+
+
+
+
+
+
 
 
 
@@ -143,3 +188,4 @@ export const Deletion = /*              */ 0b0000000001000;
 - vanilla：香草味的；普通的；寻常的
 - sibling：兄弟；兄弟姐妹；同胞
 - Reconciliation：调和；和好；对帐
+- alternate：
