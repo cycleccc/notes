@@ -11,12 +11,8 @@
             "id": "04a4c2e14a37b3be",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/学习笔记/egg.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -77,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -94,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/egg.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/egg.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "前端/学习笔记/egg.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -157,8 +148,26 @@
   },
   "active": "04a4c2e14a37b3be",
   "lastOpenFiles": [
+    "前端/文章/React源码学习.md",
+    "前端/面试/面试题/面试题手册.pdf",
+    "前端/面试/面试题/面试题手册.md",
+    "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
+    "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.003.jpeg",
+    "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
+    "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
+    "前端/面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png",
+    "前端/面试/跳槽/简历修改.md",
+    "前端/面试/面试总结.assets/image-20220518155959224-16528608028981.png",
+    "前端/面试/项目.pdf",
+    "前端/面试/项目.md",
+    "前端/面试/面试题",
+    "前端/面试/面试总结.assets",
+    "前端/面试/跳槽",
+    "前端/面试/你还有什么想问的吗.md",
+    "前端/面试",
     "前端/学习笔记/React源码学习.md",
     "前端/学习笔记/egg.md",
+    "前端/学习笔记",
     "面试/面试题/面试题手册.md",
     "生活/健身/doujiang_waist_exercise.md",
     "生活/doujiang/打球记录.md",
@@ -166,43 +175,24 @@
     "temp/temp.md",
     "面试/项目.md",
     "面试/你还有什么想问的吗.md",
-    "前端/学习笔记",
+    "前端/文章",
     "面试/面试题/面试题手册.pdf",
     "temp",
     "前端/读书笔记/深入浅出nodejs.md",
-    "前端/读书笔记",
     "面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png",
-    "面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png.crdownload",
     "Pasted.md",
     "面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
     "面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
     "面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
-    "面试/面试题/Pasted image 20230825214914.png",
-    "面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.003.jpeg",
-    "面试/面试题/Pasted image 20230825214920.png",
     "前端/职业规划.md",
     "面试/跳槽/简历修改.md",
     "面试/面试自我介绍.md",
-    "面试/项目.pdf",
     "面试/面试总结.md",
-    "生活/日记",
-    "面试/跳槽",
     "入党相关时间.md",
-    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "生活/菜.md",
     "生活/游泳.md",
-    "生活/doujiang",
-    "前端/REACT NATIVE",
     "未命名.md",
-    "面试/面试总结.assets/image-20220518155959224-16528608028981.png",
     "面试题/面试记录/面试记录.md",
-    "面试题/计算机网络/计算机网络.md",
-    "前端/项目记录.md",
-    "生活/健身/Pasted image 20230630162016.png",
-    "生活/羽毛球/doujiang_todolist.md",
-    "[.md",
-    "生活/未命名.md",
-    "生活/now_todolist.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
