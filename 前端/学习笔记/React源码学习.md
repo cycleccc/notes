@@ -168,8 +168,17 @@ export const Deletion = /*              */ 0b0000000001000;
 `React`使用“双缓存”来完成`Fiber树`的构建与替换——对应着`DOM树`的创建与更新。
 
 #### 双缓存Fiber树
+在`React`中最多会同时存在两棵`Fiber树`。当前屏幕上显示内容对应的`Fiber树`称为`current Fiber树`，正在内存中构建的`Fiber树`称为`workInProgress Fiber树`。
 
+`current Fiber树`中的`Fiber节点`被称为`current fiber`，`workInProgress Fiber树`中的`Fiber节点`被称为`workInProgress fiber`，他们通过`alternate`属性连接。
 
+`React`应用的根节点通过使`current`指针在不同`Fiber树`的`rootFiber`间切换来完成`current Fiber`树指向的切换。
+
+即当`workInProgress Fiber树`构建完成交给`Renderer`渲染在页面上后，应用根节点的`current`指针指向`workInProgress Fiber树`，此时`workInProgress Fiber树`就变为`current Fiber树`。
+
+每次状态更新都会产生新的`workInProgress Fiber树`，通过`current`与`workInProgress`的替换，完成`DOM`更新。
+
+#### mount时构建/替换流程
 
 
 
@@ -188,4 +197,4 @@ export const Deletion = /*              */ 0b0000000001000;
 - vanilla：香草味的；普通的；寻常的
 - sibling：兄弟；兄弟姐妹；同胞
 - Reconciliation：调和；和好；对帐
-- alternate：
+- alternate：交替的；轮流的
