@@ -18,7 +18,7 @@
 
 而在源码内部，为了支持这些特性，同样需要将**同步的更新**变为**可中断的异步更新**。
 
-## 第二章 老的React架构
+## 老的React架构
 ### React15架构
 - Reconciler（协调器）—— 负责找出变化的组件
 - Renderer（渲染器）—— 负责将变化的组件渲染到页面上
@@ -49,7 +49,7 @@
 #### 递归更新的缺点
 由于递归执行，所以更新一旦开始，中途就无法中断。当层级很深时，递归更新时间超过了16ms，用户交互就会卡顿。
 
-### React16架构
+## React16架构
 - Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入**Reconciler**
 - Reconciler（协调器）—— 负责找出变化的组件
 - Renderer（渲染器）—— 负责将变化的组件渲染到页面上
@@ -83,7 +83,7 @@ export const Deletion = /*              */ 0b0000000001000;
 
 **Renderer**根据**Reconciler**为虚拟DOM打的标记，同步执行对应的DOM操作。
 
-### Fiber架构的心智模型
+## Fiber架构的心智模型
 #### 什么是代数响应
 	`代数效应`是`函数式编程`中的一个概念，用于将`副作用`从`函数`调用中分离。
 
@@ -119,7 +119,7 @@ export const Deletion = /*              */ 0b0000000001000;
 
 其中每个任务更新单元为`React Element`对应的`Fiber节点`。
 
-### Fiber架构的实现原理
+## Fiber架构的实现原理
 #### Fiber的起源
 在`React15`及以前，`Reconciler`采用递归的方式创建虚拟DOM，递归过程是不能中断的。如果组件树的层级很深，递归会占用线程很多时间，造成卡顿。
 
@@ -161,7 +161,7 @@ export const Deletion = /*              */ 0b0000000001000;
   this.childLanes = NoLanes;
 ```
 
-### Fiber架构的工作原理
+## Fiber架构的工作原理
 #### 什么是双缓存
 **在内存中构建并直接替换**的技术叫做[双缓存 (opens new window)](https://baike.baidu.com/item/%E5%8F%8C%E7%BC%93%E5%86%B2)。
 
@@ -178,8 +178,9 @@ export const Deletion = /*              */ 0b0000000001000;
 
 每次状态更新都会产生新的`workInProgress Fiber树`，通过`current`与`workInProgress`的替换，完成`DOM`更新。
 
-#### mount时构建/替换流程
+# 第二章 前置
 
+## 源码的文件结构
 
 
 
