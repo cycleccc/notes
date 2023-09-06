@@ -199,7 +199,11 @@ export const Deletion = /*              */ 0b0000000001000;
 ### JSX简介
 JSX（JavaScript XML）是一种JavaScript的扩展语法，用于在React中描述UI组件的结构。它允许您在JavaScript代码中编写类似HTML的标记，以更容易地创建React元素。
 
-React.createElement
+### React.createElement
+`React.createElement`最终会调用`ReactElement`方法返回一个包含组件数据的对象，该对象有个参数`$$typeof: REACT_ELEMENT_TYPE`标记了该对象是个`React Element`。
+
+### React Component
+
 
 
 
