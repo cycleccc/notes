@@ -178,13 +178,6 @@ export const Deletion = /*              */ 0b0000000001000;
 
 每次状态更新都会产生新的`workInProgress Fiber树`，通过`current`与`workInProgress`的替换，完成`DOM`更新。
 
-# 第二章 前置
-
-## 源码的文件结构
-
-### 顶层目录
-
-
 
 
 
