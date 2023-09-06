@@ -178,6 +178,25 @@ export const Deletion = /*              */ 0b0000000001000;
 
 每次状态更新都会产生新的`workInProgress Fiber树`，通过`current`与`workInProgress`的替换，完成`DOM`更新。
 
+# 第二章 前置
+
+## 源码的文件结构
+
+### 顶层目录
+除去配置文件和隐藏文件夹，根目录的文件夹包括三个：
+
+|目录|具体内容|
+|---|---|
+|fixtures/*|测试用例(示例)|
+|packages/*|React尚未编译的核心源码|
+|scripts/*|各种工具链的脚本|
+
+## 调试源码
+### 拉取源码
+
+
+## 深入理解JSX
+### JSX简介
 
 
 
