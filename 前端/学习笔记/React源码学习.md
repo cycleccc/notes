@@ -202,8 +202,16 @@ JSX（JavaScript XML）是一种JavaScript的扩展语法，用于在React中描
 ### React.createElement
 `React.createElement`最终会调用`ReactElement`方法返回一个包含组件数据的对象，该对象有个参数`$$typeof: REACT_ELEMENT_TYPE`标记了该对象是个`React Element`。
 
-### React Component
+### JSX与Fiber节点
+`JSX`是一种描述当前组件内容的数据结构，他不包含组件**schedule**、**reconcile**、**render**所需的相关信息。
 
+在组件`mount`时，`Reconciler`根据`JSX`描述的组件内容生成组件对应的`Fiber节点`。
+
+在`update`时，`Reconciler`将`JSX`与`Fiber节点`保存的数据对比，生成组件对应的`Fiber节点`，并根据对比结果为`Fiber节点`打上`标记`。
+
+# 第三章 render阶段
+## 流程概览
+### “递”阶段
 
 
 
