@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/学习笔记/React源码学习.md",
+                "file": "list/文章List.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/React源码学习.md",
+                "file": "list/文章List.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/React源码学习.md",
+                "file": "list/文章List.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/学习笔记/React源码学习.md"
+                "file": "list/文章List.md"
               }
             }
           }
@@ -156,9 +156,10 @@
   },
   "active": "04a4c2e14a37b3be",
   "lastOpenFiles": [
+    "Quick Start.md",
+    "前端/学习笔记/React源码学习.md",
     "前端/学习笔记/umi.md",
     "前端/职业规划.md",
-    "前端/学习笔记/React源码学习.md",
     "前端/学习笔记/dva.md",
     "前端/学习笔记/mongoose.md",
     "前端/学习笔记/egg.md",
@@ -185,7 +186,6 @@
     "面试/面试题/面试题手册.md",
     "生活/健身/doujiang_waist_exercise.md",
     "生活/doujiang/打球记录.md",
-    "Quick Start.md",
     "temp/temp.md",
     "面试/项目.md",
     "面试/你还有什么想问的吗.md",
