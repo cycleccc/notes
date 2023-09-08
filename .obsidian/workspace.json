@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -155,20 +154,19 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cf09dfe7734585f5",
+  "active": "d82701bc35b5884f",
   "lastOpenFiles": [
-    "list/文章List.md",
+    "前端/面试/面试题/面试题手册.pdf",
     "Quick Start.md",
+    "前端/学习笔记/mongoose.md",
     "前端/学习笔记/React源码学习.md",
+    "list/文章List.md",
     "前端/学习笔记/umi.md",
     "前端/职业规划.md",
     "前端/学习笔记/dva.md",
-    "前端/学习笔记/mongoose.md",
     "前端/学习笔记/egg.md",
-    "list/文章List.md",
     "list",
     "前端/文章/React源码学习.md",
-    "前端/面试/面试题/面试题手册.pdf",
     "前端/面试/面试题/面试题手册.md",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.003.jpeg",
@@ -203,7 +201,6 @@
     "面试/面试自我介绍.md",
     "面试/面试总结.md",
     "入党相关时间.md",
-    "生活/菜.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
