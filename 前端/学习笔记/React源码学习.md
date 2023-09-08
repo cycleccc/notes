@@ -212,9 +212,17 @@ JSX（JavaScript XML）是一种JavaScript的扩展语法，用于在React中描
 # 第三章 render阶段
 ## 流程概览
 ### “递”阶段
+首先从`rootFiber`开始向下深度优先遍历。为遍历到的每个`Fiber节点`调用[beginWork方法 (opens new window)](https://github.com/facebook/react/blob/970fa122d8188bafa600e9b5214833487fbf1092/packages/react-reconciler/src/ReactFiberBeginWork.new.js#L3058)。
+该方法会根据传入的`Fiber节点`创建`子Fiber节点`，并将这两个`Fiber节点`连接起来。
+当遍历到叶子节点（即没有子组件的组件）时就会进入“归”阶段。
 
+### “归”阶段
+首先从`rootFiber`开始向下深度优先遍历。为遍历到的每个`Fiber节点`调用[beginWork方法 (opens new window)](https://github.com/facebook/react/blob/970fa122d8188bafa600e9b5214833487fbf1092/packages/react-reconciler/src/ReactFiberBeginWork.new.js#L3058)。
+该方法会根据传入的`Fiber节点`创建`子Fiber节点`，并将这两个`Fiber节点`连接起来。
+当遍历到叶子节点（即没有子组件的组件）时就会进入“归”阶段。
+“递”和“归”阶段会交错执行直到“归”到`rootFiber`。至此，`render阶段`的工作就结束了。
 
-
+## beginWork
 
 
 # 生词

@@ -49,3 +49,12 @@ Response 是一个**请求级别的对象**，继承自 [Koa.Response](http://k
 - `config` - 应用的[配置](https://www.eggjs.org/zh-CN/basics/config)。
 - `service` - 应用所有的 [service](https://www.eggjs.org/zh-CN/basics/service)。
 - `logger` - 为当前 controller 封装的 logger 对象。
+
+- 控制器负责处理客户端请求和响应，它接收来自路由的请求，并根据请求的内容调用适当的Service方法来执行业务逻辑。
+- 控制器通常包含多个动作（Action），每个动作对应一个不同的HTTP请求路径和方法（GET、POST等）。
+- 控制器负责验证和处理请求参数，然后将结果返回给客户端。
+
+## Service
+- 服务是用于处理业务逻辑的组件。它们包含了应用程序的核心功能。例如数据库操作、数据处理、计算等。
+- 服务被控制器调用，以执行特定的业务操作。这有助于保持控制器的简洁性，将业务逻辑与控制器分离开来。
+- 服务通常包括多个方法，每个方法负责不同的业务操作，例如创建、读取、更新和删除数据等。
