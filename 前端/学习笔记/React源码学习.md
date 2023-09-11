@@ -223,8 +223,11 @@ JSX（JavaScript XML）是一种JavaScript的扩展语法，用于在React中描
 “递”和“归”阶段会交错执行直到“归”到`rootFiber`。至此，`render阶段`的工作就结束了。
 
 ## beginWork
+### 方法概览
+`beginWork`的工作可以分为两部分：
 
-
+- `update`时：如果`current`存在，在满足一定条件时可以复用`current`节点，这样就能克隆`current.child`作为`workInProgress.child`，而不需要新建`workInProgress.child`。
+- `mount`时：除`fiberRootNode`以外，`current === null`。会根据`fiber.tag`不同，创建不同类型的`子Fiber节点`
 # 生词
 - from scratch：从头开始
 - nonessential：非本质的；非必须的
