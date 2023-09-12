@@ -270,7 +270,15 @@ JSX（JavaScript XML）是一种JavaScript的扩展语法，用于在React中描
 1. 当`newChild`类型为`object`、`number`、`string`，代表同级只有一个节点
 2. 当`newChild`类型为`Array`，同级有多个节点
 
+## 单节点Diff
 
+React通过先判断`key`是否相同，如果`key`相同则判断`type`是否相同，只有都相同时一个`DOM节点`才能复用。
+
+- 当`child !== null`且`key相同`且`type不同`时执行`deleteRemainingChildren`将`child`及其兄弟`fiber`都标记删除。
+    
+- 当`child !== null`且`key不同`时仅将`child`标记删除。
+
+## 多节点Diff
 
 
 
