@@ -244,10 +244,24 @@ JSX（JavaScript XML）是一种JavaScript的扩展语法，用于在React中描
 
 # 第五章 Diff算法
 
+一个`DOM节点`在某一时刻最多会有4个节点和他相关。
 
+1. `current Fiber`。如果该`DOM节点`已在页面中，`current Fiber`代表该`DOM节点`对应的`Fiber节点`。
+2. `workInProgress Fiber`。如果该`DOM节点`将在本次更新中渲染到页面中，`workInProgress Fiber`代表该`DOM节点`对应的`Fiber节点`。
+3. `DOM节点`本身。
+4. `JSX对象`。即`ClassComponent`的`render`方法的返回结果，或`FunctionComponent`的调用结果。`JSX对象`中包含描述`DOM节点`的信息。
 
+`Diff算法`的本质是对比1和4，生成2。
 
+## Diff的瓶颈以及React如何应对
 
+为了降低算法复杂度，`React`的`diff`会预设三个限制：
+
+1. 只对同级元素进行`Diff`。如果一个`DOM节点`在前后两次更新中跨越了层级，那么`React`不会尝试复用他。
+    
+2. 两个不同类型的元素会产生出不同的树。如果元素由`div`变为`p`，React会销毁`div`及其子孙节点，并新建`p`及其子孙节点。
+    
+3. 开发者可以通过 `key prop`来暗示哪些子元素在不同的渲染下能保持稳定。
 
 
 
