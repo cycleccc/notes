@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#闭包",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -154,10 +155,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "aeebb53510e0ac5c",
+  "active": "69ed91a5b555014c",
   "lastOpenFiles": [
-    "前端/学习笔记/React源码学习.md",
     "前端/面试/面试题/面试题手册.md",
+    "前端/学习笔记/React源码学习.md",
     "新建文件夹",
     "前端/面试/面试题/面试题手册.pdf",
     "Quick Start.md",
