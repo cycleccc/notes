@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "86606891ef4d1065",
+        "id": "5ae0fc82ed54c759",
         "type": "tabs",
         "children": [
           {
-            "id": "aeebb53510e0ac5c",
+            "id": "25b856e01a8ea62b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#闭包",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -155,13 +154,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "69ed91a5b555014c",
+  "active": "25b856e01a8ea62b",
   "lastOpenFiles": [
-    "前端/面试/面试题/面试题手册.md",
+    "conflict-files-obsidian-git.md",
     "前端/学习笔记/React源码学习.md",
+    "前端/面试/面试题/面试题手册.md",
+    "内存泄漏.md",
+    "Quick Start.md",
     "新建文件夹",
     "前端/面试/面试题/面试题手册.pdf",
-    "Quick Start.md",
     "前端/学习笔记/mongoose.md",
     "list/文章List.md",
     "前端/学习笔记/umi.md",
@@ -201,7 +202,6 @@
     "面试/跳槽/简历修改.md",
     "面试/面试自我介绍.md",
     "面试/面试总结.md",
-    "入党相关时间.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
