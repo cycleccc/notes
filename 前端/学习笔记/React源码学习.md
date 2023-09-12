@@ -291,12 +291,32 @@ React通过先判断`key`是否相同，如果`key`相同则判断`type`是否�
 
 第一轮遍历：处理`更新`的节点。
 
-第二轮遍历：处理剩下的不属于`更新`的节点。
+第一轮遍历步骤如下：
 
+1. `let i = 0`，遍历`newChildren`，将`newChildren[i]`与`oldFiber`比较，判断`DOM节点`是否可复用。
+    
+2. 如果可复用，`i++`，继续比较`newChildren[i]`与`oldFiber.sibling`，可以复用则继续遍历。
+    
+3. 如果不可复用，分两种情况：
+    
 
+- `key`不同导致不可复用，立即跳出整个遍历，**第一轮遍历结束。**
+    
+- `key`相同`type`不同导致不可复用，会将`oldFiber`标记为`DELETION`，并继续遍历
+    
 
+4. 如果`newChildren`遍历完（即`i === newChildren.length - 1`）或者`oldFiber`遍历完（即`oldFiber.sibling === null`），跳出遍历，**第一轮遍历结束。**
 
+## 第二轮更新
+对于第一轮遍历的结果，我们分别讨论：
 
+### [#](https://react.iamkasong.com/diff/multi.html#newchildren%E4%B8%8Eoldfiber%E5%90%8C%E6%97%B6%E9%81%8D%E5%8E%86%E5%AE%8C)`newChildren`与`oldFiber`同时遍历完
+
+那就是最理想的情况：只需在第一轮遍历进行组件[`更新` (opens new window)](https://github.com/facebook/react/blob/1fb18e22ae66fdb1dc127347e169e73948778e5a/packages/react-reconciler/src/ReactChildFiber.new.js#L825)。此时`Diff`结束。
+
+### [#](https://react.iamkasong.com/diff/multi.html#newchildren%E6%B2%A1%E9%81%8D%E5%8E%86%E5%AE%8C-oldfiber%E9%81%8D%E5%8E%86%E5%AE%8C)`newChildren`没遍历完，`oldFiber`遍历完
+
+已有的`DOM节点`都复用了，这时还有新加入的节点，意味着本次更新有新节点插入，我们只需要遍历剩下的`newChildren`为生成的`workInProgress fiber`依次标记`Placement`。
 
 
 
