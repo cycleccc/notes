@@ -258,11 +258,17 @@ JSX（JavaScript XML）是一种JavaScript的扩展语法，用于在React中描
 为了降低算法复杂度，`React`的`diff`会预设三个限制：
 
 1. 只对同级元素进行`Diff`。如果一个`DOM节点`在前后两次更新中跨越了层级，那么`React`不会尝试复用他。
-    
 2. 两个不同类型的元素会产生出不同的树。如果元素由`div`变为`p`，React会销毁`div`及其子孙节点，并新建`p`及其子孙节点。
-    
 3. 开发者可以通过 `key prop`来暗示哪些子元素在不同的渲染下能保持稳定。
 
+## Diff如何实现
+
+从`Diff`的入口函数`reconcileChildFibers`出发，该函数会根据`newChild`（即`JSX对象`）类型调用不同的处理函数。
+
+可以从同级的节点数量将Diff分为两类：
+
+1. 当`newChild`类型为`object`、`number`、`string`，代表同级只有一个节点
+2. 当`newChild`类型为`Array`，同级有多个节点
 
 
 
