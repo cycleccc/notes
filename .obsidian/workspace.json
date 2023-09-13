@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5ae0fc82ed54c759",
+        "id": "e3ab462c1b51ca22",
         "type": "tabs",
         "children": [
           {
-            "id": "25b856e01a8ea62b",
+            "id": "8e7981448ffa7fce",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -154,11 +154,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "25b856e01a8ea62b",
+  "active": "8e7981448ffa7fce",
   "lastOpenFiles": [
+    "响应式原理.md",
+    "前端/面试/面试题/面试题手册.md",
     "前端/学习笔记/React源码学习.md",
     "conflict-files-obsidian-git.md",
-    "前端/面试/面试题/面试题手册.md",
     "内存泄漏.md",
     "Quick Start.md",
     "新建文件夹",
@@ -201,7 +202,6 @@
     "面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
     "面试/跳槽/简历修改.md",
     "面试/面试自我介绍.md",
-    "面试/面试总结.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
