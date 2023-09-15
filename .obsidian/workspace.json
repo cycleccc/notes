@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/学习笔记/umi.md",
+                "file": "前端/文章/diff算法.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/umi.md",
+                "file": "前端/文章/diff算法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/umi.md",
+                "file": "前端/文章/diff算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/学习笔记/umi.md"
+                "file": "前端/文章/diff算法.md"
               }
             }
           },
@@ -164,8 +164,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "b6d64fa765e89c6f",
   "lastOpenFiles": [
+    "前端/学习笔记/umi.md",
+    "前端/文章/diff算法.md",
     "前端/文章",
     "前端/学习笔记/mongoose.md",
     "前端/学习笔记/egg.md",
@@ -179,7 +181,6 @@
     "Quick Start.md",
     "新建文件夹",
     "list/文章List.md",
-    "前端/学习笔记/umi.md",
     "前端/职业规划.md",
     "list",
     "前端/文章/React源码学习.md",
@@ -204,7 +205,6 @@
     "temp/temp.md",
     "面试/项目.md",
     "面试/你还有什么想问的吗.md",
-    "前端/文章",
     "前端/读书笔记/深入浅出nodejs.md",
     "面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png",
     "Pasted.md",
