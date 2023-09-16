@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "483b0457493d5269",
+        "id": "d1946d8f2ad8c792",
         "type": "tabs",
         "children": [
           {
-            "id": "b6d64fa765e89c6f",
+            "id": "06f57ce85c70b372",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/Fiber.md",
+                "file": "前端/面试/面试题/面试题手册.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/Fiber.md",
+                "file": "前端/面试/面试题/面试题手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/Fiber.md",
+                "file": "前端/面试/面试题/面试题手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/Fiber.md"
+                "file": "前端/面试/面试题/面试题手册.md"
               }
             }
           },
@@ -165,10 +164,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "b6d64fa765e89c6f",
+  "active": "d82701bc35b5884f",
   "lastOpenFiles": [
-    "前端/学习笔记/umi.md",
     "前端/文章/Fiber.md",
+    "前端/学习笔记/umi.md",
     "前端/文章",
     "前端/学习笔记/mongoose.md",
     "前端/学习笔记/egg.md",
