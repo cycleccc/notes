@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "0645b239141d7311",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.13"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -175,7 +164,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0645b239141d7311",
+  "active": "06f57ce85c70b372",
   "lastOpenFiles": [
     "前端/文章/Fiber.md",
     "前端/学习笔记/umi.md",
