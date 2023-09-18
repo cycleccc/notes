@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -168,14 +167,16 @@
   },
   "active": "06f57ce85c70b372",
   "lastOpenFiles": [
+    "前端/文章/1695044072365.png",
+    "前端/文章/Pasted image 20230918213341.png",
+    "前端/面试/面试题/面试题手册.md",
+    "前端/文章/console.log.md",
     "前端/文章/Pasted image 20230918211715.png",
     "前端/文章/Pasted image 20230918211704.png",
     "前端/文章/Pasted image 20230918211641.png",
     "前端/文章/Pasted image 20230918210507.png",
     "前端/文章/Pasted image 20230918210331.png",
     "前端/文章/Pasted image 20230918210123.png",
-    "前端/面试/面试题/面试题手册.md",
-    "前端/文章/console.log.md",
     "前端/文章/Fiber.md",
     "前端/学习笔记/umi.md",
     "前端/文章",
@@ -196,8 +197,6 @@
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.003.jpeg",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
-    "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
-    "前端/面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png",
     "前端/面试/跳槽/简历修改.md",
     "前端/面试/项目.pdf",
     "前端/面试/项目.md",
