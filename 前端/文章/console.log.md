@@ -17,8 +17,9 @@ name从Bob变成了Jenny。
  我们刚开始看到的name:Bob是该对象的一个快照，当点开扩展后浏览器会`按引用查找值`，此时引用中的name值已经改变为  name:Jenny 自然就产生了这种数值不准确的现象。
  
  # 解决方法
- 1. JSON.stringfy
+## JSON.stringfy
  ![[Pasted image 20230918214649.png]]
  通过使用 JSON.stringify 与 JSON.parse 将对象进行序列化。
  
- 缺点 
+### 缺点
+正如我们常备的面试题一样
