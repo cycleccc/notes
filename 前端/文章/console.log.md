@@ -22,4 +22,7 @@ name从Bob变成了Jenny。
  通过使用 JSON.stringify 与 JSON.parse 将对象进行序列化。
  
 ### 缺点
-正如我们常备的面试题一样，JSON的深拷贝是
+正如我们常备的面试题一样，JSON的深拷贝对`复杂类型`如function拷贝时会丢失!当然，
+![[Pasted image 20230919210506.png]]
+## console.table()
+如果对数据
