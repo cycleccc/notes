@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "ebca24c44ab83b70",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.13"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -88,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5
+    "width": 251.5,
+    "collapsed": true
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -176,7 +166,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "ebca24c44ab83b70",
+  "active": "4200fd660ac04f3b",
   "lastOpenFiles": [
     "前端/文章/1695044072365.png",
     "前端/面试/面试题/面试题手册.md",
