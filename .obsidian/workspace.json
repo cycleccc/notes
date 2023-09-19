@@ -13,13 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
+                "file": "前端/文章/console.log.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "ebca24c44ab83b70",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.13"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
+                "file": "前端/文章/console.log.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
+                "file": "前端/文章/console.log.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md"
+                "file": "前端/文章/console.log.md"
               }
             }
           },
@@ -165,8 +176,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "4200fd660ac04f3b",
+  "active": "ebca24c44ab83b70",
   "lastOpenFiles": [
+    "前端/文章/1695044072365.png",
+    "前端/面试/面试题/面试题手册.md",
     "前端/文章/Pasted image 20230918214649.png",
     "前端/文章/Pasted image 20230918214646.png",
     "前端/文章/Pasted image 20230918213341.png",
@@ -177,9 +190,7 @@
     "前端/文章/Pasted image 20230918210331.png",
     "前端/文章/Pasted image 20230918210123.png",
     "前端/文章/console.log.md",
-    "前端/文章/1695044072365.png",
     "前端/文章",
-    "前端/面试/面试题/面试题手册.md",
     "响应式原理.md",
     "前端/学习笔记/React源码学习.md",
     "conflict-files-obsidian-git.md",
@@ -195,7 +206,6 @@
     "前端/学习笔记/egg.md",
     "list",
     "前端/文章/React源码学习.md",
-    "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
     "前端/面试/跳槽/简历修改.md",
     "前端/面试/项目.pdf",
     "前端/面试/项目.md",
