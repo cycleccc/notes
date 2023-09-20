@@ -25,4 +25,4 @@ name从Bob变成了Jenny。
 正如我们常备的面试题一样，JSON的深拷贝对`复杂类型`如function拷贝时会丢失!
 嗯~ o(*￣▽￣*)o，一般也不会有什么复杂类型吧。
 ![[Pasted image 20230919210506.png]]
-## 
+## 使用debugger
