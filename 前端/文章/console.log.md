@@ -26,3 +26,4 @@ name从Bob变成了Jenny。
 嗯~ o(*￣▽￣*)o，一般也不会有什么复杂类型吧。
 ![[Pasted image 20230919210506.png]]
 ## 使用debugger
+debugger是个好东西
