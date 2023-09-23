@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/职业规划.md",
+                "file": "前端/文章/git图形界面完全指南.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/职业规划.md",
+                "file": "前端/文章/git图形界面完全指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/职业规划.md",
+                "file": "前端/文章/git图形界面完全指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/职业规划.md"
+                "file": "前端/文章/git图形界面完全指南.md"
               }
             }
           },
@@ -167,10 +167,11 @@
   },
   "active": "9af5e39aab97c59e",
   "lastOpenFiles": [
+    "前端/文章/console.log.md",
+    "前端/文章/git图形界面完全指南.md",
+    "前端/职业规划.md",
     "生活/doujiang/豆酱.md",
     "生活/doujiang/Pasted image 20230923232929.png",
-    "前端/职业规划.md",
-    "前端/文章/console.log.md",
     "前端/文章/Pasted image 20230923204658.png",
     "前端/文章/Pasted image 20230919210506.png",
     "前端/文章/Pasted image 20230918214649.png",
