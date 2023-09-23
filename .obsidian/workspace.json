@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "生活/doujiang/豆酱.md",
+                "file": "前端/职业规划.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "生活/doujiang/豆酱.md",
+                "file": "前端/职业规划.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "生活/doujiang/豆酱.md",
+                "file": "前端/职业规划.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "生活/doujiang/豆酱.md"
+                "file": "前端/职业规划.md"
               }
             }
           },
@@ -167,9 +167,9 @@
   },
   "active": "9af5e39aab97c59e",
   "lastOpenFiles": [
+    "生活/doujiang/豆酱.md",
     "生活/doujiang/Pasted image 20230923232929.png",
     "前端/职业规划.md",
-    "生活/doujiang/豆酱.md",
     "前端/文章/console.log.md",
     "前端/文章/Pasted image 20230923204658.png",
     "前端/文章/Pasted image 20230919210506.png",
@@ -180,7 +180,6 @@
     "前端/文章/Pasted image 20230923204512.png",
     "前端/文章/Pasted image 20230923204507.png",
     "前端/文章/Pasted image 20230923204308.png",
-    "前端/文章/Pasted image 20230918214646.png",
     "前端/面试/面试题/面试题手册.md",
     "前端/文章/Fiber.md",
     "前端/学习笔记/umi.md",
