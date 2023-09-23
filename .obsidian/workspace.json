@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "生活/doujiang/未命名.md",
+                "file": "生活/doujiang/豆酱.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "生活/doujiang/未命名.md",
+                "file": "生活/doujiang/豆酱.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "生活/doujiang/未命名.md",
+                "file": "生活/doujiang/豆酱.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "生活/doujiang/未命名.md"
+                "file": "生活/doujiang/豆酱.md"
               }
             }
           },
@@ -167,8 +167,9 @@
   },
   "active": "9af5e39aab97c59e",
   "lastOpenFiles": [
+    "生活/doujiang/Pasted image 20230923232929.png",
     "前端/职业规划.md",
-    "生活/doujiang/未命名.md",
+    "生活/doujiang/豆酱.md",
     "前端/文章/console.log.md",
     "前端/文章/Pasted image 20230923204658.png",
     "前端/文章/Pasted image 20230919210506.png",
@@ -212,7 +213,6 @@
     "temp/temp.md",
     "面试/项目.md",
     "面试/你还有什么想问的吗.md",
-    "前端/读书笔记/深入浅出nodejs.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
