@@ -1,5 +1,5 @@
 # 前言
-今天在公司找bug卡了一天，解决bug后想着如果没有console.log的不正确显示问题的话最起码能省一半时间吧！
+今天在公司找bug卡了一天，解决bug后想着如果没有console.log的不正确显示问题的话应该能省不少时间！
 
 # 不同步显示bug
 在我们日常开发中少不了用console.log打印变量解决bug，但是如果console.log输出的是对象就有可能发生显示异常问题，如下:
@@ -27,4 +27,7 @@ name从Bob变成了Jenny。
 ![[Pasted image 20230919210506.png]]
 ## 使用debugger
 个人感觉React DevTools、Redux DevTools并不好用，前者调用层级太深经常没法找到正确的组件以及数据，后者是数据量大的时候会直接罢工。故遇到`异步数据变动多`时 用debugger还是最优解。
-![[Pasted image 20230923204308.png]]
+![[Pasted image 20230923204658.png]]
+可以看到我们在代码中2处添加了debugger标记，打开开发者工具，当if内语句时触发（也就是在1处hober为true时）时程序就会停止，此时就可以在3处看到我们写的score变量啦。
+### 缺点
+数据量大时会有卡顿~
