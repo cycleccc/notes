@@ -26,4 +26,4 @@ name从Bob变成了Jenny。
 嗯~ o(*￣▽￣*)o，一般也不会有什么复杂类型吧。
 ![[Pasted image 20230919210506.png]]
 ## 使用debugger
-个人感觉React DevTools、Redux DevTools
+个人感觉React DevTools、Redux DevTools并不好用，前者调用层级太深经常没法找到正确的组件以及数据，后者是数据量大的时候会直接罢工。故遇到`异步数据变动多`时 用debugger还是最优解，
