@@ -18,8 +18,29 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2d7b7b95a38f3aaf",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "前端/文章/Pasted image 20230918211715.png"
+              }
+            }
+          },
+          {
+            "id": "9af5e39aab97c59e",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "前端/文章/Pasted image 20230918210507.png"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/console.log.md",
+                "file": "前端/文章/Pasted image 20230918211715.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/console.log.md",
+                "file": "前端/文章/Pasted image 20230918211715.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/console.log.md"
+                "file": "前端/文章/Pasted image 20230918211715.png"
               }
             }
           },
@@ -165,21 +186,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "06f57ce85c70b372",
+  "active": "2d7b7b95a38f3aaf",
   "lastOpenFiles": [
+    "前端/文章/console.log.md",
+    "前端/文章/Pasted image 20230918210507.png",
     "前端/文章/Pasted image 20230923204658.png",
     "前端/文章/Pasted image 20230923204512.png",
     "前端/文章/Pasted image 20230923204507.png",
     "前端/文章/Pasted image 20230923204308.png",
-    "前端/文章/console.log.md",
     "前端/文章/Pasted image 20230919210506.png",
     "前端/文章/Pasted image 20230918214649.png",
     "前端/文章/Pasted image 20230918214646.png",
     "前端/文章/1695044072365.png",
     "前端/文章/Pasted image 20230918213341.png",
     "前端/面试/面试题/面试题手册.md",
-    "前端/文章/Pasted image 20230918211715.png",
-    "前端/文章/Pasted image 20230918211704.png",
     "前端/文章/Fiber.md",
     "前端/学习笔记/umi.md",
     "前端/文章",
