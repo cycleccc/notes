@@ -31,3 +31,6 @@ name从Bob变成了Jenny。
 可以看到我们在代码中2处添加了debugger标记，打开开发者工具，当if内语句时触发（也就是在1处hober为true时）时程序就会停止，此时就可以在3处看到我们写的score变量啦。
 ### 缺点
 数据量大时会有卡顿~
+
+# 总结
+直接使用console.log在打印引用类型数据时有概率不准确，建议使用 console.log(JSON.parse(JSON.stringify(data)))或将console.log直接替换为debugger打断点调试。

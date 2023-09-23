@@ -20,16 +20,6 @@
             }
           },
           {
-            "id": "0c5b573236c7aff7",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "前端/文章/Pasted image 20230923204658.png"
-              }
-            }
-          },
-          {
             "id": "9af5e39aab97c59e",
             "type": "leaf",
             "state": {
@@ -39,8 +29,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/Pasted image 20230923204658.png",
+                "file": "前端/文章/console.log.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/Pasted image 20230923204658.png",
+                "file": "前端/文章/console.log.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/Pasted image 20230923204658.png"
+                "file": "前端/文章/console.log.md"
               }
             }
           },
@@ -186,15 +175,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0c5b573236c7aff7",
+  "active": "06f57ce85c70b372",
   "lastOpenFiles": [
+    "前端/文章/Pasted image 20230923204658.png",
     "前端/文章/console.log.md",
     "前端/文章/Pasted image 20230919210506.png",
     "前端/文章/Pasted image 20230918214649.png",
     "前端/文章/1695044072365.png",
     "前端/文章/Pasted image 20230918211715.png",
     "前端/文章/Pasted image 20230918210507.png",
-    "前端/文章/Pasted image 20230923204658.png",
     "前端/文章/Pasted image 20230923204512.png",
     "前端/文章/Pasted image 20230923204507.png",
     "前端/文章/Pasted image 20230923204308.png",
