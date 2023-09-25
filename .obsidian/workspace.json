@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "687f9c4cb7975388",
+        "id": "130469e9d56a546f",
         "type": "tabs",
         "children": [
           {
-            "id": "4200fd660ac04f3b",
+            "id": "b869b2ce4cd347ff",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -77,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -94,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "前端/面试/面试题/面试题手册.md"
-              }
+              "state": {}
             }
           },
           {
@@ -153,7 +144,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 325.5,
+    "width": 342.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -166,8 +157,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "4200fd660ac04f3b",
+  "active": "b869b2ce4cd347ff",
   "lastOpenFiles": [
+    "前端/面试/项目.md",
+    "前端/面试/项目.pdf",
+    "前端/面试/你还有什么想问的吗.md",
+    "前端/面试/跳槽/简历修改.md",
+    "前端/面试/面试题/面试题手册.md",
     "前端/文章/console.log.md",
     "生活/doujiang/Pasted image 20230923232929.png",
     "前端/文章/git图形界面完全指南.md",
@@ -177,7 +173,6 @@
     "前端/文章/Pasted image 20230923204308.png",
     "前端/文章/Pasted image 20230919210506.png",
     "前端/文章/1695044072365.png",
-    "前端/面试/面试题/面试题手册.md",
     "前端/文章/Pasted image 20230918214649.png",
     "前端/文章/Pasted image 20230918214646.png",
     "前端/文章/Pasted image 20230918213341.png",
@@ -197,13 +192,9 @@
     "前端/学习笔记/egg.md",
     "list",
     "前端/文章/React源码学习.md",
-    "前端/面试/跳槽/简历修改.md",
-    "前端/面试/项目.pdf",
-    "前端/面试/项目.md",
     "前端/面试/面试题",
     "前端/面试/面试总结.assets",
     "前端/面试/跳槽",
-    "前端/面试/你还有什么想问的吗.md",
     "前端/面试",
     "前端/学习笔记",
     "面试/面试题/面试题手册.md",
