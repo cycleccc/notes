@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/console.log.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/console.log.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/console.log.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/console.log.md"
+                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md"
               }
             }
           },
@@ -166,11 +165,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "b869b2ce4cd347ff",
   "lastOpenFiles": [
+    "前端/文章/console.log.md",
+    "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/MongoDB",
     "前端/文章/git图形界面完全指南.md",
-    "前端/文章/console.log.md",
     "前端/面试/面试题/面试题手册.md",
     "前端/面试/面试题/5d1f6c67acba46d7952de3f5f367e30e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
     "前端/面试/项目.md",
@@ -206,7 +206,6 @@
     "前端/面试/面试总结.assets",
     "前端/面试/跳槽",
     "前端/面试",
-    "前端/学习笔记",
     "面试/面试题/面试题手册.md",
     "生活/健身/doujiang_waist_exercise.md",
     "生活/doujiang/打球记录.md",
