@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md"
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md"
               }
             }
           },
@@ -167,8 +167,9 @@
   },
   "active": "b869b2ce4cd347ff",
   "lastOpenFiles": [
-    "前端/文章/console.log.md",
     "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
+    "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
+    "前端/文章/console.log.md",
     "前端/文章/MongoDB",
     "前端/文章/git图形界面完全指南.md",
     "前端/面试/面试题/面试题手册.md",
@@ -212,7 +213,6 @@
     "temp/temp.md",
     "面试/项目.md",
     "面试/你还有什么想问的吗.md",
-    "前端/读书笔记/深入浅出nodejs.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
