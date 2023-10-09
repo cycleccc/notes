@@ -13,225 +13,207 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/面试/未命名.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a5fc9c4752beee36",
+    "type": "split",
+    "children": [
+      {
+        "id": "61abc0b2df6938be",
+        "type": "tabs",
+        "children": [
           {
-            "id": "5039d0a2b79312a6",
+            "id": "d82701bc35b5884f",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "file-explorer",
               "state": {
-                "currentVersion": "1.4.14"
+                "sortOrder": "alphabetical"
               }
             }
           },
           {
-            "id": "122a66d83a80184e",
+            "id": "69ed91a5b555014c",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "search",
               "state": {
-                "currentVersion": "1.4.14"
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "22de0d104efd5762",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "bdedd89893a9d014",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 251.5
+  },
+  "right": {
+    "id": "4cb2d8017a535402",
+    "type": "split",
+    "children": [
+      {
+        "id": "f74ca5c79071dca8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d5c451e9fdee9d9f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e15ddd66da04e172",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d89117a71b475191",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0f6bf33c86f59213",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md"
+              }
+            }
+          },
+          {
+            "id": "2e672d4c61500b3d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
         ],
-        "currentTab": 2
-      }
-    ]
-  }
-],
-"direction": "vertical"
-},
-"left": {
-"id": "a5fc9c4752beee36",
-"type": "split",
-"children": [
-  {
-    "id": "61abc0b2df6938be",
-    "type": "tabs",
-    "children": [
-      {
-        "id": "d82701bc35b5884f",
-        "type": "leaf",
-        "state": {
-          "type": "file-explorer",
-          "state": {
-            "sortOrder": "alphabetical"
-          }
-        }
-      },
-      {
-        "id": "69ed91a5b555014c",
-        "type": "leaf",
-        "state": {
-          "type": "search",
-          "state": {
-            "query": "",
-            "matchingCase": false,
-            "explainSearch": false,
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical"
-          }
-        }
-      },
-      {
-        "id": "22de0d104efd5762",
-        "type": "leaf",
-        "state": {
-          "type": "starred",
-          "state": {}
-        }
-      },
-      {
-        "id": "bdedd89893a9d014",
-        "type": "leaf",
-        "state": {
-          "type": "bookmarks",
-          "state": {}
-        }
-      }
-    ]
-  }
-],
-"direction": "horizontal",
-"width": 251.5
-},
-"right": {
-"id": "4cb2d8017a535402",
-"type": "split",
-"children": [
-  {
-    "id": "f74ca5c79071dca8",
-    "type": "tabs",
-    "children": [
-      {
-        "id": "d5c451e9fdee9d9f",
-        "type": "leaf",
-        "state": {
-          "type": "backlink",
-          "state": {
-            "file": "前端/面试/未命名.md",
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical",
-            "showSearch": false,
-            "searchQuery": "",
-            "backlinkCollapsed": false,
-            "unlinkedCollapsed": true
-          }
-        }
-      },
-      {
-        "id": "e15ddd66da04e172",
-        "type": "leaf",
-        "state": {
-          "type": "outgoing-link",
-          "state": {
-            "file": "前端/面试/未命名.md",
-            "linksCollapsed": false,
-            "unlinkedCollapsed": true
-          }
-        }
-      },
-      {
-        "id": "d89117a71b475191",
-        "type": "leaf",
-        "state": {
-          "type": "tag",
-          "state": {
-            "sortOrder": "frequency",
-            "useHierarchy": true
-          }
-        }
-      },
-      {
-        "id": "0f6bf33c86f59213",
-        "type": "leaf",
-        "state": {
-          "type": "outline",
-          "state": {
-            "file": "前端/面试/未命名.md"
-          }
-        }
-      },
-      {
-        "id": "2e672d4c61500b3d",
-        "type": "leaf",
-        "state": {
-          "type": "all-properties",
-          "state": {
-            "sortOrder": "frequency"
-          }
-        }
+        "currentTab": 3
       }
     ],
-    "currentTab": 3
-  }
-],
-"direction": "horizontal",
-"width": 342.5,
-"collapsed": true
-},
-"left-ribbon": {
-"hiddenItems": {
-  "switcher:打开快速切换": false,
-  "graph:查看关系图谱": false,
-  "canvas:新建白板": false,
-  "daily-notes:打开/创建今天的日记": false,
-  "templates:插入模板": false,
-  "command-palette:打开命令面板": false
-}
-},
-"active": "122a66d83a80184e",
-"active": "b869b2ce4cd347ff",
-"lastOpenFiles": [
-"前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
-"前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
-"前端/文章/MongoDB",
-"前端/面试/面试题/5d1f6c67acba46d7952de3f5f367e30e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
-"前端/面试/项目.pdf",
-"前端/文章/console.log.md",
-"生活/doujiang/Pasted image 20230923232929.png",
-"前端/文章/git图形界面完全指南.md",
-"前端/文章/Pasted image 20230923204658.png",
-"前端/文章/Pasted image 20230923204512.png",
-"前端/文章/Pasted image 20230923204507.png",
-"前端/文章/Pasted image 20230923204308.png",
-"前端/文章/Pasted image 20230919210506.png",
-"前端/文章/1695044072365.png",
-"前端/文章/Pasted image 20230918214649.png",
-"前端/文章/Pasted image 20230918214646.png",
-"前端/文章",
-"响应式原理.md",
-"前端/学习笔记/React源码学习.md",
-"conflict-files-obsidian-git.md",
-"内存泄漏.md",
-"Quick Start.md",
-"新建文件夹",
-"前端/面试/面试题/面试题手册.pdf",
-"前端/学习笔记/mongoose.md",
-"list/文章List.md",
-"前端/学习笔记/umi.md",
-"前端/学习笔记/dva.md",
-"前端/学习笔记/egg.md",
-"list",
-"前端/文章/React源码学习.md",
-"前端/面试/面试题",
-"前端/面试/面试总结.assets",
-"前端/面试/跳槽",
-"前端/面试",
-"面试/面试题/面试题手册.md",
-"生活/健身/doujiang_waist_exercise.md",
-"生活/doujiang/打球记录.md",
-"temp/temp.md",
-"面试/项目.md",
-"未命名 1.canvas",
-"未命名.canvas"
-]
+    "direction": "horizontal",
+    "width": 342.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "b869b2ce4cd347ff",
+  "lastOpenFiles": [
+    "前端/面试/未命名.md",
+    "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
+    "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
+    "前端/文章/console.log.md",
+    "前端/文章/MongoDB",
+    "前端/文章/git图形界面完全指南.md",
+    "前端/面试/面试题/面试题手册.md",
+    "前端/面试/面试题/5d1f6c67acba46d7952de3f5f367e30e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
+    "前端/面试/项目.md",
+    "前端/面试/项目.pdf",
+    "前端/面试/你还有什么想问的吗.md",
+    "前端/面试/跳槽/简历修改.md",
+    "生活/doujiang/Pasted image 20230923232929.png",
+    "前端/文章/Pasted image 20230923204658.png",
+    "前端/文章/Pasted image 20230923204512.png",
+    "前端/文章/Pasted image 20230923204507.png",
+    "前端/文章/Pasted image 20230923204308.png",
+    "前端/文章/Pasted image 20230919210506.png",
+    "前端/文章/1695044072365.png",
+    "前端/文章/Pasted image 20230918214649.png",
+    "前端/文章/Pasted image 20230918214646.png",
+    "前端/文章",
+    "响应式原理.md",
+    "前端/学习笔记/React源码学习.md",
+    "conflict-files-obsidian-git.md",
+    "内存泄漏.md",
+    "Quick Start.md",
+    "新建文件夹",
+    "前端/面试/面试题/面试题手册.pdf",
+    "前端/学习笔记/mongoose.md",
+    "list/文章List.md",
+    "前端/学习笔记/umi.md",
+    "前端/职业规划.md",
+    "前端/学习笔记/dva.md",
+    "前端/学习笔记/egg.md",
+    "list",
+    "前端/文章/React源码学习.md",
+    "前端/面试/面试题",
+    "前端/面试/面试总结.assets",
+    "前端/面试/跳槽",
+    "前端/面试",
+    "面试/面试题/面试题手册.md",
+    "生活/健身/doujiang_waist_exercise.md",
+    "生活/doujiang/打球记录.md",
+    "temp/temp.md",
+    "面试/项目.md",
+    "未命名 1.canvas",
+    "未命名.canvas"
+  ]
 }
