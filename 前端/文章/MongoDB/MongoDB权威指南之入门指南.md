@@ -55,3 +55,23 @@ MongoDB 使用集合对文档进行分组，使用数据库对集合进行分组
 数据库名称可以是任意 UTF-8 字符串，数据库名称只能用ASCII字母和数字。
 
 ## 启动MongoDB
+
+Windows系统执行 mongod.exe 启动MongoDB
+
+启动时，服务器端会打印版本和系统信息，然后开始等待连接。
+
+默认情况下，MongoDB 会监听 27017 端口上的socket连接。
+
+如果端口不可用，那么服务器将无法启动——最常见的原因是有另一个 MongoDB 实例正在运行。
+
+# MongoDB Shell介绍
+
+MongoDB 自带 JavaScript shell，允许使用命令行与 MongoDB 实例进行交互。
+
+## 运行shell
+
+shell 在启动时会自动尝试连接到本地机器上运行的 MongoDB 服务器端，因此在启动 shell 之前，请先确保 mongod 已启动。
+
+## MongoDB客户端
+
+启动时，shell 会连接到 MongoDB 服务器端的test 数据库，并将此数据库连接赋值给全局变量 `db`。此变量是通过 shell 访问MongoDB 服务器端的主要入口点。
