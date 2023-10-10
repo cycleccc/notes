@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
+                "file": "前端/职业规划.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
+                "file": "前端/职业规划.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
+                "file": "前端/职业规划.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md"
+                "file": "前端/职业规划.md"
               }
             }
           },
@@ -168,18 +168,19 @@
   "active": "b869b2ce4cd347ff",
   "lastOpenFiles": [
     "前端/面试/未命名.md",
-    "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
-    "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
-    "前端/文章/console.log.md",
-    "前端/文章/MongoDB",
-    "前端/文章/git图形界面完全指南.md",
-    "前端/面试/面试题/面试题手册.md",
-    "前端/面试/面试题/5d1f6c67acba46d7952de3f5f367e30e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
+    "前端/职业规划.md",
     "前端/面试/项目.md",
-    "前端/面试/项目.pdf",
-    "前端/面试/你还有什么想问的吗.md",
     "前端/面试/跳槽/简历修改.md",
+    "前端/面试/你还有什么想问的吗.md",
+    "前端/面试/面试题/面试题手册.md",
+    "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
+    "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
+    "前端/文章/MongoDB",
+    "前端/面试/面试题/5d1f6c67acba46d7952de3f5f367e30e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
+    "前端/面试/项目.pdf",
+    "前端/文章/console.log.md",
     "生活/doujiang/Pasted image 20230923232929.png",
+    "前端/文章/git图形界面完全指南.md",
     "前端/文章/Pasted image 20230923204658.png",
     "前端/文章/Pasted image 20230923204512.png",
     "前端/文章/Pasted image 20230923204507.png",
@@ -199,7 +200,6 @@
     "前端/学习笔记/mongoose.md",
     "list/文章List.md",
     "前端/学习笔记/umi.md",
-    "前端/职业规划.md",
     "前端/学习笔记/dva.md",
     "前端/学习笔记/egg.md",
     "list",
