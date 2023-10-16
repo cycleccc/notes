@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "list/生活list.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "list/生活list.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "list/生活list.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "list/生活list.md"
+                "file": "前端/文章/MongoDB/MongoDB权威指南之入门指南.md"
               }
             }
           },
@@ -166,8 +166,8 @@
   },
   "active": "b869b2ce4cd347ff",
   "lastOpenFiles": [
-    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "list/生活list.md",
+    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "Quick Start.md",
     "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
     "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
@@ -189,7 +189,6 @@
     "前端/文章/Pasted image 20230923204308.png",
     "前端/文章/Pasted image 20230919210506.png",
     "前端/文章/Pasted image 20230918214649.png",
-    "前端/文章/Pasted image 20230918214646.png",
     "前端/文章",
     "响应式原理.md",
     "前端/学习笔记/React源码学习.md",
