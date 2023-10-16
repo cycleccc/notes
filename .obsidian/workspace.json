@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
+                "file": "list/生活list.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
+                "file": "list/生活list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
+                "file": "list/生活list.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md"
+                "file": "list/生活list.md"
               }
             }
           },
@@ -166,11 +166,14 @@
   },
   "active": "b869b2ce4cd347ff",
   "lastOpenFiles": [
+    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
+    "list/生活list.md",
+    "Quick Start.md",
+    "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
+    "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/1695044072365.png",
     "前端/面试/面试题/面试题手册.md",
-    "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
     "前端/面试/未命名.md",
-    "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/console.log.md",
     "前端/文章/MongoDB",
     "前端/文章/git图形界面完全指南.md",
@@ -192,7 +195,6 @@
     "前端/学习笔记/React源码学习.md",
     "conflict-files-obsidian-git.md",
     "内存泄漏.md",
-    "Quick Start.md",
     "新建文件夹",
     "前端/面试/面试题/面试题手册.pdf",
     "前端/学习笔记/mongoose.md",
@@ -210,7 +212,6 @@
     "面试/面试题/面试题手册.md",
     "生活/健身/doujiang_waist_exercise.md",
     "生活/doujiang/打球记录.md",
-    "temp/temp.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]

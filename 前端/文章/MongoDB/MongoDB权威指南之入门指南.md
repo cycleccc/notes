@@ -84,6 +84,12 @@ insertOne 函数可以将一个文档添加到集合中。
 
 ### 删
 
+deleteOne 和 deletemany 方法会从数据库中永久删除文档。
 ### 改
 
+find 和 findOne 方法可用于查询集合中的文档。如果只想查看一个文档，可以使用 findOne
 ### 查
+
+find 和 findOne 方法可用于查询集合中的文档。如果只想查看一个文档，可以使用 findOne。
+
+# 数据类型
