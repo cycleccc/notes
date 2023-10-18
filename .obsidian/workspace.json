@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之创建、更新和删除文档.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之创建、更新和删除文档.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之创建、更新和删除文档.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md"
+                "file": "前端/文章/MongoDB/MongoDB权威指南之创建、更新和删除文档.md"
               }
             }
           },
@@ -166,15 +166,16 @@
   },
   "active": "b869b2ce4cd347ff",
   "lastOpenFiles": [
+    "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
+    "前端/文章/MongoDB/MongoDB权威指南之创建、更新和删除文档.md",
+    "前端/面试/面试题/面试题手册.md",
     "前端/面试/你还有什么想问的吗.md",
     "前端/文章/console.log.md",
-    "前端/面试/面试题/面试题手册.md",
     "list/生活List.md",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "响应式原理.md",
     "Quick Start.md",
     "前端/面试/面试题/面试题手册.pdf",
-    "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
     "前端/面试/项目.md",
     "前端/职业规划.md",
     "前端/面试/未命名.md",
