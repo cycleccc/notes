@@ -276,6 +276,23 @@ save 是一个 shell 函数，它可以在文档不存在时插入文档，在�
 **updateMany** 提供了一个强大的工具，用于执行模式迁移或向某些特定用户推出新功能。
 **updateMany** 遵循与 updateOne 同样的语义并接受相同的参数。关键的区别在于可能会被更改的文档数量。
 
+```bash
+> db.users.insertMany([
+... {birthday: "10/13/1978"},
+... {birthday: "10/13/1978"},
+... {birthday: "10/13/1978"}])
+{
+    "acknowledged" : true,
+    "insertedIds" : [
+        ObjectId("5727d6fc6855a935cb57a65b"),
+        ObjectId("5727d6fc6855a935cb57a65c"),
+        ObjectId("5727d6fc6855a935cb57a65d")
+    ]
+}
+> db.users.updateMany({"birthday" : "10/13/1978"},
+... {"$set" : {"gift" : "Happy Birthday!"}})
+{ "acknowledged" : true, "matchedCount" : 3, "modifiedCount" : 3 }
+```
 ## 返回被更新的文档
 
 在某些场景中，返回修改过的文档是很重要的。在 MongoDB 的早期版本中，findAndModify 是这种情况下的首选方法。它对于操作队列和执行其他需要取值、赋值的原子操作来说非常方便。
