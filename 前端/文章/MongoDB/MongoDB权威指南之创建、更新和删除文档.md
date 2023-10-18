@@ -2,12 +2,34 @@
 
 使用集合的 insertOne 方法插入单个文档
 insertOne 会为文档自动添加一个 "_id" 键（如果你没有提供的话），并将其保存到 MongoDB 中。
-> db.movies.insertOne({"title" : "Stand by Me"})
+```shell
+db.movies.insertOne({"title" : "Stand by Me"})
+```
 
 ## insertMany
 如果要向一个集合中插入多个文档，那么可以使用 insertMany。
 
 使用 insertMany 执行批量插入时，如果中途某个文档发生了某种类型的错误，那么接下来会发生什么取决于所选择的是有序操作还是无序操作。可以指定一个选项文档作为 insertMany 的第二个参数。将选项文档中的 "**ordered**" 键指定为true，可以确保文档按提供的顺序插入。指定为 false 则允许 MongoDB 重新排列插入的顺序以提高性能。如果未特别指定，则默认为有序插入。对于有序插入，插入顺序由传递给 insertMany 的数组进行定义。如果一个文档产生了插入错误，则数组中`在此之后的文档均不会被插入集合中`。对于无序插入，MongoDB `将尝试插入所有文档，而不管某些插入是否产生了错误`。
+
+```shell
+> db.movies.drop()
+true
+> db.movies.insertMany([{"title" : "Ghostbusters"},
+...                       {"title" : "E.T."},
+...                       {"title" : "Blade Runner"}]);
+{
+    "acknowledged" : true,
+    "insertedIds" : [
+        ObjectId("572630ba11722fac4b6b4996"),
+        ObjectId("572630ba11722fac4b6b4997"),
+        ObjectId("572630ba11722fac4b6b4998")
+    ]
+}
+> db.movies.find()
+{ "_id" : ObjectId("572630ba11722fac4b6b4996"), "title" : "Ghostbusters" }
+{ "_id" : ObjectId("572630ba11722fac4b6b4997"), "title" : "E.T." }
+{ "_id" : ObjectId("572630ba11722fac4b6b4998"), "title" : "Blade Runner" }
+```
 
 ## 插入校验
 
@@ -118,3 +140,16 @@ save 是一个 shell 函数，它可以在文档不存在时插入文档，在�
 ## 更新多个文档
 
 **updateMany** 提供了一个强大的工具，用于执行模式迁移或向某些特定用户推出新功能。
+**updateMany** 遵循与 updateOne 同样的语义并接受相同的参数。关键的区别在于可能会被更改的文档数量。
+
+## 返回被更新的文档
+
+在某些场景中，返回修改过的文档是很重要的。在 MongoDB 的早期版本中，findAndModify 是这种情况下的首选方法。它对于操作队列和执行其他需要取值、赋值的原子操作来说非常方便。
+
+不过，findAndModify 很容易出现用户错误，因为它非常复杂，结合了 3 种不同类型操作的功能：删除、替换和更新（包括upsert）。
+
+MongoDB 3.2 向 shell 中引入了 3 个新的集合方法来提供 findAndModify 的功能，但其语义更易于学习和记忆：findOneAndDelete、findOneAndReplace 和findOneAndUpdate。
+
+这些方法与 updateOne 之间的主要区别在于，它们可以原子地获取已修改文档的值。
+
+MongoDB 4.2 扩展了 findOneAndUpdate 以接受一个用来更新的聚合管道。管道可以包含以下阶段：$addFields 及其别名 $set、$project 及其别名 $unset，以及 $replaceRoot 及其别名 $replaceWith。
