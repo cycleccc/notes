@@ -163,19 +163,82 @@ true
 
 和 "\$set" 用法类似，"\$inc" 是专门用来对数字进行递增和递减操作的。"$inc" 只能用于整型、长整型或双精度浮点型的值。如果用在其他任何类型的值上，则会导致操作失败。
 
+```bash
+> db.games.updateOne({"game" : "pinball", "user" : "joe"},
+... {"$inc" : {"score" : 50}})
+```
+
 ### 数组运算符
 
 #### 添加元素
 
 - "$push" 会将元素添加到数组末尾
+```bash
+> db.blog.posts.findOne()
+{
+    "_id" : ObjectId("4b2d75476cc613d5ee930164"),
+    "title" : "A blog post",
+    "content" : "..."
+}
+> db.blog.posts.updateOne({"title" : "A blog post"},
+... {"$push" : {"comments" :
+...     {"name" : "joe", "email" : "joe@example.com",
+...     "content" : "nice post."}}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.blog.posts.findOne()
+{
+    "_id" : ObjectId("4b2d75476cc613d5ee930164"),
+    "title" : "A blog post",
+    "content" : "...",
+    "comments" : [
+        {
+            "name" : "joe",
+            "email" : "joe@example.com",
+            "content" : "nice post."
+        }
+    ]
+}
+```
 - 可以对 "\$push" 使用 "$each" 修饰符，在一次操作中添加多个值
+```bash
+> db.stock.ticker.updateOne({"_id" : "GOOG"},
+... {"$push" : {"hourly" : {"$each" : [562.776, 562.790, 559.123]}}})
+```
 - 如果只允许数组增长到某个长度，则可以使用 "$slice" 修饰符配合 $push 来防止数组的增长超过某个大小
+```bash
+> db.movies.updateOne({"genre" : "horror"},
+... {"$push" : {"top10" : {"$each" : ["Nightmare on Elm Street", "Saw"],
+...                        "$slice" : -10}}})
+```
 - 在截断之前可以将 "\$sort" 修饰符应用于 "$push" 操作
-
+```bash
+> db.movies.updateOne({"genre" : "horror"},
+... {"$push" : {"top10" : {"$each" : [{"name" : "Nightmare on Elm Street",
+...                                    "rating" : 6.6},
+...                                   {"name" : "Saw", "rating" : 4.3}],
+...                        "$slice" : -10,
+...                        "$sort" : {"rating" : -1}}}})
+```
 #### 将数组作为集合使用
 
 - 仅当一个值不存在时才进行添加。这可以在查询文档中使用 "$ne" 来实现。
+```bash
+> db.papers.updateOne({"authors cited" : {"$ne" : "Richie"}},
+... {$push : {"authors cited" : "Richie"}})
+```
 - 可以使用 "$addToSet" 来避免插入重复的值。
+```bash
+> db.users.findOne({"_id" : ObjectId("4b2d75476cc613d5ee930164")})
+{
+    "_id" : ObjectId("4b2d75476cc613d5ee930164"),
+    "username" : "joe",
+    "emails" : [
+        "joe@example.com",
+        "joe@gmail.com",
+        "joe@yahoo.com"
+    ]
+}
+```
 - "\$addToSet" 与 "\$each" 结合使用，以添加多个不同的值，而这不能使用 "\$ne" 和 "$push" 的组合来实现。
 
 #### 删除元素
@@ -190,6 +253,10 @@ true
 有两种方法可以操作数组中的值
 - 按位置或使用定位运算符（$ 字符）。
 - 定位运算符 "$" 只会更新第一个匹配到的元素。
+```bash
+> db.blog.updateOne({"comments.author" : "John"},
+... {"$set" : {"comments.$.author" : "Jim"}})
+```
 
 #### 使用数组过滤器进行更新
 
