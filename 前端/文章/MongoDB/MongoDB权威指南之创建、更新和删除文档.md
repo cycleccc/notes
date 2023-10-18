@@ -2,7 +2,7 @@
 
 使用集合的 insertOne 方法插入单个文档
 insertOne 会为文档自动添加一个 "_id" 键（如果你没有提供的话），并将其保存到 MongoDB 中。
-```shell
+```
 db.movies.insertOne({"title" : "Stand by Me"})
 ```
 
@@ -11,7 +11,7 @@ db.movies.insertOne({"title" : "Stand by Me"})
 
 使用 insertMany 执行批量插入时，如果中途某个文档发生了某种类型的错误，那么接下来会发生什么取决于所选择的是有序操作还是无序操作。可以指定一个选项文档作为 insertMany 的第二个参数。将选项文档中的 "**ordered**" 键指定为true，可以确保文档按提供的顺序插入。指定为 false 则允许 MongoDB 重新排列插入的顺序以提高性能。如果未特别指定，则默认为有序插入。对于有序插入，插入顺序由传递给 insertMany 的数组进行定义。如果一个文档产生了插入错误，则数组中`在此之后的文档均不会被插入集合中`。对于无序插入，MongoDB `将尝试插入所有文档，而不管某些插入是否产生了错误`。
 
-```shell
+```bash
 > db.movies.drop()
 true
 > db.movies.insertMany([{"title" : "Ghostbusters"},
@@ -51,7 +51,38 @@ MongoDB 会对要插入的数据进行最基本的检查：
 
 这两种方法都将`筛选文档`（filter document）作为`第一个参数`。筛选文档指定了在删除文档时要与之匹配的一组条件。
 
+```bash
+> db.movies.find()
+{ "_id" : 0, "title" : "Top Gun"}
+{ "_id" : 1, "title" : "Back to the Future"}
+{ "_id" : 3, "title" : "Sixteen Candles"}
+{ "_id" : 4, "title" : "The Terminator"}
+{ "_id" : 5, "title" : "Scarface"}
+> db.movies.deleteOne({"_id" : 4})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.movies.find()
+{ "_id" : 0, "title" : "Top Gun"}
+{ "_id" : 1, "title" : "Back to the Future"}
+{ "_id" : 3, "title" : "Sixteen Candles"}
+{ "_id" : 5, "title" : "Scarface"}
+```
+
 可以使用 deleteMany 来删除满足筛选条件的所有文档。
+
+```bash
+> db.movies.find()
+{ "_id" : 0, "title" : "Top Gun", "year" : 1986 }
+{ "_id" : 1, "title" : "Back to the Future", "year" : 1985 }
+{ "_id" : 3, "title" : "Sixteen Candles", "year" : 1984 }
+{ "_id" : 4, "title" : "The Terminator", "year" : 1984 }
+{ "_id" : 5, "title" : "Scarface", "year" : 1983 }
+> db.movies.deleteMany({"year" : 1984})
+{ "acknowledged" : true, "deletedCount" : 2 }
+> db.movies.find()
+{ "_id" : 0, "title" : "Top Gun", "year" : 1986 }
+{ "_id" : 1, "title" : "Back to the Future", "year" : 1985 }
+{ "_id" : 5, "title" : "Scarface", "year" : 1983 }
+```
 
 - 在 MongoDB 3.0 之前，remove 是删除文档的主要方法。
 - 在 MongoDB 3.0 之前，remove 是删除文档的主要方法。
@@ -61,6 +92,18 @@ MongoDB 会对要插入的数据进行最基本的检查：
 ## 删除集合
 
 可以使用 **deleteMany** 来删除一个集合中的所有文档
+
+```bash
+> db.movies.find()
+{ "_id" : 0, "title" : "Top Gun", "year" : 1986 }
+{ "_id" : 1, "title" : "Back to the Future", "year" : 1985 }
+{ "_id" : 3, "title" : "Sixteen Candles", "year" : 1984 }
+{ "_id" : 4, "title" : "The Terminator", "year" : 1984 }
+{ "_id" : 5, "title" : "Scarface", "year" : 1983 }
+> db.movies.deleteMany({})
+{ "acknowledged" : true, "deletedCount" : 5 }
+> db.movies.find()
+```
 
 删除文档的操作通常会比较快。不过，如果想清空整个集合，那么使用 **drop** 直接删除集合，然后在这个空集合中重建各项索引会更快
 
@@ -77,6 +120,24 @@ MongoDB 会对要插入的数据进行最基本的检查：
 **replaceOne** 会用新文档完全替换匹配的文档。
 一个常见的错误是查询条件匹配到了多个文档，然后更新时由第二个参数产生了`重复的 "_id" 值`。数据库会抛出错误，任何文档都不会被更新。
 
+```bash
+> var joe = db.users.findOne({"name" : "joe"});
+> joe.relationships = {"friends" : joe.friends, "enemies" : joe.enemies};
+{
+    "friends" : 32,
+    "enemies" : 2
+}
+> joe.username = joe.name;
+"joe"
+> delete joe.friends;
+true
+> delete joe.enemies;
+true
+> delete joe.name;
+true
+> db.users.replaceOne({"name" : "joe"}, joe);
+```
+
 ## 使用更新运算符
 
 通常文档只会有一部分需要更新。可以使用原子的更新运算符（update operator）更新文档中的特定字段。更新运算符是特殊的键，可用于指定复杂的更新操作，比如`更改、添加或删除键，甚至可以操作数组和内嵌文档`。
@@ -87,6 +148,12 @@ MongoDB 会对要插入的数据进行最基本的检查：
 - "$set" 甚至可以修改键的类型。
 - "$unset" 可以将这个键完全删除。
 - "$set" 可以用来修改内嵌文档。
+
+```bash
+> db.users.updateOne({"name" : "joe"},
+... {"$set" : {"favorite book" :
+...     ["Cat's Cradle", "Foundation Trilogy", "Ender's Game"]}})
+```
 
 应该始终使用 $ 修饰符来增加、修改或删除键。
 
