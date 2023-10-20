@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/console.log.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "91062184653332f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/文章/console.log.md",
+                "file": "前端/面试/项目.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/console.log.md",
+                "file": "前端/面试/项目.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/console.log.md",
+                "file": "前端/面试/项目.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/console.log.md"
+                "file": "前端/面试/项目.md"
               }
             }
           },
@@ -177,37 +164,42 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "91062184653332f7",
+  "active": "b869b2ce4cd347ff",
   "lastOpenFiles": [
+    "前端/面试/你还有什么想问的吗.md",
+    "前端/前端note/VUE/响应式原理和数据双向绑定.md",
+    "前端/前端note/JS/ES6 Module和CommonJS.md",
+    "前端/前端note/JS/EventLoop.md",
+    "前端/前端note/JS/包管理工具npm、yarn、pnpm.md",
+    "前端/文章/浏览器/console.log.md",
+    "前端/文章/浏览器/未命名.md",
+    "前端/文章/浏览器",
+    "前端/文章/未命名.md",
+    "前端/文章/1695044072365.png",
+    "前端/文章/Pasted image 20230919210506.png",
+    "前端/文章/Pasted image 20230918214646.png",
+    "前端/文章/Pasted image 20230918210123.png",
     "前端/文章/Pasted image 20230923204658.png",
     "前端/文章/Pasted image 20230923204512.png",
     "前端/文章/Pasted image 20230923204507.png",
     "前端/文章/Pasted image 20230923204308.png",
-    "前端/文章/Pasted image 20230919210506.png",
     "前端/文章/Pasted image 20230918214649.png",
-    "前端/文章/console.log.md",
     "前端/文章/Pasted image 20230918210507.png",
-    "前端/文章/Pasted image 20230918210123.png",
-    "前端/文章/Pasted image 20230918211641.png",
-    "前端/文章/Pasted image 20230918210331.png",
     "前端/文章/git图形界面完全指南.md",
     "前端/文章/Vue/详解vue组件通信.md",
     "前端/文章/JavaScript/渐进式手写继承.md",
     "前端/文章/Vue",
-    "前端/文章/未命名.md",
     "前端/文章/MongoDB/MongoDB权威指南之创建、更新和删除文档.md",
     "前端/文章/JavaScript",
     "前端/面试/面试题/面试题手册.md",
     "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
     "list/生活list.md",
-    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "Quick Start.md",
     "前端/面试/未命名.md",
     "前端/文章/MongoDB",
     "前端/面试/项目.md",
     "前端/面试/项目.pdf",
-    "前端/面试/你还有什么想问的吗.md",
     "前端/面试/跳槽/简历修改.md",
     "前端/文章",
     "响应式原理.md",
@@ -218,13 +210,8 @@
     "前端/面试/面试题/面试题手册.pdf",
     "前端/学习笔记/mongoose.md",
     "list/文章List.md",
-    "前端/学习笔记/umi.md",
-    "前端/职业规划.md",
-    "前端/学习笔记/dva.md",
-    "前端/学习笔记/egg.md",
     "list",
     "前端/面试/面试题",
-    "前端/面试/面试总结.assets",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
