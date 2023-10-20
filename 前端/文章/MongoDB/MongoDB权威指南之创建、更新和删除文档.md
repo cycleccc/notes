@@ -2,7 +2,7 @@
 
 使用集合的 insertOne 方法插入单个文档
 insertOne 会为文档自动添加一个 "_id" 键（如果你没有提供的话），并将其保存到 MongoDB 中。
-```
+```bash
 db.movies.insertOne({"title" : "Stand by Me"})
 ```
 
@@ -295,11 +295,11 @@ save 是一个 shell 函数，它可以在文档不存在时插入文档，在�
 ```
 ## 返回被更新的文档
 
-在某些场景中，返回修改过的文档是很重要的。在 MongoDB 的早期版本中，findAndModify 是这种情况下的首选方法。它对于操作队列和执行其他需要取值、赋值的原子操作来说非常方便。
+在某些场景中，返回修改过的文档是很重要的。在 MongoDB 的早期版本中，**findAndModify** 是这种情况下的首选方法。它对于操作队列和执行其他需要取值、赋值的原子操作来说非常方便。
 
 不过，findAndModify 很容易出现用户错误，因为它非常复杂，结合了 3 种不同类型操作的功能：删除、替换和更新（包括upsert）。
 
-MongoDB 3.2 向 shell 中引入了 3 个新的集合方法来提供 findAndModify 的功能，但其语义更易于学习和记忆：findOneAndDelete、findOneAndReplace 和findOneAndUpdate。
+MongoDB 3.2 向 shell 中引入了 3 个新的集合方法来提供 findAndModify 的功能，但其语义更易于学习和记忆：*findOneAndDelete、findOneAndReplace 和findOneAndUpdate*。
 
 这些方法与 updateOne 之间的主要区别在于，它们可以原子地获取已修改文档的值。
 
