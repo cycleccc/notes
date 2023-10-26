@@ -8,8 +8,22 @@
 
 **查询模式**
 
-为了使 MongoDB 高效地响应查询，应用程序中的所有查询模式都应该有索引支持。
+为了使 MongoDB 高效地响应查询，应用程序中的所有查询模式都应该有`索引支持`。
 
-所谓查询模式，是指应用程序向数据库提出的不同类型的问题。例如按用户名查询 users 集合。这就是一个特定查询模式的示例。
+所谓查询模式，是指`应用程序向数据库提出的不同类型的问题`。例如按用户名查询 users 集合。这就是一个特定查询模式的示例。
 
-## 
+## 创建索引
+
+创建索引可以使用 **createIndex** 集合方法。
+
+```shell
+> db.users.createIndex({"username" : 1})
+{
+    "createdCollectionAutomatically" : false,
+    "numIndexesBefore" : 1,
+    "numIndexesAfter" : 2,
+    "ok" : 1
+}
+```
+
+创建索引只需几秒的时间，除非集合特别大。如果 createIndex 调用在几秒后没有返回，则可以运行 `db.currentOp()（在另一个 shell 中）或检查 `mongod 的日志`以查看索引创建的进度。
