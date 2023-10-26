@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之查询.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之索引.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之查询.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之索引.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之查询.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之索引.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之查询.md"
+                "file": "前端/文章/MongoDB/MongoDB权威指南之索引.md"
               }
             }
           },
@@ -166,9 +166,10 @@
   },
   "active": "b869b2ce4cd347ff",
   "lastOpenFiles": [
+    "前端/文章/MongoDB/MongoDB权威指南之查询.md",
+    "前端/文章/MongoDB/MongoDB权威指南之索引.md",
     "前端/文章/浏览器/console.log.md",
     "前端/文章/MongoDB/MongoDB权威指南之创建、更新和删除文档.md",
-    "前端/文章/MongoDB/MongoDB权威指南之查询.md",
     "前端/读书笔记/深入浅出nodejs.md",
     "前端/面试/项目.md",
     "前端/面试/你还有什么想问的吗.md",
@@ -207,7 +208,6 @@
     "响应式原理.md",
     "前端/学习笔记/React源码学习.md",
     "conflict-files-obsidian-git.md",
-    "内存泄漏.md",
     "新建文件夹",
     "前端/面试/面试题/面试题手册.pdf",
     "list",
