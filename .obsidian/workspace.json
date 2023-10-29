@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/职业规划.md",
+                "file": "list/生活list.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/职业规划.md",
+                "file": "list/生活list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/职业规划.md",
+                "file": "list/生活list.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/职业规划.md"
+                "file": "list/生活list.md"
               }
             }
           },
@@ -166,6 +166,9 @@
   },
   "active": "b869b2ce4cd347ff",
   "lastOpenFiles": [
+    "list/文章List.md",
+    "list/生活list.md",
+    "前端/职业规划.md",
     "前端/文章/MongoDB/MongoDB权威指南之索引.md",
     "前端/文章/MongoDB/MongoDB权威指南之查询.md",
     "前端/文章/浏览器/console.log.md",
@@ -198,7 +201,6 @@
     "前端/面试/面试题/面试题手册.md",
     "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
-    "list/生活list.md",
     "Quick Start.md",
     "前端/面试/未命名.md",
     "前端/文章/MongoDB",
@@ -206,8 +208,6 @@
     "前端/面试/跳槽/简历修改.md",
     "前端/文章",
     "响应式原理.md",
-    "前端/学习笔记/React源码学习.md",
-    "conflict-files-obsidian-git.md",
     "新建文件夹",
     "前端/面试/面试题/面试题手册.pdf",
     "list",
