@@ -10,3 +10,15 @@ config数据从backendConfig：name：mba/dept_config中获取
 
 data是原始数据
 通过centerName和deptName刷选出
+
+
+
+
+
+
+
+
+
+校对
+- 执行部门
+
