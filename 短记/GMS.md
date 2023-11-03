@@ -1,0 +1,5 @@
+1，数据量太大，搜索太慢，要优化；  
+2，搜索交互优化：  
+a, PROJECT_CODE:MBA-AP-2023102700001        > 搜索 PROJECT_CODE 字段，值等于 MBA-AP-2023102700001|  
+b, MBA-AP-2023102700001 > 搜索 所有字段，值等于 MBA-AP-2023102700001  
+c, PROJECT_CODE:MBA-AP-2023102700001 region:na         > 搜索 PROJECT_CODE 字段，值等于 MBA-AP-2023102700001，并且 region字段，值等于 na
