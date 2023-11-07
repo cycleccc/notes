@@ -59,27 +59,7 @@ MongoDB 有两种类型的地理空间索引
     "name": "New England",
     "loc": {
         "type": "Polygon",
-        "coordinates": [
-            [
-                [
-                    0,
-                    1
-                ],
-                [
-                    0,
-                    2
-                ],
-                [
-                    1,
-                    2
-                ],
-                [
-                    0,
-                    1
-                ]
-            ]
-        ]
-    }
+        "coordinates": [[[0,1],[0,2],[1,2],[0,1]]]}
 }
 ```
 
@@ -88,4 +68,7 @@ MongoDB 有两种类型的地理空间索引
 ```stylus
 > db.openStreetMap.createIndex({"loc" : "2dsphere"})
 ```
+
+### 地理空间查询的类型
+
 ## 2d
