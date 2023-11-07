@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
+                "file": "短记/GMS.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
+                "file": "短记/GMS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
+                "file": "短记/GMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md"
+                "file": "短记/GMS.md"
               }
             }
           },
@@ -165,12 +165,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "0f6bf33c86f59213",
+  "active": "f5d509137956e582",
   "lastOpenFiles": [
+    "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
     "前端/文章/MongoDB/MongoDB权威指南之索引.md",
     "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/MongoDB/MongoDB权威指南之创建、更新和删除文档.md",
-    "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
     "前端/文章/MongoDB/Pasted image 20231103114453.png",
     "短记/GMS.md",
     "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
