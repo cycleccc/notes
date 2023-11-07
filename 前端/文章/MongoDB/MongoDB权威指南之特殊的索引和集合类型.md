@@ -53,5 +53,39 @@ MongoDB 有两种类型的地理空间索引
 }
 ```
 
+多边形可以用点组成面表示：
+```json
+{
+    "name": "New England",
+    "loc": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    0,
+                    1
+                ],
+                [
+                    0,
+                    2
+                ],
+                [
+                    1,
+                    2
+                ],
+                [
+                    0,
+                    1
+                ]
+            ]
+        ]
+    }
+}
+```
 
+可以在 createIndex 中使用 "2dsphere" 类型来创建一个地理空间索引：
+
+```stylus
+> db.openStreetMap.createIndex({"loc" : "2dsphere"})
+```
 ## 2d
