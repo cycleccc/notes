@@ -8,3 +8,50 @@
 
 # 地理空间索引
 
+MongoDB 有两种类型的地理空间索引
+## 2dsphere
+  - 使用 2dsphere 索引的距离计算考虑到了地球的形状，提供了比 2d 索引更准确的距离处理，比如计算两个城市之间的距离
+  - 2dsphere 允许以 GeoJSON 格式指定点、线和多边形这些几何图形。
+
+一个点由一个二元数组给出，表示 [ 经度,纬度 ]（[longitude,latitude]）
+
+```json
+{
+    "name": "New York City",
+    "loc": {
+        "type": "Point",
+        "coordinates": [
+            50,
+            2
+        ]
+    }
+}
+```
+
+线可以用一个由点组成的数组来表示：
+
+```json
+{
+    "name": "Hudson River",
+    "loc": {
+        "type": "LineString",
+        "coordinates": [
+            [
+                0,
+                1
+            ],
+            [
+                0,
+                2
+            ],
+            [
+                1,
+                2
+            ]
+        ]
+    }
+}
+```
+
+
+## 2d
