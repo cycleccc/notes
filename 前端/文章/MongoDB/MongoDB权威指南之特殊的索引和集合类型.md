@@ -9,7 +9,7 @@
 # 地理空间索引
 
 MongoDB 有两种类型的地理空间索引
-## 2dsphere
+## 2dsphere索引
   - 使用 2dsphere 索引的距离计算考虑到了地球的形状，提供了比 2d 索引更准确的距离处理，比如计算两个城市之间的距离
   - 2dsphere 允许以 GeoJSON 格式指定点、线和多边形这些几何图形。
 
@@ -20,10 +20,7 @@ MongoDB 有两种类型的地理空间索引
     "name": "New York City",
     "loc": {
         "type": "Point",
-        "coordinates": [
-            50,
-            2
-        ]
+        "coordinates": [50,2]
     }
 }
 ```
@@ -35,20 +32,7 @@ MongoDB 有两种类型的地理空间索引
     "name": "Hudson River",
     "loc": {
         "type": "LineString",
-        "coordinates": [
-            [
-                0,
-                1
-            ],
-            [
-                0,
-                2
-            ],
-            [
-                1,
-                2
-            ]
-        ]
+        "coordinates": [[0,1],[0,2],[1,2]]
     }
 }
 ```
@@ -78,4 +62,21 @@ MongoDB 有两种类型的地理空间索引
   - "\$geoNear" 是`唯一`隐含了排序操作的地理空间运算符："$geoNear" 的结果总是按照距离由近及远的顺序返回。
 
 ### 使用地理空间索引
-## 2d
+
+## 2d索引
+对于非球面地图（电子游戏地图、时间序列数据等），可以使用 2d 索引代替2dsphere 索引
+
+文档应该使用一个双元素数组来表示 2d 索引字段。这个数组中的元素应该分别反映经度坐标和纬度坐标。
+
+```json
+{
+    "name" : "Water Temple",
+    "tile" : [ 32, 22 ]
+}
+```
+
+默认情况下，2d 索引会假设取值范围为 -180 到 180。如果希望对边界大小进行调整，则可以指定最小值和最大值作为 createIndex 的选项
+
+```stylus
+> db.hyrule.createIndex({"light-years" : "2d"}, {"min" : -1000, "max" : 1000})
+```
