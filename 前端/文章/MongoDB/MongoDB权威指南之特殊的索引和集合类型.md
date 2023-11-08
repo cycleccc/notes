@@ -91,4 +91,7 @@ MongoDB 中的 text 索引支持全文搜索。
 假设有一个维基百科文章集合需要进行索引。要对其中的文本进行搜索，首先需要创建一个 text 索引。
 
 ```stylus
+> db.articles.createIndex({"title": "text",
+                           "body" : "text"})
 ```
+
