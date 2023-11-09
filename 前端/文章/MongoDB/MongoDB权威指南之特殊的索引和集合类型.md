@@ -95,3 +95,51 @@ MongoDB 中的 text 索引支持全文搜索。
                            "body" : "text"})
 ```
 
+可以通过对每个字段指定权重来控制不同字段的相对重要性
+
+```stylus
+> db.articles.createIndex({"title": "text",
+                           "body": "text"},
+                          {"weights" : {
+                               "title" : 3,
+                               "body" : 2}})
+```
+
+## 文本查询
+
+可以使用 `"$text"` 查询运算符对具有 text 索引的集合进行文本搜索。
+
+### 优化全文本搜索
+
+如果能够使用某些查询条件将搜索结果的范围变窄，那么可以创建一个由这些查询条件前缀和全文本字段所组成的复合索引：
+
+```stylus
+> db.blog.createIndex({"date" : 1, "post" : "text"})
+```
+
+也可以使用某些查询条件作为后缀来实现覆盖查询。
+
+```stylus
+> db.blog.createIndex({"post" : "text", "author" : 1})
+```
+
+前缀形式和后缀形式也可以组合使用。
+
+```stylus
+> db.blog.createIndex({"date" : 1, "post" : "text", "author" : 1})
+```
+
+### 在其他语言中搜索
+
+不同语言的词干提取机制是不同的，因此必须指定索引或者文档使用的`语言`。
+
+text 索引允许指定"default_language" 选项，其默认值为 "english"，可以被设置为多种其他语言。
+
+要创建一个法语索引，可以这样做：
+
+```stylus
+> db.users.createIndex({"profil" : "text",
+                        "intérêts" : "text"},
+                       {"default_language" : "french"})
+```
+
