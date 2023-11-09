@@ -34,3 +34,46 @@ db.companies.aggregate([
 ])
 ```
 
+使用**$limit**把结果集限制为5。
+
+```JavaScript
+db.companies.aggregate([
+  {$match: {founded_year: 2004}},
+  {$limit: 5},
+  {$project: {
+    _id: 0,
+    name: 1}}
+])
+```
+
+无论 MongoDB 查询规划器在给定版本中进行何种类型的优化，都应该始终注意聚合管道的效率。确保在构建管道时限制从一个阶段传递到另一个阶段的文档数量。
+
+使用$sort对文档进行升序排序
+
+```JavaScript
+db.companies.aggregate([
+    { $match: { founded_year: 2004 } },
+    { $sort: { name: 1} },
+    { $limit: 5 },
+    { $project: {
+        _id: 0,
+        name: 1 } }
+])
+```
+
+使用**$skip**跳过10个文档。
+
+```JavaScript
+db.companies.aggregate([
+  {$match: {founded_year: 2004}},
+  {$sort: {name: 1}},
+  {$skip: 10},
+  {$limit: 5},
+  {$project: {
+    _id: 0,
+    name: 1}},
+])
+```
+
+# 表达式
+
