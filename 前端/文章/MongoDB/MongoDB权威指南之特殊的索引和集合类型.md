@@ -229,3 +229,16 @@ $ cat foo.txt
 Hello, world
 ```
 
+上面的例子使用 mongofiles 执行了 3 种基本操作：put、list 和 get。
+- put 操作可以将文件系统中选定的文件上传到 GridFS。
+- list 操作可以列出GridFS 中的文件。
+- get 操作可以将 GridFS 中的文件下载到文件系统中，这与 put 操作正好相反。
+- 用于在 GridFS 中搜索文件的 search 操作和用于从 GridFS 中删除文件的 delete 操作。
+
+## GridFS的底层机制
+
+GridFS 是一个构建于 MongoDB 普通文档之上的轻量级文件存储规范。
+
+GridFS 背后的理念是将大文件分割为`多个块`（chunk），并将每个块作为独立的文档进行存储。
+
+由于 MongoDB 支持在文档中存储二进制数据，因此可以将存储的开销降低到最小。除了将文件的每一块单独存储，还有一个文档用于将这些块组织在一起并存储文件的元数据。
