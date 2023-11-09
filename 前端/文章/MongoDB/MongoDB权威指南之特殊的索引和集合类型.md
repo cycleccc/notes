@@ -192,3 +192,40 @@ createCollection 还能够指定固定集合中文档的数量：
 
 TTL 索引允许为每一个文档设置一个超时时间。当一个文档达到其预设的`过期时间`之后就会被删除。这种类型的索引对于类似会话保存这样的缓存场景非常有用。
 
+可以在 createIndex 的第二个参数中指定"expireAfterSeconds" 选项来创建 TTL 索引：
+
+```stylus
+> // 超时时间为24小时
+> db.sessions.createIndex({"lastUpdated" : 1}, {"expireAfterSeconds" : 60*60*24})
+```
+
+为了防止活跃的会话被删除，可以在会话上有活动发生时将 "lastUpdated" 字段的值`更新为当前时间`。一旦 "lastUpdated" 的时间距离当前时间达到 24 小时，相应的文档就会被删除。
+
+MongoDB 每分钟扫描一次 TTL 索引，因此不应依赖于秒级的粒度。
+
+在一个给定的集合中可以有多个 TTL 索引。TTL 索引不能是复合索引，但是可以像“普通”索引一样用来优化排序和查询。
+
+# 使用GridFS存储文件
+
+GridFS 是 MongoDB `存储大型二进制文件`的一种机制。
+
+## GridFS 是 MongoDB 存储大型二进制文件的一种机制
+
+使用 GridFS 最简单的方式是使用 mongofiles 工具。所有的 MongoDB 发行版都包含mongofiles，它可以用来在 GridFS 中上传文件、下载文件、查看文件列表、搜索文件，以及删除文件。
+
+```PowerShell
+$ echo "Hello, world" > foo.tx
+$ mongofiles put foo.txt
+2019-10-30T10:12:06.588+0000  connected to: localhost
+2019-10-30T10:12:06.588+0000  added file: foo.txt
+$ mongofiles list
+2019-10-30T10:12:41.603+0000  connected to: localhost
+foo.txt 13
+$ rm foo.txt
+$ mongofiles get foo.txt
+2019-10-30T10:13:23.948+0000  connected to: localhost
+2019-10-30T10:13:23.955+0000  finished writing to foo.txt
+$ cat foo.txt
+Hello, world
+```
+
