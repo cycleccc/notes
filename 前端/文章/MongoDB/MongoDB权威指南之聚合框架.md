@@ -87,3 +87,26 @@ db.companies.aggregate([
 
 # $project
 
+在投射阶段中，用于指定 ipo、valuation 和 funders 值的 `$字符`表示这些值应被解释为`字段路径`，并分别用于为每个字段选择应投射的值。
+
+```JavaScript
+db.companies.aggregate([
+  {$match: {"funding_rounds.investments.financial_org.permalink": "greylock" }},
+  {$project: {
+    _id: 0,
+    name: 1,
+    ipo: "$ipo.pub_year",
+    valuation: "$ipo.valuation_amount",
+    funders: "$funding_rounds.investments.financial_org.permalink"
+  }}
+]).pretty()
+```
+
+# $unwind
+
+$unwind 会从输入文档中获取一个数组，并为该数组中的每个元素创建一个输出文档
+
+![[Pasted image 20231109174515.png]]
+
+# 数组表达式
+
