@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之聚合框架.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之聚合框架.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之聚合框架.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md"
+                "file": "前端/文章/MongoDB/MongoDB权威指南之聚合框架.md"
               }
             }
           },
@@ -167,9 +167,10 @@
   },
   "active": "f5d509137956e582",
   "lastOpenFiles": [
+    "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
+    "前端/文章/MongoDB/MongoDB权威指南之聚合框架.md",
     "前端/文章/MongoDB/MongoDB权威指南之索引.md",
     "短记/GMS.md",
-    "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
     "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/MongoDB/MongoDB权威指南之创建、更新和删除文档.md",
     "前端/文章/MongoDB/Pasted image 20231103114453.png",
@@ -211,7 +212,6 @@
     "内存泄漏.md",
     "新建文件夹",
     "前端/学习笔记/mongoose.md",
-    "list/文章List.md",
     "list",
     "未命名 1.canvas",
     "未命名.canvas"
