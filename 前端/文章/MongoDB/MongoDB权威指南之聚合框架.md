@@ -7,3 +7,30 @@
 
 # 阶段入门：常见操作
 
+使用**$match**进行过滤
+
+```JavaScript
+db.companies.aggregate([
+    {$match: {founded_year: 2004}},
+])
+```
+
+这相当于使用了 find API
+
+```JavaScript
+db.companies.find({founded_year: 2004})
+```
+
+使用**$project**添加一个投射阶段来将每个文档的输出减少到几个字段。
+
+```JavaScript
+db.companies.aggregate([
+  {$match: {founded_year: 2004}},
+  {$project: {
+    _id: 0,
+    name: 1,
+    founded_year: 1
+  }}
+])
+```
+
