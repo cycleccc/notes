@@ -122,3 +122,40 @@ $unwind 会从输入文档中获取一个数组，并为该数组中的每个元
 
 ## 分组阶段中的_id字段
 
+在分组阶段使用具有多个字段的文档作为 _id 值是完全没问题的。
+
+```JavaScript
+db.companies.aggregate([
+  { $match: { founded_year: { $gte: 2013 } } },
+  { $group: {
+    _id: { founded_year: "$founded_year"},
+    companies: { $push: "$name" }
+  } },
+  { $sort: { "_id.founded_year": 1 } }
+]).pretty()
+```
+
+管道输出值如下：
+```JavaScript
+{
+  "_id" : {
+    "founded_year" : 2013
+  },
+  "companies" : [
+    "Fixya",
+    "Wamba",
+    "Advaliant",
+    "Fluc",
+    "iBazar",
+    "Gimigo",
+    "SEOGroup",
+    "Clowdy",
+    "WhosCall",
+    "Pikk",
+    "Tongxue",
+    "Shopseen",
+    "VistaGen Therapeutics"
+  ]
+}
+...
+```
