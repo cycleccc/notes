@@ -1,11 +1,10 @@
-搜索交互优化：  
-a, PROJECT_CODE:MBA-AP-2023102700001  > 搜索 PROJECT_CODE 字段，值等于 MBA-AP-2023102700001|  
-b, MBA-AP-2023102700001 > 搜索 所有字段，值等于 MBA-AP-2023102700001  
-c, PROJECT_CODE:MBA-AP-2023102700001 region:na > 搜索 PROJECT_CODE 字段，值等于 MBA-AP-2023102700001，并且 region字段，值等于 na
-
-
-我现在有一个需求，在输入框输入查询时有几个规则：
-1. a:1 等价于 搜索 a 字段，值等于1。
-2. 1 等价于搜索所有字段，值等于1。
-3. a:1 b:2 等价于搜索a字段值等于1且b字段值等于2。
-该怎么处理字符串转换为查询参数
+order
+- headers 删除recall和__v、\_id
+- lines 删除_id、order_line_id排序
+- resourceLines resource_code排序
+receive
+- receiveHeaders  删除recall和__v、\_id
+- receiveLines 删除_id、order_line_id排序
+- resourceLines resource_code排序
+- resources 删除_id、recall、\_\_v
+- resourceNorms 删除recall和__v、\_id
