@@ -38,3 +38,7 @@ MongoDB 是一个分布式数据库，它支持跨副本集和/或分片的 ACID
 
 ## 如何使用事务
 
+MongoDB 提供了两种 API 来使用事务。
+- 第一种是与关系数据库类似的语法（如start_transaction 和 commit_transaction），称为核心 API；
+- 第二种称为回调 API，这是使用事务的推荐方法。
+
