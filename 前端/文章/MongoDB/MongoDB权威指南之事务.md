@@ -45,3 +45,31 @@ MongoDB 提供了两种 API 来使用事务。
 核心 API 不为大多数错误提供重试逻辑，它要求开发人员为操作、事务提交函数以及所需的任何重试和错误逻辑手动编写代码。
 
 回调 API 提供了一个单独的函数，该函数封装了大量功能，包括启动与指定逻辑会话关联的事务、执行作为回调函数提供的函数以及提交事务（或在出现错误时中止）。此函数还包含了处理提交错误的重试逻辑。
+
+node 核心 API 实例代码：
+```JavaScript
+   const { mongoose } = this.ctx.app;
+    const session = await this.ctx.getSession();
+    const db = mongoose.connection;
+    try {
+      let data = { name : 'ceshi' };
+      const Cat = new this.ctx.model.Cat();
+      for (let key in data) {
+        Cat[key] = data[key]
+      }
+      await db
+        .collection('cats')
+        .insertOne(Cat, { session });
+      // 提交事务
+      await session.commitTransaction();
+      return 'ok';
+    } catch (err) {
+      // 回滚事务
+      const res = await session.abortTransaction();
+      console.log(res)
+      this.ctx.logger.error(new Error(err));
+    } finally {
+      await session.endSession();
+    }
+    // 执行后,数据库中多了一条 { name: 'ceshi'} 的记录
+```
