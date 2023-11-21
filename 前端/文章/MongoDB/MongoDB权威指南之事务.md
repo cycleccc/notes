@@ -84,6 +84,7 @@ node 核心 API 实例代码：
 
 事务的默认最大运行时间是 1 分钟。可以通过在 mongod 实例级别上修改 transactionLifetimeLimitSeconds 的限制来增加。
 对于分片集群，必须在`所有分片`副本集成员上设置该参数。超过此时间后，事务将被视为已过期，并由定期运行的清理进程中止。
+
 ### oplog大小限制
 
 MongoDB 会创建出与事务中写操作数量相同的 oplog 条目。但是，每个 oplog 条目必须在 16MB 的 BSON 文档大小限制之内。
