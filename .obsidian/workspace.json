@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
+                "file": "前端/文章/snabbdom/snabbdom.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
+                "file": "前端/文章/snabbdom/snabbdom.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
+                "file": "前端/文章/snabbdom/snabbdom.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md"
+                "file": "前端/文章/snabbdom/snabbdom.md"
               }
             }
           },
@@ -166,6 +166,7 @@
   },
   "active": "1efe201f12a7ce9a",
   "lastOpenFiles": [
+    "前端/面试/面试题/面试题手册.md",
     "前端/文章/snabbdom/snabbdom.md",
     "前端/文章/snabbdom",
     "前端/文章/git图形界面完全指南.md",
@@ -173,7 +174,6 @@
     "前端/文章/未命名.md",
     "show/未命名.md",
     "show",
-    "前端/面试/面试题/面试题手册.md",
     "前端/文章/MongoDB/MongoDB权威指南之查询.md",
     "前端/文章/MongoDB/MongoDB权威指南之聚合框架.md",
     "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
