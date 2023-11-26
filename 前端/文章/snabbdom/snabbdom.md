@@ -2,4 +2,3 @@
 
 对于想要深入学习 Vue Virtual DOM 的朋友，建议先学习 Snabbdom，对理解 Vue 会很有帮助，并且其核心代码 200 多行
 
-**本文挑选 Snabbdom 模块系统作为主要核心点介绍，其他内容可以查阅官方文档**[《Snabbdom》](https://link.segmentfault.com/?enc=2wSrMHnXA%2Fs2Trsm17sRxQ%3D%3D.9SkdiOqyWjRfAPNa7L5biey%2F20amj51t0v1BCEpwyrh2sgIcjNcYUyaFi2N1NCqK)。
