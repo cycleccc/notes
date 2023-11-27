@@ -11,11 +11,9 @@
             "id": "dbd7684afd9e13c7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "前端/文章/snabbdom/snabbdom.md",
-                "mode": "source",
-                "source": false
+                "file": "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp"
               }
             }
           }
@@ -93,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/snabbdom/snabbdom.md",
+                "file": "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/snabbdom/snabbdom.md",
+                "file": "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/snabbdom/snabbdom.md"
+                "file": "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp"
               }
             }
           },
@@ -166,6 +164,9 @@
   },
   "active": "dbd7684afd9e13c7",
   "lastOpenFiles": [
+    "前端/读书笔记/深入浅出nodejs.md",
+    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
+    "list/生活list.md",
     "前端/文章/snabbdom/snabbdom.md",
     "前端/面试/面试题/面试题手册.md",
     "前端/文章/snabbdom",
@@ -195,17 +196,13 @@
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.003.jpeg",
-    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "前端/文章/Vue/详解vue组件通信.md",
     "list/文章List.md",
-    "list/生活list.md",
     "前端/职业规划.md",
     "前端/文章/浏览器/console.log.md",
-    "前端/读书笔记/深入浅出nodejs.md",
     "前端/面试/项目.md",
     "前端/面试/你还有什么想问的吗.md",
     "前端/前端note/VUE/响应式原理和数据双向绑定.md",
-    "前端/前端note/JS/ES6 Module和CommonJS.md",
     "前端/文章/浏览器",
     "前端/文章/Vue",
     "前端/文章/JavaScript",
