@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之.md",
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之.md",
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之.md",
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之.md"
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md"
               }
             }
           },
@@ -168,7 +168,7 @@
   "lastOpenFiles": [
     "前端/文章/react",
     "前端/文章/Vue/详解vue组件通信.md",
-    "前端/文章/Vue/Vue设计与实现之.md",
+    "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
     "前端/文章/MongoDB/MongoDB权威指南之查询.md",
     "前端/文章/未命名",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
