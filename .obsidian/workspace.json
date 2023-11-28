@@ -11,9 +11,11 @@
             "id": "dbd7684afd9e13c7",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp"
+                "file": "前端/文章/MongoDB/MongoDB权威指南之查询.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -91,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之查询.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
+                "file": "前端/文章/MongoDB/MongoDB权威指南之查询.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp"
+                "file": "前端/文章/MongoDB/MongoDB权威指南之查询.md"
               }
             }
           },
@@ -164,8 +166,8 @@
   },
   "active": "dbd7684afd9e13c7",
   "lastOpenFiles": [
-    "前端/读书笔记/深入浅出nodejs.md",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
+    "前端/读书笔记/深入浅出nodejs.md",
     "list/生活list.md",
     "前端/文章/snabbdom/snabbdom.md",
     "前端/面试/面试题/面试题手册.md",
