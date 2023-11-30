@@ -11,9 +11,11 @@
             "id": "dbd7684afd9e13c7",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "前端/面试/面试总结.assets/image-20220518155959224-16528608028981.png"
+                "file": "前端/面试/你还有什么想问的吗.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -91,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/面试/面试总结.assets/image-20220518155959224-16528608028981.png",
+                "file": "前端/面试/你还有什么想问的吗.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/面试/面试总结.assets/image-20220518155959224-16528608028981.png",
+                "file": "前端/面试/你还有什么想问的吗.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/面试/面试总结.assets/image-20220518155959224-16528608028981.png"
+                "file": "前端/面试/你还有什么想问的吗.md"
               }
             }
           },
@@ -162,9 +164,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "dbd7684afd9e13c7",
   "lastOpenFiles": [
     "list/生活list.md",
+    "前端/面试/面试总结.assets/image-20220518155959224-16528608028981.png",
     "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
     "前端/文章/react",
     "前端/文章/Vue/详解vue组件通信.md",
@@ -194,7 +197,6 @@
     "短记",
     "Quick Start.md",
     "前端/面试/跳槽/简历修改.md",
-    "前端/面试/面试总结.assets/image-20220518155959224-16528608028981.png",
     "前端/面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png",
     "前端/面试/面试题/5d1f6c67acba46d7952de3f5f367e30e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
