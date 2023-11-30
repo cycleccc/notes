@@ -11,11 +11,9 @@
             "id": "dbd7684afd9e13c7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
-                "mode": "source",
-                "source": false
+                "file": "前端/面试/面试总结.assets/image-20220518155959224-16528608028981.png"
               }
             }
           }
@@ -93,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
+                "file": "前端/面试/面试总结.assets/image-20220518155959224-16528608028981.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
+                "file": "前端/面试/面试总结.assets/image-20220518155959224-16528608028981.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md"
+                "file": "前端/面试/面试总结.assets/image-20220518155959224-16528608028981.png"
               }
             }
           },
@@ -164,16 +162,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "dbd7684afd9e13c7",
+  "active": "d82701bc35b5884f",
   "lastOpenFiles": [
+    "list/生活list.md",
+    "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
     "前端/文章/react",
     "前端/文章/Vue/详解vue组件通信.md",
-    "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
     "前端/文章/MongoDB/MongoDB权威指南之查询.md",
     "前端/文章/未命名",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "前端/读书笔记/深入浅出nodejs.md",
-    "list/生活list.md",
     "前端/文章/snabbdom/snabbdom.md",
     "前端/面试/面试题/面试题手册.md",
     "前端/文章/snabbdom",
@@ -211,7 +209,6 @@
     "前端/文章/Vue",
     "前端/文章/JavaScript",
     "前端/文章/MongoDB",
-    "前端/面试/项目.pdf",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
