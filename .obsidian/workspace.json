@@ -11,9 +11,9 @@
             "id": "dbd7684afd9e13c7",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "image",
               "state": {
-                "file": "前端/面试/项目.pdf"
+                "file": "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png"
               }
             }
           }
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/面试/项目.pdf",
+                "file": "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/面试/项目.pdf",
+                "file": "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/面试/项目.pdf"
+                "file": "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png"
               }
             }
           },
@@ -164,6 +164,7 @@
   },
   "active": "dbd7684afd9e13c7",
   "lastOpenFiles": [
+    "前端/面试/项目.pdf",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
     "前端/面试/面试题/5d1f6c67acba46d7952de3f5f367e30e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
@@ -201,7 +202,6 @@
     "前端/面试/跳槽/简历修改.md",
     "前端/面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
-    "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.003.jpeg",
     "list/文章List.md",
     "前端/职业规划.md",
     "前端/文章/浏览器/console.log.md",
