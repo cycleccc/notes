@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/MongoDB/Mongoose/Mongoose常用API.md"
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md"
               }
             }
           },
@@ -168,8 +168,8 @@
   "lastOpenFiles": [
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
     "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
-    "前端/文章/MongoDB/Mongoose/Mongoose常用API",
     "前端/文章/MongoDB/Mongoose",
+    "前端/文章/MongoDB/Mongoose/Mongoose常用API",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之特殊的索引和集合类型.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之索引.md",
