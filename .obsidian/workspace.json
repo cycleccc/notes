@@ -11,9 +11,11 @@
             "id": "dbd7684afd9e13c7",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png"
+                "file": "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -91,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
+                "file": "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
+                "file": "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png"
+                "file": "前端/文章/MongoDB/Mongoose/Mongoose常用API.md"
               }
             }
           },
@@ -164,8 +166,20 @@
   },
   "active": "dbd7684afd9e13c7",
   "lastOpenFiles": [
-    "前端/面试/项目.pdf",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
+    "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
+    "前端/文章/MongoDB/Mongoose/Mongoose常用API",
+    "前端/文章/MongoDB/Mongoose",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之MongoDB特性介绍.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之特殊的索引和集合类型.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之索引.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之事务.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之入门指南.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之聚合框架.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之创建、更新和删除文档.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之查询.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习",
+    "前端/面试/项目.pdf",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
     "前端/面试/面试题/5d1f6c67acba46d7952de3f5f367e30e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
     "前端/面试/你还有什么想问的吗.md",
@@ -190,26 +204,13 @@
     "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
     "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
-    "前端/文章/MongoDB/MongoDB权威指南之索引.md",
     "前端/文章/MongoDB/Pasted image 20231109174515.png",
     "前端/文章/MongoDB/test.json",
-    "前端/文章/MongoDB/MongoDB权威指南之创建、更新和删除文档.md",
     "前端/文章/MongoDB/Pasted image 20231103114453.png",
-    "短记/GMS.md",
     "短记/Pasted image 20231031141320.png",
     "短记",
-    "Quick Start.md",
-    "前端/面试/跳槽/简历修改.md",
     "前端/面试/面试题/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
-    "list/文章List.md",
-    "前端/职业规划.md",
-    "前端/文章/浏览器/console.log.md",
-    "前端/面试/项目.md",
-    "前端/文章/浏览器",
-    "前端/文章/Vue",
-    "前端/文章/JavaScript",
-    "前端/文章/MongoDB",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
