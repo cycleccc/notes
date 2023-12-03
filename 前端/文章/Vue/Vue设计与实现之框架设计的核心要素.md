@@ -23,3 +23,7 @@ highlight: docco
 
 # 框架要做到良好的Tree-Shaking
 
+想要实现 Tree-Shaking，必须满足一个条件，即模块`必须是ESM`（ES Module），因为 Tree-Shaking 依赖 ESM 的静态结构。
+
+现在无论是 rollup.js 还是 webpack，都支持 Tree-Shaking。
+
