@@ -27,3 +27,7 @@ highlight: docco
 
 现在无论是 rollup.js 还是 webpack，都支持 Tree-Shaking。
 
+使用 `__PURE__` 可以告诉rollup或webpack该函数不会产生副作用如果需要tree-shaking可以放心进行。
+
+在编写框架的时候需要合理使用 `/*#__PURE__*/` 注释。如果你去搜索 Vue.js 3 的源码，会发现它大量使用了该注释。
+
