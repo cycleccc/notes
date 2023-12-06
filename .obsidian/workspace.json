@@ -4,22 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "774ef04f9a052e83",
+        "id": "2f8076ec3d292b44",
         "type": "tabs",
         "children": [
           {
-            "id": "dbd7684afd9e13c7",
+            "id": "532e514c126608ab",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "12033d9f063157f3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
+                "file": "短记/GMS.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
+                "file": "短记/GMS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
+                "file": "短记/GMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md"
+                "file": "短记/GMS.md"
               }
             }
           },
@@ -164,24 +173,21 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "dbd7684afd9e13c7",
+  "active": "12033d9f063157f3",
   "lastOpenFiles": [
-    "前端/文章/react",
-    "前端/文章/Vue/详解vue组件通信.md",
+    "conflict-files-obsidian-git.md",
     "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
-    "前端/文章/MongoDB/MongoDB权威指南之查询.md",
-    "前端/文章/未命名",
-    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
-    "前端/读书笔记/深入浅出nodejs.md",
-    "list/生活list.md",
-    "前端/文章/snabbdom/snabbdom.md",
+    "前端/文章/Vue/详解vue组件通信.md",
+    "生活/doujiang/家务.md",
     "前端/面试/面试题/面试题手册.md",
+    "前端/文章/snabbdom/snabbdom.md",
     "前端/文章/snabbdom",
     "前端/文章/git图形界面完全指南.md",
     "前端/文章/MongoDB/MongoDB权威指南之事务.md",
     "前端/文章/未命名.md",
     "show/未命名.md",
     "show",
+    "前端/文章/MongoDB/MongoDB权威指南之查询.md",
     "前端/文章/MongoDB/MongoDB权威指南之聚合框架.md",
     "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
     "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
@@ -202,16 +208,19 @@
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.003.jpeg",
+    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "list/文章List.md",
+    "list/生活list.md",
     "前端/职业规划.md",
     "前端/文章/浏览器/console.log.md",
+    "前端/读书笔记/深入浅出nodejs.md",
     "前端/面试/项目.md",
-    "前端/面试/你还有什么想问的吗.md",
     "前端/文章/浏览器",
     "前端/文章/Vue",
     "前端/文章/JavaScript",
     "前端/文章/MongoDB",
     "前端/面试/项目.pdf",
+    "前端/文章",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
