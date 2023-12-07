@@ -1,0 +1,35 @@
+---
+
+theme: z-blue
+
+highlight: docco
+
+---
+# 提升用户的开发体验
+
+衡量一个框架是否足够优秀的指标之一就是看它的开发体验如何，例如完善的报错信息、自定义的initCustomFormatter log封装等。
+
+# 控制框架代码的体积
+
+这里讲到了使用rollup对Vue进行打包构建，以及Vue在缩小代码体积的一些措施，如告警代码通过rollup配置的__DEV__来控制是否使用，在正式环境中__DEV__为false，警告代码会被认定为不会被执行的死代码而不打包入最终代码。
+
+	rollup 只是用于 Vue 发布文件的构建，对用户使用没有直接影响。
+	
+	之前用 webpack 打包，还是会自带一个小型的动态 module 加载机制，并且每个文件是包在一个模块函数里的。rollup 打包通过重命名 import binding 直接把所有文件的函数都放在同一个函数体里面... 所以最终出来的文件会小一些，并且初始化快个十几毫秒的样子。
+	  
+	作者：尤雨溪  
+	链接：https://www.zhihu.com/question/37861778/answer/73847503  
+	来源：知乎  
+
+# 框架要做到良好的Tree-Shaking
+
+想要实现 Tree-Shaking，必须满足一个条件，即模块`必须是ESM`（ES Module），因为 Tree-Shaking 依赖 ESM 的静态结构。
+
+现在无论是 rollup.js 还是 webpack，都支持 Tree-Shaking。
+
+使用 `__PURE__` 可以告诉rollup或webpack该函数不会产生副作用如果需要tree-shaking可以放心进行。
+
+在编写框架的时候需要合理使用 `/*#__PURE__*/` 注释。如果你去搜索 Vue.js 3 的源码，会发现它大量使用了该注释。
+
+# 框架应该输出怎样的构建产物
+vue.global.js 文件就是 IIFE 形式的资源
