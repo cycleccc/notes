@@ -4,19 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2f8076ec3d292b44",
+        "id": "7eb8c58e91d04dac",
         "type": "tabs",
         "children": [
           {
-            "id": "532e514c126608ab",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "12033d9f063157f3",
+            "id": "322d2159f792b851",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -27,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -173,10 +164,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "12033d9f063157f3",
+  "active": "322d2159f792b851",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "Quick Start.md",
     "短记/GMS.md",
+    "conflict-files-obsidian-git.md",
     "前端/文章/Vue/Vue设计与实现之框架设计的核心要素.md",
     "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
     "前端/文章/MongoDB/Mongoose",
@@ -204,7 +196,6 @@
     "前端/文章/MongoDB/MongoDB权威指南之聚合框架.md",
     "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
     "前端/文章/MongoDB/MongoDB权威指南之MongoDB特性介绍.md",
-    "前端/文章/MongoDB/MongoDB权威指南之特殊的索引和集合类型.md",
     "前端/文章/MongoDB/Pasted image 20231109174515.png",
     "前端/文章/MongoDB/test.json",
     "前端/文章/MongoDB/Pasted image 20231103114453.png",
