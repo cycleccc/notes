@@ -1,5 +1,5 @@
 diff-history
-- [ ] 搜索
+- [x] 搜索
 - [ ] 总数据量
 - [x] 差异数据process状态切换，默认false
 - [x] listview重复请求解决
