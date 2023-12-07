@@ -32,4 +32,7 @@ highlight: docco
 在编写框架的时候需要合理使用 `/*#__PURE__*/` 注释。如果你去搜索 Vue.js 3 的源码，会发现它大量使用了该注释。
 
 # 框架应该输出怎样的构建产物
-vue.global.js 文件就是 IIFE 形式的资源
+
+vue.global.js 文件就是 IIFE 形式的资源。
+
+当进行服务端渲染时，Vue.js 的代码是在 Node.js 环境中运行的，而非浏览器环境。在 Node.js 环境中，资源的模块格式应该是CommonJS，简称 cjs。为了能够输出 cjs 模块的资源，我们可以通过修改 rollup.config.js 的配置 format: 'cjs' 来实现：
