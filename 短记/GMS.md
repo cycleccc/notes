@@ -7,4 +7,4 @@ diff-history
 - [x] 差异数据按日期展示
 - [x] type合并为一行
 - [x] modified状态差异name展示 
-- [ ] 滑动展示
+- [x] 滑动展示
