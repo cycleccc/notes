@@ -5,7 +5,7 @@ theme: z-blue
 highlight: docco
 
 ---
-### **SolidJS和Svelte**# 命令式和声明式
+# 命令式和声明式
 
 早年间流行的 jQuery 就是典型的命令式框架。命令式框架的一大特点就是`关注过程`。
 
