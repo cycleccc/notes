@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/Vue/Vue源码/CreateApp.md",
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/Vue/Vue源码/CreateApp.md",
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/Vue/Vue源码/CreateApp.md",
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/Vue/Vue源码/CreateApp.md"
+                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md"
               }
             }
           },
@@ -166,7 +166,6 @@
   },
   "active": "322d2159f792b851",
   "lastOpenFiles": [
-    "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
     "前端/文章/Vue/Vue源码/CreateApp.md",
     "前端/文章/Vue/Vue源码",
     "短记/GMS.md",
@@ -184,6 +183,7 @@
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之事务.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/MongoDB/MongoDB权威指南学习",
+    "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
     "前端/文章/Vue/详解vue组件通信.md",
     "生活/doujiang/家务.md",
     "前端/面试/面试题/面试题手册.md",
