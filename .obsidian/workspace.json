@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
+                "file": "前端/文章/Vue/Vue设计与实现/框架设计的核心要素.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
+                "file": "前端/文章/Vue/Vue设计与实现/框架设计的核心要素.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
+                "file": "前端/文章/Vue/Vue设计与实现/框架设计的核心要素.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现之权衡的艺术.md"
+                "file": "前端/文章/Vue/Vue设计与实现/框架设计的核心要素.md"
               }
             }
           },
@@ -166,8 +166,9 @@
   },
   "active": "322d2159f792b851",
   "lastOpenFiles": [
-    "前端/文章/Vue/Vue设计与实现之框架设计的核心要素.md",
-    "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
+    "前端/文章/Vue/Vue设计与实现/权衡的艺术.md",
+    "前端/文章/Vue/Vue设计与实现/框架设计的核心要素.md",
+    "前端/文章/Vue/Vue设计与实现",
     "前端/文章/Vue/Vue源码/CreateApp.md",
     "前端/文章/Vue/Vue源码",
     "短记/GMS.md",
@@ -196,7 +197,6 @@
     "show",
     "前端/文章/MongoDB/MongoDB权威指南之查询.md",
     "前端/文章/MongoDB/MongoDB权威指南之聚合框架.md",
-    "前端/文章/MongoDB/MongoDB权威指南之入门指南.md",
     "前端/文章/MongoDB/Pasted image 20231109174515.png",
     "前端/文章/MongoDB/test.json",
     "前端/文章/MongoDB/Pasted image 20231103114453.png",
@@ -211,7 +211,6 @@
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "前端/文章/浏览器",
     "前端/文章/Vue",
-    "前端/文章/JavaScript",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
