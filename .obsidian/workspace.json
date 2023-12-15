@@ -11,8 +11,12 @@
             "id": "c7cbc3814bba621e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "前端/文章/Vue/Vue设计与实现/权衡的艺术.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "前端/文章/Vue/Vue设计与实现/权衡的艺术.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "前端/文章/Vue/Vue设计与实现/权衡的艺术.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "前端/文章/Vue/Vue设计与实现/权衡的艺术.md"
+              }
             }
           },
           {
@@ -158,16 +166,16 @@
   },
   "active": "c7cbc3814bba621e",
   "lastOpenFiles": [
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20231215111416.png",
+    "前端/文章/Vue/Vue设计与实现/Pasted image 20231213115101.png",
+    "前端/文章/Vue/Vue设计与实现/权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/框架设计的核心要素.md",
+    "前端/文章/Vue/Vue设计与实现/Pasted image 20231215111416.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231215111150.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231215105611.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231215105551.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231215105530.png",
-    "前端/文章/Vue/Vue设计与实现/权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231213222126.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231213222024.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20231213115101.png",
     "前端/文章/Vue/Vue设计与实现",
     "前端/文章/Vue/Vue源码/CreateApp.md",
     "前端/文章/Vue/Vue源码",
