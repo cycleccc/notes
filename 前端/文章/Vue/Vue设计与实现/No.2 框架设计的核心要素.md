@@ -9,7 +9,6 @@ highlight: docco
 theme: z-blue
 highlight: docco
 ---
-# 【Vue设计与实现】框架设计的核心要素
 
 # 前言
 
