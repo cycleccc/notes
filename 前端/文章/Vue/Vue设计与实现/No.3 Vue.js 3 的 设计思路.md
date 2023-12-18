@@ -32,3 +32,15 @@ VueJS可以使用`模板语法`或JavaScript对象（或使用h函数将参数�
 04   tag: `h${level}`, // h3 标签
 05 }
 ~~~
+
+*h函数转化为JavaScript对象*
+
+~~~JavaScript
+01 import { h } from 'vue'
+02
+03 export default {
+04   render() {
+05     return h('h1', { onClick: handler }) // 虚拟 DOM
+06   }
+07 }
+~~~
