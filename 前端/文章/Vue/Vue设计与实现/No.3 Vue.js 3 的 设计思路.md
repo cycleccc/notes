@@ -47,4 +47,42 @@ h 函数是一个`辅助创建虚拟 DOM` 的工具函数
 07 }
 ~~~
 
+*Vue源码中的 h 函数实现*
+
+![[Pasted image 20231218111407.png]]
+
 # 初始渲染器
+
+渲染器的作用就是把虚拟 DOM 渲染为真实 DOM。
+
+## 实现一个简易的渲染器
+~~~JavaScript
+01 function renderer(vnode, container) {
+02   // 使用 vnode.tag 作为标签名称创建 DOM 元素
+03   const el = document.createElement(vnode.tag)
+04   // 遍历 vnode.props，将属性、事件添加到 DOM 元素
+05   for (const key in vnode.props) {
+06     if (/^on/.test(key)) {
+07       // 如果 key 以 on 开头，说明它是事件
+08       el.addEventListener(
+09         key.substr(2).toLowerCase(), // 事件名称 onClick ---> click
+10         vnode.props[key] // 事件处理函数
+11       )
+12     }
+13   }
+14
+15   // 处理 children
+16   if (typeof vnode.children === 'string') {
+17     // 如果 children 是字符串，说明它是元素的文本子节点
+18     el.appendChild(document.createTextNode(vnode.children))
+19   } else if (Array.isArray(vnode.children)) {
+20     // 递归地调用 renderer 函数渲染子节点，使用当前元素 el 作为挂载点
+21     vnode.children.forEach(child => renderer(child, el))
+22   }
+23
+24   // 将元素添加到挂载点下
+25   container.appendChild(el)
+26 }
+~~~
+
+对于渲染器来说，它真正的`难点`在于需要`精确地找到 vnode 对象的变更点并且只更新变更的内容`。就上例来说，渲染器应该只更新元素对应改变的部分，而不需要再走一遍完整的创建元素的流程。
