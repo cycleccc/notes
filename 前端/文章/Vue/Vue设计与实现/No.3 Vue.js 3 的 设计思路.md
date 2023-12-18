@@ -35,6 +35,8 @@ VueJS可以使用`模板语法`或JavaScript对象（或使用h函数将参数�
 
 *h函数转化为JavaScript对象*
 
+h 函数是一个`辅助创建虚拟 DOM` 的工具函数
+
 ~~~JavaScript
 01 import { h } from 'vue'
 02
@@ -44,3 +46,5 @@ VueJS可以使用`模板语法`或JavaScript对象（或使用h函数将参数�
 06   }
 07 }
 ~~~
+
+# 初始渲染器
