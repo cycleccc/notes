@@ -24,3 +24,11 @@ VueJS可以使用`模板语法`或JavaScript对象（或使用h函数将参数�
 ~~~
 
 *JavaScript对象*
+
+~~~JavaScript
+01 // h 标签的级别
+02 let level = 3
+03 const title = {
+04   tag: `h${level}`, // h3 标签
+05 }
+~~~
