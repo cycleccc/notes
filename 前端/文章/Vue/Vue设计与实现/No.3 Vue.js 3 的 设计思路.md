@@ -89,4 +89,26 @@ h 函数是一个`辅助创建虚拟 DOM` 的工具函数
 对于渲染器来说，它真正的`难点`在于需要`精确地找到 vnode 对象的变更点并且只更新变更的内容`。就上例来说，渲染器应该只更新元素对应改变的部分，而不需要再走一遍完整的创建元素的流程。
 
 # 组件的本质
+	组件就是一组 DOM 元素的封装
 
+我们可以定义一个JavaScript对象为MyComponent
+
+~~~JavaScript
+01 const MyComponent = function () {
+02   return {
+03     tag: 'div',
+04     props: {
+05       onClick: () => alert('hello')
+06     },
+07     children: 'click me'
+08   }
+09 }
+~~~
+
+在
+
+~~~JavaScript
+01 const vnode = {
+02   tag: MyComponent
+03 }
+~~~
