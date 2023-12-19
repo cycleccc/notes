@@ -49,7 +49,7 @@ h 函数是一个`辅助创建虚拟 DOM` 的工具函数，后续会将render()
 
 *Vue源码中的 h 函数实现*
 
-![[Pasted image 20231218111407.png]]
+![Pasted image 20231218111407.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/92faa5ae3fcb4335b4fb5b6e99051b7d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=723&h=467&s=48616&e=png&b=1f1f1f)
 
 # 初始渲染器
 
