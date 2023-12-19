@@ -105,10 +105,21 @@ h 函数是一个`辅助创建虚拟 DOM` 的工具函数
 09 }
 ~~~
 
-在Vue源码中会判断vnode的tag是否是对象或是字符串，如果是字符串则直接当渲染，如果是对象或是函数则进入组件渲染函数，
+在Vue源码中会判断vnode的tag是否是对象或是字符串，如果是字符串则直接作为标签渲染，如果是对象或是函数则进入组件渲染函数,组件渲染函数做的事情也就是递归调用渲染函数将标签拼装为组件。
 
 ~~~JavaScript
 01 const vnode = {
 02   tag: MyComponent
 03 }
 ~~~
+
+~~~JavaScript
+01 function mountComponent(vnode, container) {
+02   // vnode.tag 是组件对象，调用它的 render 函数得到组件要渲染的内容（虚拟 DOM）
+03   const subtree = vnode.tag.render()
+04   // 递归地调用 renderer 渲染 subtree
+05   renderer(subtree, container)
+06 }
+~~~
+
+# 模板的工作原理
