@@ -35,7 +35,7 @@ VueJS可以使用`模板语法`或JavaScript对象（或使用h函数将参数�
 
 *h函数转化为JavaScript对象*
 
-h 函数是一个`辅助创建虚拟 DOM` 的工具函数
+h 函数是一个`辅助创建虚拟 DOM` 的工具函数，后续会将render()称为`渲染函数`,模板最终也会被`编译器`编译为渲染函数。
 
 ~~~JavaScript
 01 import { h } from 'vue'
@@ -123,3 +123,22 @@ h 函数是一个`辅助创建虚拟 DOM` 的工具函数
 ~~~
 
 # 模板的工作原理
+
+以我们熟知的.vue 文件为例，一个 .vue 文件就是一个组件：
+~~~Vue
+01 <template>
+02   <div @click="handler">
+03     click me
+04   </div>
+05 </template>
+06
+07 <script>
+08 export default {
+09   data() {/* ... */},
+10   methods: {
+11     handler: () => {/* ... */}
+12   }
+13 }
+14 </script>
+~~~
+其中 <template> 标签里的内容就是模板内容，编译器会`把模板内容编译成渲染函数`并添加到 <script> 标签块的组件对象上
