@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
+                "file": "Quick Start.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
+                "file": "Quick Start.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
+                "file": "Quick Start.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md"
+                "file": "Quick Start.md"
               }
             }
           },
@@ -166,8 +166,8 @@
   },
   "active": "c7cbc3814bba621e",
   "lastOpenFiles": [
-    "前端/文章/Vue/Vue设计与实现/No.3 Vue.js 3 的 设计思路.md",
     "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
+    "前端/文章/Vue/Vue设计与实现/No.3 Vue.js 3 的 设计思路.md",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231218111407.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231218111348.png",
     "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",

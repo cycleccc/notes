@@ -16,3 +16,7 @@ highlight: docco
 02   document.body.innerText = 'hello vue3'
 03 }
 ~~~
+
+> effect 函数的执行会直接或间接影响其他函数的执行，这时我们说 effect 函数产生了副作用。
+
+我们在刚开始学习时容易将副作用函数理解成，响应式数据修改后产生的副作用，这是错误的理解，正确的理解是，`effect函数产生了副作用`
