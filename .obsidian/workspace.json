@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Quick Start.md",
+                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Quick Start.md",
+                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Quick Start.md",
+                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Quick Start.md"
+                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md"
               }
             }
           },
@@ -166,6 +166,7 @@
   },
   "active": "c7cbc3814bba621e",
   "lastOpenFiles": [
+    "Quick Start.md",
     "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
     "前端/文章/Vue/Vue设计与实现/No.3 Vue.js 3 的 设计思路.md",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231218111407.png",
@@ -186,7 +187,6 @@
     "前端/文章/Vue/Vue源码/CreateApp.md",
     "前端/文章/Vue/Vue源码",
     "短记/GMS.md",
-    "Quick Start.md",
     "conflict-files-obsidian-git.md",
     "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
     "前端/文章/MongoDB/Mongoose",
