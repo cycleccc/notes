@@ -36,3 +36,68 @@ effect 函数的执行会直接或间接影响其他函数的执行，这时我�
 
 # 响应式数据的基本实现
 
+首先，我们创建了一个用于存储副作用函数的桶 `bucket`，它是 Set 类型。接着定义原始数据 data，obj 是原始数据的`代理对象`，我们分别设置了 get 和 set `拦截函数`，用于拦截读取和设置操作。当读取属性时将副作用函数 effect `添加到桶`里，即 bucket.add(effect)，然后`返回属性值`；当设置属性值时先更新原始数据，再将副作用函数从桶里`取出并重新执行`，这样我们就实现了响应式数据。
+
+~~~JavaScript
+// 存储副作用函数的桶
+const bucket = new Set()
+
+// 原始数据
+const data = { text: 'hello world' }
+// 对原始数据的代理
+const obj = new Proxy(data, {
+  // 拦截读取操作
+  get(target, key) {
+    // 将副作用函数 effect 添加到存储副作用函数的桶中
+    bucket.add(effect)
+    // 返回属性值
+    return target[key]
+  },
+  // 拦截设置操作
+  set(target, key, newVal) {
+    // 设置属性值
+    target[key] = newVal
+    // 把副作用函数从桶里取出并执行
+    bucket.forEach(fn => fn())
+    // 返回 true 代表设置操作成功
+    return true
+  }
+})
+
+// 副作用函数
+function effect() {
+  document.body.innerText = obj.text
+}
+// 执行副作用函数，触发读取
+effect()
+// 1 秒后修改响应式数据
+setTimeout(() => {
+  obj.text = 'hello vue3'
+}, 1000)
+~~~
+
+# 设计一个完善的响应系统
+
+在刚刚的例子中我们实现了一个简易的响应式系统，其中只包括两个操作：
+
+- 当读取操作发生时，将副作用函数收集到“桶”中；
+- 当设置操作发生时，从“桶”中取出副作用函数并执行。
+
+
+**提供一个用来注册副作用函数的机制**
+
+~~~JavaScript
+ // 用一个全局变量存储被注册的副作用函数
+ let activeEffect
+ // effect 函数用于注册副作用函数
+ function effect(fn) {
+   // 当调用 effect 注册副作用函数时，将副作用函数 fn 赋值给 activeEffect
+   activeEffect = fn
+   // 执行副作用函数
+   fn()
+ }
+ ~~~
+
+ **使用WeakMap代替Set作为bucket的数据结构**
+
+ 
