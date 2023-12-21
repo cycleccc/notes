@@ -106,42 +106,44 @@ const bucket = new WeakMap()
 
 **根据WeakMap修改拦截器get/set代码**
 
+bucket其实是一个`三层结构`，WeakMap里还套了一层Map用于查找到每个响应式数据（第一层WeakMap的Key）的每一个属性（第二层Map的Key）对应的effect函数（第三层Map的值Set）
+
 ~~~JavaScript
-01 const obj = new Proxy(data, {
-02   // 拦截读取操作
-03   get(target, key) {
-04     // 没有 activeEffect，直接 return
-05     if (!activeEffect) return target[key]
-06     // 根据 target 从“桶”中取得 depsMap，它也是一个 Map 类型：key --> effects
-07     let depsMap = bucket.get(target)
-08     // 如果不存在 depsMap，那么新建一个 Map 并与 target 关联
-09     if (!depsMap) {
-10       bucket.set(target, (depsMap = new Map()))
-11     }
-12     // 再根据 key 从 depsMap 中取得 deps，它是一个 Set 类型，
-13     // 里面存储着所有与当前 key 相关联的副作用函数：effects
-14     let deps = depsMap.get(key)
-15     // 如果 deps 不存在，同样新建一个 Set 并与 key 关联
-16     if (!deps) {
-17       depsMap.set(key, (deps = new Set()))
-18     }
-19     // 最后将当前激活的副作用函数添加到“桶”里
-20     deps.add(activeEffect)
-21
-22     // 返回属性值
-23     return target[key]
-24   },
-25   // 拦截设置操作
-26   set(target, key, newVal) {
-27     // 设置属性值
-28     target[key] = newVal
-29     // 根据 target 从桶中取得 depsMap，它是 key --> effects
-30     const depsMap = bucket.get(target)
-31     if (!depsMap) return
-32     // 根据 key 取得所有副作用函数 effects
-33     const effects = depsMap.get(key)
-34     // 执行副作用函数
-35     effects && effects.forEach(fn => fn())
-36   }
-37 })
+ const obj = new Proxy(data, {
+   // 拦截读取操作
+   get(target, key) {
+     // 没有 activeEffect，直接 return
+     if (!activeEffect) return target[key]
+     // 根据 target 从“桶”中取得 depsMap，它也是一个 Map 类型：key --> effects
+     let depsMap = bucket.get(target)
+     // 如果不存在 depsMap，那么新建一个 Map 并与 target 关联
+     if (!depsMap) {
+       bucket.set(target, (depsMap = new Map()))
+    }
+     // 再根据 key 从 depsMap 中取得 deps，它是一个 Set 类型，
+     // 里面存储着所有与当前 key 相关联的副作用函数：effects
+     let deps = depsMap.get(key)
+     // 如果 deps 不存在，同样新建一个 Set 并与 key 关联
+     if (!deps) {
+       depsMap.set(key, (deps = new Set()))
+     }
+     // 最后将当前激活的副作用函数添加到“桶”里
+     deps.add(activeEffect)
+
+    // 返回属性值
+     return target[key]
+   },
+   // 拦截设置操作
+   set(target, key, newVal) {
+     // 设置属性值
+     target[key] = newVal
+     // 根据 target 从桶中取得 depsMap，它是 key --> effects
+     const depsMap = bucket.get(target)
+     if (!depsMap) return
+   // 根据 key 取得所有副作用函数 effects
+    const effects = depsMap.get(key)
+     // 执行副作用函数
+     effects && effects.forEach(fn => fn())
+   }
+ })
 ~~~
