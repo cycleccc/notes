@@ -8,8 +8,3 @@ diff-history
 - [x] type合并为一行
 - [x] modified状态差异name展示 
 - [x] 滑动展示
-
-
-
-
-12.22
