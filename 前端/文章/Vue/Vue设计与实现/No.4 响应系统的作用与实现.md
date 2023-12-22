@@ -212,5 +212,7 @@ effect(function effectFn() {
 })
 ~~~
 
+## 遗留的副作用函数
 当obj.ok为初始值为true时会收集obj.text的依赖，而当后续obj.ok为false时再修改obj.text时text属性不应该触发effect函数，因为修改了text属性该effect函数执行后也不会产生作用。
 
+## 
