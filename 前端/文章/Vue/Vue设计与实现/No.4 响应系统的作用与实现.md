@@ -158,4 +158,4 @@ bucket其实是一个`三层结构`，WeakMap里还套了一层Map用于查找�
 
 在Vue2中并没有effect副作用函数这一说法，都是称之为deps依赖。其实Vue3的effct就是`deps依赖`
 
-将上文代码封装到track和trigger函数中，此处要知道track（追踪）和trigger
+将上文代码封装到track和trigger函数中，此处要知道track（追踪）和trigger（触发）
