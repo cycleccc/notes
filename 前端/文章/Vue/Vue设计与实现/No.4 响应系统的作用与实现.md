@@ -159,3 +159,47 @@ bucket其实是一个`三层结构`，WeakMap里还套了一层Map用于查找�
 在Vue2中并没有effect副作用函数这一说法，都是称之为deps依赖。其实Vue3的effct就是`deps依赖`
 
 将上文代码封装到track和trigger函数中，此处要知道track（追踪）和trigger（触发）
+
+~~~JavaScript
+const obj = new Proxy(data, {
+  // 拦截读取操作
+  get(target, key) {
+    // 将副作用函数 activeEffect 添加到存储副作用函数的桶中
+    track(target, key)
+    // 返回属性值
+    return target[key]
+  },
+  // 拦截设置操作
+  set(target, key, newVal) {
+    // 设置属性值
+    target[key] = newVal
+    // 把副作用函数从桶里取出并执行
+    trigger(target, key)
+  }
+})
+
+// 在 get 拦截函数内调用 track 函数追踪变化
+function track(target, key) {
+  // 没有 activeEffect，直接 return
+  if (!activeEffect) return
+  let depsMap = bucket.get(target)
+  if (!depsMap) {
+    bucket.set(target, (depsMap = new Map()))
+  }
+  let deps = depsMap.get(key)
+  if (!deps) {
+    depsMap.set(key, (deps = new Set()))
+  }
+  deps.add(activeEffect)
+}
+// 在 set 拦截函数内调用 trigger 函数触发变化
+function trigger(target, key) {
+  const depsMap = bucket.get(target)
+  if (!depsMap) return
+  const effects = depsMap.get(key)
+  effects && effects.forEach(fn => fn())
+}
+~~~
+
+#分支切换与cleanup
+
