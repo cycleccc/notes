@@ -160,6 +160,8 @@ bucket其实是一个`三层结构`，WeakMap里还套了一层Map用于查找�
 
 将上文代码封装到track和trigger函数中，此处要知道track（追踪）和trigger（触发）
 
+## 封装track和trigger函数
+
 ~~~JavaScript
 const obj = new Proxy(data, {
   // 拦截读取操作
@@ -215,4 +217,22 @@ effect(function effectFn() {
 ## 遗留的副作用函数
 当obj.ok为初始值为true时会收集obj.text的依赖，而当后续obj.ok为false时再修改obj.text时text属性不应该触发effect函数，因为修改了text属性该effect函数执行后也不会产生作用。
 
-##  
+##  使用 activeEffect 记录当前激活的副作用函数
+
+~~~JavaScript
+// 用一个全局变量存储被注册的副作用函数
+let activeEffect
+function effect(fn) {
+  const effectFn = () => {
+    // 当 effectFn 执行时，将其设置为当前激活的副作用函数
+    activeEffect = effectFn
+    fn()
+  }
+  // activeEffect.deps 用来存储所有与该副作用函数相关联的依赖集合
+  effectFn.deps = []
+  // 执行副作用函数
+  effectFn()
+}
+~~~
+
+## track函数中进行依赖
