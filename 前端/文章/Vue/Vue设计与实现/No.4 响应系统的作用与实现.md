@@ -235,4 +235,8 @@ function effect(fn) {
 }
 ~~~
 
-## track函数中进行依赖
+## track函数中进行
+
+~~~JavaScript
+
+~~~
