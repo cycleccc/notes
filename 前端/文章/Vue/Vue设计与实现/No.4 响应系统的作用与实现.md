@@ -258,3 +258,4 @@ function track(target, key) {
 ~~~
 
 在 track 函数中我们将当前执行的副作用函数activeEffect 添加到依赖集合 deps 中，这说明 deps 就是一个与当前副作用函数存在联系的依赖集合，于是我们也把它添加到activeEffect.deps 数组中，这样就完成了对依赖集合的收集。
+
