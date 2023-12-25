@@ -14,3 +14,5 @@ diff-history
 2023年12月25日
 - [ ] 审批状态没有relativeItem
 ![[Pasted image 20231225112634.png]]
+- [ ] 草稿状态没有relativeItem
+![[Pasted image 20231225114334.png]]
