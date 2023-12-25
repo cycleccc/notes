@@ -14,5 +14,11 @@ diff-history
 2023年12月25日
 - [ ] 审批状态没有relativeItem
 ![[Pasted image 20231225112634.png]]
-- [ ] 草稿状态没有relativeItem
+- [x] 草稿状态没有relativeItem
 ![[Pasted image 20231225114334.png]]
+
+- [ ] DRAFT拼写错误
+![[Pasted image 20231225153215.png]]
+
+- [ ] 无法保存 验收人和立项金额信息 为草稿
+- [ ] 提交成功但是刷新并没有进入审批状态
