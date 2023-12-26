@@ -31,4 +31,5 @@ diff-history
 ![[Pasted image 20231226190411.png]]
 ![[Pasted image 20231226190431.png]]
 
-- [ ] 
+- [ ] 变更差值绝对值已超过3万美金，没看到二部部门GM
+http://localhost:8000/project-revise?_id=64ec90112ffb705d1ca00a41
