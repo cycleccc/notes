@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "45e8479bd9bc92b2",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.3"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -143,7 +154,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -164,7 +177,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "17fd4cff9b166d8b",
+  "active": "45e8479bd9bc92b2",
   "lastOpenFiles": [
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
