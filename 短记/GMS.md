@@ -26,4 +26,6 @@ diff-history
 
 2023年12月26日
 
-RtxList error
+- [ ] 通过审批只返回 ret:0 ，没有额外 信息 无法通过返回status跳转detail页面或继续审批
+- [ ] 走完推广总监流程后还没有审批结束
+![[Pasted image 20231226184332.png]]
