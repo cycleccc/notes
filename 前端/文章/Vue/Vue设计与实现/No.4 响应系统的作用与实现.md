@@ -290,7 +290,7 @@ function cleanup(effectFn) {
 
 # 嵌套的 effect 与 effect 栈
 
-effect 是可以发生嵌套的
+effect 是可以发生嵌套的，常见的是在A组件中渲染了B组件，就会产生嵌套effect
 
 ~~~JavaScript
 effect(function effectFn1() {
