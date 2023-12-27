@@ -265,8 +265,36 @@ function track(target, key) {
 
 这里有一个循环依赖可能比较难以理解，其实此处要表达的是effct函数和对象属性是双向多重连接，既要将对象属性添加到effct函数关联的对象属性数组中，又要将effct函数添加到对象属性deps关联的set上（如下图红框中的双向收集）。
 
-## 使用
-
 ![[Pasted image 20231225174613.png]]
 
-https://code.juejin.cn/api/raw/7316742269283860518?id=7316742269283909670
+## effect函数执行清除旧依赖
+
+根据 effectFn.deps 获取所有相关联的依赖集合，进而将副作用函数从依赖集合中移除
+
+~~~JavaScript
+function cleanup(effectFn) {
+  // 遍历 effectFn.deps 数组
+  for (let i = 0; i < effectFn.deps.length; i++) {
+    // deps 是依赖集合
+    const deps = effectFn.deps[i]
+    // 将 effectFn 从依赖集合中移除
+    deps.delete(effectFn)
+  }
+  // 最后需要重置 effectFn.deps 数组
+  effectFn.deps.length = 0
+}
+~~~
+
+本节完整示例
+[分支切换与cleanup](https://code.juejin.cn/api/raw/7316742269283860518?id=7316742269283909670)
+
+# 嵌套的 effect 与 effect 栈
+
+effect 是可以发生嵌套的
+
+~~~JavaScript
+effect(function effectFn1() {
+  effect(function effectFn2() { /* ... */ })
+  /* ... */
+})
+~~~
