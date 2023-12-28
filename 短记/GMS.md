@@ -41,6 +41,6 @@ http://localhost:8000/project-revise?_id=64ec90112ffb705d1ca00a41
 2023年12月28日
  - [x] campaign编号可复制
  - [x] 折叠面板组件替换
- - [ ] 表单校验
+ - [x] 表单校验
  - [ ] 提交、审批通过、驳回 操作，加上 loading 状态
  - [ ] 搜索匹配
