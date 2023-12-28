@@ -37,3 +37,8 @@ http://localhost:8000/project-revise?_id=64ec90112ffb705d1ca00a41
 
 2023年12月27日
 ![[Pasted image 20231227115604.png]]
+
+2023年12月28日
+ - [x] campaign编号可复制
+ - [x] 折叠面板组件替换
+ - [ ] 
