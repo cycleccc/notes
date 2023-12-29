@@ -329,6 +329,8 @@ effect(function effectFn1() {
 
 ## 使用栈存储当前activeEffect
 
+使用栈来避免嵌套导致丢失上层的effect函数
+
 ~~~JavaScript
 // 用一个全局变量存储当前激活的 effect 函数
 let activeEffect
@@ -351,5 +353,39 @@ function effect(fn) {
   effectFn.deps = []
   // 执行副作用函数
   effectFn()
+}
+~~~
+
+**本节完整示例**
+[嵌套effect](https://code.juejin.cn/api/raw/7316742269283860518?id=7316742269283909670)
+
+## 避免无线递归循环
+
+在我们现有的代码下如果effecct中有自增操作obj.foo++会导致无限循环引起栈溢出错误
+
+~~~JavaScript
+const data = { foo: 1 }
+const obj = new Proxy(data, { /*...*/ })
+
+effect(() => obj.foo++)
+~~~
+
+这个问题也很好解决，只要特判一下**如果 trigger 触发执行的副作用函数与当前正在执行的副作用函数相同，则不触发执行**
+
+~~~
+function trigger(target, key) {
+  const depsMap = bucket.get(target)
+  if (!depsMap) return
+  const effects = depsMap.get(key)
+
+  const effectsToRun = new Set()
+  effects && effects.forEach(effectFn => {
+    // 如果 trigger 触发执行的副作用函数与当前正在执行的副作用函数相同，则不触发执行
+    if (effectFn !== activeEffect) {  // 新增
+      effectsToRun.add(effectFn)
+    }
+  })
+  effectsToRun.forEach(effectFn => effectFn())
+  // effects && effects.forEach(effectFn => effectFn())
 }
 ~~~
