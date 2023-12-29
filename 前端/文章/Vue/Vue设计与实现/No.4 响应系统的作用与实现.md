@@ -290,11 +290,42 @@ function cleanup(effectFn) {
 
 # 嵌套的 effect 与 effect 栈
 
-effect 是可以发生嵌套的，常见的是在A组件中渲染了B组件，就会产生嵌套effect
+effect 是可以发生嵌套的，常见的是在A组件中渲染了B组件，就会产生嵌套effect。
 
+**嵌套effect**
 ~~~JavaScript
 effect(function effectFn1() {
   effect(function effectFn2() { /* ... */ })
   /* ... */
 })
 ~~~
+
+使用上节的代码运行以下例子会发现当activeEffect修改为effectFn2后不会在执行effectFn1。
+
+当副作用函数发生嵌套时，内层副作用函数的执行会覆盖 activeEffect 的值，并且永远不会恢复到原来的值。
+
+~~~JavaScript
+// 原始数据
+const data = { foo: true, bar: true }
+// 代理对象
+const obj = new Proxy(data, { /* ... */ })
+
+// 全局变量
+let temp1, temp2
+
+// effectFn1 嵌套了 effectFn2
+effect(function effectFn1() {
+  console.log('effectFn1 执行')
+
+  effect(function effectFn2() {
+    console.log('effectFn2 执行')
+    // 在 effectFn2 中读取 obj.bar 属性
+    temp2 = obj.bar
+  })
+  // 在 effectFn1 中读取 obj.foo 属性
+  temp1 = obj.foo
+})
+~~~
+
+## 使用栈存储当前activeEffect
+
