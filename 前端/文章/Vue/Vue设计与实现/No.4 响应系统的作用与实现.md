@@ -357,7 +357,7 @@ function effect(fn) {
 ~~~
 
 **本节完整示例**
-[嵌套effect](https://code.juejin.cn/api/raw/7316742269283860518?id=7316742269283909670)
+[嵌套effect](https://code.juejin.cn/api/raw/7317941861824495654?id=7317941861824544806)
 
 ## 避免无线递归循环
 
@@ -389,3 +389,9 @@ function trigger(target, key) {
   // effects && effects.forEach(effectFn => effectFn())
 }
 ~~~
+
+**本节完整示例**
+[嵌套effect](https://code.juejin.cn/api/raw/7317945990617497650?id=7317945990617546802)
+
+## 调度执行
+
