@@ -396,3 +396,5 @@ function trigger(target, key) {
 ## 调度执行
 
 所谓**可调度**，指的是当 trigger 动作触发副作用函数重新执行时，有能力决定副作用函数执行的时机、次数以及方式。
+
+effect函数添加第二个参数options
