@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "81ba0ba07c300d6f",
+        "id": "3c6f771d8e254e70",
         "type": "tabs",
         "children": [
           {
-            "id": "17fd4cff9b166d8b",
+            "id": "3021f17eb3c67304",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 503.5
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -143,9 +143,7 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
+                "sortOrder": "frequency"
               }
             }
           }
@@ -166,30 +164,31 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "17fd4cff9b166d8b",
+  "active": "3021f17eb3c67304",
   "lastOpenFiles": [
-    "短记/GMS.md",
     "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
-    "前端/文章/Vue/Vue设计与实现/No.3 Vue.js 3 的 设计思路.md",
     "短记/Pasted image 20231227115604.png",
     "短记/Pasted image 20231226190431.png",
     "短记/Pasted image 20231226190411.png",
     "短记/Pasted image 20231226184332.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
-    "前端/文章/Vue/Vue设计与实现/image00504.jpeg",
-    "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
     "短记/Pasted image 20231225153215.png",
     "短记/Pasted image 20231225114334.png",
     "短记/Pasted image 20231225112634.png",
-    "Quick Start.md",
+    "前端/文章/Vue/Vue设计与实现/image00504.jpeg",
+    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
+    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
     "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
-    "前端/文章/Vue/Vue设计与实现/权衡的艺术.md",
-    "前端/文章/Vue/Vue设计与实现/框架设计的核心要素.md",
-    "前端/文章/Vue/Vue设计与实现",
-    "前端/文章/Vue/Vue源码/CreateApp.md",
-    "前端/文章/Vue/Vue源码",
+    "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
+    "前端/文章/Vue/Vue设计与实现/No.3 Vue.js 3 的 设计思路.md",
     "conflict-files-obsidian-git.md",
+    "前端/文章/Vue/Vue源码/CreateApp.md",
+    "前端/文章/框架设计的核心要素.md",
+    "前端/文章/Vue/Vue设计与实现",
+    "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
+    "前端/文章/Vue/Vue源码",
+    "短记/GMS.md",
+    "Quick Start.md",
+    "前端/文章/Vue/Vue设计与实现之框架设计的核心要素.md",
     "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
     "前端/文章/MongoDB/Mongoose",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之聚合框架.md",
@@ -207,7 +206,6 @@
     "前端/文章/snabbdom/snabbdom.md",
     "前端/文章/snabbdom",
     "前端/文章/git图形界面完全指南.md",
-    "前端/文章/MongoDB/MongoDB权威指南之事务.md",
     "show",
     "前端/文章/MongoDB/test.json",
     "短记",

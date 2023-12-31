@@ -285,7 +285,7 @@ function cleanup(effectFn) {
 }
 ~~~
 
-本节完整示例
+	本节完整示例
 [分支切换与cleanup](https://code.juejin.cn/api/raw/7316742269283860518?id=7316742269283909670)
 
 # 嵌套的 effect 与 effect 栈
