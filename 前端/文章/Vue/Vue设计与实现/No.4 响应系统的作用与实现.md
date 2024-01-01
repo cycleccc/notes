@@ -397,4 +397,69 @@ function trigger(target, key) {
 
 所谓**可调度**，指的是当 trigger 动作触发副作用函数重新执行时，有能力决定副作用函数执行的时机、次数以及方式。
 
-effect函数添加第二个参数options
+effect函数添加第二个参数options，允许指定scheduler调度函数，有了调度函数，我们在trigger函数中触发副作用函数重新执行时，就可以直接调用用户传递的调度器函数，从而把控制权交给用户。
+
+## effect函数添加参数
+~~~JavaScript
+effect(
+  () => {
+    console.log(obj.foo)
+  },
+  // options
+  {
+    // 调度器 scheduler 是一个函数
+    scheduler(fn) {
+      // ...
+    }
+  }
+)
+~~~
+
+## effect函数内部选项挂载到副作用函数
+~~~JavaScript
+function effect(fn, options = {}) {
+  const effectFn = () => {
+    cleanup(effectFn)
+    // 当调用 effect 注册副作用函数时，将副作用函数赋值给 activeEffect
+    activeEffect = effectFn
+    // 在调用副作用函数之前将当前副作用函数压栈
+    effectStack.push(effectFn)
+    fn()
+    // 在当前副作用函数执行完毕后，将当前副作用函数弹出栈，并把 activeEffect 还原为之前的值
+    effectStack.pop()
+    activeEffect = effectStack[effectStack.length - 1]
+  }
+  // 将 options 挂载到 effectFn 上
+  effectFn.options = options  // 新增
+  // activeEffect.deps 用来存储所有与该副作用函数相关的依赖集合
+  effectFn.deps = []
+  // 执行副作用函数
+  effectFn()
+}
+~~~
+
+## trigger函数添加options判断
+
+~~~JavaScript
+function trigger(target, key) {
+  const depsMap = bucket.get(target)
+  if (!depsMap) return
+  const effects = depsMap.get(key)
+
+  const effectsToRun = new Set()
+  effects && effects.forEach(effectFn => {
+    if (effectFn !== activeEffect) {
+      effectsToRun.add(effectFn)
+    }
+  })
+  effectsToRun.forEach(effectFn => {
+    // 如果一个副作用函数存在调度器，则调用该调度器，并将副作用函数作为参数传递
+    if (effectFn.options.scheduler) {  // 新增
+      effectFn.options.scheduler(effectFn)  // 新增
+    } else {
+      // 否则直接执行副作用函数（之前的默认行为）
+      effectFn()  // 新增
+    }
+  })
+}
+~~~
