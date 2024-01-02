@@ -510,7 +510,7 @@ obj.foo++
 通过宏任务微任务与set，console.log最终只会执行一次两次（读取一次，自增两次只触发一次）。
 
 **本节完整示例**
-[嵌套effect](https://code.juejin.cn/api/raw/7317945990617497650?id=7317945990617546802)
+[嵌套effect](https://code.juejin.cn/api/raw/7319393509704728585?id=7319393509704777737)
 
 ## 计算属性computed与lazy
 
