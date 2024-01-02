@@ -464,3 +464,53 @@ function trigger(target, key) {
 }
 ~~~
 
+## 控制执行次数
+
+关键点：
+- 使用宏任务微任务机制，让effectFn函数滞后执行
+- 使用set排除重复的effect副作用函数
+
+~~~JavaScript
+// 定义一个任务队列
+const jobQueue = new Set()
+// 使用 Promise.resolve() 创建一个 promise 实例，我们用它将一个任务添加到微任务队列
+const p = Promise.resolve()
+
+// 一个标志代表是否正在刷新队列
+let isFlushing = false
+function flushJob() {
+  // 如果队列正在刷新，则什么都不做
+  if (isFlushing) return
+  // 设置为 true，代表正在刷新
+  isFlushing = true
+  // 在微任务队列中刷新 jobQueue 队列
+  p.then(() => {
+    jobQueue.forEach(job => job())
+  }).finally(() => {
+    // 结束后重置 isFlushing
+    isFlushing = false
+  })
+}
+
+
+effect(() => {
+  console.log(obj.foo)
+}, {
+  scheduler(fn) {   // 每次调度时，将副作用函数添加到 jobQueue 队列中
+    jobQueue.add(fn)
+    // 调用 flushJob 刷新队列
+    flushJob()
+  }
+})
+
+obj.foo++
+obj.foo++
+~~~
+
+通过宏任务微任务与set，console.log最终只会执行一次两次（读取一次，自增两次只触发一次）。
+
+**本节完整示例**
+[嵌套effect](https://code.juejin.cn/api/raw/7317945990617497650?id=7317945990617546802)
+
+## 计算属性computed与lazy
+
