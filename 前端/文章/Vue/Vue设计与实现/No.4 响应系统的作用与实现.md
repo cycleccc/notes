@@ -802,3 +802,21 @@ function watch(source, cb, options = {}) {
 
 ## 过期的副作用
 
+~~~JavaScript
+watch(obj, async (newValue, oldValue, onInvalidate) => {
+  // 定义一个标志，代表当前副作用函数是否过期，默认为 false，代表没有过期
+  let expired = false
+  // 调用 onInvalidate() 函数注册一个过期回调
+  onInvalidate(() => {
+    // 当过期时，将 expired 设置为 true
+    expired = true
+  })
+  // 发送网络请求
+  const res = await fetch('/path/to/request')
+
+  // 只有当该副作用函数的执行没有过期时，才会执行后续操作。
+  if (!expired) {
+    finalData = res
+  }
+})
+~~~
