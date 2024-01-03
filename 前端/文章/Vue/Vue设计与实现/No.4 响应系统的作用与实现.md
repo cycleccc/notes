@@ -714,4 +714,4 @@ function watch(source, cb) {
 
 ## 立即执行的watch与回调执行时机
 
-watch的回调只在响应式数据发生变化时才执行，而在Vue中可以通过选项参数immediate来指定回调是否需要立即执行。
+watch的回调只在响应式数据发生变化时才执行，而在Vue中可以通过选项参数immediate来指定回调是否需要立即执行。  
