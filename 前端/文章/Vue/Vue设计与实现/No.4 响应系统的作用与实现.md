@@ -516,7 +516,7 @@ obj.foo++
 
 ### option扩展lazy选项
 
-通过添加lazy选项表示暂缓effect执行
+通过添加lazy选项表示effect不主动执行，通过dirty标志来确定effct只在读取时调用trigger执行。
 
 ~~~JavaScript
 // 把 getter 作为副作用函数，创建一个 lazy 的 effect
@@ -530,6 +530,37 @@ const effectFn = effect(getter, {
     }
   }
 })
+~~~
+
+### effect添加返回值
+
+
+~~~JavaScript
+function effect(fn, options = {}) {
+  const effectFn = () => {
+    cleanup(effectFn)
+    // 当调用 effect 注册副作用函数时，将副作用函数赋值给 activeEffect
+    activeEffect = effectFn
+    // 在调用副作用函数之前将当前副作用函数压栈
+    effectStack.push(effectFn)
+    // 将 fn 的执行结果存储到 res 中
+    const res = fn()  // 新增
+    // 在当前副作用函数执行完毕后，将当前副作用函数弹出栈，并把 activeEffect 还原为之前的值
+    effectStack.pop()
+    activeEffect = effectStack[effectStack.length - 1]
+    return res
+  }
+  // 将 options 挂载到 effectFn 上
+  effectFn.options = options  // 新增
+  // activeEffect.deps 用来存储所有与该副作用函数相关的依赖集合
+  effectFn.deps = []
+  // 只有非lazy的时候，才执行
+  if (!options.lazy) {
+    // 执行副作用函数
+    effectFn()
+  }
+  return effectFn;
+}
 ~~~
 
 ###
