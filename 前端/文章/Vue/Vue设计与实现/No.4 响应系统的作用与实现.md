@@ -753,3 +753,6 @@ function watch(source, cb, options = {}) {
   }
 }
 ~~~
+
+### 使用微任务模拟异步执行
+
