@@ -637,7 +637,7 @@ function watch (source, cb) {
 }
 ~~~
 
-递归
+递归代理对象收集依赖属性
 ~~~JavaScript
 function traverse(value, seen = new Set()) {
   // 如果要读取的数据是原始值，或者已经被读取过了，那么什么都不做
@@ -651,5 +651,31 @@ function traverse(value, seen = new Set()) {
   }
 
   return value
+}
+~~~
+
+支持传入getter函数
+
+~~~JavaScript
+function watch(source, cb) {
+  // 定义 getter
+  let getter
+  // 如果 source 是函数，说明用户传递的是 getter，所以直接把 source 赋值给 getter
+  if (typeof source === 'function') {
+    getter = source
+  } else {
+    // 否则按照原来的实现调用 traverse 递归地读取
+    getter = () => traverse(source)
+  }
+
+  effect(
+    // 执行 getter
+    () => getter(),
+    {
+      scheduler() {
+        cb()
+      }
+    }
+  )
 }
 ~~~
