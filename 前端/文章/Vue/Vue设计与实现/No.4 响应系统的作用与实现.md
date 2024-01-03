@@ -756,3 +756,49 @@ function watch(source, cb, options = {}) {
 
 ### 使用微任务模拟异步执行
 
+添加flush选项，当flush为post时使用Promise.resolve()将job函数放到为任务队列，从而实现异步延迟执行。
+
+~~~JavaScript
+function watch(source, cb, options = {}) {
+  let getter
+  if (typeof source === 'function') {
+    getter = source
+  } else {
+    getter = () => traverse(source)
+  }
+
+  let oldValue, newValue
+
+  const job = () => {
+    newValue = effectFn()
+    cb(newValue, oldValue)
+    oldValue = newValue
+  }
+
+  const effectFn = effect(
+    // 执行 getter
+    () => getter(),
+    {
+      lazy: true,
+      scheduler: () => {
+        // 在调度函数中判断 flush 是否为 'post'，如果是，将其放到微任务队列中执行
+        if (options.flush === 'post') {
+          const p = Promise.resolve()
+          p.then(job)
+        } else {
+          job()
+        }
+      }
+    }
+  )
+
+  if (options.immediate) {
+    job()
+  } else {
+    oldValue = effectFn()
+  }
+}
+~~~
+
+## 过期的副作用
+
