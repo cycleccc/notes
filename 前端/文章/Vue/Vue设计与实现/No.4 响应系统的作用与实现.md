@@ -514,3 +514,16 @@ obj.foo++
 
 ## 计算属性computed与lazy
 
+### option扩展lazy选项
+
+通过添加lazy选项暂缓effect执行
+
+~~~JavaScript
+
+~~~
+
+**本节完整示例**
+[嵌套effect](https://code.juejin.cn/api/raw/7319683452458238004?id=7319683452458287156)
+
+## watch的实现原理
+
