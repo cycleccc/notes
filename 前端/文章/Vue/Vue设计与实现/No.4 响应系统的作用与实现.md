@@ -679,3 +679,39 @@ function watch(source, cb) {
   )
 }
 ~~~
+
+通过lazy选项，获取第一次调用时的值为旧值，后续监听触发时的值为新值。
+
+~~~JavaScript
+function watch(source, cb) {
+  let getter
+  if (typeof source === 'function') {
+    getter = source
+  } else {
+    getter = () => traverse(source)
+  }
+  // 定义旧值与新值
+  let oldValue, newValue
+  // 使用 effect 注册副作用函数时，开启 lazy 选项，并把返回值存储到 effectFn 中以便后续手动调用
+  const effectFn = effect(
+    () => getter(),
+    {
+      lazy: true,
+      scheduler() {
+        // 在 scheduler 中重新执行副作用函数，得到的是新值
+        newValue = effectFn()
+        // 将旧值和新值作为回调函数的参数
+        cb(newValue, oldValue)
+        // 更新旧值，不然下一次会得到错误的旧值
+        oldValue = newValue
+      }
+    }
+  )
+  // 手动调用副作用函数，拿到的值就是旧值
+  oldValue = effectFn()
+}
+~~~
+
+## 立即执行的watch与回调执行时机
+
+watch的回调只在响应式数据发生变化时才执行，而在Vue中可以通过选项参数immediate来指定回调是否需要立即执行。
