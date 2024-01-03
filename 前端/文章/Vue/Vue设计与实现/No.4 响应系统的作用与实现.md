@@ -516,12 +516,23 @@ obj.foo++
 
 ### option扩展lazy选项
 
-通过添加lazy选项暂缓effect执行
+通过添加lazy选项表示暂缓effect执行
 
 ~~~JavaScript
-
+// 把 getter 作为副作用函数，创建一个 lazy 的 effect
+const effectFn = effect(getter, {
+  lazy: true,
+  scheduler() {
+    if (!dirty) {
+      dirty = true
+      // 当计算属性依赖的响应式数据变化时，手动调用 trigger 函数触发响应
+      trigger(obj, 'value')
+    }
+  }
+})
 ~~~
 
+###
 **本节完整示例**
 [嵌套effect](https://code.juejin.cn/api/raw/7319683452458238004?id=7319683452458287156)
 
