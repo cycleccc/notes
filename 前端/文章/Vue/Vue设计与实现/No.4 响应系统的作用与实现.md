@@ -514,6 +514,10 @@ obj.foo++
 
 ## 计算属性computed与lazy
 
+### 计算属性介绍
+
+计算属性是用来声明式的描述一个值依赖了其它的值。lazy选项用来延迟计算属性的触发时机，只当读取计算属性值时才触发。
+
 ### option扩展lazy选项
 
 通过添加lazy选项表示effect不主动执行，通过dirty标志来确定effct只在读取时调用trigger执行。
@@ -610,3 +614,5 @@ function computed(getter) {
 
 ### watch介绍
 本质是观测一个响应式数据，当数据发生变化时通知并执行相应的回调函数。
+
+实现起来非常简单通过调度执行这一节的scheduler就可以实现。
