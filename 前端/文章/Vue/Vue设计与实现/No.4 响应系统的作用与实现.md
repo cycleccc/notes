@@ -608,3 +608,5 @@ function computed(getter) {
 
 ## watch的实现原理
 
+### watch介绍
+本质是观测一个响应式数据，当数据发生变化时通知并执行相应的回调函数。
