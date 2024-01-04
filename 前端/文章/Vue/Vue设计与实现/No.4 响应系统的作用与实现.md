@@ -804,7 +804,7 @@ function watch(source, cb, options = {}) {
 
 ## 过期的副作用
 
-
+注册过期函调,当第二次触发watch时第一次的失效
 
 ~~~JavaScript
 watch(obj, async (newValue, oldValue, onInvalidate) => {
