@@ -606,7 +606,6 @@ function computed(getter) {
 }
 ~~~
 
-###
 **本节完整示例**
 [计算属性](https://code.juejin.cn/api/raw/7319683452458238004?id=7319683452458287156)
 
@@ -711,6 +710,9 @@ function watch(source, cb) {
   oldValue = effectFn()
 }
 ~~~
+
+**本节完整示例**
+[计算属性](https://code.juejin.cn/api/raw/7319683452458238004?id=7319683452458287156)
 
 ## 立即执行的watch与回调执行时机
 
