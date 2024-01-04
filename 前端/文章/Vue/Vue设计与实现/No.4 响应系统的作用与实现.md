@@ -804,6 +804,8 @@ function watch(source, cb, options = {}) {
 
 ## 过期的副作用
 
+
+
 ~~~JavaScript
 watch(obj, async (newValue, oldValue, onInvalidate) => {
   // 定义一个标志，代表当前副作用函数是否过期，默认为 false，代表没有过期
@@ -821,4 +823,47 @@ watch(obj, async (newValue, oldValue, onInvalidate) => {
     finalData = res
   }
 })
+~~~
+
+
+~~~JavaScript
+function watch(source, cb, options = {}) {
+  let getter
+  if (typeof source === 'function') {
+    getter = source
+  } else {
+    getter = () => traverse(source)
+  }
+
+  let oldValue, newValue
+
+  const job = () => {
+    newValue = effectFn()
+    cb(newValue, oldValue)
+    oldValue = newValue
+  }
+
+  const effectFn = effect(
+    // 执行 getter
+    () => getter(),
+    {
+      lazy: true,
+      scheduler: () => {
+        // 在调度函数中判断 flush 是否为 'post'，如果是，将其放到微任务队列中执行
+        if (options.flush === 'post') {
+          const p = Promise.resolve()
+          p.then(job)
+        } else {
+          job()
+        }
+      }
+    }
+  )
+
+  if (options.immediate) {
+    job()
+  } else {
+    oldValue = effectFn()
+  }
+}
 ~~~
