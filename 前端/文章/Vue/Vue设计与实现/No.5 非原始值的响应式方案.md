@@ -18,4 +18,16 @@ highlight: docco
 
 ### 什么是基本语义
 
-对于对象属性的读取、设置属性值的操作就属于基本语义的操作。
+对于对象属性的读取、设置属性值的操作就属于基本语义的操作。如get、set、apply...
+
+proxy只能代理但基本语义的基本操作，不能复合多基本语义的复合操作。
+
+## Reflect
+
+proxy拦截器的所有方法在Reflect中都有同名函数。Reflect的作用是提供了昂问一个对象属性的默认行为。
+
+如直接读取obj.foo我们可以使用 obj.foo也可以使用Reflect.get(obj,'foo')
+
+### 使用Reflect的意义
+
+Reflect的函数可以接收第三个参数，即指定接收者receiver
