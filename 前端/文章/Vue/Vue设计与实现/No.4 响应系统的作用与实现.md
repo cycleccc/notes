@@ -802,6 +802,9 @@ function watch(source, cb, options = {}) {
 }
 ~~~
 
+**本节完整示例**
+[计算属性](https://code.juejin.cn/pen/7320080810831249419)
+
 ## 过期的副作用
 
 注册过期函调,当第二次触发watch时第一次的失效
