@@ -807,7 +807,7 @@ function watch(source, cb, options = {}) {
 
 ## 过期的副作用
 
-注册过期函调,当第二次触发watch时第一次的失效
+注册过期函调,当第二次触发watch时第一次的expired会通过闭包被更改为true
 
 ~~~JavaScript
 watch(obj, async (newValue, oldValue, onInvalidate) => {
@@ -840,9 +840,22 @@ function watch(source, cb, options = {}) {
 
   let oldValue, newValue
 
+  // cleanup 用来存储用户注册的过期回调
+  let cleanup
+  // 定义 onInvalidate 函数
+  function onInvalidate(fn) {
+    // 将过期回调存储到 cleanup 中
+    cleanup = fn
+  }
+
   const job = () => {
     newValue = effectFn()
-    cb(newValue, oldValue)
+    // 在调用回调函数 cb 之前，先调用过期回调
+    if (cleanup) {
+      cleanup()
+    }
+    // 将 onInvalidate 作为回调函数的第三个参数，以便用户使用
+    cb(newValue, oldValue, onInvalidate)
     oldValue = newValue
   }
 
@@ -852,7 +865,6 @@ function watch(source, cb, options = {}) {
     {
       lazy: true,
       scheduler: () => {
-        // 在调度函数中判断 flush 是否为 'post'，如果是，将其放到微任务队列中执行
         if (options.flush === 'post') {
           const p = Promise.resolve()
           p.then(job)
