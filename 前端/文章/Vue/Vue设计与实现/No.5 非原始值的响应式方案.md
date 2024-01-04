@@ -30,4 +30,6 @@ proxy拦截器的所有方法在Reflect中都有同名函数。Reflect的作用�
 
 ### 使用Reflect的意义
 
-Reflect的函数可以接收第三个参数，即指定接收者receiver
+Reflect的函数可以接收第三个参数，即指定接收者receiver。
+
+当使用
