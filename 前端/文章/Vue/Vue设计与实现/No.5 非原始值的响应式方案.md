@@ -43,7 +43,7 @@ const obj = {
 }
 ~~~
 
-实际上在get收集依赖时收集的不是obj.foo而是打他.foo，使用Reflect可以接受receiver指定this为代理对象。
+实际上在get收集依赖时收集的不是obj.foo而是data.foo(this.foo)，使用Reflect可以接受receiver指定this为代理对象。
 
 > [什么是访问器属性](https://www.zhihu.com/question/40648241)
 
