@@ -32,10 +32,20 @@ proxy拦截器的所有方法在Reflect中都有同名函数。Reflect的作用�
 
 Reflect的函数可以接收第三个参数，即指定接收者receiver。
 
-当使用effect对访问属性进行依赖收集
+使用effect对[访问器属性](https://www.zhihu.com/question/40648241)进行依赖收集
+
 ~~~JavaScript
+const obj = {
+    foo: 1,
+    get bar() {
+        return this.foo
+    }
+}
 ~~~
 
-(什么是访问器属性)[https://www.zhihu.com/question/40648241]
+实际上在get收集依赖时收集的不是obj.foo而是打他.foo，使用Reflect可以接受receiver指定this为代理对象。
+
+> [什么是访问器属性](https://www.zhihu.com/question/40648241)
+
 # JavaScript对象Proxy的工作原理
 
