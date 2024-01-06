@@ -50,5 +50,17 @@ const obj = {
 **本节完整示例**
 [计算属性](https://code.juejin.cn/pen/7320168567016521738)
 
+~~~JavaScript
+const p = new Proxy(obj, {
+  // 拦截读取操作，接收第三个参数 receiver
+  get(target, key, receiver) {
+    track(target, key)
+    // 使用 Reflect.get 返回读取到的属性值
+    return Reflect.get(target, key, receiver)
+  },
+  // 省略部分代码
+})
+~~~    
+
 # JavaScript对象Proxy的工作原理
 
