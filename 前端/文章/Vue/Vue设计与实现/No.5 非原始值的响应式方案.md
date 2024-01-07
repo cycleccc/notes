@@ -96,3 +96,5 @@ Proxy就是一个异质对象，它的[[Get]]没有使用ECMA规范的10.1.8节�
 - 判断对象或原型上是否存在给定的key：key in obj。
 - 使用for...in循环遍历对象：for(const key in obj){}。
 
+通过查阅ECMA-262规范(13.10.1)[https://262.ecma-international.org/14.0/?_gl=1*nwkpjf*_ga*MTAzMDI0MDQ4NC4xNzA0NjMwNjM2*_ga_TDCK4DWEPP*MTcwNDYzMDYzNS4xLjAuMTcwNDYzMDYzNS4wLjAuMA..&_ga=2.226073754.1633835410.1704630637-1030240484.1704630636#sec-relational-operators-runtime-semantics-evaluation]可以找到in操作符最终是调用hasProperty实现的，而在Proxy中hasProperty方法是通过has函数实现的，所以可以通过has拦截函数实现对in操作符的代理。
+![[Pasted image 20240107203419.png]]
