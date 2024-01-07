@@ -88,9 +88,11 @@ Proxy就是一个异质对象，它的[[Get]]没有使用ECMA规范的10.1.8节�
 
 # 如何代理Object
 
-## 对一个元素进行读取操作
+代理Object涉及了多个方面，以下内容围绕经典的增删改查进行展开完善。
 
-在响应系统中，有以下三种读取操作。
+## 完善get操作
+
+在增、查时都涉及了读取操作，响应系统中，有以下三种读取操作。
 
 - 访问属性：obj.foo。
 - 判断对象或原型上是否存在给定的key：key in obj。
@@ -99,3 +101,10 @@ Proxy就是一个异质对象，它的[[Get]]没有使用ECMA规范的10.1.8节�
 通过查阅ECMA-262规范[13.10.1](https://262.ecma-international.org/14.0/?_gl=1*nwkpjf*_ga*MTAzMDI0MDQ4NC4xNzA0NjMwNjM2*_ga_TDCK4DWEPP*MTcwNDYzMDYzNS4xLjAuMTcwNDYzMDYzNS4wLjAuMA..&_ga=2.226073754.1633835410.1704630637-1030240484.1704630636#sec-relational-operators-runtime-semantics-evaluation)可以找到in操作符最终是调用hasProperty实现的，而在Proxy中hasProperty方法是通过has函数实现的，所以可以通过has拦截函数实现对in操作符的代理。
 ![[Pasted image 20240107203419.png]]
 
+## 完善delete操作
+
+在删时设计了delete操作，根据ECMA262规范可以找到山操作需要通过deleteProperty函数。
+
+# 合理的触发响应
+
+我们在上一节已经构建了大体的框架，
