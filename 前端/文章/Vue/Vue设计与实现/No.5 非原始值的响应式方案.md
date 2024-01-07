@@ -111,4 +111,16 @@ Proxy就是一个异质对象，它的[[Get]]没有使用ECMA规范的10.1.8节�
 
 ## 当新旧值相同时
 
-修改set拦截函数，在调用trigger函数之前判断新旧值是否相同。仅仅判断全等并不够，因为在JS中 NaN不等于NaN，
+修改set拦截函数，在调用trigger函数之前判断新旧值是否相同。仅仅判断全等并不够，因为在JS中 NaN不等于NaN，还得判断是不是NaN
+
+~~~JavaScript
+// 在书中是通过全等来判断是否相等的。而在Vue源码中是通过Object.is来判断是否相等的。
+if(oldVal !== newVal && (oldVal === oldVal ||newVal === newVal)){
+    trigger(target,key,type)
+}
+// 显然使用Object.is更优雅
+if(Ojbect.is(newVal,oldVal)){
+    // ...
+}
+~~~
+
