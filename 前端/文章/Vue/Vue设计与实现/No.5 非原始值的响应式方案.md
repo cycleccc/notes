@@ -81,3 +81,5 @@ const p = new Proxy(obj, {
 ![[Pasted image 20240107175849.png]]
 - 对于内部方法 [[Call]]，必须使用 ECMA 规范 10.2.1 节给出的定义实现；
 - 对于内部方法 [[Construct]]，必须使用 ECMA 规范 10.2.2 节给出的定义实现。
+
+Proxy就是一个异质对象，
