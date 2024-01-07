@@ -64,3 +64,10 @@ const p = new Proxy(obj, {
 
 # JavaScript对象Proxy的工作原理
 
+根据 ECMAScript 规范，在 JavaScript 中有两种对象，其中一种叫作**常规对象**（ordinary object），另一种叫作**异质对象**（exotic object）。
+
+## 如何区分是普通对象还是函数
+
+对象的实际语义是由对象的内部方法指定的。所谓内部方法，指的是当我们对一个对象进行操作时在引擎内部调用的方法，这些方法对于JavaScript使用者来说是不可见的。
+
+通过内部方法和内部槽来区分对象。
