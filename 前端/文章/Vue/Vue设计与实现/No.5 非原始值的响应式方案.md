@@ -124,3 +124,4 @@ if(Ojbect.is(newVal,oldVal)){
 }
 ~~~
 
+## 原型上继承属性
