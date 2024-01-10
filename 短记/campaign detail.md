@@ -32,12 +32,18 @@
         },
         // 立项结项汇总
         "resources": {
+            // 资源code,用于做映射
             "RES002": {
+                // 资源名称
                 "resourceName": "互联网广告投放-非SEM的效果类",
+                // 资源code
                 "resourceCode": "RES002",
                 "normMap": {
+                    // 指标Code
                     "RES002_pullNewBudget": {
+                        // 指标名称
                         "normName": "拉新预算额",
+                        // 立项初始金额
                         "originValue": 20000,
                         "endValue": 17000,
                         "normPercent": 0.85
