@@ -23,11 +23,47 @@
         // 状态
         "state": "APPROVED",
         // 目标进度
-        "targetProgress": {
+            "targetProgress": {
             "purposeName": "用户-新增+回流+预约",
             "mainKpiDesc": "项目带来用户数（新增+回流+预约）",
-            "originValue": 40000,
-            "endValue": 40000,
+            "typeNorms": {
+                "付费新增": {
+                    "normName": "付费新增",
+                    "originValue": "40000",
+                    "endValue": "40000",
+                    "percent": 1
+                },
+                "自然新增": {
+                    "normName": "自然新增",
+                    "originValue": "0",
+                    "endValue": "0",
+                    "percent": 0
+                },
+                "付费回流": {
+                    "normName": "付费回流",
+                    "originValue": "0",
+                    "endValue": "0",
+                    "percent": 0
+                },
+                "自然回流": {
+                    "normName": "自然回流",
+                    "originValue": "0",
+                    "endValue": "0",
+                    "percent": 0
+                },
+                "活跃": {
+                    "normName": "活跃",
+                    "originValue": "0",
+                    "endValue": "0",
+                    "percent": 0
+                },
+                "收入": {
+                    "normName": "收入",
+                    "originValue": "0",
+                    "endValue": "0",
+                    "percent": 0
+                }
+            },
             "percent": 1
         },
         // 立项结项汇总
