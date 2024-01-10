@@ -23,48 +23,24 @@
         // 状态
         "state": "APPROVED",
         // 目标进度
-            "targetProgress": {
+        "targetProgress": {
+            // 推广kpi值
             "purposeName": "用户-新增+回流+预约",
             "mainKpiDesc": "项目带来用户数（新增+回流+预约）",
+            // 目标进度列表
             "typeNorms": {
                 "付费新增": {
+                    // 指标名称
                     "normName": "付费新增",
+                    // 指标初始值
                     "originValue": "40000",
+                    // 指标结项值
                     "endValue": "40000",
+                    // 进度
                     "percent": 1
                 },
-                "自然新增": {
-                    "normName": "自然新增",
-                    "originValue": "0",
-                    "endValue": "0",
-                    "percent": 0
-                },
-                "付费回流": {
-                    "normName": "付费回流",
-                    "originValue": "0",
-                    "endValue": "0",
-                    "percent": 0
-                },
-                "自然回流": {
-                    "normName": "自然回流",
-                    "originValue": "0",
-                    "endValue": "0",
-                    "percent": 0
-                },
-                "活跃": {
-                    "normName": "活跃",
-                    "originValue": "0",
-                    "endValue": "0",
-                    "percent": 0
-                },
-                "收入": {
-                    "normName": "收入",
-                    "originValue": "0",
-                    "endValue": "0",
-                    "percent": 0
-                }
+                // 省略...
             },
-            "percent": 1
         },
         // 立项结项汇总
         "resources": {
@@ -81,7 +57,9 @@
                         "normName": "拉新预算额",
                         // 立项初始金额
                         "originValue": 20000,
+                        // 结项金额
                         "endValue": 17000,
+                        // 进度
                         "normPercent": 0.85
                     },
                     "RES002_userLeaderCount": {
