@@ -140,3 +140,4 @@ effect(() => {
 // 修改 child.bar 的值
 child.bar = 2 // 会导致副作用函数重新执行
 ~~~
+
