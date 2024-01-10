@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/职业规划.md",
+                "file": "短记/GMS.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/职业规划.md",
+                "file": "短记/GMS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/职业规划.md",
+                "file": "短记/GMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/职业规划.md"
+                "file": "短记/GMS.md"
               }
             }
           },
@@ -166,24 +166,26 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "3021f17eb3c67304",
   "lastOpenFiles": [
-    "短记/GMS.md",
-    "前端/文章/Vue/Vue设计与实现/No.5 非原始值的响应式方案.md",
-    "短记/Pasted image 20231031141320.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175849.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175558.png",
-    "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
-    "前端/文章/Vue/Vue设计与实现/No.5 非原始值的相应系统.md",
-    "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现 copy.md",
-    "list/生活List.md",
+    "前端/文章/git图形界面完全指南.md",
+    "前端/职业规划.md",
     "短记/Pasted image 20231227115604.png",
     "短记/Pasted image 20231226190431.png",
     "短记/Pasted image 20231226190411.png",
     "短记/Pasted image 20231226184332.png",
     "短记/Pasted image 20231225153215.png",
+    "短记/Pasted image 20231225114334.png",
+    "短记/Pasted image 20231225112634.png",
+    "短记/Pasted image 20231031141320.png",
+    "短记/GMS.md",
+    "前端/文章/Vue/Vue设计与实现/No.5 非原始值的响应式方案.md",
+    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
+    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
+    "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
+    "前端/文章/Vue/Vue设计与实现/No.5 非原始值的相应系统.md",
+    "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现 copy.md",
+    "list/生活List.md",
     "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
     "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/No.3 Vue.js 3 的 设计思路.md",
@@ -206,7 +208,6 @@
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之事务.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/MongoDB/MongoDB权威指南学习",
-    "前端/文章/Vue/详解vue组件通信.md",
     "前端/文章/snabbdom",
     "show",
     "前端/文章/MongoDB/test.json",
