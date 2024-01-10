@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "短记/GMS.md",
+                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "短记/GMS.md",
+                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "短记/GMS.md",
+                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "短记/GMS.md"
+                "file": "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md"
               }
             }
           },
@@ -168,6 +168,8 @@
   },
   "active": "3021f17eb3c67304",
   "lastOpenFiles": [
+    "前端/文章/Vue/Vue设计与实现/No.5 非原始值的响应式方案.md",
+    "短记/GMS.md",
     "短记/campaign detail - 副本.md",
     "短记/campaign detail.md",
     "短记/GMS - 副本.md",
@@ -181,8 +183,6 @@
     "短记/Pasted image 20231225114334.png",
     "短记/Pasted image 20231225112634.png",
     "短记/Pasted image 20231031141320.png",
-    "短记/GMS.md",
-    "前端/文章/Vue/Vue设计与实现/No.5 非原始值的响应式方案.md",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
     "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",

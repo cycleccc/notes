@@ -207,7 +207,7 @@ function trigger(target, key) {
 }
 ~~~
 
-#分支切换与cleanup
+# 分支切换与cleanup
 
 ~~~JavaScript
 const data = { ok: true, text: 'hello world' }
@@ -359,7 +359,7 @@ function effect(fn) {
 **本节完整示例**
 [嵌套effect](https://code.juejin.cn/api/raw/7317941861824495654?id=7317941861824544806)
 
-## 避免无线递归循环
+# 避免无线递归循环
 
 在我们现有的代码下如果effecct中有自增操作obj.foo++会导致无限循环引起栈溢出错误
 
@@ -393,7 +393,7 @@ function trigger(target, key) {
 **本节完整示例**
 [嵌套effect](https://code.juejin.cn/api/raw/7317945990617497650?id=7317945990617546802)
 
-## 调度执行
+# 调度执行
 
 所谓**可调度**，指的是当 trigger 动作触发副作用函数重新执行时，有能力决定副作用函数执行的时机、次数以及方式。
 
@@ -512,7 +512,7 @@ obj.foo++
 **本节完整示例**
 [嵌套effect](https://code.juejin.cn/api/raw/7319393509704728585?id=7319393509704777737)
 
-## 计算属性computed与lazy
+# 计算属性computed与lazy
 
 ### 计算属性介绍
 
@@ -609,7 +609,7 @@ function computed(getter) {
 **本节完整示例**
 [计算属性](https://code.juejin.cn/api/raw/7319683452458238004?id=7319683452458287156)
 
-## watch的实现原理
+# watch的实现原理
 
 ### watch介绍
 本质是观测一个响应式数据，当数据发生变化时通知并执行相应的回调函数。
@@ -714,7 +714,7 @@ function watch(source, cb) {
 **本节完整示例**
 [计算属性](https://code.juejin.cn/api/raw/7319683452458238004?id=7319683452458287156)
 
-## 立即执行的watch与回调执行时机
+# 立即执行的watch与回调执行时机
 
 watch的回调只在响应式数据发生变化时才执行，而在Vue中可以通过选项参数immediate来指定回调是否需要立即执行。
 
@@ -805,7 +805,7 @@ function watch(source, cb, options = {}) {
 **本节完整示例**
 [计算属性](https://code.juejin.cn/pen/7320080810831249419)
 
-## 过期的副作用
+# 过期的副作用
 
 注册过期函调,当第二次触发watch时第一次的expired会通过闭包被更改为true
 
@@ -883,5 +883,4 @@ function watch(source, cb, options = {}) {
 }
 ~~~
 
-**本节完整示例**
-[计算属性](https://code.juejin.cn/pen/7320168567016521738)
+[过期的副作用](https://code.juejin.cn/pen/7320168567016521738)
