@@ -62,7 +62,7 @@ function track (target, key) {
 }
 
 // 在 set 拦截函数内调用 trigger 函数触发变化
-function trigger (target, key) {
+function trigger (target, key, type) {
     const depsMap = bucket.get(target)
     if (!depsMap) return
     const effects = depsMap.get(key)
@@ -203,10 +203,12 @@ const p = new Proxy(obj, {
     },
     // 拦截设置操作
     set (target, key, newVal, receiver) {
+        // 如果属性不存在，则说明是在添加新属性，否则是设置已有属性
+        const type = Object.prototype.hasOwnProperty.call(target, key) ? 'SET' : 'ADD'
         // 设置属性值
         const res = Reflect.set(target, key, newVal, receiver);
         // 把副作用函数从桶里取出并执行
-        trigger(target, key)
+        trigger(target, key, type)
 
         return res
     },
