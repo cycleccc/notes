@@ -3,7 +3,7 @@ let activeEffect
 // effect 栈
 const effectStack = []  // 新增
 
-function effect (fn, options = {}) {
+function effect(fn, options = {}) {
     const effectFn = () => {
         cleanup(effectFn)
         // 当调用 effect 注册副作用函数时，将副作用函数赋值给 activeEffect
@@ -29,9 +29,9 @@ function effect (fn, options = {}) {
     return effectFn;
 }
 
-function cleanup (effectFn) {
+function cleanup(effectFn) {
     // 遍历 effectFn.deps 数组
-    for (let i = 0;i < effectFn.deps.length;i++) {
+    for (let i = 0; i < effectFn.deps.length; i++) {
         // deps 是依赖集合
         const deps = effectFn.deps[i]
         // 将 effectFn 从依赖集合中移除
@@ -43,7 +43,7 @@ function cleanup (effectFn) {
 
 
 const bucket = new WeakMap()
-function track (target, key) {
+function track(target, key) {
     // 没有 activeEffect，直接 return
     if (!activeEffect) return
     let depsMap = bucket.get(target)
@@ -62,13 +62,11 @@ function track (target, key) {
 }
 
 // 在 set 拦截函数内调用 trigger 函数触发变化
-function trigger (target, key, type) {
+function trigger(target, key, type?: string) {
     const depsMap = bucket.get(target)
     if (!depsMap) return
+
     const effects = depsMap.get(key)
-
-    const iterateEffects = depsMap.get(ITERATE_KEY)
-
     const effectsToRun = new Set()
     effects && effects.forEach(effectFn => {
         if (effectFn !== activeEffect) {
@@ -84,22 +82,26 @@ function trigger (target, key, type) {
             effectFn()
         }
     })
-    interateEffects && iterateEffects.forEach(effectFn => {
-        if (effectFn !== activeEffect) {
-            effectsToRun.add(effectFn)
-        }
-    })
 
-    effectsToRun.forEach((effectFn) => {
-        if (effectFn.options.scheduler) {
-            effectFn.options.scheduler(effectFn)
-        } else {
-            effectFn()
-        }
-    })
+    if (type === 'ADD') {
+        const iterateEffects = depsMap.get(ITERATE_KEY)
+        iterateEffects && iterateEffects.forEach(effectFn => {
+            if (effectFn !== activeEffect) {
+                effectsToRun.add(effectFn)
+            }
+        })
+
+        effectsToRun.forEach((effectFn) => {
+            if (effectFn.options.scheduler) {
+                effectFn.options.scheduler(effectFn)
+            } else {
+                effectFn()
+            }
+        })
+    }
 }
 
-function computed (getter) {
+function computed(getter) {
     // value 用来缓存上一次计算的值
     let value
     // dirty 标志，用来标识是否需要重新计算值
@@ -107,7 +109,7 @@ function computed (getter) {
     // 把 getter 作为副作用函数，创建一个 lazy 的 effect
     const effectFn = effect(getter, {
         lazy: true,
-        scheduler () {
+        scheduler() {
             if (!dirty) {
                 dirty = true
                 // 当计算属性依赖的响应式数据变化时，手动调用 trigger 函数触发响应
@@ -117,7 +119,7 @@ function computed (getter) {
     })
 
     const obj = {   // 当读取 value 时才执行 effectFn  
-        get value () {
+        get value() {
             if (dirty) {
                 value = effectFn()
                 dirty = false
@@ -131,7 +133,7 @@ function computed (getter) {
 
 }
 
-function watch (source, cb, options = {}) {
+function watch(source, cb, options = {}) {
     let getter
     if (typeof source === 'function') {
         getter = source
@@ -144,7 +146,7 @@ function watch (source, cb, options = {}) {
     // cleanup 用来存储用户注册的过期回调
     let cleanup
     // 定义 onInvalidate 函数
-    function onInvalidate (fn) {
+    function onInvalidate(fn) {
         // 将过期回调存储到 cleanup 中
         cleanup = fn
     }
@@ -186,7 +188,7 @@ function watch (source, cb, options = {}) {
 
 const obj = {
     foo: 1,
-    get bar () {
+    get bar() {
         // 现在这里的 this 为代理对象 p
         return this.foo
     }
@@ -196,13 +198,13 @@ const ITERATE_KEY = Symbol()
 // 代理对象
 const p = new Proxy(obj, {
     // 拦截读取操作，接收第三个参数 receiver
-    get (target, key, receiver) {
+    get(target, key, receiver) {
         track(target, key)
         // 使用 Reflect.get 返回读取到的属性值
         return Reflect.get(target, key, receiver)
     },
     // 拦截设置操作
-    set (target, key, newVal, receiver) {
+    set(target, key, newVal, receiver) {
         // 如果属性不存在，则说明是在添加新属性，否则是设置已有属性
         const type = Object.prototype.hasOwnProperty.call(target, key) ? 'SET' : 'ADD'
         // 设置属性值
@@ -213,19 +215,29 @@ const p = new Proxy(obj, {
         return res
     },
     // 拦截 in 操作
-    has (target, key) {
+    has(target, key) {
         track(target, key)
         return Reflect.has(target, key)
     },
     // 拦截 for...in 操作
-    ownKeys (target) {
+    ownKeys(target) {
         // 使用ITERATE_KEY 代替 key，forin迭代操作针对对象，使用symbol作为唯一标识
         track(target, ITERATE_KEY)
         return Reflect.ownKeys(target)
+    },
+    // 拦截 delete 操作
+    deleteProperty(target, key) {
+        // 删除属性
+        const res = Reflect.deleteProperty(target, key)
+        // 触发删除操作
+        trigger(target, key, 'DELETE')
+        return res
     },
 })
 
 effect(() => {
     // obj 是原始数据，不是代理对象，这样的访问不能够建立响应联系
-    p.bar++;
+    for (const key in p) {
+        console.log(key)
+    }
 })
