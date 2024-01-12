@@ -4,7 +4,7 @@ let activeEffect
 const effectStack = []  // 新增
 
 function effect(fn, options = {}) {
-    const effectFn = () => {
+    const effectFn: EffectFn = () => {
         cleanup(effectFn)
         // 当调用 effect 注册副作用函数时，将副作用函数赋值给 activeEffect
         activeEffect = effectFn
@@ -133,7 +133,7 @@ function computed(getter) {
 
 }
 
-function watch(source, cb, options = {}) {
+function watch(source, cb, options: Options) {
     let getter
     if (typeof source === 'function') {
         getter = source
