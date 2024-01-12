@@ -187,11 +187,13 @@ const p = new Proxy(obj, {
         return Reflect.get(target, key, receiver)
     },
     // 拦截设置操作
-    set (target, key, newVal) {
+    set (target, key, newVal, receiver) {
         // 设置属性值
-        Reflect.set(target, key, newVal);
+        const res = Reflect.set(target, key, newVal, receiver);
         // 把副作用函数从桶里取出并执行
         trigger(target, key)
+
+        return res
     },
     // 拦截 in 操作
     has (target, key) {
@@ -200,7 +202,7 @@ const p = new Proxy(obj, {
     },
     // 拦截 for...in 操作
     ownKeys (target) {
-        // 使用ITERATE_KEY 代替 key，
+        // 使用ITERATE_KEY 代替 key，forin迭代操作针对对象，使用symbol作为唯一标识
         track(target, ITERATE_KEY)
         return Reflect.ownKeys(target)
     },
