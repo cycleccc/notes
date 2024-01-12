@@ -67,6 +67,8 @@ function trigger (target, key) {
     if (!depsMap) return
     const effects = depsMap.get(key)
 
+    const iterateEffects = depsMap.get(ITERATE_KEY)
+
     const effectsToRun = new Set()
     effects && effects.forEach(effectFn => {
         if (effectFn !== activeEffect) {
@@ -79,6 +81,19 @@ function trigger (target, key) {
             effectFn.options.scheduler(effectFn)
         } else {
             // 否则直接执行副作用函数（之前的默认行为）
+            effectFn()
+        }
+    })
+    interateEffects && iterateEffects.forEach(effectFn => {
+        if (effectFn !== activeEffect) {
+            effectsToRun.add(effectFn)
+        }
+    })
+
+    effectsToRun.forEach((effectFn) => {
+        if (effectFn.options.scheduler) {
+            effectFn.options.scheduler(effectFn)
+        } else {
             effectFn()
         }
     })
