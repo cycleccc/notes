@@ -48,7 +48,7 @@ const obj = {
 > [什么是访问器属性](https://www.zhihu.com/question/40648241)
 
 **本节完整示例**
-> [计算属性](https://code.juejin.cn/pen/7320168567016521738)
+> [使用receiver指定this](https://code.juejin.cn/pen/7320439226510606347)
 
 ~~~JavaScript
 const p = new Proxy(obj, {
