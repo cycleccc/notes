@@ -200,6 +200,7 @@ const p = new Proxy(obj, {
     },
     // 拦截 for...in 操作
     ownKeys (target) {
+        // 使用ITERATE_KEY 代替 key，
         track(target, ITERATE_KEY)
         return Reflect.ownKeys(target)
     },
