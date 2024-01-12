@@ -195,6 +195,7 @@ const p = new Proxy(obj, {
     },
     // 拦截 in 操作
     has (target, key) {
+        track(target, key)
         return Reflect.has(target, key)
     },
     // 拦截 for...in 操作
