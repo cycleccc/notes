@@ -170,6 +170,7 @@
   },
   "active": "3021f17eb3c67304",
   "lastOpenFiles": [
+    "前端/文章/Vue/Vue设计与实现/reactive.ts",
     "前端/文章/Vue/Vue设计与实现/代理obj.ts",
     "前端/文章/Vue/Vue设计与实现/interfaces/reactive.interface.ts",
     "前端/文章/Vue/Vue设计与实现/interfaces",
@@ -215,7 +216,6 @@
     "前端/文章/snabbdom",
     "show",
     "前端/文章/MongoDB/test.json",
-    "短记",
     "未命名 1.canvas",
     "未命名.canvas"
   ]

@@ -1,9 +1,9 @@
 // 用一个全局变量存储当前激活的 effect 函数
 let activeEffect
 // effect 栈
-const effectStack = []  // 新增
+const effectStack: EffectFn[] = []  // 新增
 
-function effect(fn, options = {}) {
+function effect(fn, options: Options) {
     const effectFn: EffectFn = () => {
         cleanup(effectFn)
         // 当调用 effect 注册副作用函数时，将副作用函数赋值给 activeEffect
