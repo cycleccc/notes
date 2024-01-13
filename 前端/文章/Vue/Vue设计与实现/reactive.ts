@@ -1,9 +1,9 @@
 // 用一个全局变量存储当前激活的 effect 函数
-let activeEffect
+let activeEffect: EffectFn
 // effect 栈
 const effectStack: EffectFn[] = []  // 新增
 
-function effect(fn, options: Options) {
+function effect(fn: Function, options?: Options) {
     const effectFn: EffectFn = () => {
         cleanup(effectFn)
         // 当调用 effect 注册副作用函数时，将副作用函数赋值给 activeEffect
@@ -22,14 +22,14 @@ function effect(fn, options: Options) {
     // activeEffect.deps 用来存储所有与该副作用函数相关的依赖集合
     effectFn.deps = []
     // 只有非lazy的时候，才执行
-    if (!options.lazy) {
+    if (options && !options.lazy) {
         // 执行副作用函数
         effectFn()
     }
     return effectFn;
 }
 
-function cleanup(effectFn) {
+function cleanup(effectFn: EffectFn) {
     // 遍历 effectFn.deps 数组
     for (let i = 0; i < effectFn.deps.length; i++) {
         // deps 是依赖集合
@@ -43,7 +43,7 @@ function cleanup(effectFn) {
 
 
 const bucket = new WeakMap()
-function track(target, key) {
+function track(target: Object, key: string | symbol) {
     // 没有 activeEffect，直接 return
     if (!activeEffect) return
     let depsMap = bucket.get(target)
@@ -62,7 +62,7 @@ function track(target, key) {
 }
 
 // 在 set 拦截函数内调用 trigger 函数触发变化
-function trigger(target, key, type?: string) {
+function trigger(target: Object, key: string, type?: string) {
     const depsMap = bucket.get(target)
     if (!depsMap) return
 

@@ -6,4 +6,4 @@ interface Options {
     // 其他可能的字段...
 }
 
-type EffectFn = (() => void) & { options?: Options, deps?: [] }
+type EffectFn = (() => void) & { options?: Options, deps: Set<> }
