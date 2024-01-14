@@ -68,12 +68,12 @@ function trigger(target: Object, key: string, type?: string) {
 
     const effects = depsMap.get(key)
     const effectsToRun = new Set()
-    effects && effects.forEach(effectFn => {
+    effects && effects.forEach((effectFn: EffectFn) => {
         if (effectFn !== activeEffect) {
             effectsToRun.add(effectFn)
         }
     })
-    effectsToRun.forEach(effectFn => {
+    effectsToRun.forEach((effectFn) => {
         // 如果一个副作用函数存在调度器，则调用该调度器，并将副作用函数作为参数传递
         if (effectFn.options.scheduler) {
             effectFn.options.scheduler(effectFn)
