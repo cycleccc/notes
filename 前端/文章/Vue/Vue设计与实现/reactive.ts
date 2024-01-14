@@ -62,20 +62,20 @@ function track(target: Object, key: string | symbol) {
 }
 
 // 在 set 拦截函数内调用 trigger 函数触发变化
-function trigger(target: Object, key: string, type?: string) {
+function trigger(target: Object, key: string | symbol, type?: string) {
     const depsMap = bucket.get(target)
     if (!depsMap) return
 
     const effects = depsMap.get(key)
-    const effectsToRun = new Set()
+    const effectsToRun: Set<EffectFn> = new Set()
     effects && effects.forEach((effectFn: EffectFn) => {
         if (effectFn !== activeEffect) {
             effectsToRun.add(effectFn)
         }
     })
-    effectsToRun.forEach((effectFn) => {
+    effectsToRun.forEach((effectFn: EffectFn) => {
         // 如果一个副作用函数存在调度器，则调用该调度器，并将副作用函数作为参数传递
-        if (effectFn.options.scheduler) {
+        if (effectFn.options?.scheduler) {
             effectFn.options.scheduler(effectFn)
         } else {
             // 否则直接执行副作用函数（之前的默认行为）
@@ -92,7 +92,7 @@ function trigger(target: Object, key: string, type?: string) {
         })
 
         effectsToRun.forEach((effectFn) => {
-            if (effectFn.options.scheduler) {
+            if (effectFn?.options?.scheduler) {
                 effectFn.options.scheduler(effectFn)
             } else {
                 effectFn()
@@ -131,6 +131,15 @@ function computed(getter) {
 
     return obj
 
+}
+
+function traverse(value, seen = new Set()) {
+    // 如果读取的数据是原始值，或者已经被读取过了，那么什么都不做
+    if (typeof value !== 'object' || value === null || seen.has(value)) return
+    // 将数据添加到seen中，代表遍历地读取过了，避免循环引用引起的死循环
+    seen.add(value)
+    // 暂时不考虑数组等其他结构
+    // 假设value就是一个对象，使用for...in 读取对象的每一个值，并递归的调用traverse 进行处理。
 }
 
 function watch(source, cb, options: Options) {
