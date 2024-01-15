@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "3c6f771d8e254e70",
+        "id": "b24e993c08987389",
         "type": "tabs",
         "children": [
           {
-            "id": "3021f17eb3c67304",
+            "id": "c6f149c6cc1d7b9f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/文章/Vue/Vue设计与实现/No.5 非原始值的响应式方案.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -77,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -94,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现/No.5 非原始值的响应式方案.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/Vue/Vue设计与实现/No.5 非原始值的响应式方案.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "前端/文章/Vue/Vue设计与实现/No.5 非原始值的响应式方案.md"
-              }
+              "state": {}
             }
           },
           {
@@ -155,8 +146,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 342.5,
-    "collapsed": true
+    "width": 342.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,36 +158,45 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "3021f17eb3c67304",
+  "active": "c6f149c6cc1d7b9f",
   "lastOpenFiles": [
     "前端/文章/Vue/Vue设计与实现/reactive.ts",
-    "前端/文章/Vue/Vue设计与实现/代理obj.ts",
+    "前端/文章/Vue/Vue设计与实现/index.html",
     "前端/文章/Vue/Vue设计与实现/interfaces/reactive.interface.ts",
+    "前端/文章/Vue/Vue设计与实现/interfaces/mi-campaign.interface.ts",
     "前端/文章/Vue/Vue设计与实现/interfaces",
-    "短记/campaign detail.md",
+    "前端/文章/Vue/Vue设计与实现/代理obj.ts",
+    "前端/文章/Vue/Vue源码/CreateApp.md",
+    "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
+    "前端/文章/Vue/Vue设计与实现/代理obj.js",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175849.png",
-    "前端/文章/Vue/Vue设计与实现/image.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175558.png",
-    "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现.md",
+    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
+    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
     "前端/文章/Vue/Vue设计与实现/No.5 非原始值的响应式方案.md",
-    "list/生活List.md",
+    "短记/GMS.md",
+    "短记/campaign detail - 副本.md",
+    "短记/campaign detail.md",
+    "短记/GMS - 副本.md",
+    "前端/文章/git图形界面完全指南.md",
+    "前端/职业规划.md",
     "短记/Pasted image 20231227115604.png",
     "短记/Pasted image 20231226190431.png",
     "短记/Pasted image 20231226190411.png",
     "短记/Pasted image 20231226184332.png",
-    "短记/Pasted image 20231225153215.png",
+    "前端/文章/Vue/Vue设计与实现/No.5 非原始值的相应系统.md",
+    "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现 copy.md",
+    "list/生活List.md",
     "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
     "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/No.3 Vue.js 3 的 设计思路.md",
     "conflict-files-obsidian-git.md",
-    "前端/文章/Vue/Vue源码/CreateApp.md",
     "前端/文章/框架设计的核心要素.md",
     "前端/文章/Vue/Vue设计与实现",
     "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
     "前端/文章/Vue/Vue源码",
-    "短记/GMS.md",
     "Quick Start.md",
     "前端/文章/Vue/Vue设计与实现之框架设计的核心要素.md",
     "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
@@ -206,16 +205,7 @@
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之索引.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之特殊的索引和集合类型.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之查询.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之创建、更新和删除文档.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之入门指南.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之事务.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之MongoDB特性介绍.md",
     "前端/文章/MongoDB/MongoDB权威指南学习",
-    "前端/文章/Vue/详解vue组件通信.md",
-    "生活/doujiang/家务.md",
-    "前端/文章/snabbdom",
-    "show",
-    "前端/文章/MongoDB/test.json",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
