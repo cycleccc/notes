@@ -3,9 +3,11 @@
 - 修改
 	- data.postBody.apply.projectCode
 - 取消预算
-	- 
+	- {"desc":{"$regex":"cancelBudget"}}
+	- data.postBody.projectCode
 - 分发
 	- {"desc":{"$regex":"mba-distribution"}}
+	- 
 - 金额调整
 	- {"desc":{"$regex":"mba-distribution-amountchange"}}
 # 结项
