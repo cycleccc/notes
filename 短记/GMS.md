@@ -7,7 +7,7 @@
 	- data.postBody.projectCode
 - 分发
 	- {"desc":{"$regex":"mba-distribution"}}
-	- 
+	- data.postBody.apply.projectCode
 - 金额调整
 	- {"desc":{"$regex":"mba-distribution-amountchange"}}
 # 结项
