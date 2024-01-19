@@ -1,6 +1,9 @@
 # 立项  
-- 创建  
+- 创建
+	- {"desc":{"$regex":"create"}}
+	- data.postBody.projectCode
 - 修改
+	- {"desc":{"$regex":"postModifyNewProjectApply"}}
 	- data.postBody.apply.projectCode
 - 取消预算
 	- {"desc":{"$regex":"cancelBudget"}}
