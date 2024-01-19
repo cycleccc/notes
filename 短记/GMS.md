@@ -10,8 +10,9 @@
 	- data.postBody.apply.projectCode
 - 金额调整
 	- {"desc":{"$regex":"mba-distribution-amountchange"}}
+	- data.postBody.apply.projectCode
 # 结项
 - 同步
-~~~json
-{"desc":{"$regex":"postCreateFinishProjectApply"}}
-~~~
+	- {"desc":{"$regex":"postCreateFinishProjectApply"}}
+	- data.postBody.apply.projectCode
+
