@@ -1,7 +1,7 @@
 # 立项  
 - 创建
 	- {"desc":{"$regex":"create"}}
-	- data.postBody.projectCode
+	- data.postBody.apply.projectCode
 - 修改
 	- {"desc":{"$regex":"postModifyNewProjectApply"}}
 	- data.postBody.apply.projectCode
