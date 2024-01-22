@@ -19,3 +19,12 @@
 	- {"desc":{"$regex":"postCreateFinishProjectApply"}}
 	- data.postBody.apply.projectCode
 
+~~~json
+{
+"params":{
+"create":'{"$and": [{ "desc": { "$regex": "create" } }, { "data.postBody.apply.projectCode": "templateCode" }]}'，
+"modify":'{"$and": [{"desc":{"$regex":"postModifyNewProjectApply"}}, { "data.postBody.apply.projectCode": "templateCode" }]}'，
+"cancelBudget":
+}
+}
+~~~
