@@ -166,8 +166,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d82701bc35b5884f",
+  "active": "c6f149c6cc1d7b9f",
   "lastOpenFiles": [
+    "前端/每日一题/899.谈谈你对事件冒泡和捕获的理解.md",
+    "前端/每日一题",
     "前端/文章/Vue/Vue设计与实现/reactive.ts",
     "前端/文章/Vue/Vue设计与实现/index.html",
     "前端/文章/Vue/Vue设计与实现/interfaces/reactive.interface.ts",
@@ -208,12 +210,10 @@
     "Quick Start.md",
     "前端/文章/Vue/Vue设计与实现之框架设计的核心要素.md",
     "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
-    "前端/文章/MongoDB/Mongoose",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之聚合框架.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之索引.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之特殊的索引和集合类型.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之查询.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
