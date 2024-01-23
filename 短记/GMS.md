@@ -44,3 +44,13 @@
 }
 }
 ~~~
+
+
+~~~
+backend\app\model\outer-record.ts  
+http://dev-kyd.oa.com/api/record-outer/list  
+参考：  
+http://dev-kyd.oa.com/system/mba-reminder  
+新路径：  
+/system/outer-record/log  
+~~~
