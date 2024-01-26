@@ -119,7 +119,7 @@ if(oldVal !== newVal && (oldVal === oldVal ||newVal === newVal)){
     trigger(target,key,type)
 }
 // 显然使用Object.is更优雅
-if(Ojbect.is(newVal,oldVal)){
+if(!Object.is(newVal,oldVal)){
     // ...
 }
 ~~~
