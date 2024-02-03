@@ -45,4 +45,3 @@
 }
 ~~~
 
-redis， kafka，nodejs的子线程
