@@ -44,7 +44,3 @@
 }
 }
 ~~~
-
-/api/pr-amount-control/control/list
-/api/pr-amount-control/detail/list
-/api/pr-amount-control/summary/list
