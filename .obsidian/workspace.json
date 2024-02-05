@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "短记/GMS.md",
+                "file": "前端/学习笔记/vim.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "短记/GMS.md",
+                "file": "前端/学习笔记/vim.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "短记/GMS.md",
+                "file": "前端/学习笔记/vim.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "短记/GMS.md"
+                "file": "前端/学习笔记/vim.md"
               }
             }
           },
@@ -171,9 +170,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "22de0d104efd5762",
+  "active": "234da35e400508da",
   "lastOpenFiles": [
     "短记/GMS.md",
+    "前端/学习笔记/vim.md",
     "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
     "前端/每日一题/899.谈谈你对事件冒泡和捕获的理解.md",
@@ -218,7 +218,6 @@
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之聚合框架.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之索引.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之特殊的索引和集合类型.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之查询.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
