@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/学习笔记/vim.md",
+                "file": "短记/GMS.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,12 +61,8 @@
             "id": "22de0d104efd5762",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "短记/GMS.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "starred",
+              "state": {}
             }
           },
           {
@@ -97,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/vim.md",
+                "file": "短记/GMS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/vim.md",
+                "file": "短记/GMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/学习笔记/vim.md"
+                "file": "短记/GMS.md"
               }
             }
           },
@@ -172,10 +168,10 @@
   },
   "active": "234da35e400508da",
   "lastOpenFiles": [
-    "短记/GMS.md",
     "前端/学习笔记/vim.md",
     "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
+    "短记/GMS.md",
     "前端/每日一题/899.谈谈你对事件冒泡和捕获的理解.md",
     "前端/每日一题",
     "前端/文章/Vue/Vue设计与实现/reactive.ts",
