@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "55f85520eaa1cf29",
+        "id": "5860a54763b66f79",
         "type": "tabs",
         "children": [
           {
-            "id": "05a181571c38be09",
+            "id": "234da35e400508da",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "前端/学习笔记/vim.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "vim",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -89,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "前端/学习笔记/vim.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "前端/学习笔记/vim.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "前端/学习笔记/vim.md"
+              }
             }
           },
           {
@@ -158,11 +167,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "05a181571c38be09",
+  "active": "234da35e400508da",
   "lastOpenFiles": [
+    "短记/GMS.md",
     "短记/租房.md",
     "前端/学习笔记/vim.md",
-    "短记/GMS.md",
     "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
     "前端/每日一题/899.谈谈你对事件冒泡和捕获的理解.md",
