@@ -11,8 +11,12 @@
             "id": "05a181571c38be09",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "前端/学习笔记/egg.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "前端/学习笔记/egg.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "前端/学习笔记/egg.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "前端/学习笔记/egg.md"
+              }
             }
           },
           {
@@ -160,12 +168,13 @@
   },
   "active": "05a181571c38be09",
   "lastOpenFiles": [
+    "短记/GMS.md",
+    "前端/学习笔记/mongoose.md",
     "短记/campaign detail.md",
     "短记/租房.md",
     "入党相关时间.md",
     "Quick Start.md",
     "前端/学习笔记/vim.md",
-    "短记/GMS.md",
     "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
     "前端/每日一题/899.谈谈你对事件冒泡和捕获的理解.md",
@@ -205,7 +214,6 @@
     "前端/文章/Vue/Vue源码",
     "前端/文章/Vue/Vue设计与实现之框架设计的核心要素.md",
     "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之聚合框架.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
