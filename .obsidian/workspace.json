@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "生活/doujiang/家务.md",
+                "file": "生活/now_todolist.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "生活/doujiang/家务.md",
+                "file": "生活/now_todolist.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "生活/doujiang/家务.md",
+                "file": "生活/now_todolist.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "生活/doujiang/家务.md"
+                "file": "生活/now_todolist.md"
               }
             }
           },
@@ -168,9 +168,12 @@
   },
   "active": "05a181571c38be09",
   "lastOpenFiles": [
-    "生活/doujiang/Pasted image 20230923232929.png",
-    "生活/doujiang/家务.md",
+    "算法相关/错题/乘法口诀数列.md",
+    "生活/菜.md",
+    "生活/歌.md",
     "生活/doujiang/打球记录.md",
+    "生活/doujiang/家务.md",
+    "生活/doujiang/Pasted image 20230923232929.png",
     "前端/学习笔记/egg.md",
     "前端/学习笔记/React源码学习.md",
     "前端/学习笔记/umi.md",
@@ -209,9 +212,6 @@
     "短记/Pasted image 20231227115604.png",
     "短记/Pasted image 20231226190431.png",
     "短记/Pasted image 20231226190411.png",
-    "短记/Pasted image 20231226184332.png",
-    "前端/文章/Vue/Vue设计与实现/No.5 非原始值的相应系统.md",
-    "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现 copy.md",
     "前端/文章/Vue/Vue设计与实现",
     "前端/文章/Vue/Vue源码",
     "未命名 1.canvas",
