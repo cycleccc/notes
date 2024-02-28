@@ -44,3 +44,6 @@
 }
 }
 ~~~
+参考：mba-detail
+title：mba基础信息操作
+button：fa'x
