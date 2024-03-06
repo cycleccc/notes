@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/学习笔记/vim.md",
+                "file": "list/wang-editor.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/vim.md",
+                "file": "list/wang-editor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/vim.md",
+                "file": "list/wang-editor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/学习笔记/vim.md"
+                "file": "list/wang-editor.md"
               }
             }
           },
@@ -168,8 +168,9 @@
   },
   "active": "234da35e400508da",
   "lastOpenFiles": [
-    "短记/GMS.md",
     "前端/学习笔记/vim.md",
+    "list/wang-editor.md",
+    "短记/GMS.md",
     "短记/租房.md",
     "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
@@ -213,7 +214,6 @@
     "前端/文章/Vue/Vue设计与实现之框架设计的核心要素.md",
     "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之聚合框架.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之索引.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
