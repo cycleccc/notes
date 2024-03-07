@@ -1,2 +1,4 @@
-
-[x] [默认字体](https://github.com/wangeditor-team/wangEditor/issues/5796)
+# Done
+- [x] [默认字体](https://github.com/wangeditor-team/wangEditor/issues/5796)
+# Todo
+- [x] [文档](https://github.com/wangeditor-team/wangEditor/issues/5794)
