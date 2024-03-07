@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5860a54763b66f79",
+        "id": "55f85520eaa1cf29",
         "type": "tabs",
         "children": [
           {
-            "id": "234da35e400508da",
+            "id": "05a181571c38be09",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "list/wang-editor.md",
+                "file": "list/文章List.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "list/wang-editor.md",
+                "file": "list/文章List.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "list/wang-editor.md",
+                "file": "list/文章List.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "list/wang-editor.md"
+                "file": "list/文章List.md"
               }
             }
           },
@@ -166,12 +166,28 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "234da35e400508da",
+  "active": "05a181571c38be09",
   "lastOpenFiles": [
-    "前端/学习笔记/vim.md",
     "list/wang-editor.md",
     "短记/GMS.md",
+    "list/生活list.md",
+    "前端/学习笔记/egg.md",
+    "前端/学习笔记/React源码学习.md",
+    "前端/学习笔记/umi.md",
+    "前端/学习笔记/vim.md",
+    "生活/now_todolist.md",
+    "算法相关/错题/乘法口诀数列.md",
+    "生活/菜.md",
+    "生活/歌.md",
+    "生活/doujiang/打球记录.md",
+    "生活/doujiang/家务.md",
+    "生活/doujiang/Pasted image 20230923232929.png",
+    "前端/学习笔记/dva.md",
+    "前端/学习笔记/mongoose.md",
+    "短记/campaign detail.md",
     "短记/租房.md",
+    "入党相关时间.md",
+    "Quick Start.md",
     "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
     "前端/每日一题/899.谈谈你对事件冒泡和捕获的理解.md",
@@ -193,27 +209,11 @@
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
     "前端/文章/Vue/Vue设计与实现/No.5 非原始值的响应式方案.md",
     "短记/campaign detail - 副本.md",
-    "短记/campaign detail.md",
-    "短记/GMS - 副本.md",
-    "前端/文章/git图形界面完全指南.md",
-    "前端/职业规划.md",
     "短记/Pasted image 20231227115604.png",
     "短记/Pasted image 20231226190431.png",
     "短记/Pasted image 20231226190411.png",
-    "短记/Pasted image 20231226184332.png",
-    "前端/文章/Vue/Vue设计与实现/No.5 非原始值的相应系统.md",
-    "前端/文章/Vue/Vue设计与实现/No.4 响应系统的作用与实现 copy.md",
-    "list/生活List.md",
-    "前端/文章/Vue/Vue设计与实现/No.3 Vue.js 3 的 设计思路.md",
-    "conflict-files-obsidian-git.md",
-    "前端/文章/框架设计的核心要素.md",
     "前端/文章/Vue/Vue设计与实现",
-    "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
     "前端/文章/Vue/Vue源码",
-    "Quick Start.md",
-    "前端/文章/Vue/Vue设计与实现之框架设计的核心要素.md",
-    "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之聚合框架.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
