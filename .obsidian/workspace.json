@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5860a54763b66f79",
+        "id": "16268a54b08c78fc",
         "type": "tabs",
         "children": [
           {
-            "id": "234da35e400508da",
+            "id": "c494e4b74694db81",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "短记/read.me.md",
+                "file": "短记/readme.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "短记/read.me.md",
+                "file": "短记/readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "短记/read.me.md",
+                "file": "短记/readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "短记/read.me.md"
+                "file": "短记/readme.md"
               }
             }
           },
@@ -166,12 +166,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "234da35e400508da",
+  "active": "c494e4b74694db81",
   "lastOpenFiles": [
-    "list/wang-editor.md",
-    "短记/read.me.md",
-    "前端/学习笔记/vim.md",
+    "list/文章List.md",
+    "短记/readme.md",
     "短记/GMS.md",
+    "短记/readme.md.md",
+    "list/wang-editor.md",
+    "前端/学习笔记/vim.md",
     "短记/租房.md",
     "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
@@ -212,8 +214,6 @@
     "前端/文章/Vue/Vue设计与实现之权衡的艺术.md",
     "前端/文章/Vue/Vue源码",
     "Quick Start.md",
-    "前端/文章/Vue/Vue设计与实现之框架设计的核心要素.md",
-    "前端/文章/MongoDB/Mongoose/Mongoose常用API.md",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
