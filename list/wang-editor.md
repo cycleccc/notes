@@ -5,4 +5,4 @@
 # Todo
 
 # 信息不全
--  [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
+-  [x] https://github.com/wangeditor-team/wangEditor/issues/5793
