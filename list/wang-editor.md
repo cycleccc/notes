@@ -4,7 +4,9 @@
 - [x] [文档](https://github.com/wangeditor-team/wangEditor/issues/5794)
 - [x] [setHtml](https://github.com/wangeditor-team/wangEditor/issues/5771)
 # Todo
-om/wangeditor-team/wangEditor/issues/5794)￼j
-# 信息不全
--  [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
 - [ ] [多人协作](https://github.com/wangeditor-team/wangEditor/issues/5775)
+
+# 信息不全
+- [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
+# 没复现
+- [ ] [chrome 76 bug]([https://github.com/wangeditor-team/wangEditor/issues/5762](https://github.com/wangeditor-team/wangEditor/issues/5762))
