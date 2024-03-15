@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/学习笔记/多人协作.md",
+                "file": "短记/GMS.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/多人协作.md",
+                "file": "短记/GMS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/多人协作.md",
+                "file": "短记/GMS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/学习笔记/多人协作.md"
+                "file": "短记/GMS.md"
               }
             }
           },
@@ -168,10 +168,10 @@
   },
   "active": "05a181571c38be09",
   "lastOpenFiles": [
-    "list/wang-editor.md",
-    "前端/学习笔记/多人协作.md",
-    "list/文章List.md",
     "短记/readme.md",
+    "前端/学习笔记/多人协作.md",
+    "list/wang-editor.md",
+    "list/文章List.md",
     "list/Pasted image 20240308151103.png",
     "短记/GMS.md",
     "list/生活list.md",
