@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "短记/GMS.md",
+                "file": "list/wang-editor.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "短记/GMS.md",
+                "file": "list/wang-editor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "短记/GMS.md",
+                "file": "list/wang-editor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "短记/GMS.md"
+                "file": "list/wang-editor.md"
               }
             }
           },
@@ -168,11 +168,11 @@
   },
   "active": "05a181571c38be09",
   "lastOpenFiles": [
-    "短记/readme.md",
     "前端/学习笔记/多人协作.md",
-    "list/wang-editor.md",
     "list/文章List.md",
+    "短记/readme.md",
     "list/Pasted image 20240308151103.png",
+    "list/wang-editor.md",
     "短记/GMS.md",
     "list/生活list.md",
     "前端/学习笔记/egg.md",
