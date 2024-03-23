@@ -9,4 +9,4 @@
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
 # 没复现
-- [ ] [chrome 76 bug]([https://github.com/wangeditor-team/wangEditor/issues/5762](https://github.com/wangeditor-team/wangEditor/issues/5762))
+- [x] [chrome 76 bug]([https://github.com/wangeditor-team/wangEditor/issues/5762](https://github.com/wangeditor-team/wangEditor/issues/5762))
