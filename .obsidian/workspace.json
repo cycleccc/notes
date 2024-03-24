@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c5ce736f3d9a7e87",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.11"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -166,7 +177,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "05a181571c38be09",
+  "active": "c5ce736f3d9a7e87",
   "lastOpenFiles": [
     "前端/学习笔记/多人协作.md",
     "list/文章List.md",
