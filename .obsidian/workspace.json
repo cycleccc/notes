@@ -13,22 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "list/wang-editor.md",
+                "file": "短记/GMS.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "c5ce736f3d9a7e87",
+            "id": "11fd8f137d83dc7a",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.5.11"
+                "file": "list/github.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
+        ],
+        "currentTab": 1
         ],
         "currentTab": 1
       }
@@ -105,6 +109,7 @@
               "type": "backlink",
               "state": {
                 "file": "list/wang-editor.md",
+                "file": "list/github.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,6 +127,7 @@
               "type": "outgoing-link",
               "state": {
                 "file": "list/wang-editor.md",
+                "file": "list/github.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,6 +151,7 @@
               "type": "outline",
               "state": {
                 "file": "list/wang-editor.md"
+                "file": "list/github.md"
               }
             }
           },
@@ -177,14 +184,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c5ce736f3d9a7e87",
+  "active": "11fd8f137d83dc7a",
   "lastOpenFiles": [
-    "前端/学习笔记/多人协作.md",
-    "list/文章List.md",
-    "短记/readme.md",
-    "list/Pasted image 20240308151103.png",
     "list/wang-editor.md",
+    "list/github.md",
+    "list/Pasted image 20240308151103.png",
+    "list/文章List.md",
+    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
+    "短记/readme.md",
     "短记/GMS.md",
+    "前端/学习笔记/多人协作.md",
     "list/生活list.md",
     "前端/学习笔记/egg.md",
     "前端/学习笔记/React源码学习.md",
@@ -205,7 +214,6 @@
     "Quick Start.md",
     "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
     "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
-    "前端/每日一题/899.谈谈你对事件冒泡和捕获的理解.md",
     "前端/每日一题",
     "前端/文章/Vue/Vue设计与实现/reactive.ts",
     "前端/文章/Vue/Vue设计与实现/index.html",
@@ -213,7 +221,6 @@
     "前端/文章/Vue/Vue设计与实现/interfaces/mi-campaign.interface.ts",
     "前端/文章/Vue/Vue设计与实现/interfaces",
     "前端/文章/Vue/Vue设计与实现/代理obj.ts",
-    "前端/文章/Vue/Vue源码/CreateApp.md",
     "前端/文章/Vue/Vue设计与实现/代理obj.js",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
@@ -222,7 +229,6 @@
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
     "短记/Pasted image 20231227115604.png",
-    "短记/Pasted image 20231226190431.png",
     "前端/文章/Vue/Vue设计与实现",
     "前端/文章/Vue/Vue源码",
     "未命名 1.canvas",
