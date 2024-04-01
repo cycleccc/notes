@@ -1,54 +1,39 @@
 {
   "main": {
-    "id": "37c4c4807ee25ef1",
+    "id": "e3517eda929a588f",
     "type": "split",
     "children": [
       {
-        "id": "55f85520eaa1cf29",
+        "id": "b4529381b3f2ed7d",
         "type": "tabs",
         "children": [
           {
-            "id": "05a181571c38be09",
+            "id": "9f4a3f68ec71c8e9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "短记/GMS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "11fd8f137d83dc7a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "list/github.md",
+                "file": "list/gms.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "a5fc9c4752beee36",
+    "id": "4ea89a57b2d25604",
     "type": "split",
     "children": [
       {
-        "id": "61abc0b2df6938be",
+        "id": "4def5150e620d0ff",
         "type": "tabs",
         "children": [
           {
-            "id": "d82701bc35b5884f",
+            "id": "d2d65f90af59b96c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -58,7 +43,7 @@
             }
           },
           {
-            "id": "69ed91a5b555014c",
+            "id": "905ee833bd35506a",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -73,15 +58,7 @@
             }
           },
           {
-            "id": "22de0d104efd5762",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "bdedd89893a9d014",
+            "id": "7b4fbebaa3bfe8cd",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -92,24 +69,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5
+    "width": 300
   },
   "right": {
-    "id": "4cb2d8017a535402",
+    "id": "be6e9279413507a1",
     "type": "split",
     "children": [
       {
-        "id": "f74ca5c79071dca8",
+        "id": "3a8b728bdf0eb07f",
         "type": "tabs",
         "children": [
           {
-            "id": "d5c451e9fdee9d9f",
+            "id": "4c886f92cbfdc761",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "list/wang-editor.md",
-                "file": "list/github.md",
+                "file": "list/gms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,20 +97,19 @@
             }
           },
           {
-            "id": "e15ddd66da04e172",
+            "id": "b59f2a4e8e9041dc",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "list/wang-editor.md",
-                "file": "list/github.md",
+                "file": "list/gms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "d89117a71b475191",
+            "id": "a278b3547e9c519b",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -145,18 +120,7 @@
             }
           },
           {
-            "id": "0f6bf33c86f59213",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "list/wang-editor.md"
-                "file": "list/github.md"
-              }
-            }
-          },
-          {
-            "id": "2e672d4c61500b3d",
+            "id": "6b5ef3436d7b12e5",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -166,13 +130,23 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "7b2b592e1fec7269",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "list/gms.md"
+              }
+            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 342.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,54 +158,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "11fd8f137d83dc7a",
+  "active": "9f4a3f68ec71c8e9",
   "lastOpenFiles": [
+    "list/gms.md",
+    "list/文章List.md",
     "list/wang-editor.md",
     "list/github.md",
-    "list/Pasted image 20240308151103.png",
-    "list/文章List.md",
-    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
-    "短记/readme.md",
-    "短记/GMS.md",
-    "前端/学习笔记/多人协作.md",
-    "list/生活list.md",
-    "前端/学习笔记/egg.md",
-    "前端/学习笔记/React源码学习.md",
-    "前端/学习笔记/umi.md",
-    "前端/学习笔记/vim.md",
-    "生活/now_todolist.md",
-    "算法相关/错题/乘法口诀数列.md",
-    "生活/菜.md",
-    "生活/歌.md",
-    "生活/doujiang/打球记录.md",
-    "生活/doujiang/家务.md",
-    "生活/doujiang/Pasted image 20230923232929.png",
-    "前端/学习笔记/dva.md",
-    "前端/学习笔记/mongoose.md",
-    "短记/campaign detail.md",
-    "短记/租房.md",
-    "入党相关时间.md",
-    "Quick Start.md",
-    "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
-    "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
-    "前端/每日一题",
-    "前端/文章/Vue/Vue设计与实现/reactive.ts",
-    "前端/文章/Vue/Vue设计与实现/index.html",
-    "前端/文章/Vue/Vue设计与实现/interfaces/reactive.interface.ts",
-    "前端/文章/Vue/Vue设计与实现/interfaces/mi-campaign.interface.ts",
-    "前端/文章/Vue/Vue设计与实现/interfaces",
-    "前端/文章/Vue/Vue设计与实现/代理obj.ts",
-    "前端/文章/Vue/Vue设计与实现/代理obj.js",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175849.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175558.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
-    "短记/Pasted image 20231227115604.png",
-    "前端/文章/Vue/Vue设计与实现",
-    "前端/文章/Vue/Vue源码",
-    "未命名 1.canvas",
-    "未命名.canvas"
+    "Quick Start.md"
   ]
 }
