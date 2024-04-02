@@ -12,4 +12,4 @@
 - [x] [chrome 76 bug]([https://github.com/wangeditor-team/wangEditor/issues/5762](https://github.com/wangeditor-team/wangEditor/issues/5762))
 
 # code review
-- [ ] [list](https://github.com/wangeditor-team/wangEditor/pull/5798/files#submit-review)
+- [x] [list](https://github.com/wangeditor-team/wangEditor/pull/5798/files#submit-review)
