@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "37c4c4807ee25ef1",
+    "id": "7a5cd0ee5307bb8a",
     "type": "split",
     "children": [
       {
-        "id": "55f85520eaa1cf29",
+        "id": "b526151b45b55ad6",
         "type": "tabs",
         "children": [
           {
-            "id": "05a181571c38be09",
+            "id": "12dca3fa0fb2090b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,21 +20,20 @@
             }
           }
         ]
-        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "a5fc9c4752beee36",
+    "id": "820fc7a9a005813c",
     "type": "split",
     "children": [
       {
-        "id": "61abc0b2df6938be",
+        "id": "01030ef7c513d9fa",
         "type": "tabs",
         "children": [
           {
-            "id": "d82701bc35b5884f",
+            "id": "b12e12c5c27f82de",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,7 +43,7 @@
             }
           },
           {
-            "id": "69ed91a5b555014c",
+            "id": "7440d598c516f6e5",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -59,15 +58,7 @@
             }
           },
           {
-            "id": "22de0d104efd5762",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "bdedd89893a9d014",
+            "id": "427a12b253539d30",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,18 +69,18 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5
+    "width": 300
   },
   "right": {
-    "id": "4cb2d8017a535402",
+    "id": "16ba5a68a0d7a8ef",
     "type": "split",
     "children": [
       {
-        "id": "f74ca5c79071dca8",
+        "id": "130552e27632844c",
         "type": "tabs",
         "children": [
           {
-            "id": "d5c451e9fdee9d9f",
+            "id": "34de719a19f3b3ea",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -106,7 +97,7 @@
             }
           },
           {
-            "id": "e15ddd66da04e172",
+            "id": "80ff6e99fd258a8a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -118,7 +109,7 @@
             }
           },
           {
-            "id": "d89117a71b475191",
+            "id": "0e680bd1ef3a09ba",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -129,17 +120,7 @@
             }
           },
           {
-            "id": "0f6bf33c86f59213",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "list/wang-editor.md"
-              }
-            }
-          },
-          {
-            "id": "2e672d4c61500b3d",
+            "id": "24109099857a4cce",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -149,13 +130,23 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "3818db37e77d211f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "list/wang-editor.md"
+              }
+            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 342.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -167,55 +158,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "05a181571c38be09",
+  "active": "12dca3fa0fb2090b",
   "lastOpenFiles": [
-    "前端/学习笔记/多人协作.md",
-    "list/文章List.md",
-    "短记/readme.md",
-    "list/Pasted image 20240308151103.png",
-    "list/wang-editor.md",
-    "短记/GMS.md",
-    "list/生活list.md",
-    "前端/学习笔记/egg.md",
-    "前端/学习笔记/React源码学习.md",
-    "前端/学习笔记/umi.md",
-    "前端/学习笔记/vim.md",
-    "生活/now_todolist.md",
-    "算法相关/错题/乘法口诀数列.md",
-    "生活/菜.md",
-    "生活/歌.md",
-    "生活/doujiang/打球记录.md",
-    "生活/doujiang/家务.md",
-    "生活/doujiang/Pasted image 20230923232929.png",
-    "前端/学习笔记/dva.md",
-    "前端/学习笔记/mongoose.md",
-    "短记/campaign detail.md",
-    "短记/租房.md",
-    "入党相关时间.md",
-    "Quick Start.md",
-    "前端/文章/Vue/Vue设计与实现/No.1 权衡的艺术.md",
-    "前端/文章/Vue/Vue设计与实现/No.2 框架设计的核心要素.md",
-    "前端/每日一题/899.谈谈你对事件冒泡和捕获的理解.md",
-    "前端/每日一题",
-    "前端/文章/Vue/Vue设计与实现/reactive.ts",
-    "前端/文章/Vue/Vue设计与实现/index.html",
-    "前端/文章/Vue/Vue设计与实现/interfaces/reactive.interface.ts",
-    "前端/文章/Vue/Vue设计与实现/interfaces/mi-campaign.interface.ts",
-    "前端/文章/Vue/Vue设计与实现/interfaces",
-    "前端/文章/Vue/Vue设计与实现/代理obj.ts",
-    "前端/文章/Vue/Vue源码/CreateApp.md",
-    "前端/文章/Vue/Vue设计与实现/代理obj.js",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175849.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175558.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
-    "短记/Pasted image 20231227115604.png",
-    "短记/Pasted image 20231226190431.png",
-    "前端/文章/Vue/Vue设计与实现",
-    "前端/文章/Vue/Vue源码",
-    "未命名 1.canvas",
-    "未命名.canvas"
+    "list/github.md",
+    "list/gms.md"
   ]
 }
