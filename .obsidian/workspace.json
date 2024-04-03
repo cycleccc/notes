@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "list/wang-editor.md",
+                "file": "list/wangeditor/list ordered.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "list/wang-editor.md",
+                "file": "list/wangeditor/list ordered.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "list/wang-editor.md",
+                "file": "list/wangeditor/list ordered.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "list/wang-editor.md"
+                "file": "list/wangeditor/list ordered.md"
               }
             }
           }
@@ -160,6 +160,9 @@
   },
   "active": "12dca3fa0fb2090b",
   "lastOpenFiles": [
+    "list/wangeditor/wang-editor.md",
+    "list/wangeditor/list ordered.md",
+    "list/wangeditor",
     "list/github.md",
     "list/gms.md"
   ]
