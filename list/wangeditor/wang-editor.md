@@ -14,3 +14,7 @@
 # code review
 - [x] [list](https://github.com/wangeditor-team/wangEditor/pull/5798/files#submit-review)
 
+# debug
+- [ ] https://github.com/wangeditor-team/wangEditor/issues/5821
+
+

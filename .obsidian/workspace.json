@@ -11,8 +11,12 @@
             "id": "05a181571c38be09",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "list/wangeditor/wang-editor.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "list/wangeditor/wang-editor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "list/wangeditor/wang-editor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "list/wangeditor/wang-editor.md"
+              }
             }
           },
           {
@@ -160,9 +168,9 @@
   },
   "active": "05a181571c38be09",
   "lastOpenFiles": [
+    "list/wangeditor/list ordered.md",
     "list/wang-editor.md",
     "list/wangeditor/wang-editor.md",
-    "list/wangeditor/list ordered.md",
     "list/wangeditor",
     "conflict-files-obsidian-git.md",
     "list/gms.md",
