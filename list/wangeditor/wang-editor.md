@@ -16,5 +16,3 @@
 
 # debug
 - [x] https://github.com/wangeditor-team/wangEditor/issues/5821
-
-
