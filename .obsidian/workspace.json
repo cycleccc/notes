@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/学习笔记/list.md",
+                "file": "前端/学习笔记/测试/前端测试.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/list.md",
+                "file": "前端/学习笔记/测试/前端测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/list.md",
+                "file": "前端/学习笔记/测试/前端测试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/学习笔记/list.md"
+                "file": "前端/学习笔记/测试/前端测试.md"
               }
             }
           },
@@ -168,8 +168,12 @@
   },
   "active": "05a181571c38be09",
   "lastOpenFiles": [
-    "list/wangeditor/wang-editor.md",
     "前端/学习笔记/list.md",
+    "前端/学习笔记/测试/前端测试.md",
+    "前端/学习笔记/测试",
+    "前端/学习笔记/未命名.md",
+    "前端/学习笔记/测试.md",
+    "list/wangeditor/wang-editor.md",
     "list/未命名.md",
     "list/wangeditor/list ordered.md",
     "list/wang-editor.md",
@@ -194,9 +198,6 @@
     "生活/doujiang/打球记录.md",
     "生活/doujiang/家务.md",
     "生活/doujiang/Pasted image 20230923232929.png",
-    "前端/学习笔记/dva.md",
-    "前端/学习笔记/mongoose.md",
-    "短记/campaign detail.md",
     "前端/每日一题",
     "前端/文章/Vue/Vue设计与实现/reactive.ts",
     "前端/文章/Vue/Vue设计与实现/index.html",
@@ -213,7 +214,6 @@
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
     "短记/Pasted image 20231227115604.png",
     "短记/Pasted image 20231226190431.png",
-    "前端/文章/Vue/Vue设计与实现",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
