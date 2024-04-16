@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/学习笔记/测试/前端测试.md",
+                "file": "生活/旅行计划.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/测试/前端测试.md",
+                "file": "生活/旅行计划.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/测试/前端测试.md",
+                "file": "生活/旅行计划.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/学习笔记/测试/前端测试.md"
+                "file": "生活/旅行计划.md"
               }
             }
           },
@@ -167,15 +167,18 @@
     }
   },
   "active": "05a181571c38be09",
-  "active": "a210bbf6c699ad99",
   "lastOpenFiles": [
-    "前端/学习笔记/list.md",
+    "生活/菜.md",
+    "生活/旅行计划.md",
     "前端/学习笔记/测试/前端测试.md",
     "前端/学习笔记/测试",
-    "前端/学习笔记/未命名.md",
-    "前端/学习笔记/测试.md",
+    "前端/学习笔记/list.md",
+    "生活/旅行/未命名.md",
+    "生活/健身/doujiang_waist_exercise.md",
+    "生活/旅行",
+    "生活/游泳.md",
+    "生活/歌.md",
     "list/wangeditor/wang-editor.md",
-    "list/未命名.md",
     "list/wangeditor/list ordered.md",
     "list/文章List.md",
     "list/gms.md",
@@ -196,8 +199,6 @@
     "前端/学习笔记/多人协作.md",
     "短记/readme.md",
     "list/Pasted image 20240308151103.png",
-    "短记/GMS.md",
-    "list/生活list.md",
     "生活/doujiang/Pasted image 20230923232929.png",
     "前端/每日一题",
     "前端/文章/Vue/Vue设计与实现/reactive.ts",
