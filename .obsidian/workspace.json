@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "a210bbf6c699ad99",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.12"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -187,13 +176,23 @@
     "list/wangeditor/wang-editor.md",
     "list/未命名.md",
     "list/wangeditor/list ordered.md",
+    "list/文章List.md",
+    "list/gms.md",
+    "list/github.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之事务.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之索引.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之入门指南.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之创建、更新和删除文档.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之查询.md",
+    "前端/文章/snabbdom/snabbdom.md",
+    "前端/文章/Vue/Vue源码/CreateApp.md",
+    "Quick Start.md",
+    "入党相关时间.md",
+    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "list/wang-editor.md",
     "list/wangeditor",
     "conflict-files-obsidian-git.md",
-    "list/gms.md",
-    "list/github.md",
     "前端/学习笔记/多人协作.md",
-    "list/文章List.md",
     "短记/readme.md",
     "list/Pasted image 20240308151103.png",
     "短记/GMS.md",
@@ -202,12 +201,6 @@
     "前端/学习笔记/React源码学习.md",
     "前端/学习笔记/umi.md",
     "前端/学习笔记/vim.md",
-    "生活/now_todolist.md",
-    "算法相关/错题/乘法口诀数列.md",
-    "生活/菜.md",
-    "生活/歌.md",
-    "生活/doujiang/打球记录.md",
-    "生活/doujiang/家务.md",
     "生活/doujiang/Pasted image 20230923232929.png",
     "前端/每日一题",
     "前端/文章/Vue/Vue设计与实现/reactive.ts",
@@ -216,7 +209,6 @@
     "前端/文章/Vue/Vue设计与实现/interfaces/mi-campaign.interface.ts",
     "前端/文章/Vue/Vue设计与实现/interfaces",
     "前端/文章/Vue/Vue设计与实现/代理obj.ts",
-    "前端/文章/Vue/Vue设计与实现/代理obj.js",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175849.png",
@@ -224,7 +216,6 @@
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
     "短记/Pasted image 20231227115604.png",
-    "短记/Pasted image 20231226190431.png",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
