@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "a210bbf6c699ad99",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.12"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -166,7 +177,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "05a181571c38be09",
+  "active": "a210bbf6c699ad99",
   "lastOpenFiles": [
     "前端/学习笔记/list.md",
     "前端/学习笔记/测试/前端测试.md",
