@@ -1,3 +1,2 @@
-- 封装路径转换模块名组件
-- 补全模块名
-- 添加筛选条件
+- [ ] complite a egg muti worker process demo  
+- [ ] success show child process message in masterworker  process

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/学习笔记/测试/前端测试.md",
+                "file": "list/gms.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/测试/前端测试.md",
+                "file": "list/gms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/测试/前端测试.md",
+                "file": "list/gms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/学习笔记/测试/前端测试.md"
+                "file": "list/gms.md"
               }
             }
           },
@@ -168,24 +168,36 @@
   },
   "active": "05a181571c38be09",
   "lastOpenFiles": [
-    "生活/Pasted image 20240416102708.png",
-    "conflict-files-obsidian-git.md",
-    "前端/学习笔记/测试/前端测试.md",
     "生活/旅行计划.md",
-    "前端/学习笔记/list.md",
+    "生活/Pasted image 20240416102708.png",
+    "生活/菜.md",
+    "前端/学习笔记/测试/前端测试.md",
     "前端/学习笔记/测试",
-    "前端/学习笔记/未命名.md",
-    "前端/学习笔记/测试.md",
+    "前端/学习笔记/list.md",
+    "生活/旅行/未命名.md",
+    "生活/健身/doujiang_waist_exercise.md",
+    "生活/旅行",
+    "生活/游泳.md",
+    "生活/歌.md",
     "list/wangeditor/wang-editor.md",
-    "list/未命名.md",
     "list/wangeditor/list ordered.md",
-    "list/wang-editor.md",
-    "list/wangeditor",
+    "list/文章List.md",
     "list/gms.md",
     "list/github.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之事务.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之索引.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之入门指南.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之创建、更新和删除文档.md",
+    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之查询.md",
+    "前端/文章/snabbdom/snabbdom.md",
+    "前端/文章/Vue/Vue源码/CreateApp.md",
+    "Quick Start.md",
+    "入党相关时间.md",
+    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
+    "list/wang-editor.md",
+    "list/wangeditor",
+    "conflict-files-obsidian-git.md",
     "前端/学习笔记/多人协作.md",
-    "list/文章List.md",
-    "短记/readme.md",
     "list/Pasted image 20240308151103.png",
     "生活/doujiang/Pasted image 20230923232929.png",
     "前端/每日一题",
@@ -195,15 +207,12 @@
     "前端/文章/Vue/Vue设计与实现/interfaces/mi-campaign.interface.ts",
     "前端/文章/Vue/Vue设计与实现/interfaces",
     "前端/文章/Vue/Vue设计与实现/代理obj.ts",
-    "前端/文章/Vue/Vue设计与实现/代理obj.js",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175849.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175558.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
-    "短记/Pasted image 20231227115604.png",
-    "短记/Pasted image 20231226190431.png",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
