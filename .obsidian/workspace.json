@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "list/gms.md",
+                "file": "list/wangeditor/wang-editor.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "list/gms.md",
+                "file": "list/wangeditor/wang-editor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "list/gms.md",
+                "file": "list/wangeditor/wang-editor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "list/gms.md"
+                "file": "list/wangeditor/wang-editor.md"
               }
             }
           },
@@ -168,6 +168,7 @@
   },
   "active": "05a181571c38be09",
   "lastOpenFiles": [
+    "list/gms.md",
     "前端/学习笔记/测试/前端测试.md",
     "生活/Pasted image 20240416102708.png",
     "conflict-files-obsidian-git.md",
@@ -181,7 +182,6 @@
     "list/wangeditor/list ordered.md",
     "list/wang-editor.md",
     "list/wangeditor",
-    "list/gms.md",
     "list/github.md",
     "前端/学习笔记/多人协作.md",
     "list/文章List.md",

@@ -4,7 +4,8 @@
 - [x] [文档](https://github.com/wangeditor-team/wangEditor/issues/5794)
 - [x] [setHtml](https://github.com/wangeditor-team/wangEditor/issues/5771)
 # Todo
-- [ ] [多人协作](https://github.com/wangeditor-team/wangEditor/issues/5775)
+- [ ] [多人协作](https://github.com/wangeditor-team/wangEditor/issues/5775)i
+- [ ] [maxNumberofFiles]()
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
