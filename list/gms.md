@@ -1,2 +1,2 @@
-- [ ] complite a egg muti worker process demo  
-- [ ] success show child process message in masterworker  process
+- [x] complite a egg muti worker process demo  
+- [x] success show child process message in masterworker  process
