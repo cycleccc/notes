@@ -7,7 +7,7 @@
 - [ ] [多人协作](https://github.com/wangeditor-team/wangEditor/issues/5775)i
 - [ ] [maxNumberofFiles]()https://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-filehttps://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-filehttps://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-file
 - [ ] create a editor package replace wang-editor
-- [ ] 加入打印功能
+- [ ] [加入打印功能](https://github.com/wangeditor-team/wangEditor/issues/4246)
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
