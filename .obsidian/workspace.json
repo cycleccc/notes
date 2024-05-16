@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/学习笔记/git.md",
+                "file": "list/wangeditor/wang-editor.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/git.md",
+                "file": "list/wangeditor/wang-editor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/git.md",
+                "file": "list/wangeditor/wang-editor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/学习笔记/git.md"
+                "file": "list/wangeditor/wang-editor.md"
               }
             }
           },
@@ -168,8 +168,9 @@
   },
   "active": "05a181571c38be09",
   "lastOpenFiles": [
-    "list/github.md",
+    "list/wangeditor/list ordered.md",
     "前端/学习笔记/git.md",
+    "list/github.md",
     "list/wangeditor/wang-editor.md",
     "list/twitter-clone.md",
     "list/gms.md",
@@ -182,7 +183,6 @@
     "前端/学习笔记/未命名.md",
     "前端/学习笔记/测试.md",
     "list/未命名.md",
-    "list/wangeditor/list ordered.md",
     "list/wang-editor.md",
     "list/wangeditor",
     "前端/学习笔记/多人协作.md",
