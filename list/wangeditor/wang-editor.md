@@ -3,7 +3,7 @@
 - [x] [添加新字体](https://github.com/wangeditor-team/wangEditor/issues/5797)
 - [x] [文档](https://github.com/wangeditor-team/wangEditor/issues/5794)
 - [x] [setHtml](https://github.com/wangeditor-team/wangEditor/issues/5771)
-- [x] wangeditor-vue3 type缺失
+- [x] [wangeditor-vue3 type缺失](https://github.com/wangeditor-team/wangEditor/issues/5673)
 # Todo
 - [ ] [多人协作](https://github.com/wangeditor-team/wangEditor/issues/5775)i
 - [ ] [maxNumberofFiles]()https://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-filehttps://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-filehttps://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-file
