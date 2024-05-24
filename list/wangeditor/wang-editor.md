@@ -4,12 +4,12 @@
 - [x] [文档](https://github.com/wangeditor-team/wangEditor/issues/5794)
 - [x] [setHtml](https://github.com/wangeditor-team/wangEditor/issues/5771)
 - [x] [wangeditor-vue3 type缺失](https://github.com/wangeditor-team/wangEditor/issues/5673)
+- [x] [粘贴产生多余空行](https://github.com/wangeditor-team/wangEditor/issues/5850)
+- [x] create a editor package replace wang-editor
 # Todo
 - [ ] [多人协作](https://github.com/wangeditor-team/wangEditor/issues/5775)i
 - [ ] [maxNumberofFiles]()https://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-filehttps://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-filehttps://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-file
-- [ ] create a editor package replace wang-editor
 - [ ] [加入打印功能](https://github.com/wangeditor-team/wangEditor/issues/4246)
-- [ ] [粘贴产生多余空行](https://github.com/wangeditor-team/wangEditor/issues/5850)
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
