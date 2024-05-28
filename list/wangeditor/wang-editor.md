@@ -15,6 +15,8 @@
 	- [ ] https://github.com/wangeditor-team/wangEditor/issues/4410
 	- [ ] https://github.com/wangeditor-team/wangEditor/issues/5704
 	- [ ] https://github.com/wangeditor-team/wangEditor/issues/5259
+- [ ] [文本加粗](https://github.com/wangeditor-team/wangEditor/pull/5812)
+
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
