@@ -15,7 +15,7 @@
 	- [ ] https://github.com/wangeditor-team/wangEditor/issues/4410
 	- [ ] https://github.com/wangeditor-team/wangEditor/issues/5704
 	- [ ] https://github.com/wangeditor-team/wangEditor/issues/5259
-- [ ] video 居中属性导出
+- [x] video 居中属性导出
 - [ ] [文本加粗](https://github.com/wangeditor-team/wangEditor/pull/5812)
 - [ ]  更新 slate 版本
 
