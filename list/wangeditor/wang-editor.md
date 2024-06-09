@@ -18,7 +18,7 @@
 - [x] video 居中属性导出
 - [ ] [文本加粗](https://github.com/wangeditor-team/wangEditor/pull/5812)
 - [ ]  更新 slate 版本
-
+- [ ] 统一 img 和 video 标签 hoverbar
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
