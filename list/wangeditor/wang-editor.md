@@ -6,6 +6,7 @@
 - [x] [wangeditor-vue3 type缺失](https://github.com/wangeditor-team/wangEditor/issues/5673)
 - [x] [粘贴产生多余空行](https://github.com/wangeditor-team/wangEditor/issues/5850)
 - [x] create a editor package replace wang-editor
+- [ ] 当复制富文本到编辑器时，如果span内部分内容加粗，则整个span都会被加粗
 # Todo
 - [ ] [多人协作](https://github.com/wangeditor-team/wangEditor/issues/5775)i
 - [ ] [maxNumberofFiles]()https://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-filehttps://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-filehttps://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-file
