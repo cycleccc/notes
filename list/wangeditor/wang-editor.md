@@ -13,9 +13,9 @@
 - [ ] [加入打印功能](https://github.com/wangeditor-team/wangEditor/issues/4246)
 - [ ] 实践多版本debug及测试
 - [x]  video自定义百分比宽度及居中居右居左
-	- [ ] https://github.com/wangeditor-team/wangEditor/issues/4410
-	- [ ] https://github.com/wangeditor-team/wangEditor/issues/5704
-	- [ ] https://github.com/wangeditor-team/wangEditor/issues/5259
+	- [x] https://github.com/wangeditor-team/wangEditor/issues/4410
+	- [x] https://github.com/wangeditor-team/wangEditor/issues/5704
+	- [x] https://github.com/wangeditor-team/wangEditor/issues/5259
 - [x] video 居中属性导出
 - [x] [文本加粗](https://github.com/wangeditor-team/wangEditor/pull/5812)
 - [ ]  更新 slate 版本
