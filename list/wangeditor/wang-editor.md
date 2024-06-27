@@ -21,6 +21,7 @@
 - [ ]  更新 slate 版本
 - [x] 统一 img 和 video 标签 hoverbar
 - [x] 视频属性编辑，完善单测
+- [ ] 使用 vitepress 构建文档
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
