@@ -42,9 +42,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6c361630d9413b40",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.5"
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -191,7 +201,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "91a2b27a483553cc",
+  "active": "6c361630d9413b40",
   "lastOpenFiles": [
     "list/wangeditor/list ordered.md",
     "list/wangeditor/wang-editor.md",
