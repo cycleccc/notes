@@ -24,6 +24,7 @@
 - [ ]  更新 slate 版本
 
 - [ ] 使用 vitepress 构建文档
+- [ ] 输入法光标位置错乱
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
