@@ -24,8 +24,9 @@
 - [ ]  更新 slate 版本
 
 - [ ] 使用 vitepress 构建文档
-- [ ] 输入法光标位置错乱（ing）
+- [ ] 输入法输入内容展示两遍，输入法光标位置错乱（ing）
 	- [ ] 26139行，选区错乱
+	- [ ] 由于输入法和slate的定位不同导致当选区选到两个 text 的分界线时输入法会将data附加到前一个 text 中，而slate则会将内容附加到后一个 text 中，这导致编辑区data 展示了两遍，而 html 则是附加到了后一个 text 上。
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
