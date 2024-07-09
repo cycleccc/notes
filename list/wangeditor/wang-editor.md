@@ -15,18 +15,17 @@
 - [x] [文本加粗](https://github.com/wangeditor-team/wangEditor/pull/5812)
 - [x] 统一 img 和 video 标签 hoverbar
 - [x] 视频属性编辑，完善单测
+- [x] 输入法输入内容展示两遍，输入法光标位置错乱（ing）
+	- [x] 由于输入法和slate的定位不同导致当选区选到两个 text 的分界线时输入法会将data附加到前一个 text 中，而slate则会将内容附加到后一个 text 中，这导致编辑区data 展示了两遍，而 html 则是附加到了后一个 text 上。
 # Todo
 - [ ] [多人协作](https://github.com/wangeditor-team/wangEditor/issues/5775)i
 - [ ] [maxNumberofFiles]()https://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-filehttps://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-filehttps://github.com/qufei1993/nextjs-learn-cn?tab=readme-ov-file
 - [ ] [加入打印功能](https://github.com/wangeditor-team/wangEditor/issues/4246)
 - [ ] 实践多版本debug及测试
-
-- [ ]  更新 slate 版本
-
+- [ ] 更新 slate 版本
 - [ ] 使用 vitepress 构建文档
-- [ ] 输入法输入内容展示两遍，输入法光标位置错乱（ing）
-	- [ ] 26139行，选区错乱
-	- [ ] 由于输入法和slate的定位不同导致当选区选到两个 text 的分界线时输入法会将data附加到前一个 text 中，而slate则会将内容附加到后一个 text 中，这导致编辑区data 展示了两遍，而 html 则是附加到了后一个 text 上。
+- [ ] 替换 e2e test.yml
+
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
