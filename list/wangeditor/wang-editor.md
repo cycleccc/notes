@@ -24,7 +24,10 @@
 - [ ] 实践多版本debug及测试
 - [ ] 更新 slate 版本
 - [ ] 使用 vitepress 构建文档
-- [ ] 替换 e2e test.yml
+- [x] 替换 e2e test.yml
+- [ ] 提供更好的 markdown 支持
+- [ ] 添加选择拖拽
+- [ ] 双回车没有取消list
 
 
 # 信息不全
