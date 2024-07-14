@@ -27,8 +27,8 @@
 - [x] 替换 e2e test.yml
 - [ ] 提供更好的 markdown 支持
 - [ ] 添加选择拖拽
-- [ ] 双回车没有取消list
-
+- [x] 双回车没有取消list
+asd
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
