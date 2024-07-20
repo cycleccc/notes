@@ -28,6 +28,8 @@
 - [ ] 提供更好的 markdown 支持
 - [ ] 添加选择拖拽
 - [x] 双回车没有取消list
+- [ ] [Android系统浏览器被判断为Safari](https://github.com/wangeditor-team/wangEditor/pull/5680/files)
+
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
 # 没复现
@@ -36,8 +38,6 @@
 # code review
 - [x] [list](https://github.com/wangeditor-team/wangEditor/pull/5798/files#submit-review)
 - [x] [文本加粗](https://github.com/wangeditor-team/wangEditor/pull/5812)
-- [ ] [有src的img识别错误为图片](https://github.com/wangeditor-team/wangEditor/pull/5199/files)
-- [ ] [表格下面列表无法删除](https://github.com/wangeditor-team/wangEditor/issues/4850)
 # debug
 - [x] https://github.com/wangeditor-team/wangEditor/issues/5821
 - [ ] [table error](https://github.com/wangeditor-team/wangEditor/issues/4376)
