@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "list/wangeditor/富文本编辑器.md",
+                "file": "list/wangeditor/wang-editor.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "list/wangeditor/富文本编辑器.md",
+                "file": "list/wangeditor/wang-editor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "list/wangeditor/富文本编辑器.md",
+                "file": "list/wangeditor/wang-editor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "list/wangeditor/富文本编辑器.md"
+                "file": "list/wangeditor/wang-editor.md"
               }
             }
           },
@@ -205,9 +205,9 @@
   },
   "active": "68dbe2a70c56ebfa",
   "lastOpenFiles": [
+    "list/wangeditor/富文本编辑器.md",
     "list/wangeditor/Pasted image 20240522234943.png",
     "list/wangeditor/list ordered.md",
-    "list/wangeditor/富文本编辑器.md",
     "list/wangeditor/wang-editor.md",
     "短记/GMS.md",
     "前端/学习笔记/vim.md",
@@ -250,7 +250,6 @@
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175849.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175558.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
     "未命名 1.canvas",
     "未命名.canvas"
   ]

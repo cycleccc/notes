@@ -28,7 +28,8 @@
 - [ ] 提供更好的 markdown 支持
 - [ ] 添加选择拖拽
 - [x] 双回车没有取消list
-- [ ] [Android系统浏览器被判断为Safari](https://github.com/wangeditor-team/wangEditor/pull/5680/files)
+- [x] [Android系统浏览器被判断为Safari](https://github.com/wangeditor-team/wangEditor/pull/5680/files)
+- [ ] add renderlistitem test https://app.codecov.io/gh/cycleccc/wangEditor-next/blob/master/packages%2Flist-module%2Fsrc%2Fmodule%2Frender-elem.tsx
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
