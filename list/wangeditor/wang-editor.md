@@ -23,13 +23,13 @@
 - [ ] [加入打印功能](https://github.com/wangeditor-team/wangEditor/issues/4246)
 - [ ] 实践多版本debug及测试
 - [ ] 更新 slate 版本
-- [ ] 使用 vitepress 构建文档
+- [x] 使用 vitepress 构建文档
 - [x] 替换 e2e test.yml
 - [ ] 提供更好的 markdown 支持
 - [ ] 添加选择拖拽
 - [x] 双回车没有取消list 
 - [x] [Android系统浏览器被判断为Safari](https://github.com/wangeditor-team/wangEditor/pull/5680/files)
-- [ ] add renderlistitem test https://app.codecov.io/gh/  个cycleccc/wangEditor-next/blob/master/packages%2Flist-module%2Fsrc%2Fmodule%2Frender-elem.tsx
+- [x] add renderlistitem test
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
