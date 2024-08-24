@@ -33,7 +33,7 @@
 - [x] 多编辑器选区、hoverbar 错误
 - [x] vue3 v-model setHtml 错误
 - [ ] 工具栏 disabled 状态判断错误
-- [x] Microsoft word 渲染错误
+- [x] Microsoft word 渲染错误 
 
 # 信息不全
 - [ ] https://github.com/wangeditor-team/wangEditor/issues/5793
