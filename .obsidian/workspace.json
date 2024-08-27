@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "list/wangeditor/wang-editor.md",
+                "file": "短记/多人协作.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "list/wangeditor/wang-editor.md",
+                "file": "短记/多人协作.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "list/wangeditor/wang-editor.md",
+                "file": "短记/多人协作.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "list/wangeditor/wang-editor.md"
+                "file": "短记/多人协作.md"
               }
             }
           },
@@ -205,10 +205,11 @@
   },
   "active": "68dbe2a70c56ebfa",
   "lastOpenFiles": [
+    "list/wangeditor/wang-editor.md",
+    "短记/多人协作.md",
     "list/wangeditor/富文本编辑器.md",
     "list/wangeditor/Pasted image 20240522234943.png",
     "list/wangeditor/list ordered.md",
-    "list/wangeditor/wang-editor.md",
     "短记/GMS.md",
     "前端/学习笔记/vim.md",
     "conflict-files-obsidian-git.md",
