@@ -9,4 +9,6 @@ https://github.com/cycleccc/wangEditor-next/blob/master/CONTRIBUTING.md
 - create Branch
 	新建分支或基于某个commit
 - cherry  pick
-	
+	提取某个 commit 到其它分支
+- drop
+
