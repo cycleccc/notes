@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/学习笔记/git.md",
+                "file": "前端/学习笔记/富文本.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/git.md",
+                "file": "前端/学习笔记/富文本.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/git.md",
+                "file": "前端/学习笔记/富文本.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/学习笔记/git.md"
+                "file": "前端/学习笔记/富文本.md"
               }
             }
           },
@@ -205,6 +205,8 @@
   },
   "active": "b844393a5ca470f4",
   "lastOpenFiles": [
+    "前端/学习笔记/git.md",
+    "前端/学习笔记/富文本.md",
     "短记/readme.md",
     "短记/多人协作.md",
     "短记/GMS.md",
@@ -213,7 +215,6 @@
     "前端/学习笔记/vim.md",
     "list/wangeditor/富文本编辑器.md",
     "list/wangeditor/list ordered.md",
-    "前端/学习笔记/git.md",
     "list/文章List.md",
     "前端/职业规划.md",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
@@ -235,7 +236,6 @@
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之事务.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之索引.md",
     "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之入门指南.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之创建、更新和删除文档.md",
     "list/wangeditor",
     "生活/doujiang/Pasted image 20230923232929.png",
     "前端/每日一题",
