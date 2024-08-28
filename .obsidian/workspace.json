@@ -44,12 +44,12 @@
             }
           },
           {
-            "id": "68dbe2a70c56ebfa",
+            "id": "b844393a5ca470f4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "短记/多人协作.md",
+                "file": "前端/学习笔记/git.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "短记/多人协作.md",
+                "file": "前端/学习笔记/git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "短记/多人协作.md",
+                "file": "前端/学习笔记/git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "短记/多人协作.md"
+                "file": "前端/学习笔记/git.md"
               }
             }
           },
@@ -203,17 +203,19 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "68dbe2a70c56ebfa",
+  "active": "b844393a5ca470f4",
   "lastOpenFiles": [
-    "list/wangeditor/wang-editor.md",
+    "短记/readme.md",
     "短记/多人协作.md",
+    "短记/GMS.md",
+    "conflict-files-obsidian-git.md",
+    "list/wangeditor/wang-editor.md",
+    "前端/学习笔记/vim.md",
     "list/wangeditor/富文本编辑器.md",
     "list/wangeditor/list ordered.md",
-    "conflict-files-obsidian-git.md",
     "前端/学习笔记/git.md",
     "list/文章List.md",
     "前端/职业规划.md",
-    "短记/readme.md",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "list/github.md",
     "list/twitter-clone.md",
