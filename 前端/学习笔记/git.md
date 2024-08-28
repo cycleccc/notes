@@ -11,4 +11,7 @@ https://github.com/cycleccc/wangEditor-next/blob/master/CONTRIBUTING.md
 - cherry  pick
 	提取某个 commit 到其它分支
 - drop
-
+	rebase 命令的语法糖
+- merge into current branch
+- rebase
+- reset
