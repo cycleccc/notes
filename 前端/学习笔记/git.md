@@ -1,5 +1,3 @@
-删除远程所有标签 ：git push origin --delete $(git tag -l)
-删除本地所有标签 ：git tag -d $(git tag -l)
 ## git commit 编写规范
 https://github.com/cycleccc/wangEditor-next/blob/master/CONTRIBUTING.md
 
@@ -50,3 +48,6 @@ https://github.com/cycleccc/wangEditor-next/blob/master/CONTRIBUTING.md
 - **用途**：`reset` 用于回滚到某个特定的提交，可以用于撤销更改。它有三种模式：`--soft`（保留工作区的更改），`--mixed`（重置暂存区），`--hard`（彻底回滚，删除工作区的更改）。
 - **命令**：`git reset --soft/mixed/hard <commit>`，根据需求选择合适的模式回滚。
 
+## 冷门命令
+删除远程所有标签 ：git push origin --delete $(git tag -l)
+删除本地所有标签 ：git tag -d $(git tag -l)
