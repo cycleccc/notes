@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/学习笔记/git.md",
+                "file": "前端/学习笔记/多人协同.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/学习笔记/git.md",
+                "file": "前端/学习笔记/多人协同.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/学习笔记/git.md",
+                "file": "前端/学习笔记/多人协同.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/学习笔记/git.md"
+                "file": "前端/学习笔记/多人协同.md"
               }
             }
           },
@@ -205,14 +205,20 @@
   },
   "active": "b844393a5ca470f4",
   "lastOpenFiles": [
-    "前端/学习笔记/富文本.md",
+    "前端/学习笔记/vim.md",
+    "前端/学习笔记/umi.md",
+    "前端/学习笔记/list.md",
+    "前端/学习笔记/React源码学习.md",
     "前端/学习笔记/git.md",
+    "前端/学习笔记/egg.md",
+    "前端/学习笔记/测试/前端测试.md",
+    "前端/学习笔记/多人协同.md",
+    "前端/学习笔记/富文本.md",
     "短记/readme.md",
     "短记/多人协作.md",
     "短记/GMS.md",
     "conflict-files-obsidian-git.md",
     "list/wangeditor/wang-editor.md",
-    "前端/学习笔记/vim.md",
     "list/wangeditor/富文本编辑器.md",
     "list/wangeditor/list ordered.md",
     "list/文章List.md",
@@ -225,17 +231,11 @@
     "生活/旅行计划.md",
     "生活/Pasted image 20240416102708.png",
     "生活/菜.md",
-    "前端/学习笔记/测试/前端测试.md",
     "前端/学习笔记/测试",
-    "前端/学习笔记/list.md",
     "生活/旅行/未命名.md",
     "生活/健身/doujiang_waist_exercise.md",
     "生活/旅行",
     "生活/游泳.md",
-    "生活/歌.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之事务.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之索引.md",
-    "前端/文章/MongoDB/MongoDB权威指南学习/MongoDB权威指南之入门指南.md",
     "list/wangeditor",
     "生活/doujiang/Pasted image 20230923232929.png",
     "前端/每日一题",
