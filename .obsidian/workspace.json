@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "55f85520eaa1cf29",
+        "id": "570b0266bafc80a8",
         "type": "tabs",
         "children": [
           {
-            "id": "42f66722c8a5497e",
+            "id": "9662a3b8ea50b31c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -167,10 +167,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "42f66722c8a5497e",
+  "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
-    "生活/now_todolist.md",
     "短记/多人协同.md",
+    "生活/now_todolist.md",
     "生活/旅行计划.md",
     "生活/歌.md",
     "生活/菜.md",
