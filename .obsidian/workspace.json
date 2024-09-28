@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "短记/多人协同.md",
+                "file": "前端/学习笔记/富文本.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "4cb2d8017a535402",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "短记/多人协同.md",
+                "file": "前端/学习笔记/富文本.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "短记/多人协同.md",
+                "file": "前端/学习笔记/富文本.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "短记/多人协同.md"
+                "file": "前端/学习笔记/富文本.md"
               }
             }
           },
@@ -169,8 +168,10 @@
   },
   "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
-    "短记/多人协同.md",
     "生活/now_todolist.md",
+    "短记/多人协同.md",
+    "短记/readme.md",
+    "前端/学习笔记/富文本.md",
     "生活/旅行计划.md",
     "生活/歌.md",
     "生活/菜.md",
@@ -178,7 +179,6 @@
     "前端/学习笔记/umi.md",
     "前端/学习笔记/React源码学习.md",
     "前端/学习笔记/git.md",
-    "前端/学习笔记/富文本.md",
     "前端/职业规划.md",
     "Quick Start.md",
     "前端/学习笔记/测试/前端测试.md",
@@ -190,7 +190,6 @@
     "前端/学习笔记/多人协同.md",
     "前端/学习笔记/list.md",
     "前端/学习笔记/egg.md",
-    "短记/readme.md",
     "短记/多人协作.md",
     "conflict-files-obsidian-git.md",
     "list/wangeditor/wang-editor.md",
