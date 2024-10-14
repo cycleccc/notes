@@ -1,221 +1,220 @@
 {
-  "main": {
-    "id": "37c4c4807ee25ef1",
-    "type": "split",
-    "children": [
-      {
-        "id": "570b0266bafc80a8",
-        "type": "tabs",
+    "main": {
+        "id": "37c4c4807ee25ef1",
+        "type": "split",
         "children": [
-          {
-            "id": "9662a3b8ea50b31c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "短记/开发日记.md",
-                "mode": "source",
-                "source": false
-              }
+            {
+                "id": "570b0266bafc80a8",
+                "type": "tabs",
+                "children": [
+                    {
+                        "id": "9662a3b8ea50b31c",
+                        "type": "leaf",
+                        "state": {
+                            "type": "markdown",
+                            "state": {
+                                "file": "前端/学习笔记/富文本.md",
+                                "mode": "source",
+                                "source": false
+                            }
+                        }
+                    }
+                ]
             }
-          }
-        ]
-      }
-    ],
-    "direction": "vertical"
-  },
-  "left": {
-    "id": "a5fc9c4752beee36",
-    "type": "split",
-    "children": [
-      {
-        "id": "61abc0b2df6938be",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d82701bc35b5884f",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              }
-            }
-          },
-          {
-            "id": "69ed91a5b555014c",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
-            }
-          },
-          {
-            "id": "22de0d104efd5762",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "bdedd89893a9d014",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
-            }
-          }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
-  },
-  "right": {
-    "id": "4cb2d8017a535402",
-    "type": "split",
-    "children": [
-      {
-        "id": "f74ca5c79071dca8",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d5c451e9fdee9d9f",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "短记/开发日记.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "e15ddd66da04e172",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "短记/开发日记.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "d89117a71b475191",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "0f6bf33c86f59213",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "短记/开发日记.md"
-              }
-            }
-          },
-          {
-            "id": "2e672d4c61500b3d",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              }
-            }
-          }
         ],
-        "currentTab": 3
-      }
-    ],
-    "direction": "horizontal",
-    "width": 342.5
-  },
-  "left-ribbon": {
-    "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
-    }
-  },
-  "active": "9662a3b8ea50b31c",
-  "lastOpenFiles": [
-    "短记/开发日记.md",
-    "生活/now_todolist.md",
-    "生活/旅行计划.md",
-    "生活/歌.md",
-    "生活/菜.md",
-    "前端/学习笔记/vim.md",
-    "前端/学习笔记/umi.md",
-    "前端/学习笔记/React源码学习.md",
-    "前端/学习笔记/git.md",
-    "前端/学习笔记/富文本.md",
-    "前端/职业规划.md",
-    "Quick Start.md",
-    "前端/学习笔记/测试/前端测试.md",
-    "入党相关时间.md",
-    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
-    "list/wangeditor/list ordered.md",
-    "短记/GMS.md",
-    "list/wangeditor/富文本编辑器.md",
-    "前端/学习笔记/多人协同.md",
-    "前端/学习笔记/list.md",
-    "前端/学习笔记/egg.md",
-    "短记/readme.md",
-    "短记/多人协作.md",
-    "conflict-files-obsidian-git.md",
-    "list/wangeditor/wang-editor.md",
-    "list/文章List.md",
-    "list/github.md",
-    "list/Pasted image 20240308151103.png",
-    "生活/Pasted image 20240416102708.png",
-    "前端/学习笔记/测试",
-    "生活/旅行",
-    "list/wangeditor",
-    "生活/doujiang/Pasted image 20230923232929.png",
-    "前端/每日一题",
-    "前端/文章/Vue/Vue设计与实现/reactive.ts",
-    "前端/文章/Vue/Vue设计与实现/index.html",
-    "前端/文章/Vue/Vue设计与实现/interfaces/reactive.interface.ts",
-    "前端/文章/Vue/Vue设计与实现/interfaces/mi-campaign.interface.ts",
-    "前端/文章/Vue/Vue设计与实现/interfaces",
-    "前端/文章/Vue/Vue设计与实现/代理obj.ts",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175849.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175558.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
-    "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
-    "未命名 1.canvas",
-    "未命名.canvas"
-  ]
+        "direction": "vertical"
+    },
+    "left": {
+        "id": "a5fc9c4752beee36",
+        "type": "split",
+        "children": [
+            {
+                "id": "61abc0b2df6938be",
+                "type": "tabs",
+                "children": [
+                    {
+                        "id": "d82701bc35b5884f",
+                        "type": "leaf",
+                        "state": {
+                            "type": "file-explorer",
+                            "state": {
+                                "sortOrder": "alphabetical"
+                            }
+                        }
+                    },
+                    {
+                        "id": "69ed91a5b555014c",
+                        "type": "leaf",
+                        "state": {
+                            "type": "search",
+                            "state": {
+                                "query": "",
+                                "matchingCase": false,
+                                "explainSearch": false,
+                                "collapseAll": false,
+                                "extraContext": false,
+                                "sortOrder": "alphabetical"
+                            }
+                        }
+                    },
+                    {
+                        "id": "22de0d104efd5762",
+                        "type": "leaf",
+                        "state": {
+                            "type": "starred",
+                            "state": {}
+                        }
+                    },
+                    {
+                        "id": "bdedd89893a9d014",
+                        "type": "leaf",
+                        "state": {
+                            "type": "bookmarks",
+                            "state": {}
+                        }
+                    }
+                ]
+            }
+        ],
+        "direction": "horizontal",
+        "width": 251.5
+    },
+    "right": {
+        "id": "4cb2d8017a535402",
+        "type": "split",
+        "children": [
+            {
+                "id": "f74ca5c79071dca8",
+                "type": "tabs",
+                "children": [
+                    {
+                        "id": "d5c451e9fdee9d9f",
+                        "type": "leaf",
+                        "state": {
+                            "type": "backlink",
+                            "state": {
+                                "file": "前端/学习笔记/富文本.md",
+                                "collapseAll": false,
+                                "extraContext": false,
+                                "sortOrder": "alphabetical",
+                                "showSearch": false,
+                                "searchQuery": "",
+                                "backlinkCollapsed": false,
+                                "unlinkedCollapsed": true
+                            }
+                        }
+                    },
+                    {
+                        "id": "e15ddd66da04e172",
+                        "type": "leaf",
+                        "state": {
+                            "type": "outgoing-link",
+                            "state": {
+                                "file": "前端/学习笔记/富文本.md",
+                                "linksCollapsed": false,
+                                "unlinkedCollapsed": true
+                            }
+                        }
+                    },
+                    {
+                        "id": "d89117a71b475191",
+                        "type": "leaf",
+                        "state": {
+                            "type": "tag",
+                            "state": {
+                                "sortOrder": "frequency",
+                                "useHierarchy": true
+                            }
+                        }
+                    },
+                    {
+                        "id": "0f6bf33c86f59213",
+                        "type": "leaf",
+                        "state": {
+                            "type": "outline",
+                            "state": {
+                                "file": "前端/学习笔记/富文本.md"
+                            }
+                        }
+                    },
+                    {
+                        "id": "2e672d4c61500b3d",
+                        "type": "leaf",
+                        "state": {
+                            "type": "all-properties",
+                            "state": {
+                                "sortOrder": "frequency",
+                                "showSearch": false,
+                                "searchQuery": ""
+                            }
+                        }
+                    }
+                ],
+                "currentTab": 3
+            }
+        ],
+        "direction": "horizontal",
+        "width": 342.5
+    },
+    "left-ribbon": {
+        "hiddenItems": {
+            "switcher:打开快速切换": false,
+            "graph:查看关系图谱": false,
+            "canvas:新建白板": false,
+            "daily-notes:打开/创建今天的日记": false,
+            "templates:插入模板": false,
+            "command-palette:打开命令面板": false
+        }
+    },
+    "active": "9662a3b8ea50b31c",
+    "lastOpenFiles": [
+        "生活/now_todolist.md",
+        "短记/多人协同.md",
+        "短记/readme.md",
+        "前端/学习笔记/富文本.md",
+        "生活/旅行计划.md",
+        "生活/歌.md",
+        "生活/菜.md",
+        "前端/学习笔记/vim.md",
+        "前端/学习笔记/umi.md",
+        "前端/学习笔记/React源码学习.md",
+        "前端/学习笔记/git.md",
+        "前端/职业规划.md",
+        "Quick Start.md",
+        "前端/学习笔记/测试/前端测试.md",
+        "入党相关时间.md",
+        "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
+        "list/wangeditor/list ordered.md",
+        "短记/GMS.md",
+        "list/wangeditor/富文本编辑器.md",
+        "前端/学习笔记/多人协同.md",
+        "前端/学习笔记/list.md",
+        "前端/学习笔记/egg.md",
+        "短记/多人协作.md",
+        "conflict-files-obsidian-git.md",
+        "list/wangeditor/wang-editor.md",
+        "list/文章List.md",
+        "list/github.md",
+        "list/Pasted image 20240308151103.png",
+        "生活/Pasted image 20240416102708.png",
+        "前端/学习笔记/测试",
+        "生活/旅行",
+        "list/wangeditor",
+        "生活/doujiang/Pasted image 20230923232929.png",
+        "前端/每日一题",
+        "前端/文章/Vue/Vue设计与实现/reactive.ts",
+        "前端/文章/Vue/Vue设计与实现/index.html",
+        "前端/文章/Vue/Vue设计与实现/interfaces/reactive.interface.ts",
+        "前端/文章/Vue/Vue设计与实现/interfaces/mi-campaign.interface.ts",
+        "前端/文章/Vue/Vue设计与实现/interfaces",
+        "前端/文章/Vue/Vue设计与实现/代理obj.ts",
+        "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
+        "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
+        "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175849.png",
+        "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175558.png",
+        "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174613.png",
+        "前端/文章/Vue/Vue设计与实现/Pasted image 20231225174538.png",
+        "未命名 1.canvas",
+        "未命名.canvas"
+    ]
 }
