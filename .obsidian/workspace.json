@@ -11,8 +11,12 @@
             "id": "9662a3b8ea50b31c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Todo/富文本.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Todo/富文本.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Todo/富文本.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Todo/富文本.md"
+              }
             }
           },
           {
@@ -160,8 +168,8 @@
   },
   "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
-    "前端/学习笔记/富文本.md",
     "短记/开发日记.md",
+    "前端/学习笔记/富文本.md",
     "Todo/富文本.md",
     "Todo",
     "生活/now_todolist.md",
