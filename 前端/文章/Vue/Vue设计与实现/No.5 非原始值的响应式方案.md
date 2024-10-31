@@ -129,8 +129,8 @@ if(!Object.is(newVal,oldVal)){
 ~~~JavaScript
 const obj = {}
 const proto = { bar: 1 }
-const child = reactive(obj)
 const parent = reactive(proto)
+const child = reactive(obj)
 // 使用 parent 作为 child 的原型
 Object.setPrototypeOf(child, parent)
 
