@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "旅行计划"
             }
-          },
-          {
-            "id": "c365efdb012f9309",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.4"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.4"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -199,7 +186,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c365efdb012f9309",
+  "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
     "Todo/富文本.md",
     "短记/开发日记.md",
