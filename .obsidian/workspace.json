@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Todo/富文本.md",
+                "file": "前端/面试/项目.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Todo/富文本.md",
+                "file": "前端/面试/项目.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Todo/富文本.md",
+                "file": "前端/面试/项目.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Todo/富文本.md"
+                "file": "前端/面试/项目.md"
               }
             }
           },
@@ -168,11 +168,11 @@
   },
   "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
+    "Todo/富文本.md",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "短记/readme.md",
     "短记/开发日记.md",
     "生活/旅行计划.md",
-    "Todo/富文本.md",
     "前端/学习笔记/富文本.md",
     "Todo",
     "生活/now_todolist.md",
