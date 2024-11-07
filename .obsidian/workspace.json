@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/面试/项目.md",
+                "file": "前端/文章/未命名.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/面试/项目.md",
+                "file": "前端/文章/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/面试/项目.md",
+                "file": "前端/文章/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/面试/项目.md"
+                "file": "前端/文章/未命名.md"
               }
             }
           },
@@ -168,6 +168,9 @@
   },
   "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
+    "前端/学习笔记/umi.md",
+    "前端/文章/未命名.md",
+    "前端/面试/项目.md",
     "Todo/富文本.md",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "短记/readme.md",
@@ -180,7 +183,6 @@
     "生活/歌.md",
     "生活/菜.md",
     "前端/学习笔记/vim.md",
-    "前端/学习笔记/umi.md",
     "前端/学习笔记/React源码学习.md",
     "前端/学习笔记/git.md",
     "前端/职业规划.md",
@@ -194,7 +196,6 @@
     "前端/学习笔记/list.md",
     "前端/学习笔记/egg.md",
     "短记/多人协作.md",
-    "conflict-files-obsidian-git.md",
     "list/Pasted image 20240308151103.png",
     "生活/Pasted image 20240416102708.png",
     "前端/学习笔记/测试",
