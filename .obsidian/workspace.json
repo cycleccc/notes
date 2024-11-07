@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/未命名.md",
+                "file": "前端/文章/富文本/协同编辑.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/未命名.md",
+                "file": "前端/文章/富文本/协同编辑.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/未命名.md",
+                "file": "前端/文章/富文本/协同编辑.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/未命名.md"
+                "file": "前端/文章/富文本/协同编辑.md"
               }
             }
           },
@@ -169,6 +169,8 @@
   "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
     "前端/学习笔记/umi.md",
+    "前端/文章/富文本/协同编辑.md",
+    "前端/文章/富文本",
     "前端/文章/未命名.md",
     "前端/面试/项目.md",
     "Todo/富文本.md",
@@ -195,7 +197,6 @@
     "前端/学习笔记/多人协同.md",
     "前端/学习笔记/list.md",
     "前端/学习笔记/egg.md",
-    "短记/多人协作.md",
     "list/Pasted image 20240308151103.png",
     "生活/Pasted image 20240416102708.png",
     "前端/学习笔记/测试",
@@ -207,7 +208,6 @@
     "前端/文章/Vue/Vue设计与实现/index.html",
     "前端/文章/Vue/Vue设计与实现/interfaces/reactive.interface.ts",
     "前端/文章/Vue/Vue设计与实现/interfaces/mi-campaign.interface.ts",
-    "前端/文章/Vue/Vue设计与实现/interfaces",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203419.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107203414.png",
     "前端/文章/Vue/Vue设计与实现/Pasted image 20240107175849.png",
