@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "前端/文章/富文本/协同编辑.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -154,7 +154,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 342.5
+    "width": 342.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
