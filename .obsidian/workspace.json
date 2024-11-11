@@ -13,28 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/富文本/协同编辑.md",
+                "file": "前端/面试/面试题/面试题手册.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "协同编辑"
-            }
-          },
-          {
-            "id": "c193651e0df2bd13",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.5"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.5"
+              "title": "面试题手册"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -116,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/文章/富文本/协同编辑.md",
+                "file": "前端/面试/面试题/面试题手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +113,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "协同编辑 的反向链接列表"
+              "title": "面试题手册 的反向链接列表"
             }
           },
           {
@@ -135,12 +122,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/文章/富文本/协同编辑.md",
+                "file": "前端/面试/面试题/面试题手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "协同编辑 的出链列表"
+              "title": "面试题手册 的出链列表"
             }
           },
           {
@@ -162,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/富文本/协同编辑.md"
+                "file": "前端/面试/面试题/面试题手册.md"
               },
               "icon": "lucide-list",
-              "title": "协同编辑 的大纲"
+              "title": "面试题手册 的大纲"
             }
           },
           {
@@ -187,8 +174,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 342.5,
-    "collapsed": true
+    "width": 342.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,8 +186,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c193651e0df2bd13",
+  "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
+    "前端/文章/富文本/协同编辑.md",
     "前端/文章/富文本/Pasted image 20241108133833.png",
     "前端/文章/富文本/Pasted image 20241108111059.png",
     "前端/文章/富文本/Pasted image 20241108111048.png",
@@ -212,8 +199,6 @@
     "前端/文章/富文本/Pasted image 20241108110829.png",
     "前端/文章/富文本/Pasted image 20241108110804.png",
     "前端/文章/富文本/Pasted image 20241108110758.png",
-    "前端/文章/富文本/协同编辑.md",
-    "前端/文章/富文本/Pasted image 20241108110751.png",
     "前端/学习笔记/umi.md",
     "前端/文章/富文本",
     "前端/文章/未命名.md",
