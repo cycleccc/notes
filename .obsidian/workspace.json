@@ -16,10 +16,25 @@
                 "file": "前端/文章/富文本/协同编辑.md",
                 "mode": "preview",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "协同编辑"
+            }
+          },
+          {
+            "id": "c193651e0df2bd13",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.5"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.5"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -39,7 +54,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -54,7 +71,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -62,7 +81,9 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           },
           {
@@ -70,7 +91,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           }
         ]
@@ -101,7 +124,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "协同编辑 的反向链接列表"
             }
           },
           {
@@ -113,7 +138,9 @@
                 "file": "前端/文章/富文本/协同编辑.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "协同编辑 的出链列表"
             }
           },
           {
@@ -124,7 +151,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           },
           {
@@ -134,7 +163,9 @@
               "type": "outline",
               "state": {
                 "file": "前端/文章/富文本/协同编辑.md"
-              }
+              },
+              "icon": "lucide-list",
+              "title": "协同编辑 的大纲"
             }
           },
           {
@@ -146,7 +177,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
             }
           }
         ],
@@ -167,7 +200,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9662a3b8ea50b31c",
+  "active": "c193651e0df2bd13",
   "lastOpenFiles": [
     "前端/文章/富文本/Pasted image 20241108133833.png",
     "前端/文章/富文本/Pasted image 20241108111059.png",
