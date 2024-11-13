@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
+                "file": "前端/面试/项目.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "面试题手册"
+              "title": "项目"
             }
           }
         ]
@@ -149,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md"
+                "file": "前端/面试/项目.md"
               },
               "icon": "lucide-list",
-              "title": "面试题手册 的大纲"
+              "title": "项目 的大纲"
             }
           },
           {
@@ -188,8 +188,8 @@
   },
   "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
-    "前端/面试/面试题/面试题手册.pdf",
     "前端/面试/面试题/面试题手册.md",
+    "前端/面试/面试题/面试题手册.pdf",
     "前端/面试/跳槽/简历修改.md",
     "前端/面试/项目.md",
     "生活/旅行计划.md",
@@ -233,7 +233,6 @@
     "前端/文章/Vue/Vue设计与实现/reactive.ts",
     "前端/文章/Vue/Vue设计与实现/index.html",
     "前端/文章/Vue/Vue设计与实现/interfaces/reactive.interface.ts",
-    "前端/文章/Vue/Vue设计与实现/interfaces/mi-campaign.interface.ts",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
