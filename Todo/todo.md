@@ -1,5 +1,5 @@
-- [x]  文字样式兼容
-- [x]  eslint 重构
+- [x] 文字样式兼容
+- [x] eslint 重构
 - [x] lunarvim 体验
 - [x] rollup 4 升级
 - [x] vitest 替换 jest
@@ -13,3 +13,8 @@
 - [x] 添加 formula 插件
 - [ ] 优化大量 table 时的性能
 - [ ] 复习八股
+    - [ ] 复习 js 八股
+    - [ ] 完善 react 八股
+    - [ ] 完善 2024-11-13 aojbwhlo 一面八股
+- [ ] 复习算法
+    - [ ] leetCode
