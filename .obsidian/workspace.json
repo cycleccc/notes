@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Todo/todo.md",
+                "file": "前端/面试/面试题/面试题手册.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "todo"
+              "title": "面试题手册"
             }
           }
         ]
@@ -149,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Todo/todo.md"
+                "file": "前端/面试/面试题/面试题手册.md"
               },
               "icon": "lucide-list",
-              "title": "todo 的大纲"
+              "title": "面试题手册 的大纲"
             }
           },
           {
@@ -188,11 +188,12 @@
   },
   "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
+    "前端/面试/面试题/面试题手册.pdf",
+    "Todo/todo.md",
     "前端/面试/面试题/面试题手册.md",
     "前端/面试/项目.md",
     "前端/面试/你还有什么想问的吗.md",
     "前端/面试/面试题/5d1f6c67acba46d7952de3f5f367e30e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
-    "前端/面试/面试题/面试题手册.pdf",
     "前端/面试/跳槽/简历修改.md",
     "生活/旅行计划.md",
     "前端/文章/富文本/协同编辑.md",
@@ -225,8 +226,6 @@
     "入党相关时间.md",
     "list/wangeditor/list ordered.md",
     "短记/GMS.md",
-    "list/wangeditor/富文本编辑器.md",
-    "前端/学习笔记/多人协同.md",
     "前端/学习笔记/测试",
     "生活/旅行",
     "list/wangeditor",
