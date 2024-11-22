@@ -11,42 +11,17 @@
             "id": "9662a3b8ea50b31c",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "前端/文章/富文本/attachments/Pasted image 20241108110311.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20241108110311"
-            }
-          },
-          {
-            "id": "4963eb485eefd47c",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "前端/文章/富文本/attachments/f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0 1.webp"
-              },
-              "icon": "lucide-image",
-              "title": "f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0 1"
-            }
-          },
-          {
-            "id": "3f8ad3b16136bab2",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/文章/富文本/协同编辑.md",
+                "file": "Todo/todo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "协同编辑"
+              "title": "todo"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -174,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/文章/富文本/协同编辑.md"
+                "file": "Todo/todo.md"
               },
               "icon": "lucide-list",
-              "title": "协同编辑 的大纲"
+              "title": "todo 的大纲"
             }
           },
           {
@@ -211,11 +186,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "3f8ad3b16136bab2",
+  "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
+    "前端/文章/富文本/attachments/Pasted image 20241108110311.png",
     "前端/文章/富文本/attachments/f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0 1.webp",
-    "前端/文章/富文本/attachments/f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
     "前端/文章/富文本/协同编辑.md",
+    "前端/文章/富文本/attachments/f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
     "Todo/todo.md",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
@@ -225,7 +201,6 @@
     "前端/文章/富文本/attachments/Pasted image 20241108110429.png",
     "前端/文章/富文本/attachments/Pasted image 20241108110420.png",
     "前端/文章/富文本/attachments/Pasted image 20241108110341.png",
-    "前端/文章/富文本/attachments/Pasted image 20241108110311.png",
     "前端/文章/富文本/attachments",
     "前端/面试/项目.md",
     "前端/面试/你还有什么想问的吗.md",
