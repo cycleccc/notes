@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/面试/项目.md",
+                "file": "前端/面试/面试题/面试题手册.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "项目"
+              "title": "面试题手册"
             }
           }
         ]
@@ -149,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/面试/项目.md"
+                "file": "前端/面试/面试题/面试题手册.md"
               },
               "icon": "lucide-list",
-              "title": "项目 的大纲"
+              "title": "面试题手册 的大纲"
             }
           },
           {
@@ -188,6 +188,8 @@
   },
   "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
+    "前端/面试/面试题/面试题手册.pdf",
+    "前端/面试/项目.md",
     "前端/面试/面试题/面试题手册.md",
     "Todo/todo.md",
     "前端/文章/富文本/attachments/Pasted image 20241108110311.png",
@@ -197,12 +199,10 @@
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
-    "前端/面试/面试题/面试题手册.pdf",
     "前端/文章/富文本/attachments/Pasted image 20241108110429.png",
     "前端/文章/富文本/attachments/Pasted image 20241108110420.png",
     "前端/文章/富文本/attachments/Pasted image 20241108110341.png",
     "前端/文章/富文本/attachments",
-    "前端/面试/项目.md",
     "前端/面试/你还有什么想问的吗.md",
     "前端/面试/面试题/5d1f6c67acba46d7952de3f5f367e30e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
     "前端/面试/跳槽/简历修改.md",
