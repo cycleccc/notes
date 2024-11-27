@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "面试题手册"
             }
+          },
+          {
+            "id": "2c599ac339e125ec",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -148,11 +161,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "前端/面试/面试题/面试题手册.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "面试题手册 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -186,7 +197,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9662a3b8ea50b31c",
+  "active": "2c599ac339e125ec",
   "lastOpenFiles": [
     "前端/面试/面试题/面试题手册.pdf",
     "前端/面试/项目.md",
