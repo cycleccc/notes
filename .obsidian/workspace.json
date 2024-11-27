@@ -83,7 +83,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -186,7 +187,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9662a3b8ea50b31c",
+  "active": "69ed91a5b555014c",
   "lastOpenFiles": [
     "前端/面试/面试题/面试题手册.pdf",
     "前端/面试/项目.md",
