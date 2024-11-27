@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "570b0266bafc80a8",
+        "id": "a4e5655d25cb9c66",
         "type": "tabs",
         "children": [
           {
-            "id": "9662a3b8ea50b31c",
+            "id": "3358382a04989960",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
+                "file": "前端/学习笔记/Vue/Vue 原理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "面试题手册"
+              "title": "Vue 原理"
             }
           }
         ]
@@ -83,8 +83,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -150,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md"
+                "file": "前端/学习笔记/Vue/Vue 原理.md"
               },
               "icon": "lucide-list",
-              "title": "面试题手册 的大纲"
+              "title": "Vue 原理 的大纲"
             }
           },
           {
@@ -187,11 +186,17 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "69ed91a5b555014c",
+  "active": "3358382a04989960",
   "lastOpenFiles": [
+    "前端/学习笔记/Vue/未命名 1.md",
+    "前端/学习笔记/Vue/未命名 2.md",
+    "前端/学习笔记/Vue/Vue 原理.md",
+    "前端/学习笔记/vim.md",
+    "前端/学习笔记/Vue",
+    "前端/面试/面试题/面试题手册.md",
+    "前端/面试/面试题/未命名",
     "前端/面试/面试题/面试题手册.pdf",
     "前端/面试/项目.md",
-    "前端/面试/面试题/面试题手册.md",
     "Todo/todo.md",
     "前端/文章/富文本/attachments/Pasted image 20241108110311.png",
     "前端/文章/富文本/attachments/f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0 1.webp",
@@ -218,7 +223,6 @@
     "短记/readme.md",
     "生活/歌.md",
     "生活/菜.md",
-    "前端/学习笔记/vim.md",
     "前端/学习笔记/umi.md",
     "前端/学习笔记/React源码学习.md",
     "前端/学习笔记/git.md",
@@ -226,14 +230,10 @@
     "Quick Start.md",
     "前端/学习笔记/测试/前端测试.md",
     "入党相关时间.md",
-    "list/wangeditor/list ordered.md",
-    "短记/GMS.md",
     "前端/学习笔记/测试",
     "生活/旅行",
     "list/wangeditor",
     "前端/每日一题",
-    "前端/文章/Vue/Vue设计与实现/reactive.ts",
-    "前端/文章/Vue/Vue设计与实现/index.html",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
