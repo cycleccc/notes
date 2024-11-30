@@ -11,12 +11,14 @@
             "id": "9662a3b8ea50b31c",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp"
+                "file": "前端/面试/面试题/面试题手册.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0"
+              "icon": "lucide-file",
+              "title": "面试题手册"
             }
           }
         ]
@@ -147,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp"
+                "file": "前端/面试/面试题/面试题手册.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of 162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0"
+              "title": "Outline of 面试题手册"
             }
           },
           {
@@ -186,13 +188,13 @@
   },
   "active": "9662a3b8ea50b31c",
   "lastOpenFiles": [
-    ",,,,,,,,,,,,,,,,,,,,,,0-pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppmmjk,,nnnnnnnnnnnn.md",
+    "前端/面试/面试题/面试题手册.pdf",
     "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
+    ",,,,,,,,,,,,,,,,,,,,,,0-pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppmmjk,,nnnnnnnnnnnn.md",
     "前端/面试/面试题/面试题手册.md",
     "前端/面试/项目.md",
     "前端/学习笔记/Vue/Vue 原理.md",
     "前端/学习笔记/Vue",
-    "前端/面试/面试题/面试题手册.pdf",
     "Todo/todo.md",
     "前端/文章/富文本/attachments/Pasted image 20241108110311.png",
     "前端/文章/富文本/attachments/f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0 1.webp",
