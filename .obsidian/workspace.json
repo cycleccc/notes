@@ -1,248 +1,240 @@
 {
-    "main": {
-        "id": "37c4c4807ee25ef1",
-        "type": "split",
+  "main": {
+    "id": "37c4c4807ee25ef1",
+    "type": "split",
+    "children": [
+      {
+        "id": "570b0266bafc80a8",
+        "type": "tabs",
         "children": [
-            {
-                "id": "570b0266bafc80a8",
-                "type": "tabs",
-                "children": [
-                    {
-                        "id": "9662a3b8ea50b31c",
-                        "type": "leaf",
-                        "state": {
-                            "type": "markdown",
-                            "state": {
-                                "file": "前端/面试/面试题/面试题手册.md",
-                                "mode": "source",
-                                "source": false
-                            },
-                            "icon": "lucide-file",
-                            "title": "面试题手册"
-                        }
-                    },
-                    {
-                        "id": "98ddea188965f5e7",
-                        "type": "leaf",
-                        "state": {
-                            "type": "empty",
-                            "state": {},
-                            "icon": "lucide-file",
-                            "title": "New tab"
-                        }
-                    }
-                ],
-                "currentTab": 1
+          {
+            "id": "9662a3b8ea50b31c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "前端/面试/面试题/面试题手册.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "面试题手册"
             }
-        ],
-        "direction": "vertical"
-    },
-    "left": {
-        "id": "a5fc9c4752beee36",
-        "type": "split",
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a5fc9c4752beee36",
+    "type": "split",
+    "children": [
+      {
+        "id": "61abc0b2df6938be",
+        "type": "tabs",
         "children": [
-            {
-                "id": "61abc0b2df6938be",
-                "type": "tabs",
-                "children": [
-                    {
-                        "id": "d82701bc35b5884f",
-                        "type": "leaf",
-                        "state": {
-                            "type": "file-explorer",
-                            "state": {
-                                "sortOrder": "alphabetical"
-                            },
-                            "icon": "lucide-folder-closed",
-                            "title": "Files"
-                        }
-                    },
-                    {
-                        "id": "69ed91a5b555014c",
-                        "type": "leaf",
-                        "state": {
-                            "type": "search",
-                            "state": {
-                                "query": "",
-                                "matchingCase": false,
-                                "explainSearch": false,
-                                "collapseAll": false,
-                                "extraContext": false,
-                                "sortOrder": "alphabetical"
-                            },
-                            "icon": "lucide-search",
-                            "title": "搜索"
-                        }
-                    },
-                    {
-                        "id": "22de0d104efd5762",
-                        "type": "leaf",
-                        "state": {
-                            "type": "starred",
-                            "state": {},
-                            "icon": "lucide-file",
-                            "title": "Plugin no longer active"
-                        }
-                    },
-                    {
-                        "id": "bdedd89893a9d014",
-                        "type": "leaf",
-                        "state": {
-                            "type": "bookmarks",
-                            "state": {},
-                            "icon": "lucide-bookmark",
-                            "title": "书签"
-                        }
-                    }
-                ]
+          {
+            "id": "d82701bc35b5884f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
-        ],
-        "direction": "horizontal",
-        "width": 251.5
-    },
-    "right": {
-        "id": "4cb2d8017a535402",
-        "type": "split",
+          },
+          {
+            "id": "69ed91a5b555014c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "22de0d104efd5762",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          },
+          {
+            "id": "bdedd89893a9d014",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 251.5
+  },
+  "right": {
+    "id": "4cb2d8017a535402",
+    "type": "split",
+    "children": [
+      {
+        "id": "f74ca5c79071dca8",
+        "type": "tabs",
         "children": [
-            {
-                "id": "f74ca5c79071dca8",
-                "type": "tabs",
-                "children": [
-                    {
-                        "id": "d5c451e9fdee9d9f",
-                        "type": "leaf",
-                        "state": {
-                            "type": "backlink",
-                            "state": {
-                                "file": "生活/旅行计划.md",
-                                "collapseAll": false,
-                                "extraContext": false,
-                                "sortOrder": "alphabetical",
-                                "showSearch": false,
-                                "searchQuery": "",
-                                "backlinkCollapsed": false,
-                                "unlinkedCollapsed": true
-                            },
-                            "icon": "links-coming-in",
-                            "title": "旅行计划 的反向链接列表"
-                        }
-                    },
-                    {
-                        "id": "e15ddd66da04e172",
-                        "type": "leaf",
-                        "state": {
-                            "type": "outgoing-link",
-                            "state": {
-                                "file": "生活/旅行计划.md",
-                                "linksCollapsed": false,
-                                "unlinkedCollapsed": true
-                            },
-                            "icon": "links-going-out",
-                            "title": "旅行计划 的出链列表"
-                        }
-                    },
-                    {
-                        "id": "d89117a71b475191",
-                        "type": "leaf",
-                        "state": {
-                            "type": "tag",
-                            "state": {
-                                "sortOrder": "frequency",
-                                "useHierarchy": true
-                            },
-                            "icon": "lucide-tags",
-                            "title": "标签"
-                        }
-                    },
-                    {
-                        "id": "0f6bf33c86f59213",
-                        "type": "leaf",
-                        "state": {
-                            "type": "outline",
-                            "state": {},
-                            "icon": "lucide-list",
-                            "title": "Outline"
-                        }
-                    },
-                    {
-                        "id": "2e672d4c61500b3d",
-                        "type": "leaf",
-                        "state": {
-                            "type": "all-properties",
-                            "state": {
-                                "sortOrder": "frequency",
-                                "showSearch": false,
-                                "searchQuery": ""
-                            },
-                            "icon": "lucide-archive",
-                            "title": "添加笔记属性"
-                        }
-                    }
-                ],
-                "currentTab": 3
+          {
+            "id": "d5c451e9fdee9d9f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "生活/旅行计划.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "旅行计划 的反向链接列表"
             }
+          },
+          {
+            "id": "e15ddd66da04e172",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "生活/旅行计划.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "旅行计划 的出链列表"
+            }
+          },
+          {
+            "id": "d89117a71b475191",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "0f6bf33c86f59213",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "前端/面试/面试题/面试题手册.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 面试题手册"
+            }
+          },
+          {
+            "id": "2e672d4c61500b3d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          }
         ],
-        "direction": "horizontal",
-        "width": 842.5
-    },
-    "left-ribbon": {
-        "hiddenItems": {
-            "switcher:Open quick switcher": false,
-            "graph:Open graph view": false,
-            "canvas:Create new canvas": false,
-            "daily-notes:Open today's daily note": false,
-            "templates:Insert template": false,
-            "command-palette:Open command palette": false
-        }
-    },
-    "active": "98ddea188965f5e7",
-    "lastOpenFiles": [
-        "前端/面试/面试题/面试题手册.md",
-        "前端/面试/项目.md",
-        "前端/面试/面试题/面试题手册.pdf",
-        "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
-        ",,,,,,,,,,,,,,,,,,,,,,0-pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppmmjk,,nnnnnnnnnnnn.md",
-        "前端/学习笔记/Vue/Vue 原理.md",
-        "前端/学习笔记/Vue",
-        "Todo/todo.md",
-        "前端/文章/富文本/attachments/Pasted image 20241108110311.png",
-        "前端/文章/富文本/attachments/f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0 1.webp",
-        "前端/文章/富文本/协同编辑.md",
-        "前端/文章/富文本/attachments/f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
-        "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
-        "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
-        "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
-        "前端/文章/富文本/attachments/Pasted image 20241108110429.png",
-        "前端/文章/富文本/attachments/Pasted image 20241108110420.png",
-        "前端/文章/富文本/attachments/Pasted image 20241108110341.png",
-        "前端/文章/富文本/attachments",
-        "前端/面试/你还有什么想问的吗.md",
-        "前端/面试/跳槽/简历修改.md",
-        "生活/旅行计划.md",
-        "前端/文章/富文本",
-        "Todo/富文本.md",
-        "短记/开发日记.md",
-        "前端/学习笔记/富文本.md",
-        "Todo",
-        "生活/now_todolist.md",
-        "短记/多人协同.md",
-        "短记/readme.md",
-        "生活/歌.md",
-        "生活/菜.md",
-        "前端/学习笔记/vim.md",
-        "前端/学习笔记/umi.md",
-        "前端/学习笔记/React源码学习.md",
-        "前端/学习笔记/git.md",
-        "前端/职业规划.md",
-        "Quick Start.md",
-        "前端/学习笔记/测试/前端测试.md",
-        "入党相关时间.md",
-        "前端/学习笔记/测试",
-        "生活/旅行",
-        "list/wangeditor",
-        "前端/每日一题",
-        "前端/文章/Vue/Vue设计与实现/reactive.ts",
-        "未命名 1.canvas",
-        "未命名.canvas"
-    ]
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 842.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "9662a3b8ea50b31c",
+  "lastOpenFiles": [
+    "生活/入党相关时间.md",
+    "生活/健身/Fitness Tips（parent）.md",
+    "前端/面试/面试题/面试题手册.md",
+    "前端/面试/项目.md",
+    "前端/面试/面试题/面试题手册.pdf",
+    "162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
+    ",,,,,,,,,,,,,,,,,,,,,,0-pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppmmjk,,nnnnnnnnnnnn.md",
+    "前端/学习笔记/Vue/Vue 原理.md",
+    "前端/学习笔记/Vue",
+    "Todo/todo.md",
+    "前端/文章/富文本/attachments/Pasted image 20241108110311.png",
+    "前端/文章/富文本/attachments/f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0 1.webp",
+    "前端/文章/富文本/协同编辑.md",
+    "前端/文章/富文本/attachments/f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0.webp",
+    "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.004.png",
+    "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
+    "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
+    "前端/文章/富文本/attachments/Pasted image 20241108110429.png",
+    "前端/文章/富文本/attachments/Pasted image 20241108110420.png",
+    "前端/文章/富文本/attachments/Pasted image 20241108110341.png",
+    "前端/文章/富文本/attachments",
+    "前端/面试/你还有什么想问的吗.md",
+    "前端/面试/跳槽/简历修改.md",
+    "生活/旅行计划.md",
+    "前端/文章/富文本",
+    "Todo/富文本.md",
+    "短记/开发日记.md",
+    "前端/学习笔记/富文本.md",
+    "Todo",
+    "生活/now_todolist.md",
+    "短记/多人协同.md",
+    "短记/readme.md",
+    "生活/歌.md",
+    "生活/菜.md",
+    "前端/学习笔记/vim.md",
+    "前端/学习笔记/umi.md",
+    "前端/学习笔记/React源码学习.md",
+    "前端/学习笔记/git.md",
+    "前端/职业规划.md",
+    "Quick Start.md",
+    "前端/学习笔记/测试/前端测试.md",
+    "前端/学习笔记/测试",
+    "生活/旅行",
+    "list/wangeditor",
+    "前端/每日一题",
+    "前端/文章/Vue/Vue设计与实现/reactive.ts",
+    "未命名 1.canvas",
+    "未命名.canvas"
+  ]
 }
