@@ -13,9 +13,10 @@
 - [x] 添加 formula 插件
 - [ ] 优化大量 table 时的性能
 - [x] 复习八股
-    - [ ] 复习 js 八股
-    - [ ] 完善 react 八股
+    - [x] 复习 js 八股
+    - [x] 完善 react 八股
     - [x] 完善 2024-11-13 aojbwhlo 一面八股
-- [ ] 复习算法
-    - [ ] leetCode
-- [ ] 解决  pro-components bug[#8859](https://github.com/ant-design/pro-components/issues/8859)
+- [x] 复习算法
+    - [x] leetCode
+- [x] 解决  pro-components bug[#8859](https://github.com/ant-design/pro-components/issues/8859)
+- [ ] 解决 表格初始化无法拖拽问题
