@@ -12,7 +12,7 @@
 - [x] 添加 markdown 插件
 - [x] 添加 formula 插件
 - [ ] 优化大量 table 时的性能
-- [ ] 复习八股
+- [x] 复习八股
     - [ ] 复习 js 八股
     - [ ] 完善 react 八股
     - [x] 完善 2024-11-13 aojbwhlo 一面八股
