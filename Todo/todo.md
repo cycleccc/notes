@@ -19,5 +19,6 @@
 - [x] 复习算法
     - [x] leetCode
 - [x] 解决  pro-components bug[#8859](https://github.com/ant-design/pro-components/issues/8859)
-- [ ] 解决 表格初始化无法拖拽问题
-- [ ] 添加自定义复制 hook
+- [x] 解决 表格初始化无法拖拽问题
+- [x] 添加自定义复制 hook
+- [ ] 解决微前端回车光标错乱问题
