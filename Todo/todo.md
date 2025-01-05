@@ -19,6 +19,7 @@
 - [x] 复习算法
     - [x] leetCode
 - [x] 解决  pro-components bug[#8859](https://github.com/ant-design/pro-components/issues/8859)
-- [x] 解决 表格初始化无法拖拽问题
+- [ ] 解决 表格设置了100%宽度后初始化宽度无法拖拽问题
 - [x] 添加自定义复制 hook
 - [ ] 解决微前端回车光标错乱问题
+- [ ] 解决表格单元格拖拽问题
