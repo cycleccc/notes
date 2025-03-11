@@ -6,19 +6,33 @@
       {
         "id": "5d97611b2e32851b",
         "type": "tabs",
+        "dimension": 63.339222614840985,
         "children": [
           {
             "id": "aa8535eaf2b87fb4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/面试/面试题/面试题手册.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "面试题手册"
+              "title": "新标签页"
+            }
+          }
+        ]
+      },
+      {
+        "id": "abf63e2b1efacab5",
+        "type": "tabs",
+        "dimension": 36.66077738515901,
+        "children": [
+          {
+            "id": "632986e0aa758e70",
+            "type": "leaf",
+            "state": {
+              "type": "marp-preview-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Deck Preview"
             }
           }
         ]
@@ -40,10 +54,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -70,7 +85,7 @@
               "type": "starred",
               "state": {},
               "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "title": "插件不再活动"
             }
           },
           {
@@ -103,17 +118,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "生活/旅行计划.md",
+                "file": "files/AwesomeMarp_dark.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "旅行计划 的反向链接列表"
+              "title": "AwesomeMarp_dark 的反向链接列表"
             }
           },
           {
@@ -122,12 +137,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "生活/旅行计划.md",
+                "file": "files/AwesomeMarp_dark.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "旅行计划 的出链列表"
+              "title": "AwesomeMarp_dark 的出链列表"
             }
           },
           {
@@ -137,7 +152,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "标签"
@@ -149,10 +166,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/面试/面试题/面试题手册.md"
+                "file": "files/AwesomeMarp_dark.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 面试题手册"
+              "title": "AwesomeMarp_dark 的大纲"
             }
           },
           {
@@ -174,31 +194,53 @@
       }
     ],
     "direction": "horizontal",
-    "width": 842.5
+    "width": 842.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "marp-slides:Show Slide Preview": false
     }
   },
   "active": "aa8535eaf2b87fb4",
   "lastOpenFiles": [
+    "files/T3_FullStack_Talk.md",
+    "前端/技术分享/files/trpc.gif",
+    "前端/技术分享/files/AwesomeMarp_red.html",
+    "前端/技术分享/files/T3_FullStack_Talk.md",
+    "前端/技术分享/files/AwesomeMarp_red.pdf",
+    "前端/技术分享/files/AwesomeMarp_red.md",
+    "前端/技术分享/files/AwesomeMarp_purple.html",
+    "前端/技术分享/files/AwesomeMarp_purple.md",
+    "前端/技术分享/files/AwesomeMarp_purple.pdf",
+    "前端/技术分享/files/AwesomeMarp_green.pdf",
+    "前端/技术分享/files/AwesomeMarp_green.md",
+    "前端/技术分享/files/AwesomeMarp_green.html",
+    "前端/技术分享/files/AwesomeMarp_dark.pdf",
+    "前端/技术分享/files/AwesomeMarp_dark.md",
+    "前端/技术分享/files/AwesomeMarp_dark.html",
+    "前端/技术分享/files/AwesomeMarp_brown.pdf",
+    "前端/技术分享/files/AwesomeMarp_brown.md",
+    "前端/技术分享/files/AwesomeMarp_brown.html",
+    "files/AwesomeMarp_dark.md",
+    "files/AwesomeMarp_brown.md",
+    "files/AwesomeMarp_blue.md",
+    "Quick Start.md",
     "前端/面试/面试题/面试题手册.md",
     "cinn.md",
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.001.png",
-    "前端/面试/面试题/面试题手册.pdf",
     "前端/面试/面试题/162db6359673e7d0~tplv-t2oaga2asx-zoom-in-crop-mark_3024_0_0_0.webp",
     "生活/入党相关时间.md",
     "生活/健身/Fitness Tips（parent）.md",
     "前端/面试/项目.md",
     ",,,,,,,,,,,,,,,,,,,,,,0-pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppmmjk,,nnnnnnnnnnnn.md",
     "前端/学习笔记/Vue/Vue 原理.md",
-    "前端/学习笔记/Vue",
     "Todo/todo.md",
     "前端/文章/富文本/attachments/Pasted image 20241108110311.png",
     "前端/文章/富文本/attachments/f14724bf7406446793c7246ad672c04f~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0 1.webp",
@@ -208,32 +250,11 @@
     "前端/面试/面试题/Aspose.Words.f0d85581-5d68-4a9c-9b5f-f02a196650c5.002.jpeg",
     "前端/文章/富文本/attachments/Pasted image 20241108110429.png",
     "前端/文章/富文本/attachments/Pasted image 20241108110420.png",
-    "前端/文章/富文本/attachments/Pasted image 20241108110341.png",
-    "前端/文章/富文本/attachments",
     "前端/面试/你还有什么想问的吗.md",
     "前端/面试/跳槽/简历修改.md",
     "生活/旅行计划.md",
-    "前端/文章/富文本",
     "Todo/富文本.md",
     "短记/开发日记.md",
-    "前端/学习笔记/富文本.md",
-    "Todo",
-    "生活/now_todolist.md",
-    "短记/多人协同.md",
-    "短记/readme.md",
-    "生活/歌.md",
-    "生活/菜.md",
-    "前端/学习笔记/vim.md",
-    "前端/学习笔记/umi.md",
-    "前端/学习笔记/React源码学习.md",
-    "前端/学习笔记/git.md",
-    "前端/职业规划.md",
-    "Quick Start.md",
-    "前端/学习笔记/测试",
-    "生活/旅行",
-    "list/wangeditor",
-    "前端/每日一题",
-    "前端/文章/Vue/Vue设计与实现/reactive.ts",
     "未命名 1.canvas",
     "未命名.canvas"
   ]
