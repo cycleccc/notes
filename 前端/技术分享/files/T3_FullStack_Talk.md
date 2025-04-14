@@ -143,7 +143,189 @@ fetch('/api/user/123')
 </div>
 
 
-## 2.3 渲染模式
+## 2.3 渲染模式概览
+
+<!-- _class: lead -->
+
+### Next.js 支持多种渲染模式  
+结合服务端和客户端的能力，实现灵活的页面渲染方案：
+
+- ✅ SSG：静态生成（Static Site Generation）
+- ✅ SSR：服务端渲染（Server Side Rendering）
+- ✅ CSR：客户端渲染（Client Side Rendering）
+- ✅ ISR：增量静态生成（Incremental Static Regeneration）
+
+---
+
+## 🧊 SSG - 静态生成
+
+<!-- _class: pin-3 -->
+
+<div class=ldiv>
+
+适合：**内容不频繁变化**的页面
+
+~~~ts
+export async function getStaticProps() {
+  return {
+    props: { data: ... },
+  }
+}
+~~~
+
+优点：
+
+- HTML 在构建时生成，**加载快**
+- 可部署在 CDN
+
+缺点：
+
+- 数据更新需**重新构建**
+
+</div>
+
+<div class=rdiv>
+
+```txt
+浏览器
+   ↓
+CDN / 静态文件
+   ↓
+直接返回 HTML
+```
+
+</div>
+
+---
+
+## 🔁 SSR - 服务端渲染
+
+<!-- _class: pin-3 -->
+
+<div class=ldiv>
+
+适合：**数据实时性要求高**的页面
+
+~~~ts
+export async function getServerSideProps(context) {
+  const res = await fetch(...)
+  return { props: { data: await res.json() } }
+}
+~~~
+
+优点：
+
+- 每次请求都会重新渲染页面
+- SEO 友好
+
+缺点：
+
+- **性能依赖服务器**
+- 响应速度相对慢
+
+</div>
+
+<div class=rdiv>
+
+```txt
+浏览器
+   ↓
+Next.js Server
+   ↓
+动态生成 HTML
+```
+
+</div>
+
+## 🖼️ CSR - 客户端渲染
+
+<!-- _class: pin-3 -->
+
+<div class=ldiv>
+
+适合：**登录后页面 / 不关心 SEO**
+
+页面只在浏览器中执行 JS 后渲染：
+
+~~~ts
+// 没有 getStaticProps / getServerSideProps
+// 在 useEffect 中加载数据
+~~~
+
+优点：
+
+- 无需服务器参与，**部署简单**
+- 体验流畅
+
+缺点：
+
+- SEO 不友好
+- 首屏加载慢
+
+</div>
+
+<div class=rdiv>
+
+```txt
+浏览器
+   ↓
+获取空 HTML + JS
+   ↓
+JS 渲染出页面内容
+```
+
+</div>
+
+
+## 🔄 ISR - 增量静态生成
+
+<!-- _class: pin-3 -->
+
+<div class=ldiv>
+
+SSG 的升级版：支持**定时更新**
+
+~~~ts
+export async function getStaticProps() {
+  return {
+    props: { ... },
+    revalidate: 60, // 60 秒后重新生成
+  }
+}
+~~~
+
+优点：
+
+- **静态性能 + 数据更新**
+- 避免频繁构建
+
+适合：**博客、商品页**等内容不实时但需定期更新的页面
+
+</div>
+
+<div class=rdiv>
+
+```txt
+请求页面时发现超时
+   ↓
+后台重新生成 HTML
+   ↓
+更新静态缓存
+```
+
+</div>
+
+
+## 🤔 应该怎么选？
+
+<!-- _class: lead -->
+
+| 模式 | 适用场景 | 是否支持 SEO | 首屏加载速度 |
+|------|----------|---------------|----------------|
+| SSG  | 博客、文档、产品页 | ✅ | 🚀 非常快 |
+| SSR  | 用户仪表盘、搜索页 | ✅ | 🐢 较慢 |
+| CSR  | 后台管理、互动页面 | ❌ | 🐢 慢（需加载 JS）|
+| ISR  | 新闻页、电商页面等 | ✅ | 🚀 快且可更新 |
 
 
 ## 3. TRPC: 类型安全通信
