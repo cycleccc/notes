@@ -109,6 +109,38 @@ app/
 
 ## 2.2 API 路由
 
+<!-- _class: pin-3 -->
+
+<div class="tdiv">
+
+> 🔧 底层原理简述
+Next.js 在构建时会：
+ 识别 app/api 或 pages/api 目录下的文件,不打包进客户端，只在服务端运行 自动根据路径注册为服务端函数
+在运行时，Next.js 会：
+根据请求路径 /api/user/123 映射到本地函数文件,将 req, res 注入函数（类 Express，但基于 Node 原生）
+</div>
+
+<div class=ldiv>
+
+~~~markdown
+app/api/
+  ├─ hello.ts        → /api/hello
+  └─ user/
+      └─ [id].ts    → /api/user/:id
+~~~
+
+</div>
+
+<div class=rdiv>
+
+~~~typescript
+// 传统方式：跨项目、跨域、跨团队沟通
+fetch('https://api.example.com/user/123')
+
+// Next.js方式：像调用本地函数一样简单,直接相对路径调用
+fetch('/api/user/123')
+~~~
+</div>
 
 
 ## 2.3 渲染模式
