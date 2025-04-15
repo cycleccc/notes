@@ -143,19 +143,13 @@ fetch('/api/user/123')
 </div>
 
 
-## 2.3 渲染模式概览
-
-<!-- _class: lead -->
-
-### Next.js 支持多种渲染模式  
-结合服务端和客户端的能力，实现灵活的页面渲染方案：
+## 2.3 渲染模式
+Next.js 支持多种渲染模式  结合服务端和客户端的能力，实现灵活的页面渲染方案：
 
 - ✅ SSG：静态生成（Static Site Generation）
 - ✅ SSR：服务端渲染（Server Side Rendering）
 - ✅ CSR：客户端渲染（Client Side Rendering）
 - ✅ ISR：增量静态生成（Incremental Static Regeneration）
-
----
 
 ## 🧊 SSG - 静态生成
 
@@ -196,25 +190,15 @@ CDN / 静态文件
 
 </div>
 
----
 
 ## 🔁 SSR - 服务端渲染
 
 <!-- _class: pin-3 -->
 
-<div class=ldiv>
+<div class=tdiv>
 
 适合：**数据实时性要求高**的页面
-
-~~~ts
-export async function getServerSideProps(context) {
-  const res = await fetch(...)
-  return { props: { data: await res.json() } }
-}
-~~~
-
 优点：
-
 - 每次请求都会重新渲染页面
 - SEO 友好
 
@@ -222,6 +206,18 @@ export async function getServerSideProps(context) {
 
 - **性能依赖服务器**
 - 响应速度相对慢
+
+</div>
+
+<div class=ldiv>
+
+
+~~~ts
+export async function getServerSideProps(context) {
+  const res = await fetch(...)
+  return { props: { data: await res.json() } }
+}
+~~~
 
 </div>
 
@@ -315,10 +311,8 @@ export async function getStaticProps() {
 
 </div>
 
-
 ## 🤔 应该怎么选？
 
-<!-- _class: lead -->
 
 | 模式 | 适用场景 | 是否支持 SEO | 首屏加载速度 |
 |------|----------|---------------|----------------|
