@@ -269,9 +269,7 @@ Next.js Server
    ↓
 JS 渲染出页面内容
 ```
-
 </div>
-
 
 ## 🔄 ISR - 增量静态生成
 
