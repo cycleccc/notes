@@ -153,19 +153,11 @@ Next.js 支持多种渲染模式  结合服务端和客户端的能力，实现�
 
 ## 🧊 SSG - 静态生成
 
-<!-- _class: pin-3 -->
+<!-- _class: cols-2 -->
 
 <div class=ldiv>
 
 适合：**内容不频繁变化**的页面
-
-~~~ts
-export async function getStaticProps() {
-  return {
-    props: { data: ... },
-  }
-}
-~~~
 
 优点：
 
@@ -176,9 +168,19 @@ export async function getStaticProps() {
 
 - 数据更新需**重新构建**
 
+
 </div>
 
 <div class=rdiv>
+
+~~~ts
+export async function getStaticProps() {
+  return {
+    props: { data: ... },
+  }
+}
+~~~
+
 
 ```txt
 浏览器
@@ -193,9 +195,9 @@ CDN / 静态文件
 
 ## 🔁 SSR - 服务端渲染
 
-<!-- _class: pin-3 -->
+<!-- _class: cols-2 -->
 
-<div class=tdiv>
+<div class=ldiv>
 
 适合：**数据实时性要求高**的页面
 优点：
@@ -209,8 +211,7 @@ CDN / 静态文件
 
 </div>
 
-<div class=ldiv>
-
+<div class=rdiv>
 
 ~~~ts
 export async function getServerSideProps(context) {
@@ -218,10 +219,6 @@ export async function getServerSideProps(context) {
   return { props: { data: await res.json() } }
 }
 ~~~
-
-</div>
-
-<div class=rdiv>
 
 ```txt
 浏览器
@@ -235,18 +232,13 @@ Next.js Server
 
 ## 🖼️ CSR - 客户端渲染
 
-<!-- _class: pin-3 -->
+<!-- _class: cols-2 -->  
 
 <div class=ldiv>
 
 适合：**登录后页面 / 不关心 SEO**
 
 页面只在浏览器中执行 JS 后渲染：
-
-~~~ts
-// 没有 getStaticProps / getServerSideProps
-// 在 useEffect 中加载数据
-~~~
 
 优点：
 
@@ -269,24 +261,21 @@ Next.js Server
    ↓
 JS 渲染出页面内容
 ```
+
+~~~ts
+// 没有 getStaticProps / getServerSideProps
+// 在 useEffect 中加载数据
+~~~
+
 </div>
 
 ## 🔄 ISR - 增量静态生成
 
-<!-- _class: pin-3 -->
+<!-- _class: cols-2 -->
 
 <div class=ldiv>
 
 SSG 的升级版：支持**定时更新**
-
-~~~ts
-export async function getStaticProps() {
-  return {
-    props: { ... },
-    revalidate: 60, // 60 秒后重新生成
-  }
-}
-~~~
 
 优点：
 
@@ -298,6 +287,15 @@ export async function getStaticProps() {
 </div>
 
 <div class=rdiv>
+
+~~~ts
+export async function getStaticProps() {
+  return {
+    props: { ... },
+    revalidate: 60, // 60 秒后重新生成
+  }
+}
+~~~
 
 ```txt
 请求页面时发现超时
