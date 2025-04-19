@@ -15,7 +15,7 @@ footer: \ *cycleccc* *ts 全栈最佳实践* *2025年2月28日*
 
 # T3 Fullstack 技术分享
 
-###### “全栈の奥义：用Next.js在老板眼皮底下摸鱼🐟”
+###### "全栈の奥义：用Next.js在老板眼皮底下摸鱼🐟"
 
 @cycleccc
 全网账号：cycleccc
@@ -385,188 +385,268 @@ function ProductivityButton() {
 ![test](./trpc.gif)
 
 
-## 4. Prisma
+## 4. Zod：运行时类型验证利器
 
-## 《荷塘月色》（两栏五五分）
+<!-- _class: trans -->
+<!-- _footer: "" -->
+<!-- _paginate: "" -->
+
+## 4.1 为什么需要 Zod？
 
 <!-- _class: cols-2 -->
 
 <div class=ldiv>
 
-曲曲折折的荷塘上面，弥望的是田田的叶子。叶子出水很高，像亭亭的舞女的裙。
+### 常见问题
+- TypeScript 只在编译时检查类型
+- API 请求数据无法保证类型安全
+- 表单验证逻辑分散且重复
+- 运行时类型错误难以捕获
 
-层层的叶子中间，零星地点缀着些白花，有袅娜地开着的，有羞涩地打着朵儿的；正如一粒粒的明珠，又如碧天里的星星，又如刚出浴的美人。
+~~~typescript
+// 没有运行时验证的风险
+type UserInput = {
+  age: number;
+  email: string;
+}
 
-微风过处，送来缕缕清香，仿佛远处高楼上渺茫的歌声似的。这时候叶子与花也有一丝的颤动，像闪电般，霎时传过荷塘的那边去了。
-
-叶子本是肩并肩密密地挨着，这便宛然有了一道凝碧的波痕。叶子底下是脉脉的流水，遮住了，不能见一些颜色；而叶子却更见风致了。
-
-—— 朱自清《荷塘月色》  [返回](#21)
-</div>
-
-<div class=rimg>
-
-<!-- ![#c](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202309221014499.png) -->
-![#c](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202309221630151.png)
-</div>
-
-## 《春》（两栏六四分）
-
-<!-- _class: cols-2-64 -->
-
-<div class=limg>
-
-![#c](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202309201217248.png)
-</div>
-
-<div class=rdiv>
-
-盼望着，盼望着，东风来了，春天的脚步近了。
-
-一切都像刚睡醒的样子，欣欣然张开了眼。山朗润起来了，水涨起来了，太阳的脸红起来了。
-
-小草偷偷地从土里钻出来，嫩嫩的，绿绿的。园子里，田野里，瞧去，一大片一大片满是的。坐着，躺着，打两个滚，踢几脚球，赛几趟跑，捉几回迷藏。风轻悄悄的，草软绵绵的。
-
-—— 朱自清《春》
-
-[返回](#21)
-</div>
-
-## 经典散文诗篇（两栏七三分）
-
-<!-- _class: cols-2-73 -->
-
-<div class=limg>
-
-![#c](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202309221010523.png)
+function processUser(input: UserInput) {
+  // 运行时可能崩溃！
+  return input.age * 2;
+}
+~~~
 
 </div>
 
 <div class=rdiv>
 
-经典的散文诗篇有：
+### Zod 解决方案
+- 运行时类型验证
+- 自动类型推导
+- 丰富的验证规则
+- 优雅的错误处理
 
-- 朱自清：《荷塘月色》
-- 林清玄：《月到天心》
-- 郁达夫：《古都的秋》
-- 张爱玲：《花落的声音》
-- 余光中：《听听那冷雨》
-- 张抗抗：《牡丹的拒绝》
-- 丰子恺：《杨柳》
-- 周作人：《乌篷船》
-- 郑振铎：《石湖》
-- 梁实秋：《雅舍》
+~~~typescript
+const UserSchema = z.object({
+  age: z.number().min(0).max(120),
+  email: z.string().email(),
+});
 
-[返回](#21)
+function processUser(input: unknown) {
+  // 安全！验证失败会抛出详细错误
+  const user = UserSchema.parse(input);
+  return user.age * 2;
+}
+~~~
+
 </div>
 
-## 《春》（两栏四六分）
+## 4.2 Zod + tRPC 完美配合
 
-<!-- _class: cols-2-46 -->
+<!-- _class: cols-2 -->
 
 <div class=ldiv>
 
+### 定义 API 接口
 
-盼望着，盼望着，东风来了，春天的脚步近了。
+~~~typescript
+// server/api/router.ts
+export const appRouter = router({
+  createUser: procedure
+    .input(z.object({
+      name: z.string().min(2),
+      age: z.number().min(0),
+      email: z.string().email(),
+      role: z.enum(['user', 'admin'])
+    }))
+    .mutation(async ({ input }) => {
+      // 输入已经过验证，类型安全！
+      const user = await prisma.user.create({
+        data: input
+      });
+      return user;
+    })
+});
+~~~
 
-一切都像刚睡醒的样子，欣欣然张开了眼。山朗润起来了，水涨起来了，太阳的脸红起来了。
-
-小草偷偷地从土里钻出来，嫩嫩的，绿绿的。园子里，田野里，瞧去，一大片一大片满是的。坐着，躺着，打两个滚，踢几脚球，赛几趟跑，捉几回迷藏。风轻悄悄的，草软绵绵的。
-
-—— 朱自清《春》
-
-[返回](#21)
-</div>
-
-<div class=rimg>
-
-![#c](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202309201217248.png)
-</div>
-
-## 经典散文诗篇（两栏三七分）
-
-<!-- _class: cols-2-37 -->
-
-<div class=ldiv>
-
-
-经典的散文诗篇有：
-
-- 朱自清：《荷塘月色》
-- 林清玄：《月到天心》
-- 郁达夫：《古都的秋》
-- 张爱玲：《花落的声音》
-- 余光中：《听听那冷雨》
-- 张抗抗：《牡丹的拒绝》
-- 丰子恺：《杨柳》
-- 周作人：《乌篷船》
-- 郑振铎：《石湖》
-- 梁实秋：《雅舍》
-
-[返回](#21)
-</div>
-
-<div class=rimg>
-
-![#c](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202309221010523.png)
-</div>
-
-## 夏与秋（三栏三平分）
-
-<!-- _class: cols-3 -->
-
-<div class=ldiv>
-
-![#center](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202309201206630.png)
-
-</div>
-
-<div class=mdiv>
-
-![#center](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202309201151809.png)
-
-![#center](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202309201158036.png)
 </div>
 
 <div class=rdiv>
 
-![#center](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202309201154535.png)
+### 客户端调用
 
-[返回](#21)
+~~~typescript
+// pages/register.tsx
+function RegisterForm() {
+  const mutation = trpc.createUser.useMutation();
+
+  const onSubmit = async (data: unknown) => {
+    try {
+      await mutation.mutateAsync({
+        name: '张三',
+        age: 25,
+        email: 'zhangsan@example.com',
+        role: 'user'
+      });
+      // 成功！
+    } catch (error) {
+      // 类型错误会在这里被捕获
+      console.error(error.message);
+    }
+  };
+}
+~~~
+
 </div>
 
+## 4.3 Zod 常用验证规则
 
-## 高山与沙漠（两行分栏）
+~~~typescript
+// 基础类型
+const stringSchema = z.string()
+const numberSchema = z.number()
+const booleanSchema = z.boolean()
 
-<!-- _class: rows-2 -->
+// 复杂验证
+const UserSchema = z.object({
+  username: z.string()
+    .min(3, '用户名至少3个字符')
+    .max(20, '用户名最多20个字符'),
+  age: z.number()
+    .int('年龄必须是整数')
+    .min(0, '年龄不能为负')
+    .max(120, '年龄不能超过120'),
+  email: z.string()
+    .email('邮箱格式不正确'),
+  website: z.string()
+    .url()
+    .optional(),
+  tags: z.array(z.string())
+    .min(1, '至少需要一个标签')
+});
 
-<div class="timg">
+// 联合类型
+const ResponseSchema = z.union([
+  z.object({ status: z.literal('success'), data: UserSchema }),
+  z.object({ status: z.literal('error'), message: z.string() })
+]);
+~~~
 
-![#c h:250](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202401131736186.png)
+## 4.4 最佳实践
+
+1. **定义清晰的错误消息**
+```typescript
+const schema = z.string({
+  required_error: "此字段不能为空",
+  invalid_type_error: "必须是字符串",
+});
+```
+
+2. **复用验证逻辑**
+```typescript
+const baseUser = z.object({
+  id: z.string().uuid(),
+  email: z.string().email(),
+});
+
+const newUser = baseUser.extend({
+  password: z.string().min(6),
+});
+
+const loginUser = baseUser.pick({
+  email: true,
+});
+```
+
+3. **结合 React Hook Form**
+```typescript
+const schema = z.object({/*...*/});
+const {
+  register,
+  handleSubmit,
+} = useForm({
+  resolver: zodResolver(schema)
+});
+```
+
+> 💡 提示：Zod + tRPC + React Hook Form 是处理表单验证的最佳组合！
+
+## 5. Prisma: 类型安全的 ORM
+
+<!-- _class: trans -->
+<!-- _footer: "" -->
+<!-- _paginate: "" -->
+
+## 5.1 Prisma 基础使用
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+Prisma 特点：
+- 类型安全的数据库操作
+- 直观的数据模型定义
+- 自动生成迁移文件
+- 强大的 IDE 支持
+
+## 5.2 Prisma vs Drizzle
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### Prisma
+
+优点：
+- 完整的 ORM 解决方案
+- 强大的关系处理·
+- Schema 定义直观
+- 自动迁移工具
+
+缺点：
+- 启动时间较长
+- 资源消耗较大
+- 灵活性较低
+
+</div>
+<!--  -->
+<div class=rdiv>
+
+#### Drizzle
+- 轻量级设计
+- 启动速度快
+- SQL 优先理念
+- 更灵活的查询
+
+~~~typescript
+// Drizzle Schema
+import { pgTable, serial, text } from 'drizzle-orm/pg-core'
+
+export const users = pgTable('users', {
+  id: serial('id').primaryKey(),
+  name: text('name'),
+  email: text('email').unique()
+})
+
+// 查询示例
+const result = await db.select()
+  .from(users)
+  .where(eq(users.email, 'test@example.com'))
+~~~
+
 </div>
 
-<div class="bimg">
+## 5.3 如何选择？
 
-![#c h:260](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202401131737821.png)
-</div>
+| 特性 | Prisma | Drizzle |
+|------|---------|----------|
+| 类型安全 | ✅ | ✅ |
+| 启动性能 | 🐢 慢 | 🚀 快 |
+| 学习曲线 | 较陡 | 平缓 |
+| SQL 控制 | 较弱 | 强 |
+| 生态完整度 | 完整 | 发展中 |
+| 适用场景 | 大型项目 | 轻量应用 |
 
-## 《宇宙的奥秘》（品字型分栏）
-
-<!-- _class: pin-3 -->
-
-<div class="tdiv">
-
-> 四百年前，两位截然不同的科学家突破了当时已知世界的边界。1609 年在威尼斯，伽利略・伽利雷透过望远镜观察星辰，并制作仪器和进行实验。在布拉格，科班出身的神学家约翰内斯・开普勒发现了行星运动定律，奠定了近代天体物理学的基础，并思考着宇宙的宏伟构造。托马斯・德・帕多瓦以至今较少受到关注却扣人心弦的通信往来为基础，讲述了这两位类型如此迥异的学者之间不对等的关系，以及他们如何在同样的时刻却以各自的方式探索星辰的奥秘。在彼此的鉴照下，他们的远见与固执、睿智与无知得以呈现。这是一部介绍新科学的崛起以及近代来临之际的巨大变革的作品。  ——《宇宙的奥妙》
-</div>
-
-<div class="limg">
-
-![#c](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202401131712626.png)
-</div>
-
-<div class="rimg">
-
-![#c h:260](https://mytuchuang-1303248785.cos.ap-beijing.myqcloud.com/picgo/202401131713779.png)
-</div>
-
-[^1]: 
+> 💡 建议：
+> - 新手/标准项目：选择 Prisma
+> - 性能敏感/经验丰富：考虑 Drizzle
