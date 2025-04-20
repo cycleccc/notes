@@ -397,7 +397,7 @@ function ProductivityButton() {
 
 <div class=ldiv>
 
-### 常见问题
+#### 常见问题
 - TypeScript 只在编译时检查类型
 - API 请求数据无法保证类型安全
 - 表单验证逻辑分散且重复
@@ -420,7 +420,7 @@ function processUser(input: UserInput) {
 
 <div class=rdiv>
 
-### Zod 解决方案
+#### Zod 解决方案
 - 运行时类型验证
 - 自动类型推导
 - 丰富的验证规则
@@ -447,7 +447,7 @@ function processUser(input: unknown) {
 
 <div class=ldiv>
 
-### 定义 API 接口
+#### 定义 API 接口
 
 ~~~typescript
 // server/api/router.ts
@@ -473,7 +473,7 @@ export const appRouter = router({
 
 <div class=rdiv>
 
-### 客户端调用
+#### 客户端调用
 
 ~~~typescript
 // pages/register.tsx
@@ -501,6 +501,10 @@ function RegisterForm() {
 
 ## 4.3 Zod 常用验证规则
 
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
 ~~~typescript
 // 基础类型
 const stringSchema = z.string()
@@ -518,6 +522,16 @@ const UserSchema = z.object({
     .max(120, '年龄不能超过120'),
   email: z.string()
     .email('邮箱格式不正确'),
+});
+~~~
+
+</div>
+
+<div class=rdiv>
+
+~~~typescript
+// 可选字段和数组
+const ExtendedSchema = z.object({
   website: z.string()
     .url()
     .optional(),
@@ -527,23 +541,34 @@ const UserSchema = z.object({
 
 // 联合类型
 const ResponseSchema = z.union([
-  z.object({ status: z.literal('success'), data: UserSchema }),
-  z.object({ status: z.literal('error'), message: z.string() })
+  z.object({ 
+    status: z.literal('success'), 
+    data: UserSchema 
+  }),
+  z.object({ 
+    status: z.literal('error'), 
+    message: z.string() 
+  })
 ]);
 ~~~
 
+</div>
+
 ## 4.4 最佳实践
 
-1. **定义清晰的错误消息**
-```typescript
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### 错误处理和复用
+~~~typescript
+// 1. 定义清晰的错误消息
 const schema = z.string({
   required_error: "此字段不能为空",
   invalid_type_error: "必须是字符串",
 });
-```
 
-2. **复用验证逻辑**
-```typescript
+// 2. 复用验证逻辑
 const baseUser = z.object({
   id: z.string().uuid(),
   email: z.string().email(),
@@ -552,24 +577,32 @@ const baseUser = z.object({
 const newUser = baseUser.extend({
   password: z.string().min(6),
 });
+~~~
 
-const loginUser = baseUser.pick({
-  email: true,
+</div>
+
+<div class=rdiv>
+
+#### 框架集成
+~~~typescript
+// 3. 结合 React Hook Form
+const schema = z.object({
+  username: z.string().min(3),
+  email: z.string().email(),
+  password: z.string().min(6)
 });
-```
 
-3. **结合 React Hook Form**
-```typescript
-const schema = z.object({/*...*/});
 const {
   register,
   handleSubmit,
 } = useForm({
   resolver: zodResolver(schema)
 });
-```
+~~~
 
 > 💡 提示：Zod + tRPC + React Hook Form 是处理表单验证的最佳组合！
+
+</div>
 
 ## 5. Prisma: 类型安全的 ORM
 
@@ -583,11 +616,58 @@ const {
 
 <div class=ldiv>
 
-Prisma 特点：
-- 类型安全的数据库操作
-- 直观的数据模型定义
-- 自动生成迁移文件
-- 强大的 IDE 支持
+#### Schema 定义
+~~~prisma
+// schema.prisma
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+  posts Post[]
+}
+
+model Post {
+  id       Int     @id
+  title    String
+  author   User    @relation(fields: [authorId], references: [id])
+  authorId Int
+}
+~~~
+
+</div>
+
+<div class=rdiv>
+
+#### CRUD 操作示例
+~~~typescript
+// 创建用户和文章
+const user = await prisma.user.create({
+  data: {
+    email: 'zhang@example.com',
+    name: '张三',
+    posts: {
+      create: { title: '第一篇博客' }
+  }}});
+
+// 关联查询
+const posts = await prisma.post.findMany({
+  where: { author: { email: 'zhang@example.com' } },
+  include: { author: true }
+});
+
+// 更新数据
+const result = await prisma.user.update({
+  where: { email: 'zhang@example.com' },
+  data: { name: '张三丰' }
+});
+~~~
+
+</div>
 
 ## 5.2 Prisma vs Drizzle
 
