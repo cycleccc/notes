@@ -730,3 +730,160 @@ const result = await db.select()
 > 💡 建议：
 > - 新手/标准项目：选择 Prisma
 > - 性能敏感/经验丰富：考虑 Drizzle
+
+# 6 NextAuth
+
+## 6. NextAuth：身份认证的最佳实践
+
+<!-- _class: trans -->
+<!-- _footer: "" -->
+<!-- _paginate: "" -->
+
+## 6.1 为什么选择 NextAuth？
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### 主要特点
+- 开箱即用的社交登录
+- 无需后端的认证方案
+- 内置安全最佳实践
+- 完整的 TypeScript 支持
+
+~~~typescript
+// 最简配置示例
+import NextAuth from "next-auth"
+import GithubProvider from "next-auth/providers/github"
+
+export const authOptions = {
+  providers: [
+    GithubProvider({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    }),
+  ],
+}
+
+export default NextAuth(authOptions)
+~~~
+
+</div>
+
+<div class=rdiv>
+
+#### 支持的认证方式
+- OAuth 提供商
+  - GitHub、Google、微信
+  - 企业微信、飞书
+- 邮箱验证码
+- 用户名密码
+- 自定义认证
+
+![NextAuth Providers](./auth-providers.png)
+
+</div>
+
+## 6.2 与 Prisma 集成
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### Schema 配置
+~~~prisma
+model Account {
+  id        String   @id @default(cuid())
+  userId    String
+  type      String
+  provider  String
+  user      User     @relation(fields: [userId], references: [id])
+  // ... 其他 OAuth 相关字段
+}
+
+model User {
+  id       String    @id @default(cuid())
+  email    String?   @unique
+  name     String?
+  accounts Account[]
+}
+~~~
+
+</div>
+
+<div class=rdiv>
+
+#### 适配器配置
+~~~typescript
+// auth.ts
+import { PrismaAdapter } from "@next-auth/prisma-adapter"
+import { prisma } from "./db"
+
+export const authOptions = {
+  adapter: PrismaAdapter(prisma),
+  providers: [
+    GithubProvider({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    }),
+  ],
+}
+~~~
+
+</div>
+
+## 6.3 在应用中使用
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### 客户端使用
+~~~typescript
+'use client'
+ 
+import { useSession } from "next-auth/react"
+ 
+export default function ProfilePage() {
+  const { data: session } = useSession()
+ 
+  if (!session) {
+    return <div>请先登录</div>
+  }
+ 
+  return (
+    <div>
+      欢迎回来, {session.user.name}
+      <img src={session.user.image} />
+    </div>
+  )
+}
+~~~
+
+</div>
+
+<div class=rdiv>
+
+#### 服务端验证
+~~~typescript
+import { getServerSession } from "next-auth/next"
+ 
+export default async function Page() {
+  const session = await getServerSession()
+ 
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false,
+      },
+    }
+  }
+ 
+  return <AdminDashboard user={session.user} />
+}
+~~~
+
+> 💡 提示：NextAuth + Prisma + tRPC 可以构建完整的用户认证系统
+
+</div>
