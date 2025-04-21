@@ -887,3 +887,287 @@ export default async function Page() {
 > 💡 提示：NextAuth + Prisma + tRPC 可以构建完整的用户认证系统
 
 </div>
+
+# 7 antd pro
+
+## 7. Ant Design Pro：企业级中后台解决方案
+
+<!-- _class: trans -->
+<!-- _footer: "" -->
+<!-- _paginate: "" -->
+
+## 7.1 为什么选择 Ant Design Pro？
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### 核心优势
+- 企业级设计体系
+- 开箱即用的模板
+- 丰富的业务组件
+- 完整的最佳实践
+
+#### 内置功能
+- 🔐 用户管理
+- 📊 数据大屏
+- 📝 表单设计器
+- 🎨 主题定制
+- 📱 响应式布局
+
+</div>
+
+<div class=rdiv>
+
+![Ant Design Pro Layout](./antd-pro.png)
+
+> 💡 开箱即用的中后台前端/设计解决方案
+
+</div>
+
+## 7.2 常用布局与组件
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### 布局模板
+- ProLayout：专业的布局
+  - 可配置的菜单
+  - 自适应缩放
+  - 面包屑导航
+  
+#### 数据展示
+- ProTable：高级表格
+- ProList：高级列表
+- ProCard：高级卡片
+- ProDescriptions：详情描述
+
+</div>
+
+<div class=rdiv>
+
+#### 表单系列
+- ProForm：高级表单
+  - 快速开发表单
+  - 数据联动
+  - 自动校验
+  
+#### 业务组件
+- ProFlow：流程图
+- Charts：图表库
+- Dashboard：仪表盘
+- Calendar：日历
+
+</div>
+
+## 7.3 与 T3 Stack 集成
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### 安装配置
+```bash
+# 安装依赖
+pnpm add @ant-design/pro-components
+pnpm add antd @ant-design/icons
+
+# 配置主题（tailwind.config.ts）
+import { theme } from 'antd'
+const { defaultAlgorithm, defaultSeed } = theme
+```
+
+#### 最佳实践
+- 按需加载组件
+- 统一主题配置
+- 结合 tRPC 的类型
+- 配合 NextAuth 权限
+
+</div>
+
+<div class=rdiv>
+
+#### 示例：ProTable + tRPC
+```typescript
+<ProTable<API.UserInfo>
+  columns={columns}
+  request={async (params) => {
+    const { data } = await trpc.user.list.query({
+      current: params.current,
+      pageSize: params.pageSize,
+      ...params,
+    });
+    return {
+      data: data.list,
+      total: data.total,
+    };
+  }}
+  rowKey="id"
+  pagination={{
+    showQuickJumper: true,
+  }}
+/>
+```
+
+> 💡 提示：ProComponents + tRPC + Tailwind 
+> 可以快速构建企业级应用
+
+</div>
+
+# 8 shadcn UI
+
+## 8. Shadcn UI：现代化的组件库解决方案
+
+<!-- _class: trans -->
+<!-- _footer: "" -->
+<!-- _paginate: "" -->
+
+## 8.1 为什么选择 Shadcn UI？
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### 核心理念
+- 不是组件库而是组件集合
+- 复制即用的源码方案
+- 完全可定制的设计
+- Radix UI + Tailwind CSS
+
+#### 独特优势
+- 零运行时开销
+- 完全可控的源码
+- 随用随取的组件
+- 极致的开发体验
+
+</div>
+
+<div class=rdiv>
+
+#### 安装方式
+```bash
+# 初始化配置
+npx shadcn-ui@latest init
+
+# 安装需要的组件
+npx shadcn-ui@latest add button
+npx shadcn-ui@latest add dialog
+npx shadcn-ui@latest add dropdown-menu
+```
+
+> 💡 不同于传统组件库，shadcn UI 是直接将组件代码复制到你的项目中
+
+</div>
+
+## 8.2 常用组件展示
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### 基础组件
+- Button：按钮
+- Input：输入框
+- Select：选择器
+- Dialog：对话框
+- Tabs：标签页
+
+#### 数据展示
+- Table：表格
+- Card：卡片
+- Calendar：日历
+- Avatar：头像
+- Badge：徽章
+
+</div>
+
+<div class=rdiv>
+
+#### 布局组件
+- Sheet：侧边栏
+- Drawer：抽屉
+- Popover：弹出框
+- Toast：提示框
+
+#### 特色功能
+- 暗黑模式支持
+- 动画过渡效果
+- 无障碍访问
+- 主题定制系统
+
+</div>
+
+## 8.3 实战应用
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### 主题定制
+```typescript
+// globals.css
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    /* ... 其他变量 */
+  }
+}
+```
+
+#### 组件使用
+```typescript
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+
+export function SearchBar() {
+  return (
+    <div className="flex gap-2">
+      <Input placeholder="搜索..." />
+      <Button>搜索</Button>
+    </div>
+  )
+}
+```
+
+</div>
+
+<div class=rdiv>
+
+#### 与 T3 集成
+```typescript
+// 表单验证结合
+import { Form } from "@/components/ui/form"
+import { zodResolver } from "@hookform/resolvers/zod"
+
+export function LoginForm() {
+  const form = useForm({
+    resolver: zodResolver(loginSchema),
+  })
+
+  return (
+    <Form {...form}>
+      <FormField
+        control={form.control}
+        name="email"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>邮箱</FormLabel>
+            <FormControl>
+              <Input {...field} />
+            </FormControl>
+          </FormItem>
+        )}
+      />
+    </Form>
+  )
+}
+```
+
+> 💡 提示：Shadcn UI + Tailwind + React Hook Form 
+> 是构建现代化表单的完美组合
+
+</div>
