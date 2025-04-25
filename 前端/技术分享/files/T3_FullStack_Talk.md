@@ -15,7 +15,7 @@ footer: \ *cycleccc* *ts 全栈最佳实践* *2025年2月28日*
 
 # T3 Fullstack 技术分享
 
-###### "全栈の奥义：用Next.js在老板眼皮底下摸鱼🐟"
+###### "全栈开发新范式：Next.js 引领的高效开发实践"
 
 @cycleccc
 全网账号：cycleccc
@@ -324,7 +324,7 @@ export async function getStaticProps() {
 <!-- _footer: "" -->
 <!-- _paginate: "" -->
 
-## 3.1 TRPC 原理与使用
+## 3.1 TRPC 使用
 
 <!-- _class: cols-2 -->  
 <div class=ldiv>
@@ -384,6 +384,76 @@ function ProductivityButton() {
 ## 3.2 TRPC 使用预览
 ![test](./trpc.gif)
 
+## 3.3 tRPC 原理介绍
+
+<!-- _class: cols-2 -->
+
+<div class=ldiv>
+
+#### 核心概念
+- **类型安全**：基于 TypeScript 的类型系统
+- **零运行时开销**：编译时类型检查
+- **端到端类型安全**：前后端共享类型定义
+- **自动类型推导**：无需手动定义类型
+
+#### 工作原理
+1. 定义 Router 和 Procedure
+2. 生成类型定义
+3. 客户端自动生成调用代码
+4. 运行时类型检查
+
+</div>
+
+<div class=rdiv>
+
+#### 架构设计
+```typescript
+// 1. 定义 Router
+const appRouter = router({
+  user: router({
+    getById: procedure
+      .input(z.number())
+      .query(({ input }) => {
+        return db.user.findUnique({ where: { id: input } })
+      })
+  })
+})
+
+// 2. 生成类型
+type AppRouter = typeof appRouter
+
+// 3. 客户端使用
+const { data } = trpc.user.getById.useQuery(1)
+```
+
+> 💡 提示：tRPC 通过 TypeScript 的泛型和类型推导，实现了端到端的类型安全
+
+</div>
+
+
+
+#### Zod 解决方案
+- 运行时类型验证
+- 自动类型推导
+- 丰富的验证规则
+- 优雅的错误处理
+
+~~~typescript
+const UserSchema = z.object({
+  age: z.number().min(0).max(120),
+  email: z.string().email(),
+});
+
+function processUser(input: unknown) {
+  // 安全！验证失败会抛出详细错误
+  const user = UserSchema.parse(input);
+  return user.age * 2;
+}
+~~~
+
+</div>
+
+
 
 ## 4. Zod：运行时类型验证利器
 
@@ -419,27 +489,6 @@ function processUser(input: UserInput) {
 </div>
 
 <div class=rdiv>
-
-#### Zod 解决方案
-- 运行时类型验证
-- 自动类型推导
-- 丰富的验证规则
-- 优雅的错误处理
-
-~~~typescript
-const UserSchema = z.object({
-  age: z.number().min(0).max(120),
-  email: z.string().email(),
-});
-
-function processUser(input: unknown) {
-  // 安全！验证失败会抛出详细错误
-  const user = UserSchema.parse(input);
-  return user.age * 2;
-}
-~~~
-
-</div>
 
 ## 4.2 Zod + tRPC 完美配合
 
