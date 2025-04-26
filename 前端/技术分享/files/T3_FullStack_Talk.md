@@ -384,6 +384,7 @@ function ProductivityButton() {
 ## 3.2 TRPC 使用预览
 ![test](./trpc.gif)
 
+
 ## 3.3 tRPC 原理介绍
 
 <!-- _class: cols-2 -->
@@ -432,29 +433,6 @@ const { data } = trpc.user.getById.useQuery(1)
 
 
 
-#### Zod 解决方案
-- 运行时类型验证
-- 自动类型推导
-- 丰富的验证规则
-- 优雅的错误处理
-
-~~~typescript
-const UserSchema = z.object({
-  age: z.number().min(0).max(120),
-  email: z.string().email(),
-});
-
-function processUser(input: unknown) {
-  // 安全！验证失败会抛出详细错误
-  const user = UserSchema.parse(input);
-  return user.age * 2;
-}
-~~~
-
-</div>
-
-
-
 ## 4. Zod：运行时类型验证利器
 
 <!-- _class: trans -->
@@ -489,6 +467,27 @@ function processUser(input: UserInput) {
 </div>
 
 <div class=rdiv>
+
+#### Zod 解决方案
+- 运行时类型验证
+- 自动类型推导
+- 丰富的验证规则
+- 优雅的错误处理
+
+~~~typescript
+const UserSchema = z.object({
+  age: z.number().min(0).max(120),
+  email: z.string().email(),
+});
+
+function processUser(input: unknown) {
+  // 安全！验证失败会抛出详细错误
+  const user = UserSchema.parse(input);
+  return user.age * 2;
+}
+~~~
+
+</div>
 
 ## 4.2 Zod + tRPC 完美配合
 
