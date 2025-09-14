@@ -1,156 +1,218 @@
 ---
-theme: seriph
-background: https://source.unsplash.com/1920x1080/?technology,code
-title: 企业级全栈技术栈分享
-info: |
-  ## 企业级全栈技术栈分享
-  
-  从 T3 Stack 到企业级解决方案的演进
-
-  基于 Turbo Monorepo + Next.js + Nest.js + ts-rest + Zod + Biome
-class: text-center
-drawings:
-  persist: false
-transition: slide-left
-mdc: true
----
-
-# 企业级全栈技术栈分享
-
-从 T3 Stack 到企业级解决方案的演进
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    开始探索 <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="在编辑器中打开" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/cycleccc" target="_blank" alt="GitHub" title="在 GitHub 上查看"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
-
----
+highlighter: shiki
+css: unocss
+colorSchema: dark
 transition: fade-out
+mdc: true
+layout: center
+glowSeed: 4
+title: 企业级全栈技术栈分享
+exportFilename: 企业级全栈技术栈分享-slidev-exported
+monaco: true
 ---
 
-# 目录
+<div class="text-5xl font-bold gradient-text mb-8">
+企业级全栈技术栈分享
+</div>
 
-<Toc maxDepth="1"></Toc>
+<div class="text-xl opacity-80 mb-12">
+从 T3 Stack 到企业级解决方案的演进
+</div>
 
----
-layout: image-right
-image: https://source.unsplash.com/800x600/?monorepo,architecture
----
+<div class="grid grid-cols-4 gap-6 max-w-4xl mx-auto">
+  <div v-click class="tech-card text-center float-animation">
+    <div class="text-4xl mb-3">🏗️</div>
+    <div class="font-mono text-sm">Turbo</div>
+  </div>
+  <div v-click class="tech-card text-center float-animation" style="animation-delay: 0.2s">
+    <div class="text-4xl mb-3">⚡</div>
+    <div class="font-mono text-sm">Next + Nest</div>
+  </div>
+  <div v-click class="tech-card text-center float-animation" style="animation-delay: 0.4s">
+    <div class="text-4xl mb-3">🔗</div>
+    <div class="font-mono text-sm">ts-rest</div>
+  </div>
+  <div v-click class="tech-card text-center float-animation" style="animation-delay: 0.6s">
+    <div class="text-4xl mb-3">🛠️</div>
+    <div class="font-mono text-sm">Biome</div>
+  </div>
+</div>
 
-# 为什么需要技术栈升级？
-
-从个人项目到企业级应用的挑战
-
-<v-clicks>
-
-- 🏢 **项目规模扩大**
-  - 多团队协作
-  - 代码库管理复杂度增加
-  - 构建和部署流程优化需求
-
-- 🔧 **技术债务积累**
-  - 类型安全性要求提高
-  - 代码质量标准化
-  - 性能优化需求
-
-- 🚀 **业务需求变化**
-  - 微服务架构支持
-  - 更强的可扩展性
-  - 更好的开发者体验
-
-</v-clicks>
+<div class="abs-br m-6 flex gap-2 opacity-60">
+  <div class="text-sm">cycleccc</div>
+  <div class="text-sm">•</div>
+  <div class="text-sm">2025</div>
+</div>
 
 ---
 layout: center
-class: text-center
 ---
 
-# 新技术栈概览
+# 今天我们聊什么？
 
-<div class="grid grid-cols-3 gap-8 mt-8">
-
-<div class="bg-blue-500/10 p-6 rounded-lg">
-  <div class="text-4xl mb-4">🏗️</div>
-  <h3>构建工具</h3>
-  <p>Turbo Monorepo</p>
-</div>
-
-<div class="bg-green-500/10 p-6 rounded-lg">
-  <div class="text-4xl mb-4">🌐</div>
-  <h3>前端框架</h3>
-  <p>Next.js</p>
-</div>
-
-<div class="bg-red-500/10 p-6 rounded-lg">
-  <div class="text-4xl mb-4">⚡</div>
-  <h3>后端框架</h3>
-  <p>Nest.js</p>
-</div>
-
-<div class="bg-purple-500/10 p-6 rounded-lg">
-  <div class="text-4xl mb-4">🔗</div>
-  <h3>API 层</h3>
-  <p>ts-rest</p>
-</div>
-
-<div class="bg-yellow-500/10 p-6 rounded-lg">
-  <div class="text-4xl mb-4">✅</div>
-  <h3>数据验证</h3>
-  <p>Zod</p>
-</div>
-
-<div class="bg-indigo-500/10 p-6 rounded-lg">
-  <div class="text-4xl mb-4">🛠️</div>
-  <h3>代码质量</h3>
-  <p>Biome</p>
-</div>
-
+<div class="grid grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
+  <div v-click class="glass p-6 rounded-2xl">
+    <div class="text-3xl mb-4">🤔</div>
+    <div class="text-lg font-semibold mb-2">为什么要升级？</div>
+    <div class="text-sm opacity-70">从个人项目到企业级的挑战</div>
+  </div>
+  
+  <div v-click class="glass p-6 rounded-2xl">
+    <div class="text-3xl mb-4">🚀</div>
+    <div class="text-lg font-semibold mb-2">新技术栈</div>
+    <div class="text-sm opacity-70">Turbo + Next + Nest + ts-rest</div>
+  </div>
+  
+  <div v-click class="glass p-6 rounded-2xl">
+    <div class="text-3xl mb-4">📊</div>
+    <div class="text-lg font-semibold mb-2">真实案例</div>
+    <div class="text-sm opacity-70">wangEditor-next 项目实践</div>
+  </div>
+  
+  <div v-click class="glass p-6 rounded-2xl">
+    <div class="text-3xl mb-4">⚡</div>
+    <div class="text-lg font-semibold mb-2">性能提升</div>
+    <div class="text-sm opacity-70">65%+ 构建时间减少</div>
+  </div>
 </div>
 
 ---
-layout: two-cols
-layoutClass: gap-16
+layout: center
+---
+
+# 为什么要升级技术栈？
+
+<div class="grid grid-cols-3 gap-8 max-w-5xl mx-auto mt-16">
+  <div v-click class="text-center">
+    <div class="text-6xl mb-6">📈</div>
+    <div class="text-xl font-semibold mb-4 gradient-text">规模增长</div>
+    <div class="text-sm opacity-70 leading-relaxed">
+      从个人项目到多团队协作<br/>
+      代码库管理复杂度激增<br/>
+      构建部署流程需要优化
+    </div>
+  </div>
+  
+  <div v-click class="text-center">
+    <div class="text-6xl mb-6">🛡️</div>
+    <div class="text-xl font-semibold mb-4 gradient-text">质量要求</div>
+    <div class="text-sm opacity-70 leading-relaxed">
+      类型安全性要求提高<br/>
+      代码质量标准化<br/>
+      减少生产环境 bug
+    </div>
+  </div>
+  
+  <div v-click class="text-center">
+    <div class="text-6xl mb-6">⚡</div>
+    <div class="text-xl font-semibold mb-4 gradient-text">性能需求</div>
+    <div class="text-sm opacity-70 leading-relaxed">
+      微服务架构支持<br/>
+      更强的可扩展性<br/>
+      更好的开发者体验
+    </div>
+  </div>
+</div>
+
+<div v-click class="text-center mt-16">
+  <div class="text-lg opacity-80">
+    T3 Stack 很好，但我们需要<span class="gradient-text font-semibold">更强大的解决方案</span>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+# 我们的技术栈
+
+<div class="grid grid-cols-2 gap-12 max-w-4xl mx-auto mt-16">
+  <div v-click class="glass p-8 rounded-3xl glow-animation">
+    <div class="text-5xl mb-6 text-center">🏗️</div>
+    <div class="text-2xl font-bold mb-4 text-center gradient-text">Turbo Monorepo</div>
+    <div class="text-center opacity-80">
+      高性能构建系统<br/>
+      <code class="text-sm">65%+ 构建时间减少</code>
+    </div>
+  </div>
+  
+  <div v-click class="glass p-8 rounded-3xl">
+    <div class="text-5xl mb-6 text-center">⚡</div>
+    <div class="text-2xl font-bold mb-4 text-center gradient-text">Next.js + Nest.js</div>
+    <div class="text-center opacity-80">
+      全栈 TypeScript<br/>
+      <code class="text-sm">统一的开发体验</code>
+    </div>
+  </div>
+  
+  <div v-click class="glass p-8 rounded-3xl">
+    <div class="text-5xl mb-6 text-center">🔗</div>
+    <div class="text-2xl font-bold mb-4 text-center gradient-text">ts-rest + Zod</div>
+    <div class="text-center opacity-80">
+      端到端类型安全<br/>
+      <code class="text-sm">90%+ 编译时错误发现</code>
+    </div>
+  </div>
+  
+  <div v-click class="glass p-8 rounded-3xl">
+    <div class="text-5xl mb-6 text-center">🛠️</div>
+    <div class="text-2xl font-bold mb-4 text-center gradient-text">Biome</div>
+    <div class="text-center opacity-80">
+      现代化工具链<br/>
+      <code class="text-sm">50ms 格式化速度</code>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
 ---
 
 # Turbo Monorepo
-高性能的 Monorepo 构建系统
 
-<v-clicks>
+<div class="text-xl opacity-80 mb-16">高性能的 Monorepo 构建系统</div>
 
-## 核心优势
+<div class="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
+  <div v-click class="text-center">
+    <div class="text-5xl mb-6">🚀</div>
+    <div class="text-lg font-semibold mb-3 gradient-text">极速构建</div>
+    <div class="text-sm opacity-70">
+      智能任务调度<br/>
+      分布式缓存<br/>
+      增量构建
+    </div>
+  </div>
+  
+  <div v-click class="text-center">
+    <div class="text-5xl mb-6">📦</div>
+    <div class="text-lg font-semibold mb-3 gradient-text">包管理</div>
+    <div class="text-sm opacity-70">
+      共享依赖<br/>
+      版本统一管理<br/>
+      跨包类型共享
+    </div>
+  </div>
+  
+  <div v-click class="text-center">
+    <div class="text-5xl mb-6">🔄</div>
+    <div class="text-lg font-semibold mb-3 gradient-text">任务编排</div>
+    <div class="text-sm opacity-70">
+      依赖图构建<br/>
+      并行执行<br/>
+      失败快速反馈
+    </div>
+  </div>
+</div>
 
-- **🚀 极速构建**
-  - 智能任务调度
-  - 分布式缓存
-  - 增量构建
+---
+layout: center
+---
 
-- **📦 包管理优化**
-  - 共享依赖
-  - 版本统一管理
-  - 跨包类型共享
+# Turbo 配置示例
 
-- **🔄 任务编排**
-  - 依赖图构建
-  - 并行执行
-  - 失败快速反馈
+<div class="max-w-2xl mx-auto">
 
-</v-clicks>
-
-::right::
-
-```json
-// turbo.json
+```json {all|3-6|7-10|11-16|all}
 {
   "pipeline": {
     "build": {
@@ -161,9 +223,6 @@ layoutClass: gap-16
       "dependsOn": ["build"],
       "inputs": ["src/**/*.tsx", "src/**/*.ts"]
     },
-    "lint": {
-      "outputs": []
-    },
     "dev": {
       "cache": false,
       "persistent": true
@@ -172,74 +231,123 @@ layoutClass: gap-16
 }
 ```
 
-<v-click>
+</div>
+
+<div v-click class="mt-12 text-center">
 
 ```bash
-# 构建所有包
-turbo run build
-
-# 并行运行测试
-turbo run test --parallel
-
-# 只构建变更的包
 turbo run build --filter=...@main
 ```
 
-</v-click>
-
----
-layout: two-cols
-layoutClass: gap-16
----
-
-# 实际案例：wangEditor-next
-
-基于 Slate.js 的富文本编辑器项目
-
-<v-clicks>
-
-## 项目挑战
-
-- **多包架构复杂**
-  - 核心编辑器包
-  - Vue2/Vue3 适配器
-  - React 适配器
-  - 插件生态系统
-
-- **构建效率问题**
-  - 全量构建耗时长
-  - 依赖关系复杂
-  - 开发环境启动慢
-
-- **维护成本高**
-  - 版本同步困难
-  - 发布流程繁琐
-  - 代码重复率高
-
-</v-clicks>
-
-::right::
-
-## Turbo 优化效果
-
-<div class="space-y-4">
-
-**构建性能提升**
-- 全量构建：5分12秒 → 1分48秒 (**65.4%** ⬇️)
-- 增量构建：3分45秒 → 42秒 (**81.3%** ⬇️)
-
-**依赖管理优化**
-- node_modules：1.2GB → 450MB (**62.5%** ⬇️)
-- 安装时间：3分钟 → 45秒 (**75%** ⬇️)
-
-**开发体验提升**
-- 启动时间减少 **68%**
-- 代码共享率提高 **45%**
-- 多项目联调效率提高 **80%**
+<div class="text-sm opacity-70 mt-2">只构建变更的包，智能缓存其余部分</div>
 
 </div>
 
+---
+layout: center
+---
+
+# 真实案例：wangEditor-next
+
+<div class="text-lg opacity-80 mb-12">基于 Slate.js 的富文本编辑器项目</div>
+
+<div class="grid grid-cols-2 gap-16 max-w-5xl mx-auto">
+  <div>
+    <div class="text-2xl font-semibold mb-8 gradient-text">挑战</div>
+    <div class="space-y-4">
+      <div v-click class="flex items-center gap-4">
+        <div class="text-2xl">🏗️</div>
+        <div>
+          <div class="font-semibold">多包架构复杂</div>
+          <div class="text-sm opacity-70">Vue2/Vue3/React 适配器</div>
+        </div>
+      </div>
+      <div v-click class="flex items-center gap-4">
+        <div class="text-2xl">⚡</div>
+        <div>
+          <div class="font-semibold">构建效率低下</div>
+          <div class="text-sm opacity-70">全量构建 5分12秒</div>
+        </div>
+      </div>
+      <div v-click class="flex items-center gap-4">
+        <div class="text-2xl">💰</div>
+        <div>
+          <div class="font-semibold">维护成本高</div>
+          <div class="text-sm opacity-70">版本同步困难</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="text-2xl font-semibold mb-8 gradient-text">解决方案</div>
+    <div class="space-y-4">
+      <div v-click class="flex items-center gap-4">
+        <div class="text-2xl">✅</div>
+        <div>
+          <div class="font-semibold">Turbo Monorepo</div>
+          <div class="text-sm opacity-70">构建时间减少 65.4%</div>
+        </div>
+      </div>
+      <div v-click class="flex items-center gap-4">
+        <div class="text-2xl">✅</div>
+        <div>
+          <div class="font-semibold">智能缓存</div>
+          <div class="text-sm opacity-70">增量构建 81.3% 提升</div>
+        </div>
+      </div>
+      <div v-click class="flex items-center gap-4">
+        <div class="text-2xl">✅</div>
+        <div>
+          <div class="font-semibold">统一工具链</div>
+          <div class="text-sm opacity-70">开发体验大幅提升</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+layout: center
+---
+
+# 性能提升数据
+
+<div class="grid grid-cols-2 gap-12 max-w-4xl mx-auto mt-16">
+  <div v-click class="glass p-8 rounded-2xl text-center">
+    <div class="text-6xl mb-4 gradient-text font-bold">65.4%</div>
+    <div class="text-lg font-semibold mb-2">构建时间减少</div>
+    <div class="text-sm opacity-70">5分12秒 → 1分48秒</div>
+  </div>
+  
+  <div v-click class="glass p-8 rounded-2xl text-center">
+    <div class="text-6xl mb-4 gradient-text font-bold">81.3%</div>
+    <div class="text-lg font-semibold mb-2">增量构建提升</div>
+    <div class="text-sm opacity-70">3分45秒 → 42秒</div>
+  </div>
+  
+  <div v-click class="glass p-8 rounded-2xl text-center">
+    <div class="text-6xl mb-4 gradient-text font-bold">68%</div>
+    <div class="text-lg font-semibold mb-2">启动时间减少</div>
+    <div class="text-sm opacity-70">开发体验大幅提升</div>
+  </div>
+  
+  <div v-click class="glass p-8 rounded-2xl text-center">
+    <div class="text-6xl mb-4 gradient-text font-bold">90%+</div>
+    <div class="text-lg font-semibold mb-2">编译时错误发现</div>
+    <div class="text-sm opacity-70">类型安全保障</div>
+  </div>
+</div>
+
+<div v-click class="text-center mt-16">
+  <div class="text-lg opacity-80">
+    数据来源：<code class="text-sm">wangEditor-next</code> 项目实际测试
+  </div>
+</div>
+
 <v-click>
+
+<div class="project-structure">
 
 ```
 wangEditor-next/
@@ -249,11 +357,28 @@ wangEditor-next/
 │   ├── editor-for-vue2/     # Vue2 适配器
 │   ├── editor-for-react/    # React 适配器
 │   └── plugins/             # 插件包
-├── turbo.json
-└── pnpm-workspace.yaml
+├── turbo.json               # Turbo 配置
+└── pnpm-workspace.yaml      # 工作区配置
 ```
 
+</div>
+
 </v-click>
+
+<style>
+.project-structure {
+  @apply p-4 rounded-lg bg-gray-900 text-green-400 text-sm;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.1);
+  font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+}
+
+.project-structure pre {
+  @apply m-0;
+  color: #22c55e;
+}
+</style>
 
 ---
 layout: two-cols
@@ -617,37 +742,64 @@ biome check --apply .
 
 ---
 layout: center
-class: text-center
 ---
 
-# 与 T3 Stack 的对比
+# T3 Stack vs 企业级技术栈
 
-<div class="grid grid-cols-2 gap-8 mt-8">
-
-<div class="bg-blue-500/10 p-6 rounded-lg">
-  <h3 class="text-xl mb-4">T3 Stack (个人/小型项目)</h3>
-  <ul class="text-left space-y-2">
-    <li>✅ Next.js + tRPC + Prisma</li>
-    <li>✅ 快速原型开发</li>
-    <li>✅ 学习曲线平缓</li>
-    <li>✅ 社区活跃</li>
-    <li>❌ 单体架构限制</li>
-    <li>❌ 大型项目扩展性</li>
-  </ul>
-</div>
-
-<div class="bg-green-500/10 p-6 rounded-lg">
-  <h3 class="text-xl mb-4">新技术栈 (企业级项目)</h3>
-  <ul class="text-left space-y-2">
-    <li>✅ Monorepo 架构</li>
-    <li>✅ 微服务支持</li>
-    <li>✅ 企业级工具链</li>
-    <li>✅ 更强的类型安全</li>
-    <li>✅ 更好的性能</li>
-    <li>❌ 学习成本较高</li>
-  </ul>
-</div>
-
+<div class="grid grid-cols-2 gap-16 max-w-5xl mx-auto mt-16">
+  <div class="glass p-8 rounded-2xl">
+    <div class="text-center mb-8">
+      <div class="text-4xl mb-4">🎯</div>
+      <div class="text-2xl font-bold gradient-text">T3 Stack</div>
+      <div class="text-sm opacity-70">个人/小型项目</div>
+    </div>
+    
+    <div class="space-y-3">
+      <div v-click class="flex items-center gap-3">
+        <span class="text-green-500">✅</span>
+        <span class="text-sm">快速原型开发</span>
+      </div>
+      <div v-click class="flex items-center gap-3">
+        <span class="text-green-500">✅</span>
+        <span class="text-sm">学习曲线平缓</span>
+      </div>
+      <div v-click class="flex items-center gap-3">
+        <span class="text-red-500">❌</span>
+        <span class="text-sm">单体架构限制</span>
+      </div>
+      <div v-click class="flex items-center gap-3">
+        <span class="text-red-500">❌</span>
+        <span class="text-sm">大型项目扩展性</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="glass p-8 rounded-2xl glow-animation">
+    <div class="text-center mb-8">
+      <div class="text-4xl mb-4">🏢</div>
+      <div class="text-2xl font-bold gradient-text">企业级技术栈</div>
+      <div class="text-sm opacity-70">大型企业项目</div>
+    </div>
+    
+    <div class="space-y-3">
+      <div v-click class="flex items-center gap-3">
+        <span class="text-green-500">✅</span>
+        <span class="text-sm">Monorepo 架构</span>
+      </div>
+      <div v-click class="flex items-center gap-3">
+        <span class="text-green-500">✅</span>
+        <span class="text-sm">微服务支持</span>
+      </div>
+      <div v-click class="flex items-center gap-3">
+        <span class="text-green-500">✅</span>
+        <span class="text-sm">更强的类型安全</span>
+      </div>
+      <div v-click class="flex items-center gap-3">
+        <span class="text-green-500">✅</span>
+        <span class="text-sm">企业级工具链</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 ---
@@ -847,7 +999,7 @@ class: text-center
   <h4 class="font-bold mb-2">阶段一</h4>
   <p class="text-sm">引入 Biome</p>
   <p class="text-sm">统一代码风格</p>
-</div>
+  </div>
 
 <div class="bg-green-500/10 p-4 rounded-lg">
   <h4 class="font-bold mb-2">阶段二</h4>
@@ -883,83 +1035,72 @@ class: text-center
 
 ---
 layout: center
-class: text-center
 ---
 
 # 总结
 
-<div class="text-left max-w-4xl mx-auto space-y-6">
+<div class="max-w-4xl mx-auto mt-16">
+  <div class="text-center mb-16">
+    <div v-click class="text-2xl gradient-text font-semibold mb-8">
+      从 T3 Stack 到企业级解决方案的演进
+    </div>
+    <div v-click class="text-lg opacity-80">
+      不是替代，而是<span class="gradient-text font-semibold">升级</span>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-2 gap-12">
+    <div v-click class="glass p-6 rounded-2xl">
+      <div class="text-xl font-semibold mb-4 gradient-text">核心收益</div>
+      <div class="space-y-2 text-sm">
+        <div>• 构建时间减少 <strong>65.4%</strong></div>
+        <div>• 增量构建提升 <strong>81.3%</strong></div>
+        <div>• 类型安全保障 <strong>90%+</strong></div>
+        <div>• 开发体验大幅提升</div>
+      </div>
+    </div>
+    
+    <div v-click class="glass p-6 rounded-2xl">
+      <div class="text-xl font-semibold mb-4 gradient-text">适用场景</div>
+      <div class="space-y-2 text-sm">
+        <div>• 大型企业项目</div>
+        <div>• 多团队协作开发</div>
+        <div>• 高性能要求应用</div>
+        <div>• 长期维护系统</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<v-clicks>
-
-## 🎯 技术栈选择的核心原则
-
-- **可扩展性**：支持团队和项目规模的增长
-- **类型安全**：减少运行时错误，提高代码质量
-- **开发效率**：工具链优化，提升开发体验
-- **维护性**：清晰的架构，便于长期维护
-
-## 🚀 适用场景
-
-- 大型企业项目
-- 多团队协作开发
-- 高性能要求的应用
-- 需要长期维护的系统
-
-## 💡 关键收益（基于 wangEditor-next 实测）
-
-- **65.4% 构建时间减少**（Turbo Monorepo）
-- **81.3% 增量构建提升**（智能缓存）
-- **90%+ 类型错误编译时发现**（ts-rest + Zod）
-- **68% 启动时间减少**（开发体验优化）
-- **统一的代码风格**（Biome）
-
-</v-clicks>
-
+<div v-click class="text-center mt-16">
+  <div class="text-lg opacity-80">
+    选择合适的技术栈，让<span class="gradient-text font-semibold">开发更高效</span>
+  </div>
 </div>
 
 ---
 layout: center
-class: text-center
 ---
 
-# 谢谢大家！
-
-<div class="pt-12">
-  <span class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+<div class="text-center">
+  <div class="text-6xl mb-8 gradient-text font-bold">
+    谢谢大家！
+  </div>
+  
+  <div v-click class="text-2xl opacity-80 mb-12">
     Questions & Discussion 🤔
-  </span>
+  </div>
+  
+  <div v-click class="flex items-center justify-center gap-8 text-sm opacity-60">
+    <div class="flex items-center gap-2">
+      <div>GitHub:</div>
+      <code>cycleccc</code>
+    </div>
+    <div>•</div>
+    <div class="flex items-center gap-2">
+      <div>PPT:</div>
+      <code>github.com/cycleccc/notes</code>
+    </div>
+  </div>
 </div>
 
-<div class="abs-br m-6 flex gap-2">
-  <a href="https://github.com/cycleccc" target="_blank" alt="GitHub" title="GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
-
----
-
-# 附录：相关资源
-
-## 📚 学习资源
-
-- [Turbo 官方文档](https://turbo.build/)
-- [Next.js 官方文档](https://nextjs.org/)
-- [Nest.js 官方文档](https://nestjs.com/)
-- [ts-rest 文档](https://ts-rest.com/)
-- [Zod 文档](https://zod.dev/)
-- [Biome 文档](https://biomejs.dev/)
-
-## 🛠️ 工具和模板
-
-- [create-turbo](https://github.com/vercel/turbo/tree/main/packages/create-turbo)
-- [Nest.js CLI](https://docs.nestjs.com/cli/overview)
-- [Next.js 模板](https://github.com/vercel/next.js/tree/canary/examples)
-- [wangEditor-next](https://github.com/wangeditor-next/wangEditor-next) - Turbo Monorepo 实际案例
-
-## 📜 最佳实践
-
-- [Monorepo 最佳实践](https://monorepo.tools/)
-- [TypeScript 最佳实践](https://typescript-eslint.io/rules/)
-- [API 设计指南](https://restfulapi.net/)
