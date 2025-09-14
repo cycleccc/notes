@@ -1,0 +1,965 @@
+---
+theme: seriph
+background: https://source.unsplash.com/1920x1080/?technology,code
+title: 企业级全栈技术栈分享
+info: |
+  ## 企业级全栈技术栈分享
+  
+  从 T3 Stack 到企业级解决方案的演进
+
+  基于 Turbo Monorepo + Next.js + Nest.js + ts-rest + Zod + Biome
+class: text-center
+drawings:
+  persist: false
+transition: slide-left
+mdc: true
+---
+
+# 企业级全栈技术栈分享
+
+从 T3 Stack 到企业级解决方案的演进
+
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    开始探索 <carbon:arrow-right class="inline"/>
+  </span>
+</div>
+
+<div class="abs-br m-6 flex gap-2">
+  <button @click="$slidev.nav.openInEditor()" title="在编辑器中打开" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon:edit />
+  </button>
+  <a href="https://github.com/cycleccc" target="_blank" alt="GitHub" title="在 GitHub 上查看"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
+  </a>
+</div>
+
+---
+transition: fade-out
+---
+
+# 目录
+
+<Toc maxDepth="1"></Toc>
+
+---
+layout: image-right
+image: https://source.unsplash.com/800x600/?monorepo,architecture
+---
+
+# 为什么需要技术栈升级？
+
+从个人项目到企业级应用的挑战
+
+<v-clicks>
+
+- 🏢 **项目规模扩大**
+  - 多团队协作
+  - 代码库管理复杂度增加
+  - 构建和部署流程优化需求
+
+- 🔧 **技术债务积累**
+  - 类型安全性要求提高
+  - 代码质量标准化
+  - 性能优化需求
+
+- 🚀 **业务需求变化**
+  - 微服务架构支持
+  - 更强的可扩展性
+  - 更好的开发者体验
+
+</v-clicks>
+
+---
+layout: center
+class: text-center
+---
+
+# 新技术栈概览
+
+<div class="grid grid-cols-3 gap-8 mt-8">
+
+<div class="bg-blue-500/10 p-6 rounded-lg">
+  <div class="text-4xl mb-4">🏗️</div>
+  <h3>构建工具</h3>
+  <p>Turbo Monorepo</p>
+</div>
+
+<div class="bg-green-500/10 p-6 rounded-lg">
+  <div class="text-4xl mb-4">🌐</div>
+  <h3>前端框架</h3>
+  <p>Next.js</p>
+</div>
+
+<div class="bg-red-500/10 p-6 rounded-lg">
+  <div class="text-4xl mb-4">⚡</div>
+  <h3>后端框架</h3>
+  <p>Nest.js</p>
+</div>
+
+<div class="bg-purple-500/10 p-6 rounded-lg">
+  <div class="text-4xl mb-4">🔗</div>
+  <h3>API 层</h3>
+  <p>ts-rest</p>
+</div>
+
+<div class="bg-yellow-500/10 p-6 rounded-lg">
+  <div class="text-4xl mb-4">✅</div>
+  <h3>数据验证</h3>
+  <p>Zod</p>
+</div>
+
+<div class="bg-indigo-500/10 p-6 rounded-lg">
+  <div class="text-4xl mb-4">🛠️</div>
+  <h3>代码质量</h3>
+  <p>Biome</p>
+</div>
+
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# Turbo Monorepo
+高性能的 Monorepo 构建系统
+
+<v-clicks>
+
+## 核心优势
+
+- **🚀 极速构建**
+  - 智能任务调度
+  - 分布式缓存
+  - 增量构建
+
+- **📦 包管理优化**
+  - 共享依赖
+  - 版本统一管理
+  - 跨包类型共享
+
+- **🔄 任务编排**
+  - 依赖图构建
+  - 并行执行
+  - 失败快速反馈
+
+</v-clicks>
+
+::right::
+
+```json
+// turbo.json
+{
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "inputs": ["src/**/*.tsx", "src/**/*.ts"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}
+```
+
+<v-click>
+
+```bash
+# 构建所有包
+turbo run build
+
+# 并行运行测试
+turbo run test --parallel
+
+# 只构建变更的包
+turbo run build --filter=...@main
+```
+
+</v-click>
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# 实际案例：wangEditor-next
+
+基于 Slate.js 的富文本编辑器项目
+
+<v-clicks>
+
+## 项目挑战
+
+- **多包架构复杂**
+  - 核心编辑器包
+  - Vue2/Vue3 适配器
+  - React 适配器
+  - 插件生态系统
+
+- **构建效率问题**
+  - 全量构建耗时长
+  - 依赖关系复杂
+  - 开发环境启动慢
+
+- **维护成本高**
+  - 版本同步困难
+  - 发布流程繁琐
+  - 代码重复率高
+
+</v-clicks>
+
+::right::
+
+## Turbo 优化效果
+
+<div class="space-y-4">
+
+**构建性能提升**
+- 全量构建：5分12秒 → 1分48秒 (**65.4%** ⬇️)
+- 增量构建：3分45秒 → 42秒 (**81.3%** ⬇️)
+
+**依赖管理优化**
+- node_modules：1.2GB → 450MB (**62.5%** ⬇️)
+- 安装时间：3分钟 → 45秒 (**75%** ⬇️)
+
+**开发体验提升**
+- 启动时间减少 **68%**
+- 代码共享率提高 **45%**
+- 多项目联调效率提高 **80%**
+
+</div>
+
+<v-click>
+
+```
+wangEditor-next/
+├── packages/
+│   ├── editor/              # 核心编辑器
+│   ├── editor-for-vue/      # Vue 适配器
+│   ├── editor-for-vue2/     # Vue2 适配器
+│   ├── editor-for-react/    # React 适配器
+│   └── plugins/             # 插件包
+├── turbo.json
+└── pnpm-workspace.yaml
+```
+
+</v-click>
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# Next.js
+全栈 React 框架
+
+<v-clicks>
+
+## 企业级特性
+
+- **🎯 App Router**
+  - 文件系统路由
+  - 服务器组件
+  - 流式渲染
+
+- **⚡ 性能优化**
+  - 自动代码分割
+  - 图片优化
+  - 字体优化
+
+- **🔧 开发体验**
+  - 热重载
+  - TypeScript 支持
+  - 内置 API 路由
+
+</v-clicks>
+
+::right::
+
+```typescript
+// app/layout.tsx
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="zh">
+      <body>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
+    </html>
+  )
+}
+```
+
+<v-click>
+
+```typescript
+// app/api/users/route.ts
+import { NextRequest } from 'next/server'
+
+export async function GET(request: NextRequest) {
+  const users = await getUsersFromDB()
+  return Response.json(users)
+}
+
+export async function POST(request: NextRequest) {
+  const body = await request.json()
+  const user = await createUser(body)
+  return Response.json(user)
+}
+```
+
+</v-click>
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# Nest.js
+企业级 Node.js 框架
+
+<v-clicks>
+
+## 架构优势
+
+- **🏗️ 模块化设计**
+  - 依赖注入
+  - 装饰器模式
+  - 可测试性
+
+- **🔌 丰富生态**
+  - WebSocket 支持
+  - 微服务架构
+  - GraphQL 集成
+
+- **🛡️ 企业特性**
+  - 守卫和拦截器
+  - 管道验证
+  - 异常过滤器
+
+</v-clicks>
+
+::right::
+
+```typescript
+// user.controller.ts
+@Controller('users')
+export class UserController {
+  constructor(private userService: UserService) {}
+
+  @Get()
+  @UseGuards(AuthGuard)
+  async findAll(@Query() query: FindUsersDto) {
+    return this.userService.findAll(query)
+  }
+
+  @Post()
+  @UsePipes(ValidationPipe)
+  async create(@Body() createUserDto: CreateUserDto) {
+    return this.userService.create(createUserDto)
+  }
+}
+```
+
+<v-click>
+
+```typescript
+// user.service.ts
+@Injectable()
+export class UserService {
+  constructor(
+    @InjectRepository(User)
+    private userRepository: Repository<User>,
+  ) {}
+
+  async findAll(query: FindUsersDto): Promise<User[]> {
+    return this.userRepository.find({
+      where: query,
+      relations: ['profile']
+    })
+  }
+}
+```
+
+</v-click>
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# ts-rest
+端到端类型安全的 API
+
+<v-clicks>
+
+## 核心特性
+
+- **🔗 契约优先**
+  - 统一 API 定义
+  - 自动类型生成
+  - 运行时验证
+
+- **🎯 开发体验**
+  - 智能提示
+  - 编译时检查
+  - 自动补全
+
+- **🚀 性能优势**
+  - 零运行时开销
+  - 树摇优化
+  - 类型推导
+
+</v-clicks>
+
+::right::
+
+```typescript
+// contracts/user.contract.ts
+import { initContract } from '@ts-rest/core'
+import { z } from 'zod'
+
+const c = initContract()
+
+export const userContract = c.router({
+  getUser: {
+    method: 'GET',
+    path: '/users/:id',
+    responses: {
+      200: UserSchema,
+      404: z.object({ message: z.string() })
+    }
+  },
+  createUser: {
+    method: 'POST',
+    path: '/users',
+    body: CreateUserSchema,
+    responses: {
+      201: UserSchema
+    }
+  }
+})
+```
+
+<v-click>
+
+```typescript
+// 客户端使用
+const client = initClient(userContract, {
+  baseUrl: 'http://localhost:3000',
+})
+
+// 完全类型安全的调用
+const { status, body } = await client.getUser({
+  params: { id: '123' }
+})
+
+if (status === 200) {
+  console.log(body.name) // 类型安全！
+}
+```
+
+</v-click>
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# Zod
+运行时类型验证
+
+<v-clicks>
+
+## 强大功能
+
+- **✅ 数据验证**
+  - 运行时类型检查
+  - 自定义验证规则
+  - 错误信息定制
+
+- **🔄 类型推导**
+  - TypeScript 集成
+  - 自动类型生成
+  - 零重复定义
+
+- **🛠️ 生态集成**
+  - React Hook Form
+  - tRPC 兼容
+  - OpenAPI 生成
+
+</v-clicks>
+
+::right::
+
+```typescript
+// schemas/user.schema.ts
+import { z } from 'zod'
+
+export const CreateUserSchema = z.object({
+  name: z.string()
+    .min(2, '姓名至少2个字符')
+    .max(50, '姓名不能超过50个字符'),
+  email: z.string()
+    .email('请输入有效的邮箱地址'),
+  age: z.number()
+    .int('年龄必须是整数')
+    .min(0, '年龄不能为负数')
+    .max(120, '年龄不能超过120'),
+  role: z.enum(['user', 'admin', 'moderator'])
+    .default('user')
+})
+
+export type CreateUserDto = z.infer<typeof CreateUserSchema>
+```
+
+<v-click>
+
+```typescript
+// 在 Nest.js 中使用
+@Post()
+async createUser(@Body() body: unknown) {
+  // 运行时验证 + 类型安全
+  const userData = CreateUserSchema.parse(body)
+  return this.userService.create(userData)
+}
+```
+
+</v-click>
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# Biome
+现代化的工具链
+
+<v-clicks>
+
+## 统一工具
+
+- **🚀 极速性能**
+  - Rust 编写
+  - 并行处理
+  - 增量分析
+
+- **🔧 多功能集成**
+  - 代码格式化
+  - 静态分析
+  - 导入排序
+
+- **⚙️ 零配置**
+  - 开箱即用
+  - 智能默认值
+  - 渐进式采用
+
+</v-clicks>
+
+::right::
+
+```json
+// biome.json
+{
+  "$schema": "https://biomejs.dev/schemas/1.4.1/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noExtraBooleanCast": "error"
+      },
+      "style": {
+        "noNegationElse": "off"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  }
+}
+```
+
+<v-click>
+
+```bash
+# 格式化代码
+biome format --write .
+
+# 检查代码质量
+biome lint .
+
+# 修复可自动修复的问题
+biome check --apply .
+```
+
+</v-click>
+
+---
+layout: center
+class: text-center
+---
+
+# 与 T3 Stack 的对比
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+
+<div class="bg-blue-500/10 p-6 rounded-lg">
+  <h3 class="text-xl mb-4">T3 Stack (个人/小型项目)</h3>
+  <ul class="text-left space-y-2">
+    <li>✅ Next.js + tRPC + Prisma</li>
+    <li>✅ 快速原型开发</li>
+    <li>✅ 学习曲线平缓</li>
+    <li>✅ 社区活跃</li>
+    <li>❌ 单体架构限制</li>
+    <li>❌ 大型项目扩展性</li>
+  </ul>
+</div>
+
+<div class="bg-green-500/10 p-6 rounded-lg">
+  <h3 class="text-xl mb-4">新技术栈 (企业级项目)</h3>
+  <ul class="text-left space-y-2">
+    <li>✅ Monorepo 架构</li>
+    <li>✅ 微服务支持</li>
+    <li>✅ 企业级工具链</li>
+    <li>✅ 更强的类型安全</li>
+    <li>✅ 更好的性能</li>
+    <li>❌ 学习成本较高</li>
+  </ul>
+</div>
+
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# 技术选型对比
+
+## API 层对比
+
+<div class="space-y-4">
+
+**tRPC (T3 Stack)**
+- RPC 风格 API
+- 紧耦合前后端
+- 适合全栈 TypeScript 项目
+
+**ts-rest (新技术栈)**
+- RESTful API 设计
+- 契约优先开发
+- 更好的团队协作
+- 支持多语言客户端
+
+</div>
+
+::right::
+
+## 后端框架对比
+
+<div class="space-y-4">
+
+**Express/Fastify (传统)**
+- 轻量级
+- 灵活性高
+- 需要更多配置
+
+**Nest.js (企业级)**
+- 结构化架构
+- 内置最佳实践
+- 更好的可维护性
+- 企业级特性支持
+
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# 项目架构示例
+
+```
+my-enterprise-app/
+├── apps/
+│   ├── web/                 # Next.js 前端应用
+│   ├── api/                 # Nest.js 后端应用
+│   └── admin/               # 管理后台
+├── packages/
+│   ├── ui/                  # 共享 UI 组件
+│   ├── contracts/           # ts-rest API 契约
+│   ├── schemas/             # Zod 验证模式
+│   └── utils/               # 共享工具函数
+├── tools/
+│   └── biome-config/        # Biome 配置
+├── turbo.json
+└── package.json
+```
+
+::right::
+
+## 开发流程
+
+<v-clicks>
+
+1. **契约优先设计**
+   - 定义 API 契约
+   - 生成类型定义
+
+2. **并行开发**
+   - 前端基于契约开发
+   - 后端实现契约
+
+3. **类型安全保障**
+   - 编译时检查
+   - 运行时验证
+
+4. **代码质量控制**
+   - Biome 自动格式化
+   - 统一代码风格
+
+</v-clicks>
+
+---
+layout: center
+class: text-center
+---
+
+# 实际应用场景
+
+<div class="grid grid-cols-2 gap-8 mt-8">
+
+<div class="bg-purple-500/10 p-6 rounded-lg">
+  <div class="text-4xl mb-4">🏢</div>
+  <h3>企业管理系统</h3>
+  <p>多模块、多团队协作</p>
+  <p>复杂的权限管理</p>
+  <p>高并发处理需求</p>
+</div>
+
+<div class="bg-orange-500/10 p-6 rounded-lg">
+  <div class="text-4xl mb-4">🛒</div>
+  <h3>电商平台</h3>
+  <p>微服务架构</p>
+  <p>多端应用支持</p>
+  <p>高性能要求</p>
+</div>
+
+<div class="bg-teal-500/10 p-6 rounded-lg">
+  <div class="text-4xl mb-4">📊</div>
+  <h3>数据分析平台</h3>
+  <p>大量数据处理</p>
+  <p>实时数据展示</p>
+  <p>复杂的图表交互</p>
+</div>
+
+<div class="bg-pink-500/10 p-6 rounded-lg">
+  <div class="text-4xl mb-4">🎓</div>
+  <h3>在线教育平台</h3>
+  <p>多媒体内容管理</p>
+  <p>实时互动功能</p>
+  <p>学习进度跟踪</p>
+</div>
+
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# 性能对比
+
+## 构建性能（基于 wangEditor-next 实测）
+
+<div class="space-y-4">
+
+**传统方案**
+- 全量构建：5分12秒
+- 增量构建：3分45秒
+- node_modules：1.2GB
+- 安装时间：3分钟
+
+**Turbo Monorepo**
+- 全量构建：1分48秒 (**65.4%** ⬇️)
+- 增量构建：42秒 (**81.3%** ⬇️)
+- node_modules：450MB (**62.5%** ⬇️)
+- 安装时间：45秒 (**75%** ⬇️)
+
+</div>
+
+::right::
+
+## 开发体验提升
+
+<div class="space-y-4">
+
+**wangEditor-next 项目收益**
+- 启动时间减少：**68%**
+- 代码共享率提高：**45%**
+- 多项目联调效率：**80%** ⬆️
+
+**工具链性能**
+- Biome：~50ms 格式化
+- ESLint + Prettier：~2-5s
+
+**类型安全**
+- ts-rest：编译时 + 运行时
+- 传统 API：仅运行时验证
+
+**错误发现**
+- 编译阶段发现 90% 的类型错误
+- 减少生产环境 bug
+
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# 迁移策略
+
+<div class="grid grid-cols-3 gap-6 mt-8">
+
+<div class="bg-blue-500/10 p-4 rounded-lg">
+  <h4 class="font-bold mb-2">阶段一</h4>
+  <p class="text-sm">引入 Biome</p>
+  <p class="text-sm">统一代码风格</p>
+</div>
+
+<div class="bg-green-500/10 p-4 rounded-lg">
+  <h4 class="font-bold mb-2">阶段二</h4>
+  <p class="text-sm">迁移到 Monorepo</p>
+  <p class="text-sm">重构项目结构</p>
+</div>
+
+<div class="bg-purple-500/10 p-4 rounded-lg">
+  <h4 class="font-bold mb-2">阶段三</h4>
+  <p class="text-sm">引入 ts-rest</p>
+  <p class="text-sm">替换 API 层</p>
+</div>
+
+<div class="bg-orange-500/10 p-4 rounded-lg">
+  <h4 class="font-bold mb-2">阶段四</h4>
+  <p class="text-sm">后端迁移 Nest.js</p>
+  <p class="text-sm">模块化重构</p>
+</div>
+
+<div class="bg-teal-500/10 p-4 rounded-lg">
+  <h4 class="font-bold mb-2">阶段五</h4>
+  <p class="text-sm">完善监控</p>
+  <p class="text-sm">性能优化</p>
+</div>
+
+<div class="bg-pink-500/10 p-4 rounded-lg">
+  <h4 class="font-bold mb-2">阶段六</h4>
+  <p class="text-sm">团队培训</p>
+  <p class="text-sm">最佳实践</p>
+</div>
+
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# 总结
+
+<div class="text-left max-w-4xl mx-auto space-y-6">
+
+<v-clicks>
+
+## 🎯 技术栈选择的核心原则
+
+- **可扩展性**：支持团队和项目规模的增长
+- **类型安全**：减少运行时错误，提高代码质量
+- **开发效率**：工具链优化，提升开发体验
+- **维护性**：清晰的架构，便于长期维护
+
+## 🚀 适用场景
+
+- 大型企业项目
+- 多团队协作开发
+- 高性能要求的应用
+- 需要长期维护的系统
+
+## 💡 关键收益（基于 wangEditor-next 实测）
+
+- **65.4% 构建时间减少**（Turbo Monorepo）
+- **81.3% 增量构建提升**（智能缓存）
+- **90%+ 类型错误编译时发现**（ts-rest + Zod）
+- **68% 启动时间减少**（开发体验优化）
+- **统一的代码风格**（Biome）
+
+</v-clicks>
+
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# 谢谢大家！
+
+<div class="pt-12">
+  <span class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    Questions & Discussion 🤔
+  </span>
+</div>
+
+<div class="abs-br m-6 flex gap-2">
+  <a href="https://github.com/cycleccc" target="_blank" alt="GitHub" title="GitHub"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
+  </a>
+</div>
+
+---
+
+# 附录：相关资源
+
+## 📚 学习资源
+
+- [Turbo 官方文档](https://turbo.build/)
+- [Next.js 官方文档](https://nextjs.org/)
+- [Nest.js 官方文档](https://nestjs.com/)
+- [ts-rest 文档](https://ts-rest.com/)
+- [Zod 文档](https://zod.dev/)
+- [Biome 文档](https://biomejs.dev/)
+
+## 🛠️ 工具和模板
+
+- [create-turbo](https://github.com/vercel/turbo/tree/main/packages/create-turbo)
+- [Nest.js CLI](https://docs.nestjs.com/cli/overview)
+- [Next.js 模板](https://github.com/vercel/next.js/tree/canary/examples)
+- [wangEditor-next](https://github.com/wangeditor-next/wangEditor-next) - Turbo Monorepo 实际案例
+
+## 📜 最佳实践
+
+- [Monorepo 最佳实践](https://monorepo.tools/)
+- [TypeScript 最佳实践](https://typescript-eslint.io/rules/)
+- [API 设计指南](https://restfulapi.net/)
