@@ -126,40 +126,40 @@ layout: center
 
 # 我们的技术栈
 
-<div class="grid grid-cols-2 gap-12 max-w-4xl mx-auto mt-16">
-  <div v-click class="glass p-8 rounded-3xl glow-animation">
-    <div class="text-5xl mb-6 text-center">🏗️</div>
-    <div class="text-2xl font-bold mb-4 text-center gradient-text">Turbo Monorepo</div>
-    <div class="text-center opacity-80">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full mx-auto mt-10 auto-rows-fr">
+  <div v-click class="glass h-full p-6 rounded-3xl glow-animation flex flex-col gap-4">
+    <div class="text-4xl text-center">🏗️</div>
+    <div class="text-xl font-bold text-center gradient-text">Turbo Monorepo</div>
+    <div class="text-center opacity-80 text-sm leading-relaxed">
       高性能构建系统<br/>
-      <code class="text-sm">65%+ 构建时间减少</code>
+      <code class="text-xs">65%+ 构建时间减少</code>
     </div>
   </div>
   
-  <div v-click class="glass p-8 rounded-3xl">
-    <div class="text-5xl mb-6 text-center">⚡</div>
-    <div class="text-2xl font-bold mb-4 text-center gradient-text">Next.js + Nest.js</div>
-    <div class="text-center opacity-80">
+  <div v-click class="glass h-full p-6 rounded-3xl flex flex-col gap-4">
+    <div class="text-4xl text-center">⚡</div>
+    <div class="text-xl font-bold text-center gradient-text">Next.js + Nest.js</div>
+    <div class="text-center opacity-80 text-sm leading-relaxed">
       全栈 TypeScript<br/>
-      <code class="text-sm">统一的开发体验</code>
+      <code class="text-xs">统一的开发体验</code>
     </div>
   </div>
   
-  <div v-click class="glass p-8 rounded-3xl">
-    <div class="text-5xl mb-6 text-center">🔗</div>
-    <div class="text-2xl font-bold mb-4 text-center gradient-text">ts-rest + Zod</div>
-    <div class="text-center opacity-80">
+  <div v-click class="glass h-full p-6 rounded-3xl flex flex-col gap-4">
+    <div class="text-4xl text-center">🔗</div>
+    <div class="text-xl font-bold text-center gradient-text">ts-rest + Zod</div>
+    <div class="text-center opacity-80 text-sm leading-relaxed">
       端到端类型安全<br/>
-      <code class="text-sm">90%+ 编译时错误发现</code>
+      <code class="text-xs">90%+ 编译时错误发现</code>
     </div>
   </div>
   
-  <div v-click class="glass p-8 rounded-3xl">
-    <div class="text-5xl mb-6 text-center">🛠️</div>
-    <div class="text-2xl font-bold mb-4 text-center gradient-text">Biome</div>
-    <div class="text-center opacity-80">
+  <div v-click class="glass h-full p-6 rounded-3xl flex flex-col gap-4">
+    <div class="text-4xl text-center">🛠️</div>
+    <div class="text-xl font-bold text-center gradient-text">Biome</div>
+    <div class="text-center opacity-80 text-sm leading-relaxed">
       现代化工具链<br/>
-      <code class="text-sm">50ms 格式化速度</code>
+      <code class="text-xs">50ms 格式化速度</code>
     </div>
   </div>
 </div>
@@ -170,36 +170,40 @@ layout: center
 
 # Turbo Monorepo
 
-<div class="text-xl opacity-80 mb-16">高性能的 Monorepo 构建系统</div>
+<div class="flex flex-col items-center gap-8 max-w-5xl w-full mx-auto mt-2">
+  <div class="text-lg opacity-80 text-center leading-relaxed">
+    高性能的 Monorepo 构建系统
+  </div>
 
-<div class="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
-  <div v-click class="text-center">
-    <div class="text-5xl mb-6">🚀</div>
-    <div class="text-lg font-semibold mb-3 gradient-text">极速构建</div>
-    <div class="text-sm opacity-70">
-      智能任务调度<br/>
-      分布式缓存<br/>
-      增量构建
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full auto-rows-fr">
+    <div v-click class="glass h-full p-6 rounded-2xl text-center flex flex-col gap-3 justify-center">
+      <div class="text-4xl">🚀</div>
+      <div class="text-base font-semibold gradient-text">极速构建</div>
+      <div class="text-sm opacity-70 leading-relaxed">
+        智能任务调度<br/>
+        分布式缓存<br/>
+        增量构建
+      </div>
     </div>
-  </div>
-  
-  <div v-click class="text-center">
-    <div class="text-5xl mb-6">📦</div>
-    <div class="text-lg font-semibold mb-3 gradient-text">包管理</div>
-    <div class="text-sm opacity-70">
-      共享依赖<br/>
-      版本统一管理<br/>
-      跨包类型共享
+    
+    <div v-click class="glass h-full p-6 rounded-2xl text-center flex flex-col gap-3 justify-center">
+      <div class="text-4xl">📦</div>
+      <div class="text-base font-semibold gradient-text">包管理</div>
+      <div class="text-sm opacity-70 leading-relaxed">
+        共享依赖<br/>
+        版本统一管理<br/>
+        跨包类型共享
+      </div>
     </div>
-  </div>
-  
-  <div v-click class="text-center">
-    <div class="text-5xl mb-6">🔄</div>
-    <div class="text-lg font-semibold mb-3 gradient-text">任务编排</div>
-    <div class="text-sm opacity-70">
-      依赖图构建<br/>
-      并行执行<br/>
-      失败快速反馈
+    
+    <div v-click class="glass h-full p-6 rounded-2xl text-center flex flex-col gap-3 justify-center">
+      <div class="text-4xl">🔄</div>
+      <div class="text-base font-semibold gradient-text">任务编排</div>
+      <div class="text-sm opacity-70 leading-relaxed">
+        依赖图构建<br/>
+        并行执行<br/>
+        失败快速反馈
+      </div>
     </div>
   </div>
 </div>
@@ -313,35 +317,35 @@ layout: center
 
 # 性能提升数据
 
-<div class="grid grid-cols-2 gap-12 max-w-4xl mx-auto mt-16">
-  <div v-click class="glass p-8 rounded-2xl text-center">
-    <div class="text-6xl mb-4 gradient-text font-bold">65.4%</div>
-    <div class="text-lg font-semibold mb-2">构建时间减少</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full mx-auto mt-8 auto-rows-fr items-stretch">
+  <div v-click class="glass h-full p-6 rounded-2xl text-center flex flex-col gap-3 justify-center">
+    <div class="text-5xl gradient-text font-bold leading-tight">65.4%</div>
+    <div class="text-base font-semibold">构建时间减少</div>
     <div class="text-sm opacity-70">5分12秒 → 1分48秒</div>
   </div>
   
-  <div v-click class="glass p-8 rounded-2xl text-center">
-    <div class="text-6xl mb-4 gradient-text font-bold">81.3%</div>
-    <div class="text-lg font-semibold mb-2">增量构建提升</div>
+  <div v-click class="glass h-full p-6 rounded-2xl text-center flex flex-col gap-3 justify-center">
+    <div class="text-5xl gradient-text font-bold leading-tight">81.3%</div>
+    <div class="text-base font-semibold">增量构建提升</div>
     <div class="text-sm opacity-70">3分45秒 → 42秒</div>
   </div>
   
-  <div v-click class="glass p-8 rounded-2xl text-center">
-    <div class="text-6xl mb-4 gradient-text font-bold">68%</div>
-    <div class="text-lg font-semibold mb-2">启动时间减少</div>
+  <div v-click class="glass h-full p-6 rounded-2xl text-center flex flex-col gap-3 justify-center">
+    <div class="text-5xl gradient-text font-bold leading-tight">68%</div>
+    <div class="text-base font-semibold">启动时间减少</div>
     <div class="text-sm opacity-70">开发体验大幅提升</div>
   </div>
   
-  <div v-click class="glass p-8 rounded-2xl text-center">
-    <div class="text-6xl mb-4 gradient-text font-bold">90%+</div>
-    <div class="text-lg font-semibold mb-2">编译时错误发现</div>
+  <div v-click class="glass h-full p-6 rounded-2xl text-center flex flex-col gap-3 justify-center">
+    <div class="text-5xl gradient-text font-bold leading-tight">90%+</div>
+    <div class="text-base font-semibold">编译时错误发现</div>
     <div class="text-sm opacity-70">类型安全保障</div>
   </div>
 </div>
 
-<div v-click class="text-center mt-16">
-  <div class="text-lg opacity-80">
-    数据来源：<code class="text-sm">wangEditor-next</code> 项目实际测试
+<div v-click class="text-center mt-10">
+  <div class="text-sm opacity-80">
+    数据来源：<code class="text-xs">wangEditor-next</code> 项目实际测试
   </div>
 </div>
 
@@ -1103,4 +1107,3 @@ layout: center
     </div>
   </div>
 </div>
-
