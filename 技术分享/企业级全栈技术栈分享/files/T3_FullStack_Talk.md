@@ -20,7 +20,7 @@ footer: \ *cycleccc* *ts 全栈最佳实践* *2025年2月28日*
 @cycleccc
 全网账号：cycleccc
 发布时间：2025年2月28日
-<2991205548@qq.com>
+<author@example.com>
 PPT(md) 地址：[GitHub库](https://github.com/cycleccc/notes)
 
 ## 什么是 T3 Stack？

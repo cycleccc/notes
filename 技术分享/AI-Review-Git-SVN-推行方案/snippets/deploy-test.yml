@@ -1,0 +1,25 @@
+name: Deploy Test Environment
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H YOUR_SERVER_IP >> ~/.ssh/known_hosts
+
+      - name: Deploy Test Service
+        run: |
+          ssh USER@YOUR_SERVER_IP "set -e; cd /path/to/project; ./scripts/deploy-test.sh"
