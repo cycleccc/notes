@@ -1,0 +1,29 @@
+{
+  "name": "talks",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.22.0",
+  "scripts": {
+    "dev": "tsx scripts/picker.ts dev --open",
+    "build": "rimraf dist && pnpm -r run build",
+    "typecheck": "pnpm -r run typecheck",
+    "update:redirects": "tsx scripts/redirects.ts",
+    "prepare": "pnpm run update:redirects"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.11.1",
+    "@slidev/client": "^52.11.1",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/theme-seriph": "^0.25.0",
+    "@types/node": "^22.19.3",
+    "fast-glob": "^3.3.3",
+    "markdown-it-magic-link": "^0.1.4",
+    "prompts": "^2.4.2",
+    "rimraf": "^6.0.1",
+    "tinyexec": "^1.0.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "unocss": "^66.4.0",
+    "vue-tsc": "^3.1.8"
+  }
+}

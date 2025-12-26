@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "tsx ../../scripts/build.ts /2025-12-26-ai-review-git-svn/",
+    "export": "slidev export --output ../2025-12-26-ai-review-git-svn.pdf",
+    "typecheck": "vue-tsc --noEmit"
+  }
+}

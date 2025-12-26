@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "tsx ../../scripts/build.ts /enterprise-fullstack/",
+    "export": "slidev export --output ../enterprise-fullstack.pdf",
+    "typecheck": "vue-tsc --noEmit"
+  }
+}

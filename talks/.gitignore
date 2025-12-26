@@ -1,7 +1,9 @@
 node_modules
 .DS_Store
 dist
+dist-stale
 *.local
 .vite-inspect
 .remote-assets
 components.d.ts
+pnpm-debug.log
