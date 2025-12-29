@@ -3,6 +3,7 @@ highlighter: shiki
 css: unocss
 colorSchema: dark
 transition: fade-out
+routerMode: hash
 mdc: true
 layout: center
 glowSeed: 6
