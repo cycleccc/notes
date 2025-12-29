@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "tsx ../../scripts/build.ts /2025-04-27-t3-fullstack/",
+    "export": "slidev export --output ../2025-04-27-t3-fullstack.pdf",
+    "typecheck": "vue-tsc --noEmit"
+  }
+}
+
