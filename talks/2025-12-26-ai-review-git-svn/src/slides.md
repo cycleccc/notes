@@ -227,26 +227,28 @@ layout: two-cols
 
 ::right::
 
-<<< @/snippets/10-ai-review.key-parts.sh bash {2-80}
+<div class="glass p-6 rounded-2xl mt-6">
+  <div class="text-lg font-semibold mb-3">实现要点（正片不贴代码）</div>
+  <ul class="text-sm opacity-80 leading-relaxed space-y-2">
+    <li>缺少证据的 <span class="font-mono">CONFIRMED</span> 自动降级为 <span class="font-mono">RISK</span></li>
+    <li>拒绝必须可复核：定位到文件/行号或引用 diff 片段</li>
+    <li>结果写入日志，通知/复盘直接读日志</li>
+  </ul>
+  <div class="text-xs opacity-70 mt-4">代码参考见 Appendix（备份页）</div>
+</div>
 
 ---
 layout: center
 ---
 
-# 评分与准入规则
+# 准入规则 + 跳过策略（降低摩擦）
 
 <v-clicks>
 
 - 准入：`CONFIRMED` + `minScore`
-- 评分：`AI_REVIEW_SCORE_MODE`
+- 评分：`AI_REVIEW_SCORE_MODE`（主要用于展示/通知）
 
 </v-clicks>
-
----
-layout: center
----
-
-# 开关与跳过策略（降低摩擦）
 
 <div class="grid grid-cols-2 gap-6 max-w-6xl mx-auto mt-10">
   <div v-click="1" class="glass p-6 rounded-2xl" transition duration-500 forward:delay-0>
@@ -280,7 +282,14 @@ layout: two-cols
 
 ::right::
 
-<<< @/snippets/20-ai-review-mark-reviewed.sh bash {2-80}
+<div class="glass p-6 rounded-2xl mt-6">
+  <div class="text-lg font-semibold mb-3">写 marker 的核心一句话</div>
+  <pre class="slidev-code text-sm"><code>git update-ref refs/ai-reviewed/&lt;branch&gt; &lt;newrev&gt;</code></pre>
+  <div class="text-sm opacity-75 leading-relaxed mt-4">
+    marker 写入失败不影响 push（只影响“二次校验”）。
+  </div>
+  <div class="text-xs opacity-70 mt-4">完整脚本见 Appendix（备份页）</div>
+</div>
 
 ---
 layout: two-cols
@@ -409,101 +418,6 @@ sudo apt-get install -y postgresql</pre>
 </div>
 
 ---
-layout: center
----
-
-# AI 时代：<span v-mark="0">WSL</span> = AI 的默认执行环境
-
-<div class="grid grid-cols-3 gap-6 max-w-6xl mx-auto mt-10 auto-rows-fr">
-  <div v-click="1" class="tech-card" transition duration-500 forward:delay-200>
-    <div class="text-4xl mb-3">🔗</div>
-    <div class="text-lg font-semibold">命令串联天然可用</div>
-    <div class="text-sm opacity-70 leading-relaxed">
-      <span class="font-mono">&&</span> / <span class="font-mono">|</span> / <span class="font-mono">grep</span> / <span class="font-mono">awk</span> / <span class="font-mono">sed</span> / <span class="font-mono">jq</span><br/>
-      AI 默认就会生成这些
-    </div>
-  </div>
-  <div v-click="1" class="tech-card" transition duration-500 forward:delay-400>
-    <div class="text-4xl mb-3">🧾</div>
-    <div class="text-lg font-semibold">编码/路径更一致</div>
-    <div class="text-sm opacity-70 leading-relaxed">
-      实践反馈：Codex 在 Windows 更容易乱码<br/>
-      WSL 更接近 UTF-8 的默认语义
-    </div>
-  </div>
-  <div v-click="1" class="tech-card glow-animation" transition duration-500 forward:delay-600>
-    <div class="text-4xl mb-3">⚡</div>
-    <div class="text-lg font-semibold gradient-text">少绕路，直接到结果</div>
-    <div class="text-sm opacity-70 leading-relaxed">
-      Win：先失败再“改成 Windows 版本”<br/>
-      WSL：一次到位，减少来回
-    </div>
-  </div>
-</div>
-
-<div class="grid grid-cols-2 gap-6 max-w-6xl mx-auto mt-8">
-  <div v-click="2" class="glass p-5 rounded-2xl" transition duration-500 forward:delay-200>
-    <div class="font-semibold mb-2">真实体验（实践反馈）</div>
-    <ul class="text-sm opacity-75 leading-relaxed space-y-1">
-      <li>• SVN 提交：WSL 体感更快、更稳定</li>
-      <li>• 安装依赖：命令行几行搞定，不用反复点 GUI/重启</li>
-      <li>• ffmpeg：Linux 环境行为更一致，减少 Win 缺陷/差异</li>
-    </ul>
-  </div>
-  <div v-click="2" class="glass p-5 rounded-2xl" transition duration-500 forward:delay-400>
-    <div class="font-semibold mb-2">落地方式</div>
-    <ul class="text-sm opacity-75 leading-relaxed space-y-1">
-      <li>• 不强制换编辑器：Windows IDE + WSL 终端即可</li>
-      <li>• 团队只维护一套脚本：<span class="font-mono">git psvn</span> 作为统一入口</li>
-      <li>• 仓库放在 WSL 文件系统（更快，少跨盘 IO）</li>
-    </ul>
-  </div>
-</div>
-
-<div v-click="3" class="mt-8 text-center text-lg opacity-85">
-结论：推行 WSL 不是“换系统”，是把 Windows 的命令行层升级成可复制的 Linux 工具链
-</div>
-
----
-layout: center
----
-
-# 总结：WSL 的优势
-
-<div class="grid grid-cols-3 gap-6 max-w-6xl mx-auto mt-10 auto-rows-fr">
-  <div v-click="1" class="tech-card text-center flex flex-col gap-3 justify-center" transition duration-500 forward:delay-0>
-    <div class="text-4xl">⚡</div>
-    <div class="text-base font-semibold">更快（体感）</div>
-    <div class="text-sm opacity-70">SVN / 工具链操作更顺</div>
-  </div>
-  <div v-click="1" class="tech-card text-center flex flex-col gap-3 justify-center" transition duration-500 forward:delay-200>
-    <div class="text-4xl">📦</div>
-    <div class="text-base font-semibold">更好装</div>
-    <div class="text-sm opacity-70">PostgreSQL / ffmpeg / 各种依赖一条命令</div>
-  </div>
-  <div v-click="1" class="tech-card text-center flex flex-col gap-3 justify-center" transition duration-500 forward:delay-400>
-    <div class="text-4xl">🔁</div>
-    <div class="text-base font-semibold">更可复制</div>
-    <div class="text-sm opacity-70">脚本一次写好，全员同路径</div>
-  </div>
-  <div v-click="1" class="tech-card text-center flex flex-col gap-3 justify-center" transition duration-500 forward:delay-600>
-    <div class="text-4xl">🤖</div>
-    <div class="text-base font-semibold">更适配 AI</div>
-    <div class="text-sm opacity-70"><span class="font-mono">&&</span>/<span class="font-mono">|</span>/Unix 工具链直接可用</div>
-  </div>
-  <div v-click="1" class="tech-card text-center flex flex-col gap-3 justify-center" transition duration-500 forward:delay-800>
-    <div class="text-4xl">🧾</div>
-    <div class="text-base font-semibold">更少乱码/路径坑</div>
-    <div class="text-sm opacity-70">终端/编码语义更一致</div>
-  </div>
-  <div v-click="1" class="tech-card text-center flex flex-col gap-3 justify-center glow-animation" transition duration-500 forward:delay-1000>
-    <div class="text-4xl">🧰</div>
-    <div class="text-base font-semibold gradient-text">更少维护成本</div>
-    <div class="text-sm opacity-70">减少“Win 特供”与重复排障</div>
-  </div>
-</div>
-
----
 layout: two-cols
 ---
 
@@ -525,6 +439,15 @@ layout: two-cols
 
 <div v-click class="mt-6 text-sm opacity-70">
 定位方式：先判断「问题在文件系统监听」还是「问题在网络转发」
+</div>
+
+<div v-click class="mt-6 glass p-4 rounded-2xl">
+  <div class="text-sm font-semibold mb-2">其它坑速记</div>
+  <ul class="text-sm opacity-75 leading-relaxed space-y-1">
+    <li>• 仓库别放 <span class="font-mono">/mnt/c</span>（IO 慢、文件监听不稳）</li>
+    <li>• 代理/VPN：把配置与排障步骤文档化（减少“只在我电脑不行”）</li>
+    <li>• 权限/大小写：尽早暴露边界问题，更贴近 CI/生产</li>
+  </ul>
 </div>
 
 ::right::
@@ -551,63 +474,6 @@ netsh advfirewall firewall add rule name="Vite 3000" dir=in action=allow protoco
 
   <div v-click class="text-xs opacity-70 mt-3">
   备注：服务端仍建议在 WSL 内监听 <span class="font-mono">0.0.0.0</span>（例如 Vite 的 <span class="font-mono">--host 0.0.0.0</span>）
-  </div>
-</div>
-
----
-layout: center
----
-
-# 其它常见坑（提前说清楚，减少误解）
-
-<div class="grid grid-cols-3 gap-6 max-w-6xl mx-auto mt-10 auto-rows-fr">
-  <div v-click class="tech-card">
-    <div class="text-4xl mb-2">📁</div>
-    <div class="font-semibold mb-1">把仓库放在 <span class="font-mono">/mnt/c</span></div>
-    <div class="text-sm opacity-70 leading-relaxed">
-      IO 慢、文件监听不稳<br/>
-      做法：仓库放 WSL 文件系统，产物按需落盘到 Windows
-    </div>
-  </div>
-  <div v-click class="tech-card">
-    <div class="text-4xl mb-2">🌐</div>
-    <div class="font-semibold mb-1">网络与代理/VPN</div>
-    <div class="text-sm opacity-70 leading-relaxed">
-      公司网络/分流会影响 WSL 出网<br/>
-      做法：把代理配置与排障步骤文档化
-    </div>
-  </div>
-  <div v-click class="tech-card">
-    <div class="text-4xl mb-2">🔒</div>
-    <div class="font-semibold mb-1">权限/大小写差异</div>
-    <div class="text-sm opacity-70 leading-relaxed">
-      文件权限、路径大小写更严格<br/>
-      好处：更贴近 CI/生产；但需要改掉边界写法
-    </div>
-  </div>
-  <div v-click class="tech-card">
-    <div class="text-4xl mb-2">🧩</div>
-    <div class="font-semibold mb-1">依赖的二进制差异</div>
-    <div class="text-sm opacity-70 leading-relaxed">
-      某些库在 Windows 有缺陷或行为不同（如 ffmpeg）<br/>
-      WSL 里通常更稳定
-    </div>
-  </div>
-  <div v-click class="tech-card">
-    <div class="text-4xl mb-2">🧠</div>
-    <div class="font-semibold mb-1">资源占用与冷启动</div>
-    <div class="text-sm opacity-70 leading-relaxed">
-      WSL2 会占用内存/磁盘<br/>
-      做法：统一配置与清理策略（例如 wsl --shutdown）
-    </div>
-  </div>
-  <div v-click class="tech-card glow-animation">
-    <div class="text-4xl mb-2">✅</div>
-    <div class="font-semibold mb-1 gradient-text">总体结论</div>
-    <div class="text-sm opacity-70 leading-relaxed">
-      有少量边界，但可绕过且可沉淀成模板<br/>
-      换来长期一致性与自动化能力
-    </div>
   </div>
 </div>
 
@@ -641,7 +507,15 @@ alias 示例：
 
 ::right::
 
-<<< @/snippets/push-with-svn.sh bash {2-80}
+<div class="glass p-6 rounded-2xl mt-6">
+  <div class="text-lg font-semibold mb-3">脚本做的事（不展开代码）</div>
+  <ul class="text-sm opacity-80 leading-relaxed space-y-2">
+    <li>先 <span class="font-mono">git push</span></li>
+    <li>（可选）校验远端 marker 指向当前 <span class="font-mono">HEAD</span></li>
+    <li><span class="font-mono">git svn rebase</span> 后 <span class="font-mono">git svn dcommit</span>（作者仍是本人）</li>
+  </ul>
+  <div class="text-xs opacity-70 mt-4">脚本参考见 Appendix（备份页）</div>
+</div>
 
 ---
 layout: center
@@ -669,7 +543,13 @@ layout: center
 
 # Gitea Actions：自动部署测试环境（示例）
 
-<<< @/snippets/deploy-test.yml yaml {all}
+<v-clicks>
+
+- 可选项：把 “push 后的部署/验证” 交给 CI（不阻塞主流程）
+- 目标：每次主分支更新自动部署到测试环境，减少人工点点点
+- 配置样例见 Appendix（备份页）
+
+</v-clicks>
 
 ---
 layout: center
@@ -677,7 +557,14 @@ layout: center
 
 # 配置模板（脱敏）
 
-<<< @/snippets/ai-review.env.example bash {all}
+<v-clicks>
+
+- 核心：API Key / Model / Timeout / Diff 上限 / 日志目录
+- 门禁：`CONFIRMED` / `RISK` 前缀与证据要求
+- 分支：哪些分支参与门禁与 marker
+- 脱敏模板见 Appendix（备份页）
+
+</v-clicks>
 
 ---
 layout: center
@@ -773,3 +660,51 @@ Q&A
 <div class="text-sm opacity-70 mt-8">
 参考：<a href="https://sli.dev/" target="_blank">Slidev</a> · <a href="https://github.com/antfu/talks" target="_blank">antfu/talks</a>
 </div>
+
+---
+layout: center
+---
+
+# Appendix（备份页）
+
+代码与模板只用于“被问到时翻出来”，正片不讲实现细节。
+
+---
+layout: center
+---
+
+## Appendix · pre-receive 关键逻辑（节选）
+
+<<< @/snippets/10-ai-review.key-parts.sh bash {2-80}
+
+---
+layout: center
+---
+
+## Appendix · post-receive 写 marker（节选）
+
+<<< @/snippets/20-ai-review-mark-reviewed.sh bash {2-80}
+
+---
+layout: center
+---
+
+## Appendix · 开发者侧 wrapper（节选）
+
+<<< @/snippets/push-with-svn.sh bash {2-80}
+
+---
+layout: center
+---
+
+## Appendix · Gitea Actions（示例）
+
+<<< @/snippets/deploy-test.yml yaml {all}
+
+---
+layout: center
+---
+
+## Appendix · 配置模板（脱敏）
+
+<<< @/snippets/ai-review.env.example bash {all}
