@@ -5,7 +5,7 @@
   "packageManager": "pnpm@10.22.0",
   "scripts": {
     "dev": "tsx scripts/picker.ts dev --open",
-    "build": "rimraf dist && pnpm -r run build",
+    "build": "rimraf dist && pnpm -r run build && tsx scripts/index.ts",
     "typecheck": "pnpm -r run typecheck",
     "update:redirects": "tsx scripts/redirects.ts",
     "prepare": "pnpm run update:redirects"

@@ -60,26 +60,6 @@ jobs:
         shell: bash
         run: |
           pnpm run build
-          touch dist/.nojekyll
-
-          # Simple landing page at https://<user>.github.io/<repo>/
-          dirs=$(find dist -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort)
-          {
-            echo '<!doctype html>'
-            echo '<meta charset="utf-8">'
-            echo '<meta name="viewport" content="width=device-width, initial-scale=1">'
-            echo '<title>Talks</title>'
-            echo '<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 16px;line-height:1.5}h1{margin:0 0 12px}ul{padding-left:18px}a{color:#2563eb;text-decoration:none}a:hover{text-decoration:underline}</style>'
-            echo '<h1>Talks</h1>'
-            echo '<ul>'
-            for d in $dirs; do
-              if [ -f "dist/$d/index.html" ]; then
-                echo "  <li><a href=\"./$d/\">$d</a></li>"
-              fi
-            done
-            echo '</ul>'
-            echo '<p>Built with <a href="https://sli.dev/">Slidev</a>.</p>'
-          } > dist/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -94,4 +74,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-
