@@ -7,6 +7,16 @@ NODE_VERSION = "22"
 
 
 [[redirects]]
+from = "/2025-04-27-t3-fullstack"
+to = "/2025-04-27-t3-fullstack/"
+status = 302
+
+[[redirects]]
+from = "/2025-04-27-t3-fullstack/*"
+to = "/2025-04-27-t3-fullstack/index.html"
+status = 200
+
+[[redirects]]
 from = "/2025-12-26-ai-review-git-svn"
 to = "/2025-12-26-ai-review-git-svn/"
 status = 302

@@ -53,15 +53,15 @@ layout: center
 
 <div class="grid grid-cols-2 gap-6 max-w-5xl mx-auto mt-10">
   <div v-click="1" class="glass p-6 rounded-2xl" transition duration-500 forward:delay-0>
-    <div class="text-lg font-semibold mb-2">✅ 质量门禁：不合格直接拦截</div>
+    <div class="text-lg font-semibold mb-2">✅ 拦截契约：只拦“可复核问题”</div>
     <div class="text-sm opacity-80 leading-relaxed">
-      <span class="font-mono">pre-receive</span> 触发 AI Review；只有标为 <span class="font-mono">CONFIRMED</span> 的明确问题才会拦截。
+      <span class="font-mono">pre-receive</span> 触发 AI Review；只有 <span class="font-mono">CONFIRMED</span> 且能给证据（行号或 diff）的项才允许拦截。
     </div>
   </div>
   <div v-click="1" class="glass p-6 rounded-2xl" transition duration-500 forward:delay-200>
-    <div class="text-lg font-semibold mb-2">🏷️ 通过标记：写到独立 ref</div>
+    <div class="text-lg font-semibold mb-2">🏷️ 通过回执：写到独立 ref</div>
     <div class="text-sm opacity-80 leading-relaxed">
-      <span class="font-mono">post-receive</span> 写 <span class="font-mono">refs/ai-reviewed/&lt;branch&gt;</span>，规避 quarantine 阶段不能写 refs 的限制。
+      <span class="font-mono">post-receive</span> 写 <span class="font-mono">refs/ai-reviewed/&lt;branch&gt;</span>，用于审计与二次校验（且规避 quarantine 阶段不能写 refs 的限制）。
     </div>
   </div>
   <div v-click="1" class="glass p-6 rounded-2xl" transition duration-500 forward:delay-400>
@@ -71,9 +71,9 @@ layout: center
     </div>
   </div>
   <div v-click="1" class="glass p-6 rounded-2xl" transition duration-500 forward:delay-600>
-    <div class="text-lg font-semibold mb-2">📊 评分归一化：避免 0/100 过于极端</div>
+    <div class="text-lg font-semibold mb-2">🚀 成功 push 后：CI 自动部署（可选）</div>
     <div class="text-sm opacity-80 leading-relaxed">
-      评分只用于展示/通知；是否拦截只看规则（<span class="font-mono">minScore</span> + <span class="font-mono">CONFIRMED</span>）。
+      <span class="font-mono">deploy-test.yml</span> 监听主分支 push，自动部署测试环境；失败再通知（不阻塞门禁主流程）。
     </div>
   </div>
 </div>
@@ -121,14 +121,14 @@ layout: center
   <div v-click="1" class="glass p-6 rounded-2xl" transition duration-500 forward:delay-0>
     <div class="text-lg font-semibold mb-2">🚧 pre-receive quarantine</div>
     <div class="text-sm opacity-80 leading-relaxed">
-      quarantine 阶段 <span class="font-mono">不能写 refs/tags</span>，否则 push 会失败。<br/>
-      所以通过标记必须放到 <span class="font-mono">post-receive</span>。
+      quarantine 阶段 <span class="font-mono">不能写 refs/tags</span>（包括自定义 marker），否则 push 会失败。<br/>
+      所以“通过回执”只能放到 <span class="font-mono">post-receive</span> 落盘。
     </div>
   </div>
   <div v-click="1" class="glass p-6 rounded-2xl" transition duration-500 forward:delay-200>
     <div class="text-lg font-semibold mb-2">🧷 Git 没有原生 post-push</div>
     <div class="text-sm opacity-80 leading-relaxed">
-      客户端要用 wrapper（或 CI）补 post-push；这里选本地脚本。
+      “push 成功后再做事”（如校验 marker / 同步 SVN）需要客户端 wrapper；这里选本地脚本。
     </div>
   </div>
   <div v-click="1" class="glass p-6 rounded-2xl" transition duration-500 forward:delay-400>
@@ -160,15 +160,10 @@ class: e2e-flow
 flowchart TD
   A["开发者：git psvn"] --> B["git push"] --> C["Gitea pre-receive：AI Review"]
   C -->|fail| D["拒绝 push + 通知"]
-  C -->|pass| E["Gitea post-receive：写 refs/ai-reviewed/{branch}"]
-  subgraph AFTER
-    direction LR
-    F["飞书通知（读日志）"]
-    G["本地检查 marker"] --> H["git svn rebase/dcommit"]
-  end
-  style AFTER fill:transparent,stroke:transparent,color:transparent
-  E --> F
-  E --> G
+  C -->|pass| E["Gitea post-receive：写 refs/ai-reviewed/{branch} + 飞书通知（读日志）"]
+  E --> G["本地 wrapper：检查 marker"] --> H["git svn rebase/dcommit"]
+  E --> I["Gitea Actions：deploy-test.yml"]
+  I -->|fail| J["部署失败通知"]
 ```
 
 ::right::
@@ -176,8 +171,8 @@ flowchart TD
 <v-clicks>
 
 - 统一入口：`git psvn`
-- 拦截条件：只认 `CONFIRMED`
-- “通过标记”：`refs/ai-reviewed/*`
+- 失败可见：拒绝原因 + 通知
+- 成功可见：marker ref / 日志 /（可选）CI 部署
 
 </v-clicks>
 
@@ -185,68 +180,25 @@ flowchart TD
 layout: center
 ---
 
-# 核心机制 1：只拦 CONFIRMED
+# 拦截契约：只拦“可复核问题”
 
 <div class="grid grid-cols-2 gap-6 max-w-6xl mx-auto mt-10">
   <div v-click="1" class="glass p-6 rounded-2xl" transition duration-500 forward:delay-0>
-    <div class="text-lg font-semibold mb-3">规则</div>
+    <div class="text-lg font-semibold mb-3">规则（讲到这就够用）</div>
     <ul class="text-sm opacity-80 leading-relaxed space-y-2">
-      <li><span class="font-mono">CONFIRMED:</span> 有明确证据的问题（可拦截）</li>
+      <li><span class="font-mono">CONFIRMED:</span> 明确问题 + 可复核证据（允许拦截）</li>
       <li><span class="font-mono">RISK:</span> 风险/信息不足（只提示，不拦截）</li>
-      <li>没有 <span class="font-mono">CONFIRMED</span>：即使模型给了 <span class="font-mono">pass=false</span>，也不拦截，只提示</li>
+      <li>没有可复核证据：一律按 <span class="font-mono">RISK</span> 处理</li>
     </ul>
   </div>
   <div v-click="1" class="glass p-6 rounded-2xl" transition duration-500 forward:delay-200>
-    <div class="text-lg font-semibold mb-3">为什么</div>
-    <div class="text-sm opacity-80 leading-relaxed">
-      拦截只针对可复核的问题，减少误杀；<br/>
-      其它建议放到通知里，后续再迭代规则/提示词。
-    </div>
+    <div class="text-lg font-semibold mb-3">证据长什么样</div>
+    <ul class="text-sm opacity-80 leading-relaxed space-y-2">
+      <li>精确定位：<span class="font-mono">path/to/file.ts:123</span> 或 <span class="font-mono">#L123</span></li>
+      <li>引用 diff：直接贴关键 diff（用反引号包起来）</li>
+      <li>原则：能让任何人 30 秒内复核“是否真的有问题”</li>
+    </ul>
   </div>
-</div>
-
----
-layout: two-cols
-class: mechanism-2
----
-
-# 核心机制 2：证据要求
-
-<div class="glass p-5 rounded-2xl mt-4">
-  <div class="text-lg font-semibold mb-2">为什么要“证据”</div>
-  <div class="text-sm opacity-75 leading-relaxed">
-    让可拦截的问题能复核，减少误杀和争议。
-  </div>
-</div>
-
-<div class="glass p-5 rounded-2xl mt-3">
-  <div class="text-lg font-semibold mb-2">证据格式（任一即可）</div>
-  <div class="space-y-2 text-sm opacity-80 leading-relaxed">
-    <div v-click class="metric-card p-3">
-      <div class="font-semibold mb-1">方式 A：精确定位</div>
-      <div class="font-mono text-xs opacity-75">path/to/file.ts:123 或 path/to/file.ts#L123</div>
-    </div>
-    <div v-click class="metric-card p-3">
-      <div class="font-semibold mb-1">方式 B：引用 diff 片段</div>
-      <div class="opacity-75 text-xs">直接贴 diff（用反引号包起来）</div>
-    </div>
-    <div v-click class="metric-card p-3">
-      <div class="font-semibold mb-1">自动降级</div>
-      <div class="opacity-75 text-xs">缺少证据的 <span class="font-mono">CONFIRMED</span> 会被自动降级为 <span class="font-mono">RISK</span></div>
-    </div>
-  </div>
-</div>
-
-::right::
-
-<div class="glass p-5 rounded-2xl mt-4">
-  <div class="text-lg font-semibold mb-2">实现原则</div>
-  <ul class="text-sm opacity-80 leading-relaxed space-y-1">
-    <li>缺少证据的 <span class="font-mono">CONFIRMED</span> 自动降级为 <span class="font-mono">RISK</span></li>
-    <li>拦截必须可复核：给文件/行号或贴 diff 片段</li>
-    <li>结果落日志；通知/复盘直接读日志</li>
-  </ul>
-  <div class="text-xs opacity-70 mt-3">相关脚本在附录</div>
 </div>
 
 ---
@@ -283,12 +235,13 @@ layout: center
 layout: two-cols
 ---
 
-# 核心机制 3：marker refs（可选）
+# 通过回执：marker ref（可选的二次校验）
 
 <v-clicks>
 
-- push 通过后，`post-receive` 写 marker：`refs/ai-reviewed/{branch} -> {newrev}`
-- marker 只是标记：写失败不影响 push，只影响二次校验
+- push 通过后写 marker：`refs/ai-reviewed/{branch} -> {newrev}`
+- marker 的用途：审计/回溯 + 客户端二次校验（避免漏跑 wrapper）
+- marker 写失败不影响 push：只会让二次校验失效
 
 </v-clicks>
 
@@ -556,8 +509,8 @@ layout: center
 <v-clicks>
 
 - 可选：把 push 后的部署/验证交给 CI（不阻塞主流程）
-- 目标：主分支更新后自动部署到测试环境，减少手动操作
-- 配置见附录
+- 触发：主分支 push 成功后（push 被拒绝不会触发）
+- 示例：`ai-studio/.gitea/workflows/deploy-test.yml`（附录有脱敏版）
 
 </v-clicks>
 
