@@ -1,0 +1,77 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro'
+import rawTalks from '../../generated/talks.json'
+
+type Talk = {
+  title: string
+  slug: string
+  summary: string
+  date: string | null
+  year: string | null
+  href: string
+  presenterHref: string
+  overviewHref: string
+  entryHref: string
+  sourceDir: string
+  readmePath: string
+  updatedAt: string
+}
+
+const base = import.meta.env.BASE_URL
+const talks = rawTalks as Talk[]
+
+function withBase(path: string) {
+  if (path.startsWith('/'))
+    return `${base.replace(/\/$/, '')}${path}`
+  return `${base}${path}`
+}
+
+const groups = talks.reduce<Record<string, Talk[]>>((acc, talk) => {
+  const key = talk.year ?? 'Other'
+  acc[key] ||= []
+  acc[key].push(talk)
+  return acc
+}, {})
+
+const years = Object.keys(groups).sort((a, b) => b.localeCompare(a))
+---
+
+<MainLayout
+  title="Talks"
+  description="所有正式分享 deck 的时间线与落地页。"
+>
+  <section class="page-hero compact">
+    <p class="eyebrow">TALKS</p>
+    <h1>全部分享</h1>
+    <p class="hero-text">
+      每一个分享都保留单独的落地页，并直接挂载对应 Slidev deck。
+    </p>
+  </section>
+
+  {years.map((year) => (
+    <section class="section-block">
+      <div class="section-head inline">
+        <p class="eyebrow">YEAR</p>
+        <h2>{year}</h2>
+      </div>
+
+      <div class="talk-grid">
+        {groups[year].map((talk) => (
+          <article class="talk-card">
+            <div class="card-topline">
+              <span>{talk.date ?? year}</span>
+              <span>{talk.slug}</span>
+            </div>
+            <h3>{talk.title}</h3>
+            <p>{talk.summary}</p>
+            <div class="card-actions">
+              <a class="button button-primary" href={`${base}talks/${talk.slug}/`}>落地页</a>
+              <a class="button" href={withBase(talk.href)}>播放</a>
+              <a class="button button-ghost" href={withBase(talk.overviewHref)}>总览</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  ))}
+</MainLayout>

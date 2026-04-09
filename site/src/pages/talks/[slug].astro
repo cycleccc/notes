@@ -1,0 +1,78 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro'
+import rawTalks from '../../generated/talks.json'
+
+type Talk = {
+  title: string
+  slug: string
+  summary: string
+  date: string | null
+  year: string | null
+  href: string
+  presenterHref: string
+  overviewHref: string
+  entryHref: string
+  sourceDir: string
+  readmePath: string
+  updatedAt: string
+}
+
+export function getStaticPaths() {
+  const talks = rawTalks as Talk[]
+  return talks.map(talk => ({
+    params: { slug: talk.slug },
+    props: { talk },
+  }))
+}
+
+const { talk } = Astro.props as { talk: Talk }
+const base = import.meta.env.BASE_URL
+
+function withBase(path: string) {
+  if (path.startsWith('/'))
+    return `${base.replace(/\/$/, '')}${path}`
+  return `${base}${path}`
+}
+---
+
+<MainLayout title={talk.title} description={talk.summary}>
+  <section class="detail-hero">
+    <a class="breadcrumb" href={`${base}talks/`}>← 返回分享列表</a>
+    <p class="eyebrow">DECK DETAIL</p>
+    <h1>{talk.title}</h1>
+    <p class="hero-text">{talk.summary}</p>
+
+    <div class="meta-strip">
+      <span>{talk.date ?? talk.year ?? 'TBD'}</span>
+      <span>{talk.slug}</span>
+      <span>{talk.sourceDir}</span>
+    </div>
+
+    <div class="card-actions">
+      <a class="button button-primary" href={withBase(talk.href)}>播放</a>
+      <a class="button" href={withBase(talk.presenterHref)}>讲者模式</a>
+      <a class="button" href={withBase(talk.overviewHref)}>总览</a>
+      <a class="button button-ghost" href={withBase(talk.entryHref)}>入口</a>
+    </div>
+  </section>
+
+  <section class="preview-section">
+    <div class="preview-frame">
+      <iframe
+        title={`${talk.title} preview`}
+        src={withBase(talk.href)}
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <aside class="detail-sidecard">
+      <h2>仓库位置</h2>
+      <p>{talk.sourceDir}</p>
+      <h2>README</h2>
+      <p>{talk.readmePath}</p>
+      <h2>最近更新</h2>
+      <p>{new Date(talk.updatedAt).toLocaleDateString('zh-CN')}</p>
+    </aside>
+  </section>
+</MainLayout>

@@ -1,2 +1,7 @@
 .obsidian
 workspace.json
+site/.astro
+site/dist
+site/node_modules
+site/public/slides
+site/src/generated/talks.json

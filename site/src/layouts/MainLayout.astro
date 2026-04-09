@@ -1,0 +1,44 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="site-noise"></div>
+      <header class="site-header">
+        <a class="brand" href={`${import.meta.env.BASE_URL}`}>
+          <span class="brand-mark"></span>
+          <span>
+            <strong>yaolongfei</strong>
+            <small>talks-first content site</small>
+          </span>
+        </a>
+
+        <nav class="site-nav">
+          <a href={`${import.meta.env.BASE_URL}`}>Home</a>
+          <a href={`${import.meta.env.BASE_URL}talks/`}>Talks</a>
+          <a href={`${import.meta.env.BASE_URL}#archive`}>Archive</a>
+        </nav>
+      </header>
+
+      <main class="page-frame">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

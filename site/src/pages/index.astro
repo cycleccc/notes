@@ -1,0 +1,127 @@
+---
+import MainLayout from '../layouts/MainLayout.astro'
+import rawTalks from '../generated/talks.json'
+
+type Talk = {
+  title: string
+  slug: string
+  summary: string
+  date: string | null
+  year: string | null
+  href: string
+  presenterHref: string
+  overviewHref: string
+  entryHref: string
+  sourceDir: string
+  readmePath: string
+  updatedAt: string
+}
+
+const talks = rawTalks as Talk[]
+const featured = talks.slice(0, 2)
+const recent = talks.slice(0, 4)
+const total = talks.length
+const base = import.meta.env.BASE_URL
+
+function withBase(path: string) {
+  if (path.startsWith('/'))
+    return `${base.replace(/\/$/, '')}${path}`
+  return `${base}${path}`
+}
+---
+
+<MainLayout
+  title="yaolongfei content site"
+  description="以技术分享 deck 为核心的个人内容站，首页聚焦 Talks，旧笔记作为归档保留。"
+>
+  <section class="hero-panel">
+    <div class="hero-copy">
+      <p class="eyebrow">CONTENT STUDIO</p>
+      <h1>分享是主线，笔记退到归档。</h1>
+      <p class="hero-text">
+        这个站点围绕 Slidev deck 组织内容。每次分享都会有独立落地页、在线预览入口，以及更清晰的时间线。
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href={`${base}talks/`}>浏览全部分享</a>
+        {featured[0] && <a class="button" href={`${base}talks/${featured[0].slug}/`}>查看最新一场</a>}
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="metric-card">
+        <span>Published Decks</span>
+        <strong>{total}</strong>
+      </div>
+      <div class="metric-card">
+        <span>Primary Format</span>
+        <strong>Slidev</strong>
+      </div>
+      <div class="metric-card">
+        <span>Repository Shape</span>
+        <strong>Site + Slides</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="section-head">
+      <p class="eyebrow">FEATURED</p>
+      <h2>最近的分享</h2>
+    </div>
+
+    <div class="feature-grid">
+      {featured.map((talk, index) => (
+        <article class:list={['feature-card', index === 0 && 'feature-card-accent']}>
+          <div class="card-topline">
+            <span>{talk.date ?? 'Undated'}</span>
+            <span>{talk.slug}</span>
+          </div>
+          <h3>{talk.title}</h3>
+          <p>{talk.summary}</p>
+          <div class="card-actions">
+            <a class="button button-primary" href={`${base}talks/${talk.slug}/`}>落地页</a>
+            <a class="button" href={withBase(talk.href)}>播放</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="section-head">
+      <p class="eyebrow">TIMELINE</p>
+      <h2>近期更新</h2>
+    </div>
+
+    <div class="timeline-list">
+      {recent.map((talk) => (
+        <a class="timeline-item" href={`${base}talks/${talk.slug}/`}>
+          <div>
+            <strong>{talk.title}</strong>
+            <p>{talk.summary}</p>
+          </div>
+          <span>{talk.date ?? talk.year ?? 'TBD'}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-block" id="archive">
+    <div class="section-head">
+      <p class="eyebrow">ARCHIVE</p>
+      <h2>旧笔记已经退到仓库内部</h2>
+    </div>
+
+    <div class="archive-panel">
+      <p>
+        旧的 Obsidian 分类内容仍然保留在仓库 `archive/`，但不再占据首页心智。站点只突出真正持续产出的内容：分享 deck。
+      </p>
+      <div class="archive-tags">
+        <span>archive/前端</span>
+        <span>archive/算法相关</span>
+        <span>archive/生活</span>
+        <span>archive/短记</span>
+      </div>
+    </div>
+  </section>
+</MainLayout>

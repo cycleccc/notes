@@ -1,10 +1,12 @@
-name: Deploy talks to GitHub Pages
+name: Deploy site to GitHub Pages
 
 on:
   push:
     branches: [main, master]
     paths:
-      - talks/**
+      - site/**
+      - slides/**
+      - README.md
       - .github/workflows/pages.yml
   workflow_dispatch:
 
@@ -20,9 +22,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: talks
     steps:
       - uses: actions/checkout@v4
 
@@ -35,7 +34,9 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-          cache-dependency-path: talks/pnpm-lock.yaml
+          cache-dependency-path: |
+            slides/pnpm-lock.yaml
+            site/pnpm-lock.yaml
 
       - uses: actions/configure-pages@v5
 
@@ -51,19 +52,23 @@ jobs:
             echo "prefix=/$repo" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Install
+      - name: Install slides dependencies
+        working-directory: slides
         run: pnpm install --frozen-lockfile
 
-      - name: Build
+      - name: Install site dependencies
+        working-directory: site
+        run: pnpm install --frozen-lockfile
+
+      - name: Build site
         env:
-          TALKS_URL_PREFIX: ${{ steps.base.outputs.prefix }}
-        shell: bash
-        run: |
-          pnpm run build
+          SITE_BASE: ${{ steps.base.outputs.prefix }}
+        working-directory: site
+        run: pnpm run build:with-slides
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: talks/dist
+          path: site/dist
 
   deploy:
     runs-on: ubuntu-latest

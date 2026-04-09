@@ -1,0 +1,17 @@
+{
+  "name": "content-site",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.22.0",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 4321",
+    "sync:content": "node ./scripts/sync-content.mjs",
+    "predev": "pnpm run sync:content",
+    "build": "pnpm run sync:content && astro build",
+    "build:with-slides": "pnpm --dir ../slides run build && pnpm run build",
+    "preview": "astro preview --host 0.0.0.0 --port 4321"
+  },
+  "dependencies": {
+    "astro": "^5.14.4"
+  }
+}
