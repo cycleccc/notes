@@ -29,7 +29,7 @@ const normalizePrefix = (prefix: string) => {
 }
 
 const base = normalizeBase(baseInput)
-const slidesMount = normalizePrefix(process.env.SLIDES_MOUNT || '/slides')
+const slidesMount = normalizePrefix(process.env.SLIDES_MOUNT || '')
 const urlBase = `${normalizePrefix(process.env.SITE_BASE || '')}${slidesMount}${base}`
 
 const cwd = process.cwd()

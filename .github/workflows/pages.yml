@@ -1,12 +1,10 @@
-name: Deploy site to GitHub Pages
+name: Deploy slides to GitHub Pages
 
 on:
   push:
     branches: [main, master]
     paths:
-      - site/**
       - slides/**
-      - README.md
       - .github/workflows/pages.yml
   workflow_dispatch:
 
@@ -34,9 +32,7 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-          cache-dependency-path: |
-            slides/pnpm-lock.yaml
-            site/pnpm-lock.yaml
+          cache-dependency-path: slides/pnpm-lock.yaml
 
       - uses: actions/configure-pages@v5
 
@@ -52,23 +48,19 @@ jobs:
             echo "prefix=/$repo" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Install slides dependencies
+      - name: Install
         working-directory: slides
         run: pnpm install --frozen-lockfile
 
-      - name: Install site dependencies
-        working-directory: site
-        run: pnpm install --frozen-lockfile
-
-      - name: Build site
+      - name: Build
         env:
           SITE_BASE: ${{ steps.base.outputs.prefix }}
-        working-directory: site
-        run: pnpm run build:with-slides
+        working-directory: slides
+        run: pnpm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site/dist
+          path: slides/dist
 
   deploy:
     runs-on: ubuntu-latest
