@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "tsx ../../../scripts/build.ts /2026-04-26-ai-fullstack-agent-takeover/",
+    "export": "slidev export --output ../2026-04-26-ai-fullstack-agent-takeover.pdf",
+    "typecheck": "vue-tsc --noEmit"
+  }
+}
