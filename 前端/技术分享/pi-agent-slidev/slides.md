@@ -88,6 +88,13 @@ td, th { padding: 9px 13px !important; border-color: #35534c !important; }
 :global(.demo-copy) { margin-left: 52%; }
 :global(.slidev-page-9 .slidev-code) { margin-left: 52%; width: 46%; }
 :global(.slidev-page-9 .terminal) { border: 1px solid #35534c; background: #101b19; box-shadow: 8px 8px 0 #14211e; }
+:global(.slidev-page-10 .slidev-monaco-container) { width: 100%; max-width: none; min-height: 300px; margin-top: 20px; }
+:global(.slidev-page-10 .slidev-monaco-container-inner) { min-height: 300px; }
+:global(.lab-copy) { margin-left: 0; }
+:global(.lab-caption) { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
+:global(.lab-steps) { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 14px; }
+:global(.lab-steps li) { margin: 0; padding-top: 8px; border-top: 2px solid #35534c; }
+:global(.lab-steps li::marker) { color: #ff8f70; }
 .stack { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
 .layer { display: grid; grid-template-columns: 195px 1fr; gap: 16px; align-items: center; padding: 11px 16px; border-left: 4px solid #59d6b4; background: #172321; }
 .layer:nth-child(2) { border-left-color: #7ee7ce; margin-left: 28px; }
@@ -209,10 +216,10 @@ transition: slide-left
 # 把一次工具调用拆开看
 
 <div class="timeline">
-  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">00.0s</div><div class="event-body">模型发出 <strong>tool call</strong><span>工具名 + 参数：read_file({ path })</span></div></div>
-  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">00.1s</div><div class="event-body">runtime 记录事件并检查状态<span>session、上下文、权限和取消信号</span></div></div>
-  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">00.2s</div><div class="event-body">宿主执行真实动作<span>文件系统、进程或网络都在这一边发生</span></div></div>
-  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">00.4s</div><div class="event-body">结果回注，循环再次进入模型<span>stdout、diff、error 或用户确认</span></div></div>
+  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }" :click-1="{ x: 6, scale: 1.02 }"><div class="event-time">00.0s</div><div class="event-body">模型发出 <strong>tool call</strong><span>工具名 + 参数：read_file({ path })</span></div></div>
+  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }" :click-2="{ x: 6, scale: 1.02 }"><div class="event-time">00.1s</div><div class="event-body">runtime 记录事件并检查状态<span>session、上下文、权限和取消信号</span></div></div>
+  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }" :click-3="{ x: 6, scale: 1.02 }"><div class="event-time">00.2s</div><div class="event-body">宿主执行真实动作<span>文件系统、进程或网络都在这一边发生</span></div></div>
+  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }" :click-4="{ x: 6, scale: 1.02 }"><div class="event-time">00.4s</div><div class="event-body">结果回注，循环再次进入模型<span>stdout、diff、error 或用户确认</span></div></div>
 </div>
 <div class="mt-1 quote" v-click="5">最重要的不是“模型说了什么”，而是<strong>哪一个边界真正产生了副作用</strong>。</div>
 
@@ -235,11 +242,13 @@ transition: slide-left
   </div>
 </div><div>
   <div class="label">调试时看哪三件事</div>
-  <div class="mt-3 step" v-click="5"><b>顺序</b><p class="small">事件是否按预期进入上下文？</p></div>
-  <div class="mt-3 step" v-click="6"><b>副作用</b><p class="small">工具参数和实际修改是否一致？</p></div>
-  <div class="mt-3 step" v-click="7"><b>转移</b><p class="small">失败后状态去了重试、修正还是结束？</p></div>
+  <v-switch>
+    <template #1><div class="mt-3 step"><b>RUNNING</b><p class="small">事件正在进入上下文，等待下一次工具结果。</p></div></template>
+    <template #2><div class="mt-3 step"><b>WAITING</b><p class="small">宿主正在执行，模型暂时不能替它产生副作用。</p></div></template>
+    <template #3><div class="mt-3 step"><b>DONE / RETRY</b><p class="small">结果回注后，状态选择结束或再次循环。</p></div></template>
+  </v-switch>
 </div></div>
-<div class="mt-4 muted small" v-click="8">“它为什么这样做”通常要从事件流回答，而不是从最后一句自然语言回答。</div>
+<div class="mt-4 muted small" v-click="4">“它为什么这样做”通常要从事件流回答，而不是从最后一句自然语言回答。</div>
 
 <!--
 [Sources]
@@ -278,12 +287,25 @@ transition: slide-up
   <div class="label">模型提出的修改，宿主留下的证据</div>
 </div>
 
-````md magic-move
-```ts
-const token = input.trim()
+````md magic-move {lines: true}
+```ts {*|1-4}
+function parse(input?: string) {
+  const token = input.trim()
+  return token
+}
 ```
-```ts
-const token = (input ?? '').trim()
+```ts {*|1-4}
+function parse(input?: string) {
+  const token = (input ?? '').trim()
+  return token
+}
+```
+```ts {*|2-4}
+function parse(input?: string) {
+  const token = (input ?? '').trim()
+  console.log(token)
+  return token
+}
 ```
 ````
 
@@ -292,6 +314,38 @@ const token = (input ?? '').trim()
 <!--
 [Sources]
 - https://github.com/earendil-works/pi/tree/main/packages/coding-agent
+-->
+
+---
+
+# Live lab：让代码自己留下证据
+
+```ts {monaco-run} {autorun:false,showOutputAt:'+1'}
+function parse(input?: string) {
+  const token = (input ?? '').trim()
+  return token || '(empty)'
+}
+
+console.log(parse(undefined))
+```
+<div class="lab-caption mt-4">
+  <p class="label lab-copy">可编辑、可运行的最小实验</p>
+  <p class="muted small lab-copy">点击 Run，让宿主返回一条可重复的证据。</p>
+</div>
+<div class="label lab-copy mt-4">观察顺序</div>
+<v-clicks every="2" class="lab-steps">
+
+- 先看输入：`undefined` 会不会崩？
+- 再点运行：宿主返回了什么？
+- 最后改代码：结果如何变化？
+
+</v-clicks>
+<div class="lab-copy mt-5 quote">把“模型说它修好了”换成<strong>可重复的运行证据</strong>。</div>
+
+<!--
+[Sources]
+- https://sli.dev/features/monaco-run
+- https://sli.dev/guide/animations
 -->
 
 ---
