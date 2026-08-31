@@ -95,6 +95,50 @@ td, th { padding: 9px 13px !important; border-color: #35534c !important; }
 :global(.lab-steps) { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 14px; }
 :global(.lab-steps li) { margin: 0; padding-top: 8px; border-top: 2px solid #35534c; }
 :global(.lab-steps li::marker) { color: #ff8f70; }
+:global(.choice-grid) { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
+:global(.choice) { min-height: 170px; padding: 18px 20px; border-top: 3px solid #59d6b4; background: #172321; }
+:global(.choice:nth-child(2)) { border-top-color: #ffb08f; }
+:global(.choice:nth-child(3)) { border-top-color: #ff8f70; }
+:global(.choice h3) { margin: 0 0 10px; color: #f2f4f3; }
+:global(.choice p) { margin: 0; color: #aab7b4; font-size: 17px; line-height: 1.45; }
+:global(.context-flow) { display: grid; grid-template-columns: 1fr 110px 1fr; align-items: center; gap: 16px; margin-top: 26px; }
+:global(.context-list) { display: flex; flex-direction: column; gap: 9px; }
+:global(.context-item) { padding: 10px 14px; border-left: 3px solid #59d6b4; background: #172321; color: #e7ecea; font-size: 18px; }
+:global(.context-item:nth-child(2)) { border-left-color: #7ee7ce; }
+:global(.context-item:nth-child(3)) { border-left-color: #ffb08f; }
+:global(.context-item:nth-child(4)) { border-left-color: #ff8f70; }
+:global(.context-arrow) { color: #ff8f70; font-size: 34px; text-align: center; }
+:global(.context-result) { padding: 22px; border: 1px solid #35534c; background: #101b19; }
+:global(.context-result strong) { display: block; font-size: 25px; margin-bottom: 10px; }
+:global(.context-result span) { display: block; color: #aab7b4; font-size: 17px; line-height: 1.45; }
+:global(.tree-box) { position: relative; min-height: 250px; padding: 22px 26px; background: #101b19; border: 1px solid #35534c; font-family: monospace; color: #d5e9e3; }
+:global(.tree-box .branch) { display: block; margin: 10px 0; }
+:global(.tree-box .branch:nth-child(2)) { margin-left: 40px; }
+:global(.tree-box .branch:nth-child(3)) { margin-left: 80px; }
+:global(.tree-box .branch:nth-child(4)) { margin-left: 120px; color: #ffb08f; }
+:global(.tree-box .fork) { color: #ff8f70; }
+.choice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
+.choice { min-height: 170px; padding: 18px 20px; border-top: 3px solid #59d6b4; background: #172321; }
+.choice:nth-child(2) { border-top-color: #ffb08f; }
+.choice:nth-child(3) { border-top-color: #ff8f70; }
+.choice h3 { margin: 0 0 10px; color: #f2f4f3; }
+.choice p { margin: 0; color: #aab7b4; font-size: 17px; line-height: 1.45; }
+.context-flow { display: grid; grid-template-columns: 1fr 110px 1fr; align-items: center; gap: 16px; margin-top: 26px; }
+.context-list { display: flex; flex-direction: column; gap: 9px; }
+.context-item { padding: 10px 14px; border-left: 3px solid #59d6b4; background: #172321; color: #e7ecea; font-size: 18px; }
+.context-item:nth-child(2) { border-left-color: #7ee7ce; }
+.context-item:nth-child(3) { border-left-color: #ffb08f; }
+.context-item:nth-child(4) { border-left-color: #ff8f70; }
+.context-arrow { color: #ff8f70; font-size: 34px; text-align: center; }
+.context-result { padding: 22px; border: 1px solid #35534c; background: #101b19; }
+.context-result strong { display: block; font-size: 25px; margin-bottom: 10px; }
+.context-result span { display: block; color: #aab7b4; font-size: 17px; line-height: 1.45; }
+.tree-box { position: relative; min-height: 250px; padding: 22px 26px; background: #101b19; border: 1px solid #35534c; font-family: monospace; color: #d5e9e3; }
+.tree-box .branch { display: block; margin: 10px 0; }
+.tree-box .branch:nth-child(2) { margin-left: 40px; }
+.tree-box .branch:nth-child(3) { margin-left: 80px; }
+.tree-box .branch:nth-child(4) { margin-left: 120px; color: #ffb08f; }
+.tree-box .fork { color: #ff8f70; }
 .stack { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
 .layer { display: grid; grid-template-columns: 195px 1fr; gap: 16px; align-items: center; padding: 11px 16px; border-left: 4px solid #59d6b4; background: #172321; }
 .layer:nth-child(2) { border-left-color: #7ee7ce; margin-left: 28px; }
@@ -194,6 +238,45 @@ flowchart LR
 -->
 
 ---
+
+# Pi 的极简，是一种设计选择
+
+<div class="choice-grid">
+  <div class="choice" v-click><h3>默认很少</h3><p>read · write · edit · bash<br />先把 Agent loop 做成清晰的核心。</p></div>
+  <div class="choice" v-click><h3>边界很直白</h3><p>不内置 plan、sub-agent、MCP 或权限弹窗。Pi 默认使用启动它的进程权限。</p></div>
+  <div class="choice" v-click><h3>能力往外长</h3><p>extensions、skills、packages 可以注册工具、事件、命令和界面。</p></div>
+</div>
+<div class="mt-8 quote" v-click="4">Pi 的问题不是“功能够不够多”，而是<strong>你愿意把哪些能力放进自己的 harness</strong>。</div>
+
+<!--
+[Sources]
+- https://github.com/earendil-works/pi
+- https://deepakness.com/blog/pi-agent-setup/
+-->
+
+---
+
+# 在模型推理前，Pi 先组装上下文
+
+<div class="context-flow">
+  <div class="context-list">
+    <div class="context-item" v-click>系统提示与当前目录</div>
+    <div class="context-item" v-click>AGENTS.md / 自定义规则</div>
+    <div class="context-item" v-click>skills 与 tool descriptions</div>
+    <div class="context-item" v-click>历史消息与当前目标</div>
+  </div>
+  <div class="context-arrow" v-click="5">→</div>
+  <div class="context-result" v-click="5"><strong>一次 LLM 调用</strong><span>上下文过长时，先把历史压缩成 checkpoint，再继续循环。</span></div>
+</div>
+<div class="mt-7 muted">所以“它为什么这样做”不只取决于最后一句 Prompt，也取决于<strong>哪些信息被放进了这一轮上下文</strong>。</div>
+
+<!--
+[Sources]
+- https://github.com/earendil-works/pi/tree/main/packages/agent
+- https://www.youtube.com/watch?v=gTeujlv8qK0
+-->
+
+---
 transition: slide-left
 ---
 
@@ -230,29 +313,29 @@ transition: slide-left
 
 ---
 
-# 会话与状态：Agent 如何记住上下文
+# 会话不是列表，而是一棵可分叉的树
 
-<div class="two-col mt-5"><div>
-  <div class="label">一轮循环留下的记录</div>
-  <div class="timeline">
-    <div class="event" v-click v-motion :initial="{ x: -18, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">S1</div><div class="event-body">user_message<span>“修复空输入崩溃”</span></div></div>
-    <div class="event" v-click v-motion :initial="{ x: -18, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">S2</div><div class="event-body">assistant → tool<span>read_file({ path })</span></div></div>
-    <div class="event" v-click v-motion :initial="{ x: -18, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">S3</div><div class="event-body">tool → assistant<span>source text / error / diff</span></div></div>
-    <div class="event" v-click v-motion :initial="{ x: -18, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">S4</div><div class="event-body">assistant → next<span>继续、修正，或结束</span></div></div>
+<div class="two-col mt-6"><div>
+  <div class="label">JSONL：一行一个事件</div>
+  <div class="tree-box mt-4">
+    <span class="branch">01 user_message</span>
+    <span class="branch">02 assistant → tool</span>
+    <span class="branch fork">├─ 03 tool → assistant</span>
+    <span class="branch">│  └─ 04 assistant → next</span>
+    <span class="branch fork">└─ 03' fork / alternate path</span>
   </div>
 </div><div>
-  <div class="label">调试时看哪三件事</div>
-  <v-switch>
-    <template #1><div class="mt-3 step"><b>RUNNING</b><p class="small">事件正在进入上下文，等待下一次工具结果。</p></div></template>
-    <template #2><div class="mt-3 step"><b>WAITING</b><p class="small">宿主正在执行，模型暂时不能替它产生副作用。</p></div></template>
-    <template #3><div class="mt-3 step"><b>DONE / RETRY</b><p class="small">结果回注后，状态选择结束或再次循环。</p></div></template>
-  </v-switch>
+  <div class="label">这带来三个能力</div>
+  <div class="mt-4 step" v-click><b>回到过去</b><p class="small">从某个节点继续，而不是抹掉之后的记录。</p></div>
+  <div class="mt-4 step" v-click><b>分叉比较</b><p class="small">同一个父节点可以长出不同的尝试。</p></div>
+  <div class="mt-4 step" v-click><b>压缩续跑</b><p class="small">上下文过长时，用 summary checkpoint 接着工作。</p></div>
 </div></div>
-<div class="mt-4 muted small" v-click="4">“它为什么这样做”通常要从事件流回答，而不是从最后一句自然语言回答。</div>
+<div class="mt-5 muted small" v-click="4">状态调试要同时看：事件顺序、父子关系，以及这一轮实际送进模型的上下文。</div>
 
 <!--
 [Sources]
 - https://github.com/earendil-works/pi/tree/main/packages/agent
+- https://www.youtube.com/watch?v=gTeujlv8qK0
 -->
 
 ---
