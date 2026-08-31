@@ -84,6 +84,10 @@ td, th { padding: 9px 13px !important; border-color: #35534c !important; }
  :global(.zone.world h3) { color: #ff8f70; }
 :global(.zone p) { font-size: 17px; color: #aab7b4; }
 :global(.boundary-arrow) { display: flex; align-items: center; justify-content: center; color: #ff8f70; font-size: 28px; }
+:global(.demo-terminal) { float: left; width: 48%; margin-top: 20px; }
+:global(.demo-copy) { margin-left: 52%; }
+:global(.slidev-page-9 .slidev-code) { margin-left: 52%; width: 46%; }
+:global(.slidev-page-9 .terminal) { border: 1px solid #35534c; background: #101b19; box-shadow: 8px 8px 0 #14211e; }
 .stack { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
 .layer { display: grid; grid-template-columns: 195px 1fr; gap: 16px; align-items: center; padding: 11px 16px; border-left: 4px solid #59d6b4; background: #172321; }
 .layer:nth-child(2) { border-left-color: #7ee7ce; margin-left: 28px; }
@@ -183,15 +187,17 @@ flowchart LR
 -->
 
 ---
+transition: slide-left
+---
 
 # Pi 不是一个“更聪明的模型”
 
 <div class="two-col mt-5"><div class="stack">
-  <div class="layer"><div class="layer-name">pi-tui</div><div class="layer-role">终端交互：输入、输出和可见反馈</div></div>
-  <div class="layer"><div class="layer-name">pi-coding-agent</div><div class="layer-role">编码产品层：默认工具与 CLI 工作流</div></div>
-  <div class="layer"><div class="layer-name">pi-agent-core</div><div class="layer-role">运行时：tool calling、状态和事件循环</div></div>
-  <div class="layer"><div class="layer-name">pi-ai</div><div class="layer-role">模型适配：统一不同供应商的 API</div></div>
-</div><div><div class="label">从上到下是体验，从下到上是能力</div><p class="text-2xl mt-3">Pi 是<strong>可扩展的 harness</strong>：把模型、工具、状态、事件和交互接成一个可运行的系统。</p><div class="rule"></div><p class="muted small">读源码时，先定位“这一层拥有哪种责任”，再看具体实现。</p></div></div>
+  <div class="layer" v-click><div class="layer-name">pi-tui</div><div class="layer-role">终端交互：输入、输出和可见反馈</div></div>
+  <div class="layer" v-click><div class="layer-name">pi-coding-agent</div><div class="layer-role">编码产品层：默认工具与 CLI 工作流</div></div>
+  <div class="layer" v-click><div class="layer-name">pi-agent-core</div><div class="layer-role">运行时：tool calling、状态和事件循环</div></div>
+  <div class="layer" v-click><div class="layer-name">pi-ai</div><div class="layer-role">模型适配：统一不同供应商的 API</div></div>
+</div><div><div class="label">每一击展开一层</div><p class="text-2xl mt-3" v-click="5">Pi 是<strong>可扩展的 <span v-mark.circle="{ at: 5, color: '#ff8f70' }">harness</span></strong>：把模型、工具、状态、事件和交互接成一个可运行的系统。</p><div class="rule" v-click="5"></div><p class="muted small" v-click="5">读源码时，先定位“这一层拥有哪种责任”，再看具体实现。</p></div></div>
 
 <!--
 [Sources]
@@ -203,12 +209,12 @@ flowchart LR
 # 把一次工具调用拆开看
 
 <div class="timeline">
-  <div class="event"><div class="event-time">00.0s</div><div class="event-body">模型发出 <strong>tool call</strong><span>工具名 + 参数：read_file({ path })</span></div></div>
-  <div class="event"><div class="event-time">00.1s</div><div class="event-body">runtime 记录事件并检查状态<span>session、上下文、权限和取消信号</span></div></div>
-  <div class="event"><div class="event-time">00.2s</div><div class="event-body">宿主执行真实动作<span>文件系统、进程或网络都在这一边发生</span></div></div>
-  <div class="event"><div class="event-time">00.4s</div><div class="event-body">结果回注，循环再次进入模型<span>stdout、diff、error 或用户确认</span></div></div>
+  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">00.0s</div><div class="event-body">模型发出 <strong>tool call</strong><span>工具名 + 参数：read_file({ path })</span></div></div>
+  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">00.1s</div><div class="event-body">runtime 记录事件并检查状态<span>session、上下文、权限和取消信号</span></div></div>
+  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">00.2s</div><div class="event-body">宿主执行真实动作<span>文件系统、进程或网络都在这一边发生</span></div></div>
+  <div class="event" v-click v-motion :initial="{ x: -24, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">00.4s</div><div class="event-body">结果回注，循环再次进入模型<span>stdout、diff、error 或用户确认</span></div></div>
 </div>
-<div class="mt-1 quote">最重要的不是“模型说了什么”，而是<strong>哪一个边界真正产生了副作用</strong>。</div>
+<div class="mt-1 quote" v-click="5">最重要的不是“模型说了什么”，而是<strong>哪一个边界真正产生了副作用</strong>。</div>
 
 <!--
 [Sources]
@@ -222,18 +228,18 @@ flowchart LR
 <div class="two-col mt-5"><div>
   <div class="label">一轮循环留下的记录</div>
   <div class="timeline">
-    <div class="event"><div class="event-time">S1</div><div class="event-body">user_message<span>“修复空输入崩溃”</span></div></div>
-    <div class="event"><div class="event-time">S2</div><div class="event-body">assistant → tool<span>read_file({ path })</span></div></div>
-    <div class="event"><div class="event-time">S3</div><div class="event-body">tool → assistant<span>source text / error / diff</span></div></div>
-    <div class="event"><div class="event-time">S4</div><div class="event-body">assistant → next<span>继续、修正，或结束</span></div></div>
+    <div class="event" v-click v-motion :initial="{ x: -18, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">S1</div><div class="event-body">user_message<span>“修复空输入崩溃”</span></div></div>
+    <div class="event" v-click v-motion :initial="{ x: -18, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">S2</div><div class="event-body">assistant → tool<span>read_file({ path })</span></div></div>
+    <div class="event" v-click v-motion :initial="{ x: -18, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">S3</div><div class="event-body">tool → assistant<span>source text / error / diff</span></div></div>
+    <div class="event" v-click v-motion :initial="{ x: -18, opacity: 0 }" :enter="{ x: 0, opacity: 1 }"><div class="event-time">S4</div><div class="event-body">assistant → next<span>继续、修正，或结束</span></div></div>
   </div>
 </div><div>
   <div class="label">调试时看哪三件事</div>
-  <div class="mt-3 step"><b>顺序</b><p class="small">事件是否按预期进入上下文？</p></div>
-  <div class="mt-3 step"><b>副作用</b><p class="small">工具参数和实际修改是否一致？</p></div>
-  <div class="mt-3 step"><b>转移</b><p class="small">失败后状态去了重试、修正还是结束？</p></div>
+  <div class="mt-3 step" v-click="5"><b>顺序</b><p class="small">事件是否按预期进入上下文？</p></div>
+  <div class="mt-3 step" v-click="6"><b>副作用</b><p class="small">工具参数和实际修改是否一致？</p></div>
+  <div class="mt-3 step" v-click="7"><b>转移</b><p class="small">失败后状态去了重试、修正还是结束？</p></div>
 </div></div>
-<div class="mt-4 muted small">“它为什么这样做”通常要从事件流回答，而不是从最后一句自然语言回答。</div>
+<div class="mt-4 muted small" v-click="8">“它为什么这样做”通常要从事件流回答，而不是从最后一句自然语言回答。</div>
 
 <!--
 [Sources]
@@ -241,15 +247,17 @@ flowchart LR
 -->
 
 ---
+transition: slide-left
+---
 
 # 安全边界：项目 ≠ 执行环境
 
 <div class="boundary">
-  <div class="zone model"><h3>模型</h3><p>提出下一步</p><p>看见上下文</p><p class="accent">看不见真实文件系统</p></div>
-  <div class="zone host"><h3>Agent + Host</h3><p>校验工具参数</p><p>决定是否执行</p><p>记录结果与权限</p></div>
-  <div class="zone world"><h3>真实世界</h3><p>文件</p><p>进程</p><p>网络 / 凭据</p></div>
+  <div class="zone model" v-click><h3>模型</h3><p>提出下一步</p><p>看见上下文</p><p class="accent">看不见真实文件系统</p></div>
+  <div class="zone host" v-click><h3><span v-mark.underline="{ at: 2, color: '#59d6b4' }">Agent + Host</span></h3><p>校验工具参数</p><p>决定是否执行</p><p>记录结果与权限</p></div>
+  <div class="zone world" v-click><h3>真实世界</h3><p>文件</p><p>进程</p><p>网络 / 凭据</p></div>
 </div>
-<div class="mt-5 quote">Project trust 不是 sandbox。<strong>权限和隔离属于宿主产品的责任</strong>。</div>
+<div class="mt-5 quote" v-click="4">Project trust 不是 sandbox。<strong>权限和隔离属于宿主产品的责任</strong>。</div>
 
 <!--
 [Sources]
@@ -257,17 +265,29 @@ flowchart LR
 -->
 
 ---
+transition: slide-up
+---
 
 # Demo：用一个小任务看完整因果链
 
-<div class="two-col mt-5"><div>
+<div class="demo-terminal">
   <div class="label">终端里看到的行动</div>
-  <div class="terminal mt-3"><div class="terminal-bar">pi · demo-project · session 01</div><div class="terminal-body"><div><span class="prompt">$</span> pi "修复空输入崩溃"</div><div class="mt-2 muted">→ read_file src/parser.ts</div><div class="muted">→ edit src/parser.ts</div><div><span class="result">✓</span> 1 file changed</div><div><span class="prompt">$</span> npm test -- parser</div><div><span class="result">✓</span> 8 passed</div></div></div>
-</div><div>
+  <div class="terminal mt-3"><div class="terminal-bar">pi · demo-project · session 01</div><div class="terminal-body"><div><span class="prompt">$</span> pi "修复空输入崩溃"</div><div class="mt-2 muted" v-click>→ read_file src/parser.ts</div><div class="muted" v-click>→ edit src/parser.ts</div><div v-click><span class="result">✓</span> 1 file changed</div><div v-click><span class="prompt">$</span> npm test -- parser</div><div v-click><span class="result">✓</span> 8 passed</div></div></div>
+</div>
+<div class="demo-copy">
   <div class="label">模型提出的修改，宿主留下的证据</div>
-  <div class="diff mt-3"><div class="muted">src/parser.ts</div><div class="minus">- const token = input.trim()</div><div class="plus">+ const token = (input ?? '').trim()</div><div class="muted">@@ test result</div><div class="plus">+ 8 passed</div></div>
-  <div class="mt-5 muted small">讲解重点：先读，再改，再跑；每一步都能被观察和复盘。</div>
-</div></div>
+</div>
+
+````md magic-move
+```ts
+const token = input.trim()
+```
+```ts
+const token = (input ?? '').trim()
+```
+````
+
+<div class="demo-copy mt-4 muted small" v-click>讲解重点：先读，再改，再跑；每一步都能被观察和复盘。</div>
 
 <!--
 [Sources]
