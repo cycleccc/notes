@@ -1,6 +1,6 @@
 ---
 theme: default
-title: Pi Agent：从模型到可工作的系统
+title: Pi Agent：模型如何开始工作
 author: 内部学习分享
 colorSchema: dark
 aspectRatio: 16/9
@@ -8,29 +8,114 @@ transition: fade
 mdc: true
 ---
 
-<style>
+<style global>
 :root { --slidev-theme-primary: #59d6b4; --ink: #f2f4f3; --muted: #aab7b4; --panel: #172321; --line: #35534c; --coral: #ff8f70; }
-.slidev-layout { background: #0d1514; color: var(--ink); padding: 52px 72px; }
+.slidev-layout { background: #0d1514; color: #f2f4f3; padding: 52px 72px; }
 h1 { font-size: 52px; line-height: 1.08; letter-spacing: 0; }
 h2 { font-size: 38px; line-height: 1.12; margin-bottom: 24px; letter-spacing: 0; }
 h3 { font-size: 25px; }
 p, li { font-size: 20px; line-height: 1.5; }
 strong { color: #59d6b4; }
-.eyebrow { color: var(--coral); font-size: 16px; letter-spacing: .08em; text-transform: uppercase; }
-.muted { color: var(--muted); }
-.accent { color: var(--coral); }
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; align-items: start; }
+.eyebrow { color: #ff8f70; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; }
+.muted { color: #aab7b4; }
+.accent { color: #ff8f70; }
+.two-col { display: grid; grid-template-columns: 1.12fr .88fr; gap: 36px; align-items: start; }
 .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.rule { height: 1px; background: var(--line); margin: 20px 0 26px; }
-.quote { border-left: 4px solid var(--coral); padding-left: 22px; color: #e7ecea; font-size: 29px; line-height: 1.3; }
-.label { color: var(--muted); font-size: 15px; text-transform: uppercase; letter-spacing: .08em; }
+.rule { height: 1px; background: #35534c; margin: 20px 0 26px; }
+.quote { border-left: 4px solid #ff8f70; padding-left: 22px; color: #e7ecea; font-size: 29px; line-height: 1.3; }
+.label { color: #aab7b4; font-size: 15px; text-transform: uppercase; letter-spacing: .08em; }
 .step { border-top: 2px solid #59d6b4; padding-top: 12px; }
 .step b { color: #59d6b4; font-size: 24px; }
 .small { font-size: 16px; line-height: 1.4; }
 .slidev-code { font-size: 17px !important; line-height: 1.45 !important; }
 table { font-size: 18px; }
 th { color: #59d6b4; }
-td, th { padding: 9px 13px !important; border-color: var(--line) !important; }
+td, th { padding: 9px 13px !important; border-color: #35534c !important; }
+:global(.slidev-layout) { background: #0d1514; color: #f2f4f3; padding: 52px 72px; }
+:global(.slidev-layout h1) { font-size: 52px; line-height: 1.08; letter-spacing: 0; }
+:global(.slidev-layout h2) { font-size: 38px; line-height: 1.12; margin-bottom: 24px; letter-spacing: 0; }
+:global(.slidev-layout h3) { font-size: 25px; }
+:global(.slidev-layout p), :global(.slidev-layout li) { font-size: 20px; line-height: 1.5; }
+:global(.slidev-layout strong) { color: #59d6b4; }
+:global(.eyebrow) { color: #ff8f70; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; }
+:global(.muted) { color: #aab7b4; }
+:global(.accent) { color: #ff8f70; }
+:global(.two-col) { display: grid; grid-template-columns: 1.12fr .88fr; gap: 36px; align-items: start; }
+:global(.three-col) { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+:global(.rule) { height: 1px; background: #35534c; margin: 20px 0 26px; }
+:global(.quote) { border-left: 4px solid #ff8f70; padding-left: 22px; color: #e7ecea; font-size: 29px; line-height: 1.3; }
+:global(.label) { color: #aab7b4; font-size: 15px; text-transform: uppercase; letter-spacing: .08em; }
+:global(.step) { border-top: 2px solid #59d6b4; padding-top: 12px; }
+:global(.step b) { color: #59d6b4; font-size: 24px; }
+:global(.small) { font-size: 16px; line-height: 1.4; }
+:global(.slidev-code) { font-size: 17px !important; line-height: 1.45 !important; }
+:global(table) { font-size: 18px; }
+:global(th) { color: #59d6b4; }
+:global(td), :global(th) { padding: 9px 13px !important; border-color: #35534c !important; }
+:global(.stack) { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
+:global(.layer) { display: grid; grid-template-columns: 195px 1fr; gap: 16px; align-items: center; padding: 11px 16px; border-left: 4px solid #59d6b4; background: #172321; }
+:global(.layer:nth-child(2)) { border-left-color: #7ee7ce; margin-left: 28px; }
+:global(.layer:nth-child(3)) { border-left-color: #ffb08f; margin-left: 56px; }
+:global(.layer:nth-child(4)) { border-left-color: #ff8f70; margin-left: 84px; }
+:global(.layer-name) { font-size: 23px; font-weight: 700; color: #f2f4f3; }
+:global(.layer-role) { color: #aab7b4; font-size: 15px; line-height: 1.35; }
+:global(.timeline) { position: relative; margin-top: 24px; padding-left: 34px; }
+:global(.timeline:before) { content: ''; position: absolute; left: 9px; top: 7px; bottom: 7px; width: 2px; background: #35534c; }
+:global(.event) { position: relative; display: grid; grid-template-columns: 90px 1fr; gap: 22px; padding: 0 0 20px; }
+:global(.event:before) { content: ''; position: absolute; left: -30px; top: 6px; width: 12px; height: 12px; background: #59d6b4; border: 3px solid #0d1514; outline: 2px solid #59d6b4; border-radius: 50%; }
+:global(.event:nth-child(3):before) { background: #ff8f70; outline-color: #ff8f70; }
+:global(.event-time) { color: #ff8f70; font-family: monospace; font-size: 16px; }
+:global(.event-body) { color: #e7ecea; font-size: 19px; }
+:global(.event-body span) { display: block; color: #aab7b4; font-size: 16px; margin-top: 4px; }
+:global(.terminal) { background: #101b19; border: 1px solid #35534c; box-shadow: 8px 8px 0 #14211e; font-family: monospace; overflow: hidden; }
+:global(.terminal-bar) { padding: 9px 14px; color: #aab7b4; border-bottom: 1px solid #35534c; font-size: 14px; }
+:global(.terminal-body) { padding: 16px 18px 19px; font-size: 17px; line-height: 1.6; color: #d5e9e3; }
+:global(.prompt) { color: #59d6b4; }
+:global(.result) { color: #ffb08f; }
+:global(.diff) { background: #151f1d; border-left: 3px solid #ff8f70; padding: 14px 18px; font-family: monospace; font-size: 16px; line-height: 1.6; }
+:global(.minus) { color: #ff8f70; }
+:global(.plus) { color: #59d6b4; }
+:global(.boundary) { display: grid; grid-template-columns: 1fr 1.25fr 1fr; align-items: stretch; margin-top: 26px; min-height: 230px; }
+:global(.zone) { padding: 20px; border: 1px solid #35534c; }
+:global(.zone.model) { background: #1b2926; border-right: 0; }
+:global(.zone.host) { background: #1b2422; border-right: 0; }
+:global(.zone.world) { background: #2a1e1b; border-color: #7e4d40; }
+:global(.zone h3) { margin: 0 0 12px; color: #59d6b4; }
+ :global(.zone.world h3) { color: #ff8f70; }
+:global(.zone p) { font-size: 17px; color: #aab7b4; }
+:global(.boundary-arrow) { display: flex; align-items: center; justify-content: center; color: #ff8f70; font-size: 28px; }
+.stack { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
+.layer { display: grid; grid-template-columns: 195px 1fr; gap: 16px; align-items: center; padding: 11px 16px; border-left: 4px solid #59d6b4; background: #172321; }
+.layer:nth-child(2) { border-left-color: #7ee7ce; margin-left: 28px; }
+.layer:nth-child(3) { border-left-color: #ffb08f; margin-left: 56px; }
+.layer:nth-child(4) { border-left-color: #ff8f70; margin-left: 84px; }
+.layer-name { font-size: 23px; font-weight: 700; color: #f2f4f3; }
+.layer-role { color: #aab7b4; font-size: 15px; line-height: 1.35; }
+.timeline { position: relative; margin-top: 24px; padding-left: 34px; }
+.timeline:before { content: ''; position: absolute; left: 9px; top: 7px; bottom: 7px; width: 2px; background: #35534c; }
+.event { position: relative; display: grid; grid-template-columns: 90px 1fr; gap: 22px; padding: 0 0 20px; }
+.event:before { content: ''; position: absolute; left: -30px; top: 6px; width: 12px; height: 12px; background: #59d6b4; border: 3px solid #0d1514; outline: 2px solid #59d6b4; border-radius: 50%; }
+.event:nth-child(3):before { background: #ff8f70; outline-color: #ff8f70; }
+.event-time { color: #ff8f70; font-family: monospace; font-size: 16px; }
+.event-body { color: #e7ecea; font-size: 19px; }
+.event-body span { display: block; color: #aab7b4; font-size: 16px; margin-top: 4px; }
+.terminal { background: #101b19; border: 1px solid #35534c; box-shadow: 8px 8px 0 #14211e; font-family: monospace; overflow: hidden; }
+.terminal-bar { padding: 9px 14px; color: #aab7b4; border-bottom: 1px solid #35534c; font-size: 14px; }
+.terminal-body { padding: 16px 18px 19px; font-size: 17px; line-height: 1.6; color: #d5e9e3; }
+.prompt { color: #59d6b4; }
+.result { color: #ffb08f; }
+.diff { background: #151f1d; border-left: 3px solid #ff8f70; padding: 14px 18px; font-family: monospace; font-size: 16px; line-height: 1.6; }
+.minus { color: #ff8f70; }
+.plus { color: #59d6b4; }
+.boundary { display: grid; grid-template-columns: 1fr 1.25fr 1fr; align-items: stretch; margin-top: 26px; min-height: 230px; }
+.zone { padding: 20px; border: 1px solid #35534c; }
+.zone.model { background: #1b2926; border-right: 0; }
+.zone.host { background: #1b2422; border-right: 0; }
+.zone.world { background: #2a1e1b; border-color: #7e4d40; }
+.zone h3 { margin: 0 0 12px; color: #59d6b4; }
+.zone.world h3 { color: #ff8f70; }
+.zone p { font-size: 17px; color: #aab7b4; }
+.boundary-arrow { display: flex; align-items: center; justify-content: center; color: #ff8f70; font-size: 28px; }
 </style>
 
 <!--
@@ -39,7 +124,7 @@ td, th { padding: 9px 13px !important; border-color: var(--line) !important; }
 - https://pi.dev/docs/latest
 -->
 
-# Pi Agent：从模型到可工作的系统
+# Pi Agent：模型如何开始工作
 
 <div class="mt-8 text-xl muted">一次工具调用，如何变成一次真实的工程行动</div>
 <div class="absolute bottom-14 left-18 right-18 flex justify-between text-sm muted"><span>内部学习分享</span><span>2026</span></div>
@@ -101,23 +186,12 @@ flowchart LR
 
 # Pi 不是一个“更聪明的模型”
 
-<div class="two-col mt-8"><div>
-
-```text
-pi-ai
-  └─ 统一不同模型供应商的调用
-
-pi-agent-core
-  └─ tool calling + state management
-
-pi-coding-agent
-  └─ 面向编码任务的 CLI 与默认工具
-
-pi-tui
-  └─ 终端交互层
-```
-
-</div><div><div class="label">一个实用的判断</div><p class="text-2xl mt-3">Pi 是<strong>可扩展的 harness</strong>：把模型、工具、状态、事件和交互接成一个可运行的系统。</p><div class="rule"></div><p class="muted small">学习入口应该是边界和事件，而不是功能清单。</p></div></div>
+<div class="two-col mt-5"><div class="stack">
+  <div class="layer"><div class="layer-name">pi-tui</div><div class="layer-role">终端交互：输入、输出和可见反馈</div></div>
+  <div class="layer"><div class="layer-name">pi-coding-agent</div><div class="layer-role">编码产品层：默认工具与 CLI 工作流</div></div>
+  <div class="layer"><div class="layer-name">pi-agent-core</div><div class="layer-role">运行时：tool calling、状态和事件循环</div></div>
+  <div class="layer"><div class="layer-name">pi-ai</div><div class="layer-role">模型适配：统一不同供应商的 API</div></div>
+</div><div><div class="label">从上到下是体验，从下到上是能力</div><p class="text-2xl mt-3">Pi 是<strong>可扩展的 harness</strong>：把模型、工具、状态、事件和交互接成一个可运行的系统。</p><div class="rule"></div><p class="muted small">读源码时，先定位“这一层拥有哪种责任”，再看具体实现。</p></div></div>
 
 <!--
 [Sources]
@@ -128,8 +202,13 @@ pi-tui
 
 # 把一次工具调用拆开看
 
-<div class="grid grid-cols-5 gap-3 mt-10"><div class="step"><b>1</b><p class="small">模型选择工具</p><p class="muted small">名称 + 参数</p></div><div class="step"><b>2</b><p class="small">runtime 校验状态</p><p class="muted small">会话 / 上下文</p></div><div class="step"><b>3</b><p class="small">宿主执行</p><p class="muted small">文件 / 进程 / 网络</p></div><div class="step"><b>4</b><p class="small">结果回注</p><p class="muted small">stdout / diff / error</p></div><div class="step"><b>5</b><p class="small">模型继续循环</p><p class="muted small">修正或结束</p></div></div>
-<div class="mt-10 quote">把第 3 步当成“魔法”，就是 Agent 系统最容易失控的地方。</div>
+<div class="timeline">
+  <div class="event"><div class="event-time">00.0s</div><div class="event-body">模型发出 <strong>tool call</strong><span>工具名 + 参数：read_file({ path })</span></div></div>
+  <div class="event"><div class="event-time">00.1s</div><div class="event-body">runtime 记录事件并检查状态<span>session、上下文、权限和取消信号</span></div></div>
+  <div class="event"><div class="event-time">00.2s</div><div class="event-body">宿主执行真实动作<span>文件系统、进程或网络都在这一边发生</span></div></div>
+  <div class="event"><div class="event-time">00.4s</div><div class="event-body">结果回注，循环再次进入模型<span>stdout、diff、error 或用户确认</span></div></div>
+</div>
+<div class="mt-1 quote">最重要的不是“模型说了什么”，而是<strong>哪一个边界真正产生了副作用</strong>。</div>
 
 <!--
 [Sources]
@@ -138,10 +217,23 @@ pi-tui
 
 ---
 
-# 会话和状态：Agent 为什么能“记得刚才做了什么”
+# 会话与状态：Agent 如何记住上下文
 
-<div class="two-col mt-8"><div><div class="label">上下文中有什么</div><ul><li>用户消息与模型响应</li><li>工具调用及其返回结果</li><li>错误、取消和用户确认</li></ul></div><div><div class="label">调试时看什么</div><ul><li>当前 session 的事件顺序</li><li>工具参数和实际副作用</li><li>失败后是重试、修正还是结束</li></ul></div></div>
-<div class="mt-8 muted small">“它为什么这样做”通常要从事件流回答，而不是从最后一句自然语言回答。</div>
+<div class="two-col mt-5"><div>
+  <div class="label">一轮循环留下的记录</div>
+  <div class="timeline">
+    <div class="event"><div class="event-time">S1</div><div class="event-body">user_message<span>“修复空输入崩溃”</span></div></div>
+    <div class="event"><div class="event-time">S2</div><div class="event-body">assistant → tool<span>read_file({ path })</span></div></div>
+    <div class="event"><div class="event-time">S3</div><div class="event-body">tool → assistant<span>source text / error / diff</span></div></div>
+    <div class="event"><div class="event-time">S4</div><div class="event-body">assistant → next<span>继续、修正，或结束</span></div></div>
+  </div>
+</div><div>
+  <div class="label">调试时看哪三件事</div>
+  <div class="mt-3 step"><b>顺序</b><p class="small">事件是否按预期进入上下文？</p></div>
+  <div class="mt-3 step"><b>副作用</b><p class="small">工具参数和实际修改是否一致？</p></div>
+  <div class="mt-3 step"><b>转移</b><p class="small">失败后状态去了重试、修正还是结束？</p></div>
+</div></div>
+<div class="mt-4 muted small">“它为什么这样做”通常要从事件流回答，而不是从最后一句自然语言回答。</div>
 
 <!--
 [Sources]
@@ -150,10 +242,14 @@ pi-tui
 
 ---
 
-# 安全边界：信任项目，不等于信任执行环境
+# 安全边界：项目 ≠ 执行环境
 
-<div class="two-col mt-8"><div><div class="label">默认工具带来的能力</div><ul><li>读取、写入、编辑文件</li><li>执行 shell 命令</li><li>观察输出并继续循环</li></ul></div><div><div class="label accent">系统仍然要额外决定</div><ul><li>文件、进程、网络和凭据隔离</li><li>哪些动作需要用户确认</li><li>超时、取消、审计和恢复</li></ul></div></div>
-<div class="mt-8 quote">Project trust 不是 sandbox。权限和隔离属于宿主产品的责任。</div>
+<div class="boundary">
+  <div class="zone model"><h3>模型</h3><p>提出下一步</p><p>看见上下文</p><p class="accent">看不见真实文件系统</p></div>
+  <div class="zone host"><h3>Agent + Host</h3><p>校验工具参数</p><p>决定是否执行</p><p>记录结果与权限</p></div>
+  <div class="zone world"><h3>真实世界</h3><p>文件</p><p>进程</p><p>网络 / 凭据</p></div>
+</div>
+<div class="mt-5 quote">Project trust 不是 sandbox。<strong>权限和隔离属于宿主产品的责任</strong>。</div>
 
 <!--
 [Sources]
@@ -164,7 +260,14 @@ pi-tui
 
 # Demo：用一个小任务看完整因果链
 
-<div class="two-col mt-8"><div><div class="label">用户目标</div><p class="text-2xl">“找出空输入时的崩溃原因，并修复它。”</p><div class="rule"></div><ol><li>读取相关文件</li><li>解释计划并展示 diff</li><li>执行一个定向测试</li><li>根据结果继续或结束</li></ol></div><div><div class="label">现场纪律</div><p>使用脱敏小项目；每次写入或命令执行都解释“谁批准、谁执行、结果回到哪里”。</p><div class="mt-8 p-5" style="background: var(--panel); border: 1px solid var(--line);"><span class="accent">Fallback</span><br />预录终端输出 + 静态 diff，不让网络或模型延迟决定分享是否成功。</div></div></div>
+<div class="two-col mt-5"><div>
+  <div class="label">终端里看到的行动</div>
+  <div class="terminal mt-3"><div class="terminal-bar">pi · demo-project · session 01</div><div class="terminal-body"><div><span class="prompt">$</span> pi "修复空输入崩溃"</div><div class="mt-2 muted">→ read_file src/parser.ts</div><div class="muted">→ edit src/parser.ts</div><div><span class="result">✓</span> 1 file changed</div><div><span class="prompt">$</span> npm test -- parser</div><div><span class="result">✓</span> 8 passed</div></div></div>
+</div><div>
+  <div class="label">模型提出的修改，宿主留下的证据</div>
+  <div class="diff mt-3"><div class="muted">src/parser.ts</div><div class="minus">- const token = input.trim()</div><div class="plus">+ const token = (input ?? '').trim()</div><div class="muted">@@ test result</div><div class="plus">+ 8 passed</div></div>
+  <div class="mt-5 muted small">讲解重点：先读，再改，再跑；每一步都能被观察和复盘。</div>
+</div></div>
 
 <!--
 [Sources]
