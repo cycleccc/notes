@@ -86,10 +86,10 @@ td, th { padding: 9px 13px !important; border-color: #35534c !important; }
 :global(.boundary-arrow) { display: flex; align-items: center; justify-content: center; color: #ff8f70; font-size: 28px; }
 :global(.demo-terminal) { float: left; width: 48%; margin-top: 20px; }
 :global(.demo-copy) { margin-left: 52%; }
-:global(.slidev-page-9 .slidev-code) { margin-left: 52%; width: 46%; }
-:global(.slidev-page-9 .terminal) { border: 1px solid #35534c; background: #101b19; box-shadow: 8px 8px 0 #14211e; }
-:global(.slidev-page-10 .slidev-monaco-container) { width: 100%; max-width: none; min-height: 300px; margin-top: 20px; }
-:global(.slidev-page-10 .slidev-monaco-container-inner) { min-height: 300px; }
+:global(.slidev-page-10 .slidev-code) { margin-left: 52%; width: 46%; }
+:global(.slidev-page-10 .terminal) { border: 1px solid #35534c; background: #101b19; box-shadow: 8px 8px 0 #14211e; }
+:global(.slidev-page-11 .slidev-monaco-container) { width: 100%; max-width: none; min-height: 300px; margin-top: 20px; }
+:global(.slidev-page-11 .slidev-monaco-container-inner) { min-height: 300px; }
 :global(.lab-copy) { margin-left: 0; }
 :global(.lab-caption) { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
 :global(.lab-steps) { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 14px; }
@@ -139,6 +139,15 @@ td, th { padding: 9px 13px !important; border-color: #35534c !important; }
 .tree-box .branch:nth-child(3) { margin-left: 80px; }
 .tree-box .branch:nth-child(4) { margin-left: 120px; color: #ffb08f; }
 .tree-box .fork { color: #ff8f70; }
+.misconceptions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 34px; }
+.misconception { min-height: 210px; padding: 18px 20px 20px; border-top: 3px solid #35534c; background: #172321; }
+.misconception:nth-child(2) { border-top-color: #ffb08f; }
+.misconception:nth-child(3) { border-top-color: #ff8f70; }
+.misconception .num { color: #ff8f70; font-family: monospace; font-size: 16px; }
+.misconception .not { margin-top: 18px; color: #aab7b4; font-size: 17px; }
+.misconception .not s { color: #ff8f70; text-decoration-thickness: 2px; }
+.misconception .is { margin-top: 10px; color: #f2f4f3; font-size: 24px; line-height: 1.3; }
+.misconception .is strong { color: #59d6b4; }
 .stack { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
 .layer { display: grid; grid-template-columns: 195px 1fr; gap: 16px; align-items: center; padding: 11px 16px; border-left: 4px solid #59d6b4; background: #172321; }
 .layer:nth-child(2) { border-left-color: #7ee7ce; margin-left: 28px; }
@@ -211,6 +220,36 @@ layout: center
 <!--
 [Sources]
 - https://github.com/earendil-works/pi/tree/main/packages/agent
+-->
+
+---
+
+# 先放下三个误解，再看 Pi 的实现
+
+<div class="misconceptions">
+  <div class="misconception" v-click>
+    <div class="num">01 / 身份</div>
+    <div class="not"><s>Pi = 一个更聪明的模型</s></div>
+    <div class="is">Pi 是把<strong>模型、工具与状态</strong>接起来的 harness。</div>
+  </div>
+  <div class="misconception" v-click>
+    <div class="num">02 / 能力</div>
+    <div class="not"><s>工具越多，Agent 越强</s></div>
+    <div class="is">先用<strong>少量默认工具</strong>，让每次行动都可观察。</div>
+  </div>
+  <div class="misconception" v-click>
+    <div class="num">03 / 安全</div>
+    <div class="not"><s>信任项目，就等于安全</s></div>
+    <div class="is">真正的<strong>权限与隔离</strong>，发生在宿主环境。</div>
+  </div>
+</div>
+<div class="mt-8 quote" v-click="4">接下来每一页，都在回答其中一个问题。</div>
+
+<!--
+[Sources]
+- https://github.com/earendil-works/pi
+- https://juejin.cn/search?query=Pi%20Coding%20Agent
+- https://www.zhihu.com/search?type=content&q=Pi%20Agent%20Core
 -->
 
 ---
