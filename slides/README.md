@@ -5,9 +5,20 @@
 ## 结构
 
 - `decks/`：正式分享内容
+- `drafts/`：未完成的分享，独立运行，不参与正式构建和发布
 - `examples/`：参考工程
-- `legacy/`：旧材料与非主线内容
 - `scripts/`：构建、选择器、元数据导出
+
+## 分享索引
+
+| 分享 | 状态 | 正文源码 |
+| --- | --- | --- |
+| AI 全栈接管工作流分享 | 已发布 | [slides.md](decks/2026-04-26-ai-fullstack-agent-takeover/src/slides.md) |
+| TanStack 全家桶技术分享 | 已发布 | [slides.md](decks/2026-03-06-tanstack-family/src/slides.md) |
+| AI Review + Git/SVN 推行方案 | 已发布 | [slides.md](decks/2025-12-26-ai-review-git-svn/src/slides.md) |
+| T3 Fullstack 技术分享 | 已发布 | [slides.md](decks/2025-04-27-t3-fullstack/src/slides.md) |
+| 企业级全栈技术栈分享 | 已发布 | [slides.md](decks/enterprise-fullstack/src/slides.md) |
+| Pi Agent：模型如何开始工作 | 草稿 | [slides.md](drafts/pi-agent/slides.md) |
 
 ## 开发
 
@@ -18,6 +29,16 @@ pnpm dev
 ```
 
 `pnpm dev` 会弹出选择器，直接启动某一个 deck 的 Slidev 开发服务。
+
+Pi Agent 草稿使用独立的依赖与锁文件：
+
+```bash
+cd slides/drafts/pi-agent
+pnpm install --frozen-lockfile
+pnpm dev
+```
+
+以上路径从仓库根目录进入。草稿完成后，按 `decks/<分享名>/src/` 结构接入正式 workspace，并配置对应的构建路径，再加入发布列表。
 
 ## 构建
 
@@ -33,4 +54,4 @@ pnpm run metadata
 ## 说明
 
 - `examples/antfu-talks/`：Anthony Fu 的 talks，用于参考结构和视觉实现
-- `legacy/t3-fullstack/`：历史 Marp 材料
+- T3 统一维护 Slidev 版本；旧 Marp 源稿、导出文件和专属主题已移除，可通过 Git 历史查阅。

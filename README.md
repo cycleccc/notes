@@ -4,10 +4,10 @@
 
 ## 主结构
 
-- `slides/`：Slidev deck 工程，正式分享在 `slides/decks/`
+- `slides/`：PPT 源码统一入口，正式分享在 `slides/decks/`，未完成的分享在 `slides/drafts/`，详见 [分享索引](slides/README.md)
 - `site/`：Astro 站点实验目录（当前不作为线上发布入口）
 - `archive/`：历史笔记归档
-- `images/` / `themes/`：历史素材，按需保留
+- `images/`：历史笔记素材
 
 ## 本地使用
 
