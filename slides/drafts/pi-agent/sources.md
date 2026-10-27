@@ -1,0 +1,50 @@
+# 内容来源与核对范围
+
+核对日期：2026-10-26。Pi 源码固定到 [d5b3de22](https://github.com/earendil-works/pi/tree/d5b3de22d0e24a3e9c38a9410d3329b099717283)，不是对未来版本的承诺。
+
+| 内容 | 官方来源 |
+| --- | --- |
+| Pi 的定位、默认权限与扩展方式 | [README](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/README.md) |
+| Agent 状态、消息转换与事件流 | [agent/README](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/agent/README.md) |
+| 工具参数校验、执行、异常与结果回注 | [agent-loop.ts](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/agent/src/agent-loop.ts) |
+| read 工具名称及 path / offset / limit 参数 | [read.ts](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/coding-agent/src/core/tools/read.ts) |
+| 内置工具集合 | [tools/index.ts](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/coding-agent/src/core/tools/index.ts) |
+| 配置与上下文发现 | [configuration.md](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/coding-agent/docs/configuration.md) |
+| /tree、/fork、/compact 与当前分支上下文 | [sessions.md](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/coding-agent/docs/sessions.md) |
+| JSONL、id / parentId、compaction 条目 | [session-format.md](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/coding-agent/docs/session-format.md) |
+| 历史压缩与保留边界 | [compaction.md](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/coding-agent/docs/compaction.md) |
+| 扩展运行位置与可注册能力 | [extensions.md](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/coding-agent/docs/extensions.md) |
+| Skills 与包资源 | [skills.md](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/coding-agent/docs/skills.md)、[packages.md](https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/coding-agent/docs/packages.md) |
+
+## 演示边界
+
+- 图中的 tool call 和终端轨迹是教学示意，不是实际模型会话录屏。
+- `demo/` 可离线重放修复前后的行为，输出来自实际断言。
+- 附录第 14 页在浏览器计算示例，不等于 Pi 在本机执行工具。
+- 执行顺序图只展示一次工具调用；并发、重试和流式执行等细节以固定版本源码为准。
+- `/tree` 和 `/fork` 操作的是会话，不会自动回滚磁盘文件。
+
+## 教学路线与产品对照
+
+| 来源 | 使用范围 |
+| --- | --- |
+| [冬瓜的 Pi Agent 教程](https://www.dgzhuya.com/modules/ch01-overview) | 参考十章覆盖的知识领域，改为按能力依赖讲解，未照搬章节内容 |
+| [三层架构](https://www.dgzhuya.com/modules/ch02-three-layer-arch) | 三个核心包与 UI 基础设施的职责定位 |
+| [Codex as a platform](https://developers.openai.com/blog/codex-as-a-platform) | Harness、会话状态、事件、工具、沙箱与批准策略 |
+| [How Claude Code works](https://code.claude.com/docs/en/how-claude-code-works) | 收集上下文、行动、验证的循环，模型与 Harness 的分工 |
+| [OpenCode Agents](https://opencode.ai/docs/agents/) | 主 Agent、子 Agent、模型与工具权限配置 |
+
+对照核对日期：2026-10-26。OpenCode 使用 `/docs/` 文档，不混用 `/v2/docs/` 的配置字段。模式和默认权限会随版本、环境及用户配置变化。
+
+正文按工具、结果反馈、持续运行与状态管理的因果关系讲解 Harness。图示表示职责，不代表 Pi 内置全面批准系统。产品映射是对公开职责的归纳，不推断闭源模型、服务实现，也不进行未经测量的性能排名。
+
+第 6 页 `AgentTrace` 的请求、顺序与结果展示是人工编排的教学回放。测试通过数依据真实本地断言，仍不构成真实 Pi 运行记录。第 10 页可衔接真实演示，需要在临时目录准备失败版本，并实际启动 Pi 才能观察真实会话。
+
+## Slidev 表达与版本
+
+- [Slidev 53.0.0 发布说明](https://github.com/slidevjs/slidev/releases/tag/v53.0.0)，Node.js 22.12+、Mermaid 12。
+- [点击与动画](https://sli.dev/guide/animations)、[逐行聚焦](https://sli.dev/features/line-highlighting)、[Shiki Magic Move](https://sli.dev/features/shiki-magic-move)。
+- [Vue 组件](https://sli.dev/guide/component)、[圈画标记](https://sli.dev/features/rough-marker)、[代码分组](https://sli.dev/features/code-groups)。
+- 能力取舍：正文使用逐步展开与修复回放。代码变形与产品交互放在可选附录，不为展示功能增加主讲章节。
+- SVG 机制图与回放均为教学示意，不是实际 Pi 执行日志。附录第 14 页的测试结果由浏览器按对应函数计算。
+

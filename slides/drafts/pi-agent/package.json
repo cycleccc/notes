@@ -2,14 +2,15 @@
   "name": "pi-agent-sharing",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.22.0",
   "scripts": {
     "dev": "slidev slides.md",
     "build": "slidev build slides.md",
     "export": "slidev export slides.md --format pdf"
   },
   "dependencies": {
-    "@slidev/cli": "^52.19.1",
-    "@slidev/theme-default": "latest"
+    "@slidev/cli": "^53.0.0",
+    "@slidev/theme-default": "0.25.0"
   },
   "devDependencies": {
     "playwright-chromium": "latest"
