@@ -4,18 +4,21 @@ title: 从对话到行动：Harness 如何运行 Agent
 author: 内部技术分享
 colorSchema: dark
 aspectRatio: 16/9
-transition: none
+transition: fade-out
 mdc: true
 routerMode: hash
+layout: default
+class: talk-cover
 fonts:
   provider: none
 ---
 
-<div class="cover-kicker">用 Pi 看懂 Coding Agent</div>
+<div class="cover-eyebrow">UNDERSTANDING CODING AGENTS</div>
 
-# AI 如何从回答问题，<br>走到完成任务
+<h1 class="cover-title">从对话<br>到<span>行动</span></h1>
 
-<p class="cover-subtitle">Harness（运行系统）怎样组织模型、工具与反馈</p>
+<div class="cover-deck">Harness 如何让模型持续推进任务</div>
+<div class="cover-signature">以 Pi 为线索，理解 Coding Agent</div>
 
 <!--
 开场只问一个问题：同样是问模型，为什么聊天窗口给出建议，Coding Agent 却能读文件、修改和运行测试？
@@ -27,16 +30,16 @@ Pi 是可阅读的实现样本，Codex、Claude Code、OpenCode 只在最后作�
 
 ---
 name: goal
-clicks: 1
+class: talk-question
+clicks: 2
 ---
 
-# 同一句「帮我修好」，期待的结果变了
+<div class="quiet-prompt">“帮我修复 parser 的空值报错。”</div>
 
-<div class="single-request">帮我修复 parser 的空值报错</div>
-<div class="answer-vs-action">
-<div><span>一问一答</span><strong>一段修改建议</strong><p>你把建议变成实际修改</p></div>
-<div v-click><span>Agent</span><strong>实际修改与验证结果</strong><p>系统组织中间的工作过程</p></div>
-</div>
+<h1 class="question-title">AI 给了建议。<br>剩下的呢？</h1>
+
+<div class="expectation" v-click="1">我们期待的，是<span>实际修改</span>。</div>
+<div class="question-proof" v-click="2">文件改变了，测试也通过了。</div>
 
 <!--
 保持同一个 parser 修复任务。空值输入会报错，普通字符串的 trim 行为要保留。
@@ -47,13 +50,20 @@ Agent 的实际产物必须以工具输出、文件变化和验收结果为依�
 
 ---
 name: human-loop
-clicks: 2
+class: talk-human
+clicks: 3
 ---
 
-# 对话模式里，人让工作继续
+<div class="section-label">在只有模型回答的时候</div>
 
-<MechanismDiagram kind="manual" :step="$clicks" />
-<p class="diagram-caption">你负责收集材料、执行建议，再把结果带回对话。</p>
+<div class="human-composition">
+<h1>是你，<br>让工作继续。</h1>
+<div class="human-actions">
+<div v-for="(item, n) in ['找代码', '改文件', '跑测试', '贴回结果']" :key="item" :class="{ current: $clicks === n, past: $clicks > n }"><span>0{{ n + 1 }}</span>{{ item }}</div>
+</div>
+</div>
+
+<p class="bottom-thought">模型提出建议，人把建议变成行动。</p>
 
 <!--
 你找代码、贴给模型。模型给建议，你改文件、运行测试，再把报错贴回去。每一步仍然依赖人搬运。
@@ -63,13 +73,43 @@ clicks: 2
 
 ---
 name: tools
+class: talk-code
 clicks: 2
 ---
 
-# 工具让模型的请求变成真实动作
+<h1>把操作，交给工具。</h1>
+<div class="slide-lead">从一段回答，到一个可以执行的请求。</div>
 
-<MechanismDiagram kind="tool" :step="$clicks" />
-<p class="diagram-caption">模型选动作、填参数，Harness 调度工具，工具操作真实环境。</p>
+<div class="code-composition">
+<div class="code-work">
+<div class="code-filename">harness.ts</div>
+
+````md magic-move {duration:650}
+```ts
+const reply = await model(messages)
+show(reply.text)
+```
+```ts
+const reply = await model(messages)
+const call = reply.toolCall
+// read({ path: 'parser.mjs' })
+```
+```ts
+const reply = await model(messages)
+const call = reply.toolCall
+const result = await tools.run(call)
+```
+````
+
+<div class="pseudocode-note">职责伪代码，非 Pi API</div>
+</div>
+<div class="code-explanation">
+<div :class="{ current: $clicks === 0 }"><span>01</span><b>模型给出回答</b></div>
+<div :class="{ current: $clicks === 1 }"><span>02</span><b>模型提出请求</b></div>
+<div :class="{ current: $clicks === 2 }"><span>03</span><b>宿主执行工具</b></div>
+<p v-click="2">真实环境的变化<br>发生在执行这一侧。</p>
+</div>
+</div>
 
 <!--
 模型输出结构化的 read 请求，运行系统调用真正的读取函数。文件内容并非模型凭空知道。
@@ -80,13 +120,47 @@ clicks: 2
 
 ---
 name: feedback
-clicks: 4
+class: talk-code talk-feedback
+clicks: 2
 ---
 
-# 把结果交回模型，下一步就有了依据
+<h1>再把结果，交回模型。</h1>
+<div class="slide-lead">下一步，开始有了实际依据。</div>
 
-<MechanismDiagram kind="loop" :step="$clicks" />
-<p class="diagram-caption">读到的代码、失败输出、复测结果，都能改变下一步。</p>
+<div class="code-composition">
+<div class="code-work">
+<div class="code-filename">harness.ts</div>
+
+````md magic-move {duration:650}
+```ts
+const reply = await model(messages)
+const result = await tools.run(reply.toolCall)
+```
+```ts
+const reply = await model(messages)
+const result = await tools.run(reply.toolCall)
+messages.push(reply)
+messages.push(toolResult(result))
+```
+```ts
+while (true) {
+  const reply = await model(messages)
+  if (!reply.toolCall) break
+
+  const result = await tools.run(reply.toolCall)
+  messages.push(reply, toolResult(result))
+}
+```
+````
+
+<div class="pseudocode-note">省略校验、错误、取消与其他停止条件</div>
+</div>
+<div class="feedback-copy">
+<span class="feedback-word">{{ ['执行', '反馈', '继续'][$clicks] }}</span>
+<p>{{ ['先拿到真实结果。', '把观察加入下一次输入。', '一次次调用，接成工作过程。'][$clicks] }}</p>
+<div class="small-evidence" v-click="1">例如：2 / 4 失败<br>空值调用 trim 报错</div>
+</div>
+</div>
 
 <!--
 关键的一步是结果回传：读完文件后重新调用模型，模型才知道实际实现；测试失败后把失败输出带回去，模型才有依据调整。
@@ -97,14 +171,15 @@ Harness 维护消息和运行循环，模型依据本轮输入生成下一步。
 
 ---
 name: replay
+class: talk-demo
+clicks: 7
 ---
 
-# Harness 把一次次调用接成修复过程
-
-<AgentTrace />
+<h1>看一次完整的修复。</h1>
+<RepairReplay :step="$clicks" :active="$slidev.nav.currentPage === 6" @step="$slidev.nav.go(6, $event)" @next="$slidev.nav.nextSlide()" @previous="$slidev.nav.prevSlide(true)" />
 
 <!--
-按按钮回放同一个任务：目标进入上下文，读取文件，测试失败，模型提出修改，宿主执行，复测，检查 diff，给出结论。
+用自动播放或方向键回放同一个任务：目标进入上下文，读取文件，测试失败，模型提出修改，宿主执行，复测，检查 diff，给出结论。
 请听众注意：每一步模型并没有直接碰磁盘，Harness 调度的工具才产生实际动作。工具结果又驱动下一次生成。
 这是人工编排的教学回放，不是实际 Pi 录屏，不会在页面调用模型或本机命令。通过数来自本地示例断言。
 真正的 Pi 演示准备见 README，可在讲到第 10 页时切换。
@@ -112,13 +187,22 @@ name: replay
 
 ---
 name: continuity
+class: talk-memory
 clicks: 2
 ---
 
-# 任务变长，Harness 让进度接得上
+<h1>长任务，需要把进度接上。</h1>
+<div class="slide-lead">每次调用，都重新组织相关输入。</div>
 
-<MechanismDiagram kind="continuity" :step="$clicks" />
-<p class="diagram-caption">保存目标、发现和进度，为下一次调用组织相关信息。</p>
+<div class="memory-composition" :class="`memory-step-${$clicks}`">
+<div class="history-fragments">
+<span class="memory-label">工作历史</span>
+<div v-for="(line, n) in ['目标：修复空值报错', 'read：读到实现', 'bash：2 / 4 失败', 'edit：补上空值处理', 'bash：4 / 4 通过']" :key="line" :style="{ '--n': n }"><span>0{{ n + 1 }}</span>{{ line }}</div>
+</div>
+<div class="progress-note"><span class="memory-label">进度摘要</span><b>空值处理已修复。</b><p>保留普通字符串的行为<br>下一步：检查 diff</p></div>
+<div class="next-input"><span>下一次模型输入</span><div>目标与进度</div><div>近期工具结果</div></div>
+</div>
+<div class="memory-footnote">{{ ['完整历史可以保存。', '摘要保留目标、发现和进度，也可能丢失细节。', '必要时，重新读取原始证据。'][$clicks] }}</div>
 
 <!--
 一次模型生成结束后，持续工作的状态需要运行系统管理。下一次调用需要任务目标、已发现的事实和近期工具结果。
@@ -129,13 +213,21 @@ clicks: 2
 
 ---
 name: reach
-clicks: 3
+class: talk-reach
+clicks: 2
 ---
 
-# 接上更多工具，行动范围随之扩展
+<h1>工具，扩展行动半径。</h1>
 
-<MechanismDiagram kind="reach" :step="$clicks" />
-<p class="diagram-caption">修代码、查资料、操作业务系统，都可以接到同一个循环上。</p>
+<div class="reach-composition">
+<div>
+<Transition name="word-swap" mode="out-in"><div :key="$clicks" class="reach-word">{{ ['代码库', '浏览器', '业务系统'][$clicks] }}</div></Transition>
+<div class="reach-example">{{ ['read / edit / bash', '观察页面，操作网页', '读取工单，调用业务接口'][$clicks] }}</div>
+</div>
+<p>同一个循环，<br>连接不同的环境。</p>
+</div>
+<div class="reach-index"><span v-for="(label, n) in ['代码', '网页', '业务']" :key="label" :class="{ current: $clicks === n }">{{ label }}</span></div>
+<div class="bottom-note">实际可用工具依赖产品与配置，接入能力也需要可靠反馈。</div>
 
 <!--
 看起来无所不能的一个原因，是循环可以连接不同工具。终端能操作代码与进程，浏览器工具能观察和操作网页，业务接口能接入工单、文档与数据。
@@ -146,13 +238,19 @@ Skills、MCP、扩展等可以帮助提供方法或连接能力，此处不再�
 
 ---
 name: control
+class: talk-control
 clicks: 2
 ---
 
-# Harness 还管理执行边界与停止条件
+<div class="section-label">连续执行，还需要边界</div>
+<h1>能行动，<br>也要会停下。</h1>
 
-<MechanismDiagram kind="boundary" :step="$clicks" />
-<p class="diagram-caption">执行前检查策略，运行中支持取消，结束时检查结果。</p>
+<div class="control-rows">
+<div :class="{ current: $clicks === 0 }"><span>执行前</span><b>检查范围与策略</b></div>
+<div :class="{ current: $clicks === 1 }"><span>运行中</span><b>处理错误，支持取消</b></div>
+<div :class="{ current: $clicks === 2 }"><span>结束时</span><b>看证据，判断是否完成</b></div>
+</div>
+<div class="bottom-note">具体能力取决于实现与配置。Pi 默认工具不等于全面权限沙箱。</div>
 
 <!--
 当系统可以连续行动，运行系统还要处理执行范围、批准策略、错误、取消和运行限制。具体限制能力取决于产品和配置。
@@ -163,13 +261,19 @@ Pi 核心工具不能描述为自带全面权限沙箱；扩展通常拥有宿�
 
 ---
 name: pi
+class: talk-pi
 clicks: 3
 ---
 
-# Pi 是这条工作链路的一种具体实现
-
-<MechanismDiagram kind="pi" :step="$clicks" />
-<p class="diagram-caption">把同一个修复任务交给 Pi，就能观察这条链路实际运行。</p>
+<div class="section-label">现在，给这套运行系统一个具体名字</div>
+<div class="pi-composition">
+<div><h1>Pi<span>.</span></h1><p>一个可以读懂的 Harness。</p></div>
+<div class="pi-responsibilities">
+<div v-for="(pair, n) in [['模型', '选择下一步'], ['Pi', '组织并调度'], ['工具', '接触真实环境'], ['结果', '回到模型输入']]" :key="pair[0]" :class="{ current: $clicks === n }"><span>{{ pair[0] }}</span><b>{{ pair[1] }}</b></div>
+</div>
+</div>
+<div class="pi-tools">read <span>/</span> edit <span>/</span> bash</div>
+<div class="bottom-note">可切换真实 Pi 演示，任务与准备步骤见 README。</div>
 
 <!--
 此处把已经讲清楚的机制落到 Pi：模型提出请求，Pi 组织调用与运行状态，read / edit / bash 等工具产生动作，结果接回模型。
@@ -181,14 +285,15 @@ clicks: 3
 
 ---
 name: products
-clicks: 1
+class: talk-products
+clicks: 2
 ---
 
-# 其他 Coding Agent，也可以这样理解
-
-<div class="product-names"><span>Codex</span><span>Claude Code</span><span>Pi</span><span>OpenCode</span></div>
-<div class="common-work">组织上下文，调用模型，执行工具，再接回结果</div>
-<p class="product-conclusion" v-click>各家在工具、上下文组织、执行策略和交互上作出不同选择。</p>
+<div class="section-label">把同一组问题，带到其他产品</div>
+<h1>同一个模型，<br>为什么体验不同？</h1>
+<div class="product-wordmark-row" v-click="1"><span>Codex</span><span>Claude Code</span><span>Pi</span><span>OpenCode</span></div>
+<div class="product-insight" v-click="2">Harness 选择怎样组织上下文、工具、反馈与策略。</div>
+<div class="bottom-note">这是公开职责的对照，不表示各家内部实现相同。</div>
 
 <!--
 这是一组用于理解公开职责的共同问题，不主张各家内部使用同样源码或完全一致的消息格式。
@@ -202,14 +307,14 @@ Pi 固定版本官方资料，见 sources.md。
 
 ---
 name: conclusion
-clicks: 3
+class: talk-finale
+clicks: 2
 ---
 
-# Agent 怎样从对话走向行动
-
-<div class="agent-equation"><strong>模型</strong><span>+</span><strong v-click>Harness</strong><span>+</span><strong v-click>工具与环境</strong></div>
-<p class="closing-line" v-click>Harness 接起模型决策、工具执行与结果反馈，让任务持续推进。</p>
-<p class="closing-question">如果模型只能回答，剩下的工作是谁在做？</p>
+<div class="section-label">从对话，到行动</div>
+<h1>让 AI<br>把事情<span>做下去</span>。</h1>
+<div class="finale-formula" v-click="1">模型 <span>+</span> Harness <span>+</span> 工具与环境</div>
+<div class="finale-proof" v-click="2">用证据判断完成。</div>
 
 <!--
 回扣最开始的对话：此前是人维持整个工作循环，现在由 Harness 把相当一部分步骤连接起来。
@@ -220,6 +325,7 @@ Agent 是整体，Harness 是其中组织上下文、工具调用、反馈与运
 
 ---
 name: architecture
+transition: none
 clicks: 3
 ---
 
@@ -238,6 +344,7 @@ https://www.dgzhuya.com/modules/ch02-three-layer-arch
 
 ---
 name: evidence
+transition: none
 clicks: 1
 ---
 
@@ -273,6 +380,7 @@ export function parse(input) {
 
 ---
 name: comparison
+transition: none
 ---
 
 # 附录：四款产品的公开设计
@@ -290,6 +398,7 @@ Pi 固定版本文档，见 sources.md。
 
 ---
 name: sources
+transition: none
 ---
 
 # 附录：源码与阅读入口

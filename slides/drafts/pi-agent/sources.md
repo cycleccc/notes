@@ -18,10 +18,10 @@
 
 ## 演示边界
 
-- 图中的 tool call 和终端轨迹是教学示意，不是实际模型会话录屏。
+- 主讲中的代码演进、文件变化、测试输出与八步回放均为人工编排的教学模拟，不是实际模型会话录屏，页面不执行本机命令。
 - `demo/` 可离线重放修复前后的行为，输出来自实际断言。
 - 附录第 14 页在浏览器计算示例，不等于 Pi 在本机执行工具。
-- 执行顺序图只展示一次工具调用；并发、重试和流式执行等细节以固定版本源码为准。
+- 职责伪代码展示简化循环，省略参数校验、错误处理、取消及其他停止条件；并发、重试和流式执行以固定版本源码为准。
 - `/tree` 和 `/fork` 操作的是会话，不会自动回滚磁盘文件。
 
 ## 教学路线与产品对照
@@ -38,13 +38,20 @@
 
 正文按工具、结果反馈、持续运行与状态管理的因果关系讲解 Harness。图示表示职责，不代表 Pi 内置全面批准系统。产品映射是对公开职责的归纳，不推断闭源模型、服务实现，也不进行未经测量的性能排名。
 
-第 6 页 `AgentTrace` 的请求、顺序与结果展示是人工编排的教学回放。测试通过数依据真实本地断言，仍不构成真实 Pi 运行记录。第 10 页可衔接真实演示，需要在临时目录准备失败版本，并实际启动 Pi 才能观察真实会话。
+第 6 页 `RepairReplay` 的请求、顺序与结果展示是人工编排的教学回放。测试通过数依据真实本地断言，仍不构成真实 Pi 运行记录。第 10 页可衔接真实演示，需要在临时目录准备失败版本，并实际启动 Pi 才能观察真实会话。
 
 ## Slidev 表达与版本
 
 - [Slidev 53.0.0 发布说明](https://github.com/slidevjs/slidev/releases/tag/v53.0.0)，Node.js 22.12+、Mermaid 12。
 - [点击与动画](https://sli.dev/guide/animations)、[逐行聚焦](https://sli.dev/features/line-highlighting)、[Shiki Magic Move](https://sli.dev/features/shiki-magic-move)。
 - [Vue 组件](https://sli.dev/guide/component)、[圈画标记](https://sli.dev/features/rough-marker)、[代码分组](https://sli.dev/features/code-groups)。
-- 能力取舍：正文使用逐步展开与修复回放。代码变形与产品交互放在可选附录，不为展示功能增加主讲章节。
-- SVG 机制图与回放均为教学示意，不是实际 Pi 执行日志。附录第 14 页的测试结果由浏览器按对应函数计算。
+- 能力取舍：正文使用代码变形、历史收拢、环境切换与修复回放。详细产品对照放在可选附录，不为展示功能增加主讲章节。
+- 场景动画、附录 SVG 机制图与回放均为教学示意，不是实际 Pi 执行日志。附录第 14 页的测试结果由浏览器按对应函数计算。
 
+
+## 视觉与演讲参考
+
+- Anthony Fu：[Make Tools That People Love](https://talks.antfu.me/2025/squiggleconf/)，[源码](https://github.com/antfu/talks/tree/main/2025-09-18/src)。参考大字排版、留白、柔和背景与页面节奏。
+- sxzz：[Vue Vapor：重新发明](https://talks.sxzz.dev/2024-07-vueconf/)，[源码](https://github.com/sxzz/talks/tree/main/2024-07-vueconf/src)。参考把代码逐步变形，沿着能力形成的顺序解释机制。
+
+仅参考表达方法，未复制上述项目的源码或素材。本稿的布局、CSS 与修复回放组件独立编写。设计参考核对日期：2026-10-27。
