@@ -82,3 +82,19 @@
 .slidev-layout table { font-size:18px; width:100%; }.slidev-layout td,.slidev-layout th { padding:13px 12px!important; border-color:var(--line)!important; }.slidev-layout .slidev-code { font-size:17px!important; line-height:1.65!important; }
 .demo-controls { display:flex; align-items:center; gap:16px; font-size:16px; }.demo-controls button { border:1px solid #675675; padding:8px 16px; color:var(--ink); border-radius:4px; background:#201a2b; cursor:pointer; }.demo-controls button:hover:not(:disabled) { border-color:#c8b6ff; background:#2a2239; }.demo-controls button:disabled { opacity:.3; cursor:default; }.demo-controls .quiet { margin-left:auto; background:transparent; }
 @media(prefers-reduced-motion:reduce) { .slidev-layout *, .slidev-layout *::before,.slidev-layout *::after { transition:none!important; animation:none!important; filter:none!important; } }
+
+/* Pi source and runtime evidence extend the established code-first layouts. */
+.talk-pi-call .code-composition { grid-template-columns:2.5fr 1fr; gap:28px; margin-top:28px; }
+.talk-pi-call .shiki-magic-move-container,.talk-pi-call .slidev-code { font-size:13px!important; line-height:1.8!important; }
+.talk-pi-call .pseudocode-note { margin-top:19px; font-size:10px; }
+.pi-call-copy { border-left:1px solid #ffffff19; padding-left:23px; }
+.pi-call-word { font:49px/1.3 var(--display); color:#c8b6ff; }
+.slidev-layout .pi-call-copy p { font-size:18px; color:#afa2bf; line-height:1.7; margin-top:24px; }
+.pi-call-copy a { font-size:12px; display:block; margin-top:28px; }
+.slidev-layout.talk-runtime h1 { font-size:35px; }
+.product-choices { margin-top:28px; }
+.choices-head,.choices-row { display:grid; grid-template-columns:135px 270px 1fr; column-gap:18px; align-items:center; }
+.choices-head { color:#8d839a; font-size:12px; margin-bottom:8px; }
+.choices-row { border-bottom:1px solid #ffffff15; padding:12px 0; line-height:1.4; color:#61596e; transition:color .5s,transform .5s; font-size:17px; }
+.choices-row b { font-weight:400; font-size:21px; }.choices-row.current { color:#e4d5ee; transform:translateX(4px); }.choices-row.current b { color:#cfb4ea; }.choices-row.past { color:#9a90a7; }
+.choices-takeaway { color:#cdbbd9; font-size:21px; margin-top:22px; }

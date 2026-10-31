@@ -1,0 +1,7 @@
+{
+  "name": "pi-harness-runtime-demo",
+  "private": true,
+  "type": "module",
+  "scripts": { "demo": "node run.mjs" },
+  "dependencies": { "@earendil-works/pi-agent-core": "1.4.0" }
+}

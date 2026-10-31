@@ -17,8 +17,8 @@ fonts:
 
 <h1 class="cover-title">从对话<br>到<span>行动</span></h1>
 
-<div class="cover-deck">Harness 如何让模型持续推进任务</div>
-<div class="cover-signature">以 Pi 为线索，理解 Coding Agent</div>
+<div class="cover-deck">以 Pi 为例，理解 Coding Agent 的运行原理</div>
+<div class="cover-signature">工具 · 反馈 · 上下文 · 执行边界</div>
 
 <!--
 开场只问一个问题：同样是问模型，为什么聊天窗口给出建议，Coding Agent 却能读文件、修改和运行测试？
@@ -182,7 +182,7 @@ clicks: 7
 用自动播放或方向键回放同一个任务：目标进入上下文，读取文件，测试失败，模型提出修改，宿主执行，复测，检查 diff，给出结论。
 请听众注意：每一步模型并没有直接碰磁盘，Harness 调度的工具才产生实际动作。工具结果又驱动下一次生成。
 这是人工编排的教学回放，不是实际 Pi 录屏，不会在页面调用模型或本机命令。通过数来自本地示例断言。
-真正的 Pi 演示准备见 README，可在讲到第 10 页时切换。
+第 11 页沿实际消息和源码定位，第 12 页验证真实 Pi 核心循环。接入真实模型的演示准备见 README。
 -->
 
 ---
@@ -273,36 +273,131 @@ clicks: 3
 </div>
 </div>
 <div class="pi-tools">read <span>/</span> edit <span>/</span> bash</div>
-<div class="bottom-note">可切换真实 Pi 演示，任务与准备步骤见 README。</div>
+<div class="bottom-note">接下来，沿一次 read 请求找到源码，再运行同一个修复任务。</div>
 
 <!--
 此处把已经讲清楚的机制落到 Pi：模型提出请求，Pi 组织调用与运行状态，read / edit / bash 等工具产生动作，结果接回模型。
-不展开分包、事件类型和供应商协议。想读实现时再打开附录源码定位页。
+下一页沿工具字段与 agent-loop.ts 找到真实实现，随后验证核心循环；分包结构留在附录。
 可切换到真实 Pi 演示。完整提示词和准备步骤见 README，先在独立临时目录放入失败版本，不要覆盖仓库完成版本。
-若没有模型连接，用前面的示意回放与附录本地用例继续。自然语言任务范围不是操作系统沙箱。
+若没有模型连接，用第 12 页的 Pi 核心实验与附录本地用例继续。自然语言任务范围不是操作系统沙箱。
 来源：Pi 固定版本 agent-loop.ts、tools/index.ts 与相关工具实现。
 -->
 
 ---
-name: products
-class: talk-products
-clicks: 2
+name: pi-call
+class: talk-code talk-pi-call
+clicks: 3
 ---
 
-<div class="section-label">把同一组问题，带到其他产品</div>
-<h1>同一个模型，<br>为什么体验不同？</h1>
-<div class="product-wordmark-row" v-click="1"><span>Codex</span><span>Claude Code</span><span>Pi</span><span>OpenCode</span></div>
-<div class="product-insight" v-click="2">Harness 选择怎样组织上下文、工具、反馈与策略。</div>
-<div class="bottom-note">这是公开职责的对照，不表示各家内部实现相同。</div>
+<h1>一次 read，在 Pi 里怎样发生？</h1>
+<div class="slide-lead">工具定义进入输入，请求与结果用同一个 ID 对上。</div>
+
+<div class="code-composition">
+<div class="code-work">
+<div class="code-filename">{{ ['提供给模型的工具定义（字段示例）', '模型返回的 Pi 内部消息（字段示例）', 'agent-loop.ts（关键节选，省略周边代码）', 'Pi 构造的结果消息（字段示例）'][$clicks] }}</div>
+
+````md magic-move {duration:650}
+```ts
+{
+  name: 'read',
+  description: '读取文件内容',
+  parameters: {
+    type: 'object',
+    properties: { path: { type: 'string' } },
+    required: ['path']
+  }
+}
+```
+```ts
+{
+  role: 'assistant',
+  content: [{
+    type: 'toolCall', id: 'call_1',
+    name: 'read',
+    arguments: { path: 'parser.mjs' }
+  }]
+}
+```
+```ts
+// prepareToolCall：按名称定位、校验参数
+const tool = tools.find((t) => t.name === toolCall.name);
+const validatedArgs = validateToolArguments(tool, preparedToolCall);
+
+// 后续执行阶段调用 prepared.tool.execute(...)
+// read 的实现才会真正读取磁盘
+```
+```ts
+{
+  role: 'toolResult',
+  toolCallId: 'call_1',
+  toolName: 'read',
+  content: [{ type: 'text', text: '文件内容…' }],
+  isError: false
+}
+// 加入 messages，供下一次模型调用使用
+```
+````
+
+<div class="pseudocode-note">字段示例已省略非关键项；内部消息由 pi-ai 适配到供应商协议。</div>
+</div>
+<div class="pi-call-copy">
+<span class="pi-call-word">{{ ['定义', '请求', '执行', '反馈'][$clicks] }}</span>
+<p>{{ ['模型拿到工具名称、用途和参数约束。', '模型选择 read，给出路径和调用 ID。', 'Pi 找到工具实现，校验通过后调用它。', 'call_1 的文件内容，成为下一步的依据。'][$clicks] }}</p>
+<a :href="'https://github.com/earendil-works/pi/blob/d5b3de22d0e24a3e9c38a9410d3329b099717283/packages/agent/src/agent-loop.ts#L' + [412,268,726,940][$clicks]" target="_blank">查看对应源码 ↗</a>
+</div>
+</div>
 
 <!--
-这是一组用于理解公开职责的共同问题，不主张各家内部使用同样源码或完全一致的消息格式。
-同一个模型配上不同 Harness，工具、输入组织和反馈方式也会不同。用户体验与完成效果不能只归因于模型本身。
-产品细节放在附录按需讨论，不回到四款产品各讲一遍的结构。
-来源：https://developers.openai.com/blog/codex-as-a-platform
-https://code.claude.com/docs/en/how-claude-code-works
-https://opencode.ai/docs/agents/
-Pi 固定版本官方资料，见 sources.md。
+先解释模型为何知道 read：Harness 将可用工具的名称、描述与参数 schema 放入输入；模型生成结构化请求，不能靠文字声称已经读过文件。
+Pi 内部 assistant.content 的 toolCall 包含 id/name/arguments。模型供应商的线格式由 pi-ai 适配，不要把内部字段当作所有供应商通用协议。
+prepareToolCall 按名称查找工具并验证参数；随后在执行阶段调用 prepared.tool.execute。两个源码行来自同一函数的不同位置，省略了不存在工具、准备参数、Hook、异常与中止等分支。
+执行结果由 createToolResultMessage 构造成 toolResult，toolCallId 对应原调用 id，再由 runLoop 加回 currentContext.messages。
+本页的定义、请求与结果是按源码字段编写的示例，不是真实模型输出。源码节选固定到 d5b3de22；下一页实际运行发布包 1.4.0 的核心循环。
+来源：agent-loop.ts L268、L283–285、L412、L726–737、L842、L940；types.ts AgentTool；read.ts。详见 sources.md。
+-->
+
+---
+name: pi-runtime
+class: talk-runtime
+clicks: 4
+---
+
+<h1>让 Pi 的循环，真正跑一次。</h1>
+<PiRuntimeProof :step="$clicks" />
+
+<!--
+这里展示可复现脚本保存的本地运行结果，不再是第 6 页的手工编排动画。
+实际运行 @earendil-works/pi-agent-core@1.4.0 的 runAgentLoop；仅用 scriptedStream 替换模型服务，read/edit/bash 是精简的自定义教学工具，不是完整 coding-agent 内置工具。
+Pi 本身完成参数校验、工具调度、toolResult 创建与结果回注。读取、修改和 node 测试真实发生在唯一临时目录。
+模型边界共调用 5 次，工具执行 4 次。每次新调用都断言读到了上一条匹配 ID 的 toolResult，失败数与通过数来自原验收脚本；最终 agent_end 和文件差异也有断言。
+这验证 Harness 机制，不代表验证了模型的规划或自主纠错能力。要看真实模型决定下一步，按 README 切换完整 Pi 演示；本机尚未配置 Pi CLI 模型连接，不把预设回复伪装成模型推理。
+来源：demo/pi-runtime/run.mjs、result.json、独立 pnpm-lock.yaml。页面只展示记录，不运行本机命令。
+-->
+
+---
+name: products
+class: talk-product-choices
+clicks: 3
+---
+
+<h1>同一套职责，各家怎样组织？</h1>
+<div class="slide-lead">沿着工具、上下文与执行边界，看公开设计。</div>
+
+<div class="product-choices">
+<div class="choices-head"><span>产品</span><span>公开设计入口</span><span>怎样影响任务执行</span></div>
+<div v-for="(row, n) in [['Pi', '核心循环 + 工具与扩展', '把循环嵌入自己的工具和界面'], ['Codex', 'Harness + 沙箱与批准策略', '按配置与运行环境约束操作'], ['Claude Code', '收集上下文 → 行动 → 验证', '围绕项目持续获取并验证信息'], ['OpenCode', '主 Agent / 子 Agent + 权限', '按任务配置角色与工具访问']]" :key="row[0]" class="choices-row" :class="{ current: $clicks === n, past: $clicks > n }"><b>{{ row[0] }}</b><span>{{ row[1] }}</span><span>{{ row[2] }}</span></div>
+</div>
+<div class="choices-takeaway">模型决定下一步；Harness 决定这一步怎样落地。</div>
+<div class="bottom-note">这些侧重点并非各家独有，也不表示内部实现相同。效果仍取决于模型、任务与配置。</div>
+
+<!--
+本页不做性能和独有能力排名：工具、上下文与执行策略是共同职责，各家的公开组合方式不同。
+Pi 的 agent-core 负责循环，可组合工具与扩展；不是所有权限限制都由 Pi 默认提供。
+Codex 官方将 Harness 定义为模型外围组织上下文、工具、状态与执行边界的系统；实际沙箱和批准能力依运行环境与配置而定。
+Claude Code 官方直接用 gather context / take action / verify results 说明循环与模型、工具的分工。
+OpenCode /docs/ 将主 Agent 和子 Agent 作为可配置角色，模型、提示与工具权限可以分别配置；不在这里混用 /v2/docs/ 字段。
+四行展示公开设计入口，不能把模型选择归于 Harness，也不能把最终效果只归于模型。详细交互仍在附录。
+来源：2026-10-31 核对的 Codex as a platform、How Claude Code works、OpenCode Agents；Pi 固定版本文档。见 sources.md。
 -->
 
 ---
@@ -411,7 +506,7 @@ transition: none
 <li><a href="https://opencode.ai/docs/agents/">OpenCode Agents</a><span>主 Agent、子 Agent 与权限配置</span></li>
 </ul>
 
-<p class="muted small mt-6">核对日期：2026-10-26。Pi 固定到 d5b3de22，详细索引见 sources.md。</p>
+<p class="muted small mt-6">补充核对：2026-10-31。Pi 固定到 d5b3de22，详细索引见 sources.md。</p>
 
 <!--
 教程是二手学习材料，Pi API 与行为以固定版本官方源码为准。
