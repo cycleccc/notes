@@ -158,7 +158,7 @@ while (true) {
 <div class="feedback-copy">
 <span class="feedback-word">{{ ['执行', '反馈', '继续'][$clicks] }}</span>
 <p>{{ ['先拿到真实结果。', '把观察加入下一次输入。', '一次次调用，接成工作过程。'][$clicks] }}</p>
-<div class="small-evidence" v-click="1">例如：2 / 4 失败<br>空值调用 trim 报错</div>
+<div class="small-evidence" v-click="1">测试发现：空值输入报错<br>undefined / null 无法调用 trim</div>
 </div>
 </div>
 
@@ -197,7 +197,7 @@ clicks: 2
 <div class="memory-composition" :class="`memory-step-${$clicks}`">
 <div class="history-fragments">
 <span class="memory-label">工作历史</span>
-<div v-for="(line, n) in ['目标：修复空值报错', 'read：读到实现', 'bash：2 / 4 失败', 'edit：补上空值处理', 'bash：4 / 4 通过']" :key="line" :style="{ '--n': n }"><span>0{{ n + 1 }}</span>{{ line }}</div>
+<div v-for="(line, n) in ['目标：修复空值报错', 'read：读到实现', 'bash：空值输入报错', 'edit：补上空值处理', 'bash：四个用例均通过']" :key="line" :style="{ '--n': n }"><span>0{{ n + 1 }}</span>{{ line }}</div>
 </div>
 <div class="progress-note"><span class="memory-label">进度摘要</span><b>空值处理已修复。</b><p>保留普通字符串的行为<br>下一步：检查 diff</p></div>
 <div class="next-input"><span>下一次模型输入</span><div>目标与进度</div><div>近期工具结果</div></div>
