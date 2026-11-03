@@ -32,7 +32,9 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-          cache-dependency-path: slides/pnpm-lock.yaml
+          cache-dependency-path: |
+            slides/pnpm-lock.yaml
+            slides/decks/2026-11-03-pi-agent/src/pnpm-lock.yaml
 
       - uses: actions/configure-pages@v5
 
@@ -51,6 +53,10 @@ jobs:
       - name: Install
         working-directory: slides
         run: pnpm install --frozen-lockfile
+
+      - name: Install Pi Agent deck (Slidev 53)
+        working-directory: slides/decks/2026-11-03-pi-agent/src
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Build
         env:

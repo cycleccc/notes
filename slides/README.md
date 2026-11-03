@@ -18,7 +18,7 @@
 | AI Review + Git/SVN 推行方案 | 已发布 | [slides.md](decks/2025-12-26-ai-review-git-svn/src/slides.md) |
 | T3 Fullstack 技术分享 | 已发布 | [slides.md](decks/2025-04-27-t3-fullstack/src/slides.md) |
 | 企业级全栈技术栈分享 | 已发布 | [slides.md](decks/enterprise-fullstack/src/slides.md) |
-| Pi Agent：模型如何开始工作 | 草稿 | [slides.md](drafts/pi-agent/slides.md) |
+| Pi Agent：从对话到行动 | 已发布 | [slides.md](decks/2026-11-03-pi-agent/src/slides.md) |
 
 ## 开发
 
@@ -30,15 +30,15 @@ pnpm dev
 
 `pnpm dev` 会弹出选择器，直接启动某一个 deck 的 Slidev 开发服务。
 
-Pi Agent 草稿使用独立的依赖与锁文件：
+Pi Agent 使用独立的 Slidev 53 依赖与锁文件，发布构建前还需要安装这一份：
 
 ```bash
-cd slides/drafts/pi-agent
+cd slides/decks/2026-11-03-pi-agent/src
 pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-以上路径从仓库根目录进入。草稿完成后，按 `decks/<分享名>/src/` 结构接入正式 workspace，并配置对应的构建路径，再加入发布列表。
+以上路径从仓库根目录进入。Pi Agent 不加入旧稿的共享 workspace，`pnpm run build` 会单独调用其构建，再生成包含全部分享的首页。
 
 ## 构建
 

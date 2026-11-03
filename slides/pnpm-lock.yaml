@@ -55,6 +55,16 @@ importers:
 
   2025-12-26-ai-review-git-svn/src: {}
 
+  decks/2025-04-27-t3-fullstack/src: {}
+
+  decks/2025-12-26-ai-review-git-svn/src: {}
+
+  decks/2026-03-06-tanstack-family/src: {}
+
+  decks/2026-04-26-ai-fullstack-agent-takeover/src: {}
+
+  decks/enterprise-fullstack/src: {}
+
   enterprise-fullstack/src: {}
 
 packages:

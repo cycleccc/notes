@@ -1,6 +1,6 @@
 ---
 theme: default
-title: 从对话到行动：Harness 如何运行 Agent
+title: Pi Agent：从对话到行动
 author: 内部技术分享
 colorSchema: dark
 aspectRatio: 16/9
@@ -582,7 +582,7 @@ clicks: 4
 
 默认继续第 13 页。只有事先决定加入且配置好模型，才在此切换真实 Pi 会话，观察“请求了什么、返回了什么、下一步如何变化”，准备见 README。
 
-如果听众要求复现，可在此草稿目录的终端运行 `pnpm --dir demo/pi-runtime demo`。它无需模型，依赖须提前安装。终端会给出完整 report.json 路径。运行失败就保留报错，继续展示已保存记录，不把它称为本次现场成功。
+如果听众要求复现，可在本稿源码目录的终端运行 `pnpm --dir demo/pi-runtime demo`。它无需模型，依赖须提前安装。终端会给出完整 report.json 路径。运行失败就保留报错，继续展示已保存记录，不把它称为本次现场成功。
 
 **来源备查，不用念**
 
@@ -743,7 +743,7 @@ export function parse(input) {
 
 **可选终端操作**
 
-工作目录：仓库的 `slides/drafts/pi-agent`。不需要网络或模型，依次运行：
+工作目录：仓库的 `slides/decks/2026-11-03-pi-agent/src`。不需要网络或模型，依次运行：
 
 ```bash
 node demo/check.mjs before

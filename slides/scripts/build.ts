@@ -49,7 +49,8 @@ if (existsSync(dirStale)) {
 
 await fs.mkdir(dirname(dirDist), { recursive: true })
 
-await x('npx', ['slidev', 'build', '--base', urlBase, '--out', dirDist, ...args], {
+const cli = join(root, 'node_modules', '@slidev', 'cli', 'bin', 'slidev.mjs')
+await x(process.execPath, [cli, 'build', '--base', urlBase, '--out', dirDist, ...args], {
   nodeOptions: {
     cwd,
     stdio: 'inherit',

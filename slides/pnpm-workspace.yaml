@@ -1,2 +1,3 @@
 packages:
   - 'decks/*/src'
+  - '!decks/2026-11-03-pi-agent/src'

@@ -1,6 +1,6 @@
 # 从对话到行动：Harness 如何运行 Agent
 
-状态：Slidev 草稿，不参与正式站点与 GitHub Pages 发布。
+状态：正式发布，参与 GitHub Pages 构建。[在线播放](https://cycleccc.github.io/notes/2026-11-03-pi-agent/#/1)。
 
 主讲 14 页，建议 25–30 分钟，围绕一个问题：模型如何通过 Harness，从给出建议走向执行一个任务。Pi 是具体实现样本。另有 4 页可选附录，不计入主讲。
 
@@ -10,15 +10,15 @@ Agent 指完整的任务执行系统，Harness 指模型外围组织工作过程
 
 ## 本地运行
 
-使用 Slidev 53.0.0（从 52.19.1 升级），需要 Node.js 22.12+、pnpm 10.22.0。此草稿使用独立 workspace。53.0 的 Mermaid 升至 12，本稿的主讲使用 Vue / CSS 场景动画，附录保留可编辑 SVG 与代码变形。
+使用 Slidev 53.0.0（从 52.19.1 升级），需要 Node.js 22.12+、pnpm 10.22.0。本稿使用独立 workspace。53.0 的 Mermaid 升至 12，本稿的主讲使用 Vue / CSS 场景动画，附录保留可编辑 SVG 与代码变形。
 
 ```bash
-cd slides/drafts/pi-agent
+cd slides/decks/2026-11-03-pi-agent/src
 pnpm install --frozen-lockfile
 pnpm dev --port 3030
 ```
 
-预览地址：<http://localhost:3030/>。生产构建使用 `pnpm build`，PDF 导出使用 `pnpm run export`。PDF 不保留交互，教学回放在静态输出中只显示当前步骤。
+预览地址：<http://localhost:3030/>。生产构建使用 `pnpm build`，输出到 `slides/dist/2026-11-03-pi-agent/`。网站发布时设置 `SITE_BASE=/notes`，也可从 `slides/` 运行 `pnpm build` 构建全部分享。PDF 导出使用 `pnpm run export`。PDF 不保留交互，教学回放在静态输出中只显示当前步骤。
 
 如果本机默认 pnpm 8，可使用 `pnpm dlx pnpm@10.22.0 install --frozen-lockfile` 安装，避免重写锁文件。
 
